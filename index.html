@@ -1134,10 +1134,52 @@
   <div class="reveal">
     <h2 class="section-title" style="margin: 0 auto 20px; font-size: clamp(28px, 5vw, 64px); word-wrap: break-word; padding: 0 16px;">Reprends le contrôle.<br><span class="gradient">Dès le lancement.</span></h2>
     <p class="section-sub" style="margin: 0 auto 36px; padding: 0 16px;">Sois prévenu(e) le jour J et reçois un mois de Pulse Pro offert.</p>
-    <form onsubmit="event.preventDefault(); var email=this.querySelector('input').value; window.location.href='mailto:Contact@pulsecalendar.app?subject='+encodeURIComponent('Notifie-moi au lancement de PulseCalendar')+'&body='+encodeURIComponent('Salut !%0D%0A%0D%0AJe souhaite être prévenu·e quand PulseCalendar sortira sur l\'App Store.%0D%0A%0D%0AMon email : '+email+'%0D%0A%0D%0AMerci !'); this.querySelector('button').textContent='✓ App mail ouverte';" style="display: inline-flex; gap: 8px; padding: 6px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 16px; max-width: 460px; width: calc(100% - 32px); margin: 0 16px; flex-wrap: wrap;">
-      <input type="email" placeholder="ton@email.com" required="" style="flex: 1; min-width: 180px; background: transparent; border: none; outline: none; padding: 10px 14px; color: white; font-family: inherit; font-size: 15px;">
+    <form id="notify-form" action="https://api.web3forms.com/submit" method="POST" style="display: inline-flex; gap: 8px; padding: 6px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 16px; max-width: 460px; width: calc(100% - 32px); margin: 0 16px; flex-wrap: wrap;">
+      <input type="hidden" name="access_key" value="f3981621-01a8-40df-9c3b-4a0d843e42b1">
+      <input type="hidden" name="subject" value="🚀 Nouvelle inscription au lancement PulseCalendar">
+      <input type="hidden" name="from_name" value="PulseCalendar Landing">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <input type="email" name="email" placeholder="ton@email.com" required="" style="flex: 1; min-width: 180px; background: transparent; border: none; outline: none; padding: 10px 14px; color: white; font-family: inherit; font-size: 15px;">
       <button type="submit" style="padding: 10px 20px; border-radius: 10px; background: var(--pulse-grad); color: white; font-weight: 600; font-size: 14px; transition: transform 0.2s; white-space: nowrap;">Notifier au lancement</button>
     </form>
+    <p id="notify-msg" style="margin-top: 16px; font-size: 14px; color: var(--text-2); min-height: 20px;"></p>
+    <script>
+      (function() {
+        var form = document.getElementById('notify-form');
+        var msg  = document.getElementById('notify-msg');
+        var btn  = form.querySelector('button[type="submit"]');
+        form.addEventListener('submit', async function(e) {
+          e.preventDefault();
+          btn.disabled = true;
+          btn.textContent = 'Envoi…';
+          msg.style.color = 'var(--text-2)';
+          msg.textContent = '';
+          try {
+            var data = new FormData(form);
+            var res = await fetch(form.action, {
+              method: 'POST',
+              body: data,
+              headers: { 'Accept': 'application/json' }
+            });
+            var json = await res.json();
+            if (res.ok && json.success) {
+              btn.textContent = '✓ Inscrit !';
+              msg.style.color = '#7BE38F';
+              msg.textContent = 'Merci ! On te prévient dès que PulseCalendar sort.';
+              form.querySelector('input[type=email]').value = '';
+            } else {
+              throw new Error(json.message || 'Erreur inconnue');
+            }
+          } catch (err) {
+            btn.disabled = false;
+            btn.textContent = 'Notifier au lancement';
+            msg.style.color = '#FF8A80';
+            msg.textContent = 'Oups, ça n\'a pas marché. Réessaie ou écris à Contact@pulsecalendar.app';
+            console.error('Notify form error:', err);
+          }
+        });
+      })();
+    </script>
   </div>
 </section>
 
