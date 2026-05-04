@@ -443,7 +443,7 @@
 
   /* SECTIONS */
   section.block {
-    padding: 120px 32px;
+    padding: clamp(56px, 10vw, 120px) clamp(16px, 4vw, 32px);
     max-width: 1280px; margin: 0 auto;
   }
   .section-eyebrow {
@@ -657,7 +657,7 @@
   /* CONTACT */
   .contact-block {
     text-align: center;
-    padding: 100px 32px;
+    padding: clamp(40px, 8vw, 100px) clamp(20px, 5vw, 32px);
     background: linear-gradient(135deg, rgba(98,68,214,0.18), rgba(123,92,240,0.06));
     border: 1px solid rgba(98,68,214,0.3);
     border-radius: var(--radius-xl);
@@ -665,10 +665,15 @@
   }
   .contact-email {
     display: inline-flex; align-items: center; gap: 14px;
-    padding: 18px 28px; border-radius: 18px;
+    padding: clamp(14px, 3vw, 18px) clamp(16px, 4vw, 28px);
+    border-radius: 18px;
     background: rgba(0,0,0,0.4); border: 1px solid var(--border-strong);
-    font-family: "Geist Mono", monospace; font-size: 18px; font-weight: 500;
+    font-family: "Geist Mono", monospace;
+    font-size: clamp(13px, 3.5vw, 18px); font-weight: 500;
     margin-top: 28px; transition: all 0.2s;
+    max-width: 100%;
+    word-break: break-all;
+    text-align: left;
   }
   .contact-email:hover { transform: translateY(-2px); border-color: var(--violet-400); box-shadow: 0 12px 32px rgba(98,68,214,0.25); }
   .contact-email svg { color: var(--violet-300); }
