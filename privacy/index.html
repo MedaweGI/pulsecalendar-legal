@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pulse Calendar — Politique de confidentialité</title>
+<style>
+  :root {
+    --accent: #6B4FE8;
+    --bg: #FAFAFD;
+    --bg-card: #FFFFFF;
+    --text: #0F0B1E;
+    --text-mid: #544E6C;
+    --text-low: #8883A0;
+    --border: #EAE8F0;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --accent: #8B6FFF;
+      --bg: #0B0818;
+      --bg-card: #141028;
+      --text: #F5F3FA;
+      --text-mid: #B8B3C9;
+      --text-low: #6E6A80;
+      --border: #1F1A36;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    color: var(--text);
+    background: var(--bg);
+    padding: 0;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 40px 24px 80px; }
+  header {
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 20px;
+    margin-bottom: 40px;
+  }
+  .logo {
+    display: inline-block;
+    font-weight: 800;
+    font-size: 18px;
+    background: var(--accent);
+    color: white;
+    padding: 6px 14px;
+    border-radius: 20px;
+    margin-bottom: 16px;
+  }
+  h1 { font-size: 32px; font-weight: 800; letter-spacing: -0.5px; margin: 0 0 8px; }
+  .subtitle { color: var(--text-mid); font-size: 14px; margin: 0; }
+  h2 { font-size: 20px; font-weight: 700; margin: 48px 0 12px; letter-spacing: -0.2px; }
+  h3 { font-size: 16px; font-weight: 700; margin: 28px 0 10px; color: var(--text); }
+  p, ul { color: var(--text-mid); }
+  ul { padding-left: 20px; }
+  li { margin-bottom: 8px; }
+  strong { color: var(--text); }
+  code {
+    background: var(--border);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  .lang-switch {
+    text-align: right;
+    margin-bottom: 20px;
+  }
+  .lang-switch a {
+    color: var(--accent);
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+  }
+  .highlight-box {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--accent);
+    padding: 18px 20px;
+    border-radius: 10px;
+    margin: 24px 0;
+  }
+  .highlight-box p { color: var(--text); margin: 0; }
+  footer {
+    margin-top: 60px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    color: var(--text-low);
+    font-size: 13px;
+    text-align: center;
+  }
+  a.contact {
+    color: var(--accent);
+    font-weight: 600;
+    text-decoration: none;
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="lang-switch"><a href="#en">English ↓</a> · <a href="#es">Español ↓</a></div>
+
+  <header>
+    <span class="logo">Pulse Calendar</span>
+    <h1>Politique de confidentialité</h1>
+    <p class="subtitle">Dernière mise à jour : 21 avril 2026</p>
+  </header>
+
+  <div class="highlight-box">
+    <p><strong>🔒 En une phrase :</strong> Pulse Calendar ne collecte <strong>aucune</strong> donnée personnelle sur nos serveurs. Tout reste sur ton iPhone. Nous n'avons pas de base de données utilisateurs. Nous n'utilisons ni Google Analytics, ni Firebase, ni aucun service tiers de tracking.</p>
+  </div>
+
+  <h2>1. Qui sommes-nous ?</h2>
+  <p>Pulse Calendar est éditée par <strong>Medawe</strong>, éditeur indépendant basé en France. Cette politique décrit comment l'application Pulse Calendar (« l'app ») traite tes informations.</p>
+  <p>Contact : <a class="contact" href="mailto:info@Pulsecalendar.fr">info@Pulsecalendar.fr</a></p>
+
+  <h2>2. Quelles données l'app utilise-t-elle ?</h2>
+
+  <h3>2.1 Données du calendrier iOS (EventKit)</h3>
+  <p>Avec ta permission explicite, Pulse lit et modifie les événements de ton calendrier iOS (iCloud, Google, Outlook, Exchange — tous les calendriers que tu as configurés dans Réglages iOS → Comptes).</p>
+  <ul>
+    <li>Ces données <strong>restent sur ton appareil</strong>.</li>
+    <li>Elles ne sont <strong>jamais transmises</strong> à Medawe ou à un tiers.</li>
+    <li>Tu peux révoquer l'accès à tout moment via Réglages iOS → Confidentialité → Calendriers → Pulse Calendar.</li>
+  </ul>
+
+  <h3>2.2 Préférences locales (UserDefaults)</h3>
+  <p>Tes choix de configuration (thème, catégories custom, suivis, priorités, mood check-ins, etc.) sont stockés dans <code>UserDefaults</code>, une base locale iOS. Ces données sont sauvegardées avec ton iPhone via iCloud Backup si tu l'actives — mais Medawe n'y a jamais accès.</p>
+
+  <h3>2.3 Données sensibles (Keychain)</h3>
+  <p>Si tu configures un « Accountability Buddy » (contact notifié quand tu dérives), son numéro de téléphone est stocké dans le <strong>Keychain iOS</strong>, chiffré par iOS. Ce numéro n'est jamais envoyé à nos serveurs — il est utilisé uniquement localement pour préremplir l'app Messages iOS quand tu demandes à notifier ton buddy.</p>
+
+  <h3>2.4 Notifications</h3>
+  <p>L'app envoie des notifications <strong>locales uniquement</strong> (briefing matinal, rappels d'événements, coach post-événement). Aucun serveur push tiers.</p>
+
+  <h3>2.5 Achats intégrés (StoreKit)</h3>
+  <p>Si tu souscris à Pulse+, l'achat est géré entièrement par Apple via StoreKit. Medawe reçoit une confirmation anonyme de ton statut premium, jamais ton moyen de paiement ni ton identité. Apple conserve ses propres données de transaction selon <a href="https://www.apple.com/legal/privacy/" class="contact" target="_blank">sa politique</a>.</p>
+
+  <h2>3. Ce que Pulse ne fait PAS</h2>
+  <ul>
+    <li>❌ Nous ne collectons <strong>aucune</strong> information identifiable (nom, email, téléphone, IP).</li>
+    <li>❌ Aucune analytics tierce (Google Analytics, Firebase, Mixpanel, etc.).</li>
+    <li>❌ Aucun tracking publicitaire, aucun IDFA.</li>
+    <li>❌ Aucun cookie, aucun fingerprinting.</li>
+    <li>❌ Aucun crash reporter qui envoie du code à des tiers.</li>
+    <li>❌ Nous ne vendons, ne louons, ne partageons <strong>rien</strong> avec des tiers.</li>
+  </ul>
+
+  <h2>4. Tes droits (RGPD)</h2>
+  <p>Même si nous ne détenons aucune donnée personnelle sur toi, tu as toujours le droit :</p>
+  <ul>
+    <li><strong>D'accès, de rectification, d'effacement</strong> : ces droits s'exercent directement dans l'app (Profil → Avancé → Réinitialiser toutes les données) ou en désinstallant l'app (tout est purgé).</li>
+    <li><strong>De portabilité</strong> : Profil → Avancé → Export/Import te permet d'exporter tes données au format JSON ou ICS standard.</li>
+    <li><strong>D'opposition et de limitation</strong> : désactive les permissions via Réglages iOS → Confidentialité.</li>
+  </ul>
+  <p>Pour toute question : <a class="contact" href="mailto:info@Pulsecalendar.fr">info@Pulsecalendar.fr</a>. Tu peux aussi saisir la <a href="https://www.cnil.fr" class="contact" target="_blank">CNIL</a> en cas de différend.</p>
+
+  <h2>5. Mineurs</h2>
+  <p>Pulse Calendar ne s'adresse pas aux enfants de moins de 13 ans. Nous ne collectons volontairement aucune donnée d'utilisateurs mineurs.</p>
+
+  <h2>6. Modifications</h2>
+  <p>En cas d'évolution substantielle de cette politique, nous notifierons les utilisateurs via une bannière dans l'app et la date en haut de cette page sera mise à jour.</p>
+
+  <hr style="margin: 80px 0 40px; border: none; border-top: 1px solid var(--border);">
+
+  <a id="en"></a>
+  <header>
+    <span class="logo">Pulse Calendar</span>
+    <h1>Privacy Policy</h1>
+    <p class="subtitle">Last updated: April 21, 2026</p>
+  </header>
+
+  <div class="highlight-box">
+    <p><strong>🔒 In one sentence:</strong> Pulse Calendar collects <strong>no</strong> personal data on our servers. Everything stays on your iPhone. We don't have a user database. We don't use Google Analytics, Firebase, or any third-party tracking service.</p>
+  </div>
+
+  <h2>1. Who we are</h2>
+  <p>Pulse Calendar is published by <strong>Medawe</strong>, an independent publisher based in France. This policy describes how the Pulse Calendar application ("the app") handles your information.</p>
+  <p>Contact: <a class="contact" href="mailto:info@Pulsecalendar.fr">info@Pulsecalendar.fr</a></p>
+
+  <h2>2. What data does the app use?</h2>
+
+  <h3>2.1 iOS Calendar data (EventKit)</h3>
+  <p>With your explicit permission, Pulse reads and modifies events in your iOS calendar (iCloud, Google, Outlook, Exchange — any calendar you've configured in iOS Settings → Accounts).</p>
+  <ul>
+    <li>This data <strong>stays on your device</strong>.</li>
+    <li>It is <strong>never transmitted</strong> to Medawe or any third party.</li>
+    <li>You can revoke access at any time via iOS Settings → Privacy → Calendars → Pulse Calendar.</li>
+  </ul>
+
+  <h3>2.2 Local preferences (UserDefaults)</h3>
+  <p>Your settings (theme, custom categories, habits, priorities, mood check-ins, etc.) are stored in <code>UserDefaults</code>, an iOS local database. This data is backed up with your iPhone via iCloud Backup if enabled — but Medawe never has access.</p>
+
+  <h3>2.3 Sensitive data (Keychain)</h3>
+  <p>If you configure an "Accountability Buddy," their phone number is stored in the <strong>iOS Keychain</strong>, encrypted by iOS. This number is never sent to our servers — it's used locally only to pre-fill the iOS Messages app when you choose to notify your buddy.</p>
+
+  <h3>2.4 Notifications</h3>
+  <p>The app sends <strong>local-only</strong> notifications (morning briefing, event reminders, post-event coach). No third-party push servers.</p>
+
+  <h3>2.5 In-app purchases (StoreKit)</h3>
+  <p>If you subscribe to Pulse+, the purchase is handled entirely by Apple via StoreKit. Medawe receives only an anonymous confirmation of your premium status — never your payment method or identity. Apple retains its own transaction data per <a href="https://www.apple.com/legal/privacy/" class="contact" target="_blank">its policy</a>.</p>
+
+  <h2>3. What Pulse does NOT do</h2>
+  <ul>
+    <li>❌ We collect <strong>zero</strong> identifiable information (name, email, phone, IP).</li>
+    <li>❌ No third-party analytics (Google Analytics, Firebase, Mixpanel, etc.).</li>
+    <li>❌ No ad tracking, no IDFA.</li>
+    <li>❌ No cookies, no fingerprinting.</li>
+    <li>❌ No crash reporter sending code to third parties.</li>
+    <li>❌ We never sell, rent, or share <strong>anything</strong> with third parties.</li>
+  </ul>
+
+  <h2>4. Your rights (GDPR)</h2>
+  <p>Even though we hold no personal data about you, you always have the right:</p>
+  <ul>
+    <li><strong>Access, correction, deletion</strong>: these rights can be exercised directly in the app (Profile → Advanced → Reset all data) or by uninstalling (everything is purged).</li>
+    <li><strong>Portability</strong>: Profile → Advanced → Export/Import lets you export your data as standard JSON or ICS.</li>
+    <li><strong>Objection and restriction</strong>: disable permissions via iOS Settings → Privacy.</li>
+  </ul>
+  <p>Questions: <a class="contact" href="mailto:info@Pulsecalendar.fr">info@Pulsecalendar.fr</a>. You may also file a complaint with your national data protection authority.</p>
+
+  <h2>5. Minors</h2>
+  <p>Pulse Calendar is not directed at children under 13. We do not knowingly collect any data from minor users.</p>
+
+  <h2>6. Changes</h2>
+  <p>In case of significant changes to this policy, we will notify users via an in-app banner, and the date at the top of this page will be updated.</p>
+
+  <hr style="margin: 80px 0 40px; border: none; border-top: 1px solid var(--border);">
+
+  <a id="es"></a>
+  <header>
+    <span class="logo">Pulse Calendar</span>
+    <h1>Política de privacidad</h1>
+    <p class="subtitle">Última actualización: 22 de abril de 2026</p>
+  </header>
+
+  <div class="highlight-box">
+    <p><strong>🔒 En una frase:</strong> Pulse Calendar no recopila <strong>ningún</strong> dato personal en nuestros servidores. Todo permanece en tu iPhone. No tenemos base de datos de usuarios. No usamos Google Analytics, Firebase ni ningún servicio de seguimiento de terceros.</p>
+  </div>
+
+  <h2>1. Quiénes somos</h2>
+  <p>Pulse Calendar es publicada por <strong>Medawe</strong>, editor independiente con sede en Francia. Esta política describe cómo la aplicación Pulse Calendar («la app») trata tu información.</p>
+  <p>Contacto: <a class="contact" href="mailto:info@Pulsecalendar.fr">info@Pulsecalendar.fr</a></p>
+
+  <h2>2. ¿Qué datos usa la app?</h2>
+
+  <h3>2.1 Datos del calendario iOS (EventKit)</h3>
+  <p>Con tu permiso explícito, Pulse lee y modifica los eventos de tu calendario iOS (iCloud, Google, Outlook, Exchange — todos los calendarios configurados en Ajustes iOS → Cuentas).</p>
+  <ul>
+    <li>Estos datos <strong>permanecen en tu dispositivo</strong>.</li>
+    <li><strong>Nunca se transmiten</strong> a Medawe ni a terceros.</li>
+    <li>Puedes revocar el acceso en cualquier momento en Ajustes iOS → Privacidad → Calendarios → Pulse Calendar.</li>
+  </ul>
+
+  <h3>2.2 Preferencias locales (UserDefaults)</h3>
+  <p>Tus ajustes (tema, categorías personalizadas, hábitos, prioridades, check-ins de ánimo, etc.) se guardan en <code>UserDefaults</code>, una base de datos local de iOS. Se incluyen en la copia de seguridad de iCloud si está activada — pero Medawe nunca accede a ellos.</p>
+
+  <h3>2.3 Datos sensibles (Keychain)</h3>
+  <p>Si configuras un «Accountability Buddy», su número de teléfono se guarda en el <strong>Keychain iOS</strong>, cifrado por iOS. Este número no se envía a nuestros servidores — se usa solo localmente para rellenar la app Mensajes iOS cuando decides notificar a tu buddy.</p>
+
+  <h3>2.4 Notificaciones</h3>
+  <p>La app envía notificaciones <strong>solo locales</strong> (briefing matutino, recordatorios de eventos, coach post-evento). Sin servidores push de terceros.</p>
+
+  <h3>2.5 Compras integradas (StoreKit)</h3>
+  <p>Si te suscribes a Pulse+, la compra la gestiona Apple vía StoreKit. Medawe recibe solo una confirmación anónima de tu estado premium — nunca tu método de pago ni tu identidad. Apple conserva sus propios datos de transacción según <a href="https://www.apple.com/legal/privacy/" class="contact" target="_blank">su política</a>.</p>
+
+  <h2>3. Lo que Pulse NO hace</h2>
+  <ul>
+    <li>❌ No recopilamos <strong>ninguna</strong> información identificable (nombre, email, teléfono, IP).</li>
+    <li>❌ Sin analíticas de terceros (Google Analytics, Firebase, Mixpanel, etc.).</li>
+    <li>❌ Sin seguimiento publicitario, sin IDFA.</li>
+    <li>❌ Sin cookies, sin fingerprinting.</li>
+    <li>❌ Sin crash reporter que envíe código a terceros.</li>
+    <li>❌ Nunca vendemos, alquilamos ni compartimos <strong>nada</strong> con terceros.</li>
+  </ul>
+
+  <h2>4. Tus derechos (RGPD)</h2>
+  <p>Aunque no conservamos ningún dato personal tuyo, siempre tienes derecho a:</p>
+  <ul>
+    <li><strong>Acceso, rectificación, borrado</strong>: se ejercen directamente en la app (Perfil → Avanzado → Restablecer todos los datos) o desinstalando la app (todo se purga).</li>
+    <li><strong>Portabilidad</strong>: Perfil → Avanzado → Exportar/Importar te permite exportar tus datos en formato JSON o ICS estándar.</li>
+    <li><strong>Oposición y limitación</strong>: desactiva los permisos en Ajustes iOS → Privacidad.</li>
+  </ul>
+  <p>Consultas: <a class="contact" href="mailto:info@Pulsecalendar.fr">info@Pulsecalendar.fr</a>. También puedes presentar reclamación ante la <a href="https://www.aepd.es" class="contact" target="_blank">AEPD</a> en España.</p>
+
+  <h2>5. Menores</h2>
+  <p>Pulse Calendar no está dirigida a menores de 13 años. No recopilamos intencionadamente datos de usuarios menores.</p>
+
+  <h2>6. Cambios</h2>
+  <p>Ante cambios significativos en esta política, notificaremos a los usuarios mediante un banner en la app y la fecha al inicio de esta página se actualizará.</p>
+
+  <footer>
+    Pulse Calendar · Medawe, France · <a class="contact" href="terms.html">Terms of Use / Condiciones</a>
+  </footer>
+</div>
+</body>
+</html>
