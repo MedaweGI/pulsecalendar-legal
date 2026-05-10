@@ -659,6 +659,22 @@
     font-family: "Geist Mono", monospace; letter-spacing: 0.02em;
   }
   .price-card .trial-note svg { width: 12px; height: 12px; }
+  .price-card .launch-note {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 4px 10px; border-radius: 999px;
+    background: rgba(245, 197, 24, 0.14); color: var(--orange);
+    font-size: 12px; font-weight: 600;
+    margin: 0 0 12px 6px;
+    font-family: "Geist Mono", monospace; letter-spacing: 0.02em;
+  }
+  .price-card .launch-note svg { width: 12px; height: 12px; }
+  .price-card .post-launch {
+    display: block;
+    font-size: 12px; color: var(--text-3);
+    margin-top: -2px; margin-bottom: 16px;
+    font-style: italic;
+  }
+  .price-card .post-launch strong { color: var(--text-2); font-style: normal; font-weight: 600; }
   .price-features { list-style: none; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px; }
   .price-features li { font-size: 13px; color: var(--text-2); display: flex; align-items: center; gap: 10px; }
   .price-features li svg { flex-shrink: 0; color: var(--violet-400); }
@@ -1283,7 +1299,12 @@
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
         7 jours d'essai gratuit
       </span>
+      <span class="launch-note">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
+        Tarif de lancement
+      </span>
       <div class="pamount"><strong>29,99 €</strong><span>/ an</span><span class="save-tag">–50 %</span></div>
+      <span class="post-launch">Puis <strong>39,99 €/an</strong> après le lancement.</span>
       <div class="pdesc">Le meilleur rapport qualité-prix. ~2,50 € / mois.</div>
       <button class="pbtn">Choisir annuel</button>
       <ul class="price-features">
