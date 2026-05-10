@@ -915,6 +915,82 @@
     .nav-links { display: none; }
   }
 
+  /* PULSE AUTOPILOT (v1 feature phare) */
+  .autopilot-section { position: relative; }
+  .autopilot-section::before {
+    content: "";
+    position: absolute; top: 0; left: 50%;
+    transform: translateX(-50%);
+    width: min(800px, 90%); height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
+    pointer-events: none;
+  }
+  .autopilot-header { text-align: center; max-width: 760px; margin: 0 auto 56px; }
+  .autopilot-header .section-title,
+  .autopilot-header .section-sub { margin-left: auto; margin-right: auto; }
+  .autopilot-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+  .autopilot-module {
+    position: relative;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 32px 28px;
+    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
+  }
+  .autopilot-module:hover {
+    transform: translateY(-4px);
+    background: var(--surface-2);
+    border-color: var(--border-strong);
+  }
+  .autopilot-module .icon-halo {
+    width: 44px; height: 44px;
+    border-radius: 12px;
+    background: var(--pulse-grad-soft);
+    border: 1px solid rgba(123, 92, 240, 0.25);
+    display: flex; align-items: center; justify-content: center;
+    margin-bottom: 18px;
+  }
+  .autopilot-module .icon-halo svg {
+    width: 22px; height: 22px;
+    color: var(--violet-300);
+  }
+  .autopilot-module h3 {
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    line-height: 1.3;
+    margin-bottom: 10px;
+    color: var(--text);
+  }
+  .autopilot-module p {
+    font-size: 14px;
+    color: var(--text-2);
+    line-height: 1.55;
+  }
+  .autopilot-footnote {
+    margin-top: 48px;
+    text-align: center;
+    font-family: "Geist Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--text-3);
+  }
+  @media (max-width: 960px) {
+    .autopilot-grid { grid-template-columns: repeat(2, 1fr); }
+  }
+  @media (max-width: 600px) {
+    .autopilot-grid { grid-template-columns: 1fr; gap: 14px; }
+    .autopilot-module { padding: 24px 22px; }
+    .autopilot-header { margin-bottom: 36px; }
+  }
+
   /* Reveal animation */
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
   .reveal.in { opacity: 1; transform: translateY(0); }
@@ -1004,6 +1080,99 @@
     <div class="country"><span class="flag">🇩🇪</span><span>Allemagne</span></div>
   </div>
 </div>
+
+<!-- ===== PULSE AUTOPILOT (v1 feature phare) ===== -->
+<section class="block autopilot-section" id="autopilot">
+  <div class="reveal autopilot-header">
+    <span class="section-eyebrow">Pulse Autopilot · v1.0</span>
+    <h2 class="section-title">Pulse protège ton temps <span class="gradient">automatiquement.</span></h2>
+    <p class="section-sub">Cinq modules qui agissent à ta place — pour que ta journée tienne sans micro-management.</p>
+  </div>
+
+  <div class="autopilot-grid reveal">
+    <!-- Shield Focus -->
+    <div class="autopilot-module">
+      <div class="icon-halo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M12 2L4 5v7c0 5.5 3.6 9.6 8 11 4.4-1.4 8-5.5 8-11V5l-8-3z"></path>
+        </svg>
+      </div>
+      <h3>Tes blocs sacrés, jamais grignotés</h3>
+      <p>Pulse refuse silencieusement les invitations qui empiètent sur tes focus blocks. Rien à approuver. Personne à expliquer.</p>
+    </div>
+
+    <!-- Late SMS -->
+    <div class="autopilot-module">
+      <div class="icon-halo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+        </svg>
+      </div>
+      <h3>Les retards prévenus avant qu'ils ne deviennent un problème</h3>
+      <p>Quand Pulse détecte que tu seras en retard, un SMS pré-rempli est prêt en un tap. Le destinataire est prévenu avant de s'inquiéter.</p>
+    </div>
+
+    <!-- Auto-Reschedule -->
+    <div class="autopilot-module">
+      <div class="icon-halo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="23 4 23 10 17 10"></polyline>
+          <polyline points="1 20 1 14 7 14"></polyline>
+          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
+        </svg>
+      </div>
+      <h3>Les conflits résolus avant que tu ne les voies</h3>
+      <p>Deux events qui se chevauchent ? Pulse propose le déplacement le plus pertinent avec aperçu avant/après. Tu valides. C'est tout.</p>
+    </div>
+
+    <!-- Week Plan -->
+    <div class="autopilot-module">
+      <div class="icon-halo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+          <line x1="16" y1="2" x2="16" y2="6"></line>
+          <line x1="8" y1="2" x2="8" y2="6"></line>
+          <line x1="3" y1="10" x2="21" y2="10"></line>
+        </svg>
+      </div>
+      <h3>Ta semaine alignée sans micro-management</h3>
+      <p>Chaque dimanche, Pulse compare ton calendrier réel à ta semaine idéale. Il propose les ajustements. Tu gardes ce qui compte.</p>
+    </div>
+
+    <!-- Morning Brief -->
+    <div class="autopilot-module">
+      <div class="icon-halo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <circle cx="12" cy="12" r="5"></circle>
+          <line x1="12" y1="1" x2="12" y2="3"></line>
+          <line x1="12" y1="21" x2="12" y2="23"></line>
+          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+          <line x1="1" y1="12" x2="3" y2="12"></line>
+          <line x1="21" y1="12" x2="23" y2="12"></line>
+          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+        </svg>
+      </div>
+      <h3>Ta journée tient en une notification</h3>
+      <p>Le matin, un brief : ce qui compte, ce qui attend, ce qui est protégé. Plus besoin d'ouvrir l'app pour savoir ce qui t'attend.</p>
+    </div>
+
+    <!-- Toujours réversible -->
+    <div class="autopilot-module">
+      <div class="icon-halo">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 14 4 9 9 4"></polyline>
+          <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
+        </svg>
+      </div>
+      <h3>Toujours réversible. Toujours visible.</h3>
+      <p>Chaque action Autopilot est journalisée et annulable d'un tap. Tu gardes le contrôle, même quand Pulse agit pour toi.</p>
+    </div>
+  </div>
+
+  <p class="autopilot-footnote">Active les modules un par un · Tout est désactivable</p>
+</section>
 
 <!-- ===== SCROLLYTELLING ===== -->
 <section class="block" id="features">
