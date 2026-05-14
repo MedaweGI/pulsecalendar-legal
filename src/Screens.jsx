@@ -144,7 +144,7 @@ function ScreenFocus() {
       </div>
       <div style={{ margin: '14px 6px', padding: 12, background: 'linear-gradient(135deg, rgba(98,68,214,0.18), rgba(98,68,214,0.04))', borderRadius: 14, border: '1px solid rgba(98,68,214,0.3)' }}>
         <div style={{ display: 'flex', alignItems: 'center', gap: 6, fontSize: 10, color: '#9d83f7', fontWeight: 600 }}>
-          <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#9d83f7' }}/> PULSE BRAIN · IA LOCALE
+          <span style={{ width: 6, height: 6, borderRadius: '50%', background: '#9d83f7' }}/> PULSE BRAIN · COACH LOCAL
         </div>
         <div style={{ fontSize: 11, marginTop: 6, lineHeight: 1.45 }}>Tu as 2h libres entre 14h-16h. <strong style={{ color: '#c4b3fb' }}>Bloque ta priorité #1 maintenant ?</strong></div>
         <button style={{ marginTop: 8, padding: '6px 12px', borderRadius: 10, background: 'linear-gradient(135deg, #6244D6, #7B5CF0)', color: 'white', fontSize: 10, fontWeight: 600 }}>Auto-bloquer</button>
@@ -235,7 +235,7 @@ function ScreenAnalyse() {
   );
 }
 
-// === SCREEN 4: PULSE BRAIN — IA OPTIMISATION ===
+// === SCREEN 4: PULSE BRAIN — OPTIMISATION INTELLIGENTE ===
 function ScreenBrain() {
   return (
     <div className="screen-ui">

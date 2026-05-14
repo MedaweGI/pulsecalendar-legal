@@ -1,82 +1,87 @@
-# Pulse Calendar — Legal Pages
+# PulseCalendar — Site web
 
-3 pages HTML à héberger sur GitHub Pages (ou n'importe quel hébergement statique) avant la soumission App Store :
+Smart Calendar & Anti-Procrastination Coach pour iPhone.
 
-- `index.html` — landing page de l'app (utilisable comme « Marketing URL » dans App Store Connect)
-- `privacy.html` — Politique de confidentialité bilingue FR/EN (« Privacy Policy URL » obligatoire)
-- `terms.html` — Conditions d'utilisation bilingues FR/EN (« Terms of Use URL » requise pour les abonnements)
+## Structure
 
----
+```
+PulseCalendar.html         ← Home page (point d'entrée principal)
+privacy.html               ← Politique de confidentialité
 
-## Hébergement en 5 minutes (GitHub Pages gratuit)
+features/                  ← 6 pages SEO ciblées
+  smart-calendar.html
+  ai-calendar.html         (Coach intelligent — slug gardé pour SEO)
+  anti-procrastination.html
+  focus-planner.html
+  adhd-calendar.html
+  schedule-optimizer.html
 
-1. **Crée un repo public** sur GitHub, nommé par exemple `pulsecalendar-landing`
-2. `git clone` le repo en local
-3. Copie les 3 fichiers `.html` à la racine
-4. Push :
-   ```bash
-   git add .
-   git commit -m "Initial legal pages"
-   git push
-   ```
-5. Sur GitHub → **Settings → Pages** → Source = `main` branch → Save
-6. En 1-2 minutes, tes pages sont live à :
-   - `https://TON_USERNAME.github.io/pulsecalendar-landing/`
-   - `https://TON_USERNAME.github.io/pulsecalendar-landing/privacy.html`
-   - `https://TON_USERNAME.github.io/pulsecalendar-landing/terms.html`
+vs/
+  apple-calendar.html      ← Page comparative
 
-## Domaine custom (optionnel, ~12€/an)
+audiences/
+  students.html
+  adhd.html
 
-Si tu veux `pulsecalendar.app` :
+calendars/                 ← Hub ICS (gros levier SEO)
+  index.html
+  world-cup-2026.html
+  f1-2026.html
+  school-holidays-france.html
 
-1. Achète le domaine (Gandi, OVH, Namecheap…)
-2. Dans GitHub repo → Settings → Pages → Custom domain → entre `pulsecalendar.app`
-3. Ajoute un fichier `CNAME` à la racine du repo contenant `pulsecalendar.app`
-4. Chez ton registrar DNS, ajoute un `CNAME` pointant vers `TON_USERNAME.github.io`
-5. Attends la propagation (~10 min à 2h)
+shared/
+  effects.css              ← Effets pro (aurora, grain, glass, etc.)
+  effects.js               ← Spotlight curseur, scroll progress, magnetic CTA, counters
+  seo-page.css             ← Design system des sous-pages
+  nav-footer.js            ← Injecteur nav + footer commun
 
----
+src/                       ← Composants React (mockup iPhone)
+  PulseLogo.jsx
+  PhoneFrame.jsx
+  Screens.jsx
+  Themes.jsx
+  Mount.jsx
 
-## ⚠️ À mettre à jour avant le push
-
-Dans les 3 fichiers HTML, les **emails** et **domaine** sont hardcodés :
-
-- `privacy@pulsecalendar.app`
-- `info@Pulsecalendar.fr`
-
-Remplace par tes vraies adresses. Crée les aliases chez ton registrar mail si besoin (Gandi offre 2 alias gratuits avec chaque domaine).
-
-Dans `legal/terms.html` section 5.2, le prix **39,99 €/an** est mentionné — garde-le cohérent avec ton prix App Store Connect.
-
----
-
-## Mettre à jour les URLs dans l'app
-
-Le paywall (`PaywallViewController.swift` lignes `openTerms` / `openPrivacy`) pointe aujourd'hui vers :
-
-```swift
-"https://pulsecalendar.app/terms"
-"https://pulsecalendar.app/privacy"
+favicon.svg
+apple-touch-icon.svg
+og-cover.svg
+robots.txt
+sitemap.xml
 ```
 
-**Si tu utilises GitHub Pages sans domaine custom**, remplace par :
+## Stack
 
-```swift
-"https://TON_USERNAME.github.io/pulsecalendar-landing/terms.html"
-"https://TON_USERNAME.github.io/pulsecalendar-landing/privacy.html"
-```
+- HTML statique (pas de build step)
+- React + Babel CDN pour les mockups iPhone interactifs
+- Geist Sans + Geist Mono (Google Fonts)
+- Tout-en-un dans `PulseCalendar.html` + 4 fichiers JSX
 
-**Si tu achètes `pulsecalendar.app`**, garde les URLs telles quelles.
+## SEO
 
----
+- 8 langues hreflang (fr, en, en-us, en-gb, en-ca, en-au, es, de, ja)
+- 8 pays cibles : FR, CA, US, GB, AU, ES, JP, DE
+- Schema.org : MobileApplication, FAQPage, Organization, WebSite, Article
+- Sitemap.xml avec hreflang sur la home
+- robots.txt avec sitemap reference
 
-## Apple App Store Connect — URLs à renseigner
+## Avant prod
 
-Dans App Store Connect → App Information :
+1. Convertir `og-cover.svg` → `og-cover.jpg` 1200×630
+2. Générer `favicon.ico` à partir de `favicon.svg`
+3. Générer `apple-touch-icon.png` 180×180 à partir de `apple-touch-icon.svg`
+4. Brancher le formulaire newsletter (#cta form) à un backend (Brevo, ConvertKit…)
+5. Remplacer `https://pulsecalendar.app/` par le vrai domaine dans tous les `<link rel="canonical">` et `<meta property="og:*">`
+6. Setup Google Search Console + Bing Webmaster Tools
+7. Soumettre `sitemap.xml`
 
-| Champ | Valeur à mettre |
-|---|---|
-| **Privacy Policy URL** | `https://…/privacy.html` |
-| **Terms of Use URL** (si abonnement IAP) | `https://…/terms.html` |
-| **Marketing URL** | `https://…/index.html` ou `/` |
-| **Support URL** | `mailto:info@Pulsecalendar.fr` ou `https://…/index.html#contact` |
+## Couleurs
+
+- Violet signature : `#6244D6` (--violet-500)
+- Orange cosmique : `#ff8a3d` (utilisé sur « Commence à avancer »)
+- Background : `#07050f` avec aurora blobs animés
+
+## Plateformes
+
+- **iPhone** : disponible au lancement (iOS 17+)
+- **iPad** : bientôt
+- **Mac** : bientôt

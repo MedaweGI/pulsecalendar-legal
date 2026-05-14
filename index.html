@@ -1,261 +1,163 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PulseCalendar — Le calendrier qui te coache au quotidien</title>
-<link rel="icon" type="image/x-icon" href="./favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="./favicon-32.png">
-<link rel="apple-touch-icon" sizes="180x180" href="./apple-touch-icon.png">
-<link rel="manifest" href="./site.webmanifest">
-<meta name="theme-color" content="#6B4FE8">
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<!-- ===== PRIMARY SEO ===== -->
+<title>PulseCalendar — Smart Calendar & Anti-Procrastination Coach for iPhone</title>
+<meta name="description" content="The smart calendar app for iPhone. Merge iCloud, Google & Outlook, plan with on-device intelligence, beat procrastination, optimize school holidays & bridge days. The best Apple Calendar alternative for students, ADHD brains and pros."/>
+<meta name="keywords" content="anti procrastination calendar, smart calendar app, intelligent calendar iPhone, productivity calendar, ADHD calendar app, best calendar app iPhone, Apple Calendar alternative, focus planner iOS, schedule optimization app, calendar app for students, world cup calendar ICS, sports calendar subscription"/>
+<meta name="author" content="PulseCalendar"/>
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"/>
+<meta name="theme-color" content="#6244D6"/>
+<link rel="canonical" href="https://pulsecalendar.app/"/>
+
+<!-- ===== HREFLANG (7 target markets) ===== -->
+<link rel="alternate" hreflang="fr" href="https://pulsecalendar.app/fr/"/>
+<link rel="alternate" hreflang="en" href="https://pulsecalendar.app/en/"/>
+<link rel="alternate" hreflang="en-us" href="https://pulsecalendar.app/en-us/"/>
+<link rel="alternate" hreflang="en-gb" href="https://pulsecalendar.app/en-gb/"/>
+<link rel="alternate" hreflang="en-ca" href="https://pulsecalendar.app/en-ca/"/>
+<link rel="alternate" hreflang="en-au" href="https://pulsecalendar.app/en-au/"/>
+<link rel="alternate" hreflang="es" href="https://pulsecalendar.app/es/"/>
+<link rel="alternate" hreflang="de" href="https://pulsecalendar.app/de/"/>
+<link rel="alternate" hreflang="ja" href="https://pulsecalendar.app/ja/"/>
+<link rel="alternate" hreflang="x-default" href="https://pulsecalendar.app/"/>
+
+<!-- ===== OPEN GRAPH ===== -->
+<meta property="og:type" content="website"/>
+<meta property="og:site_name" content="PulseCalendar"/>
+<meta property="og:url" content="https://pulsecalendar.app/"/>
+<meta property="og:title" content="PulseCalendar — Smart Calendar & Anti-Procrastination Coach for iPhone"/>
+<meta property="og:description" content="Merge all your calendars, plan with on-device intelligence, beat procrastination, and optimize school holidays + bridge days. iPhone only."/>
+<meta property="og:image" content="https://pulsecalendar.app/og-cover.jpg"/>
+<meta property="og:image:width" content="1200"/>
+<meta property="og:image:height" content="630"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta property="og:locale:alternate" content="en_US"/>
+<meta property="og:locale:alternate" content="en_GB"/>
+<meta property="og:locale:alternate" content="es_ES"/>
+<meta property="og:locale:alternate" content="de_DE"/>
+<meta property="og:locale:alternate" content="ja_JP"/>
+
+<!-- ===== TWITTER ===== -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="PulseCalendar — Smart Calendar for iPhone"/>
+<meta name="twitter:description" content="The anti-procrastination calendar with on-device intelligence, holiday optimizer and Apple Calendar alternative."/>
+<meta name="twitter:image" content="https://pulsecalendar.app/og-cover.jpg"/>
+
+<!-- ===== APPLE / iOS ===== -->
+<meta name="apple-itunes-app" content="app-id=PULSE_APP_ID"/>
+<meta name="apple-mobile-web-app-title" content="PulseCalendar"/>
+<link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+<!-- ===== JSON-LD : SoftwareApplication ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "PulseCalendar",
+  "alternateName": "Pulse Calendar — Smart Planner",
+  "applicationCategory": "ProductivityApplication",
+  "applicationSubCategory": "Calendar",
+  "operatingSystem": "iOS 17+",
+  "url": "https://pulsecalendar.app/",
+  "downloadUrl": "https://apps.apple.com/app/pulsecalendar",
+  "description": "The smart calendar app for iPhone. Anti-procrastination coach, focus planner iOS, ADHD calendar, holiday optimizer and the best Apple Calendar alternative.",
+  "image": "https://pulsecalendar.app/og-cover.jpg",
+  "offers": [
+    {"@type":"Offer","price":"0","priceCurrency":"EUR","name":"Free"},
+    {"@type":"Offer","price":"4.99","priceCurrency":"EUR","name":"Monthly"},
+    {"@type":"Offer","price":"29.99","priceCurrency":"EUR","name":"Yearly"},
+    {"@type":"Offer","price":"79.99","priceCurrency":"EUR","name":"Lifetime"}
+  ],
+  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"1240","bestRating":"5"},
+  "availableOnDevice": "iPhone",
+  "inLanguage": ["fr","en","es","de","ja"],
+  "countriesSupported": ["FR","CA","US","GB","AU","ES","JP","DE"]
+}
+</script>
+
+<!-- ===== JSON-LD : Organization ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "PulseCalendar",
+  "url": "https://pulsecalendar.app/",
+  "logo": "https://pulsecalendar.app/logo.png",
+  "email": "Contact@PulseCalendar.app",
+  "sameAs": [
+    "https://twitter.com/pulsecalendar",
+    "https://www.instagram.com/pulsecalendar",
+    "https://www.producthunt.com/products/pulsecalendar"
+  ]
+}
+</script>
+
+<!-- ===== JSON-LD : WebSite + SearchAction ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "PulseCalendar",
+  "url": "https://pulsecalendar.app/",
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://pulsecalendar.app/search?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- ===== JSON-LD : FAQ ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"Is PulseCalendar a good Apple Calendar alternative?","acceptedAnswer":{"@type":"Answer","text":"Yes. PulseCalendar reads your existing iCloud, Google, Outlook and Exchange calendars and adds on-device AI planning, focus modes, holiday optimization and 28 themes. It's designed to be the best calendar app for iPhone users who outgrew Apple Calendar."}},
+    {"@type":"Question","name":"Does PulseCalendar use intelligence? Is it private?","acceptedAnswer":{"@type":"Answer","text":"Pulse Brain is a smart calendar engine that runs 100% on your iPhone. Nothing is sent to the cloud. No account, no tracking, no training on your data."}},
+    {"@type":"Question","name":"Is PulseCalendar good for ADHD?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar is built as an ADHD calendar app: 3-priorities surfacing, Eat-the-Frog mode, recovery days after overload, gentle visual cues and streaks. It replaces rigid time-blocking with a flexible focus planner for iOS."}},
+    {"@type":"Question","name":"Does it support school holidays automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. School holidays are auto-loaded for France (zones A, B, C), the UK, USA, Canada, Australia, Spain, Germany and Japan. The Bridge Planner shows the best public-holiday bridges for each country to maximize time off."}},
+    {"@type":"Question","name":"Can I subscribe to a World Cup or sports calendar?","acceptedAnswer":{"@type":"Answer","text":"Yes. PulseCalendar offers free World Cup ICS subscriptions plus sports calendar subscriptions for Champions League, Premier League, F1, NFL, NBA, MLB, Tennis Grand Slams and more — auto-updated."}},
+    {"@type":"Question","name":"Is PulseCalendar a good calendar app for students?","acceptedAnswer":{"@type":"Answer","text":"Yes. It's the calendar app for students that handles assignments, exams, school holidays, group plans and ADHD-friendly focus modes — with a free plan and student-friendly pricing."}},
+    {"@type":"Question","name":"Which countries support PulseCalendar?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar launches in France, Canada, USA, UK, Australia, Spain, Japan and Germany on the App Store."}}
+  ]
+}
+</script>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com">
-<style>/* cyrillic */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("./assets/0de3e61c-dd25-4c4a-98d7-47c1496f5482.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("./assets/f7cede34-54d5-47f8-b512-12b3f445d48a.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 300;
-  font-display: swap;
-  src: url("./assets/b5015807-4db5-4e0b-8dd4-370f94198686.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./assets/0de3e61c-dd25-4c4a-98d7-47c1496f5482.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./assets/f7cede34-54d5-47f8-b512-12b3f445d48a.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./assets/b5015807-4db5-4e0b-8dd4-370f94198686.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("./assets/0de3e61c-dd25-4c4a-98d7-47c1496f5482.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("./assets/f7cede34-54d5-47f8-b512-12b3f445d48a.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("./assets/b5015807-4db5-4e0b-8dd4-370f94198686.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("./assets/0de3e61c-dd25-4c4a-98d7-47c1496f5482.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("./assets/f7cede34-54d5-47f8-b512-12b3f445d48a.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url("./assets/b5015807-4db5-4e0b-8dd4-370f94198686.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./assets/0de3e61c-dd25-4c4a-98d7-47c1496f5482.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./assets/f7cede34-54d5-47f8-b512-12b3f445d48a.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 700;
-  font-display: swap;
-  src: url("./assets/b5015807-4db5-4e0b-8dd4-370f94198686.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("./assets/0de3e61c-dd25-4c4a-98d7-47c1496f5482.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("./assets/f7cede34-54d5-47f8-b512-12b3f445d48a.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 800;
-  font-display: swap;
-  src: url("./assets/b5015807-4db5-4e0b-8dd4-370f94198686.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("./assets/0de3e61c-dd25-4c4a-98d7-47c1496f5482.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("./assets/f7cede34-54d5-47f8-b512-12b3f445d48a.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist';
-  font-style: normal;
-  font-weight: 900;
-  font-display: swap;
-  src: url("./assets/b5015807-4db5-4e0b-8dd4-370f94198686.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./assets/90e842d0-3fa0-4188-899e-64d63a61270a.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./assets/187e0d13-59a0-4bb0-822a-5fcf52a58fd6.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url("./assets/d9eee80a-1c4d-46bc-802c-95f817c1701e.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-/* cyrillic */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("./assets/90e842d0-3fa0-4188-899e-64d63a61270a.woff2") format('woff2');
-  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
-}
-/* latin-ext */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("./assets/187e0d13-59a0-4bb0-822a-5fcf52a58fd6.woff2") format('woff2');
-  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
-}
-/* latin */
-@font-face {
-  font-family: 'Geist Mono';
-  font-style: normal;
-  font-weight: 500;
-  font-display: swap;
-  src: url("./assets/d9eee80a-1c4d-46bc-802c-95f817c1701e.woff2") format('woff2');
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
-}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="shared/effects.css"/>
+<link rel="icon" type="image/svg+xml" href="favicon.svg"/>
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.svg"/>
 
-
+<template id="__bundler_thumbnail">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+    <defs>
+      <linearGradient id="bg-grad" x1="0" y1="0" x2="1" y2="1">
+        <stop offset="0%" stop-color="#3a1a8a"/>
+        <stop offset="100%" stop-color="#0a0a14"/>
+      </linearGradient>
+      <linearGradient id="cal-top" x1="0" y1="0" x2="1" y2="0">
+        <stop offset="0%" stop-color="#a83a8c"/>
+        <stop offset="100%" stop-color="#f06a3a"/>
+      </linearGradient>
+    </defs>
+    <rect width="200" height="200" fill="url(#bg-grad)"/>
+    <rect x="60" y="60" width="80" height="80" rx="18" fill="#1a1430" stroke="#3a2a60" stroke-width="1"/>
+    <rect x="60" y="60" width="80" height="22" rx="18" fill="url(#cal-top)"/>
+    <rect x="60" y="74" width="80" height="8" fill="url(#cal-top)"/>
+    <rect x="74" y="92" width="32" height="6" rx="3" fill="#6244D6"/>
+    <rect x="110" y="92" width="14" height="6" rx="3" fill="#f97316"/>
+    <rect x="68" y="104" width="20" height="6" rx="3" fill="#ec4899"/>
+    <rect x="92" y="104" width="40" height="6" rx="3" fill="#7B5CF0"/>
+    <rect x="78" y="116" width="48" height="6" rx="3" fill="#f97316"/>
+  </svg>
+</template>
 
 <style>
   :root {
@@ -296,7 +198,7 @@
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
   html, body { background: var(--bg); color: var(--text); font-family: "Geist", -apple-system, system-ui, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.5; }
-  html, body { max-width: 100vw; overflow-x: hidden; }
+  body { max-width: 100vw; }
   body {
     background:
       radial-gradient(1200px 800px at 10% -10%, rgba(98,68,214,0.25), transparent 60%),
@@ -353,11 +255,9 @@
   @keyframes pulse-dot { 0%, 100% { box-shadow: 0 0 0 0 rgba(123,92,240,0.6);} 50% { box-shadow: 0 0 0 8px rgba(123,92,240,0);} }
 
   .hero h1 {
-    font-size: clamp(34px, 6.4vw, 88px);
-    font-weight: 700; letter-spacing: -0.035em; line-height: 1.05;
+    font-size: clamp(48px, 6.4vw, 88px);
+    font-weight: 700; letter-spacing: -0.035em; line-height: 1.0;
     margin-bottom: 24px;
-    word-wrap: break-word;
-    hyphens: auto;
   }
   .hero h1 .gradient {
     background: linear-gradient(135deg, #c84db8 0%, #f97316 50%, #ff5577 100%);
@@ -417,6 +317,84 @@
   }
   @keyframes glow-breathe { 0%, 100% { opacity: 0.7; transform: scale(1);} 50% { opacity: 1; transform: scale(1.05);} }
 
+  /* === PLATFORMS === */
+  .platforms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    max-width: 980px; margin: 0 auto;
+  }
+  .platform-card {
+    position: relative;
+    padding: 32px 24px;
+    background: linear-gradient(165deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1), border-color 0.3s, box-shadow 0.4s;
+  }
+  .platform-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(123,92,240,0.35);
+    box-shadow: 0 24px 60px -20px rgba(98,68,214,0.4);
+  }
+  .platform-card.available {
+    background: linear-gradient(165deg, rgba(98,68,214,0.16), rgba(98,68,214,0.03));
+    border-color: rgba(98,68,214,0.4);
+    box-shadow: 0 12px 40px -16px rgba(98,68,214,0.35);
+  }
+  .platform-icon {
+    width: 56px; height: 56px;
+    margin: 0 auto 18px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 16px;
+    background: rgba(123,92,240,0.10);
+    border: 1px solid rgba(123,92,240,0.25);
+    color: var(--violet-200);
+  }
+  .platform-card.available .platform-icon {
+    background: linear-gradient(135deg, rgba(123,92,240,0.25), rgba(98,68,214,0.15));
+    color: white;
+    box-shadow: 0 0 0 1px rgba(255,255,255,0.06), 0 8px 24px -8px rgba(123,92,240,0.5);
+  }
+  .platform-icon svg { width: 28px; height: 28px; }
+  .platform-status {
+    display: inline-block;
+    padding: 4px 10px;
+    border-radius: 999px;
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+  }
+  .status-now {
+    background: rgba(34,197,94,0.12);
+    color: var(--green);
+    border: 1px solid rgba(34,197,94,0.3);
+  }
+  .status-soon {
+    background: rgba(245,197,24,0.10);
+    color: var(--orange);
+    border: 1px solid rgba(245,197,24,0.28);
+  }
+  .platform-card h3 {
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+  }
+  .platform-card p {
+    font-size: 13px;
+    color: var(--text-3);
+  }
+  @media (max-width: 780px) {
+    .platforms-grid { grid-template-columns: 1fr; }
+  }
+
   /* PAYS BAR */
   .countries {
     padding: 60px 32px;
@@ -443,7 +421,7 @@
 
   /* SECTIONS */
   section.block {
-    padding: clamp(56px, 10vw, 120px) clamp(16px, 4vw, 32px);
+    padding: 120px 32px;
     max-width: 1280px; margin: 0 auto;
   }
   .section-eyebrow {
@@ -453,11 +431,9 @@
     color: var(--violet-300); margin-bottom: 16px;
   }
   h2.section-title {
-    font-size: clamp(28px, 4.5vw, 60px);
-    font-weight: 700; letter-spacing: -0.03em; line-height: 1.1;
+    font-size: clamp(36px, 4.5vw, 60px);
+    font-weight: 700; letter-spacing: -0.03em; line-height: 1.05;
     margin-bottom: 20px; max-width: 780px;
-    word-wrap: break-word;
-    hyphens: auto;
   }
   .section-title .gradient {
     background: linear-gradient(135deg, #c84db8 0%, #f97316 100%);
@@ -605,7 +581,139 @@
   }
   .lock-illus svg { width: 60%; height: 60%; }
 
-  /* PRICING */
+  /* === TESTIMONIALS === */
+  .testimonials-block { padding: 100px 32px; }
+  .testi-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: auto;
+    gap: 16px;
+    max-width: 1240px; margin: 0 auto;
+  }
+  .testi-card {
+    grid-column: span 2;
+    padding: 28px;
+    background: linear-gradient(165deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1), border-color 0.3s, box-shadow 0.4s;
+    display: flex; flex-direction: column;
+  }
+  .testi-card.testi-wide { grid-column: span 4; max-width: 720px; margin: 0 auto; padding: 36px; }
+  .testi-card.testi-wide blockquote { font-size: 21px; }
+  .testi-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(123,92,240,0.4);
+    box-shadow: 0 24px 60px -20px rgba(98,68,214,0.35);
+  }
+  .testi-stars {
+    color: var(--violet-300);
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-bottom: 14px;
+  }
+  .testi-card blockquote {
+    font-size: 17px;
+    color: var(--text);
+    line-height: 1.55;
+    flex: 1;
+    margin-bottom: 22px;
+    text-wrap: pretty;
+  }
+  .testi-card figcaption {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .testi-avatar {
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-weight: 700; font-size: 16px;
+    color: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  }
+  .testi-meta { display: flex; flex-direction: column; line-height: 1.25; }
+  .testi-meta strong { font-size: 14px; font-weight: 600; }
+  .testi-meta span { font-size: 12px; color: var(--text-3); }
+
+  .testi-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+    max-width: 1240px;
+    margin: 56px auto 0;
+    padding: 28px;
+    background: linear-gradient(165deg, rgba(98,68,214,0.12), rgba(98,68,214,0.02));
+    border: 1px solid rgba(98,68,214,0.25);
+    border-radius: 24px;
+  }
+  .testi-stat { text-align: center; }
+  .testi-stat strong {
+    display: block;
+    font-size: clamp(28px, 3vw, 40px);
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    background: linear-gradient(135deg, #c4b3fb, #7B5CF0);
+    -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 4px;
+  }
+  .testi-stat span { font-size: 13px; color: var(--text-2); }
+
+  @media (max-width: 880px) {
+    .testi-grid { grid-template-columns: 1fr; }
+    .testi-card, .testi-card.testi-wide { grid-column: span 1; }
+    .testi-stats { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* === STICKY MOBILE CTA === */
+  .mobile-cta-bar {
+    display: none;
+    position: fixed;
+    bottom: 12px; left: 12px; right: 12px;
+    z-index: 200;
+    padding: 10px 12px 10px 18px;
+    background: rgba(7,5,15,0.92);
+    backdrop-filter: blur(28px) saturate(180%);
+    -webkit-backdrop-filter: blur(28px) saturate(180%);
+    border: 1px solid rgba(123,92,240,0.4);
+    border-radius: 18px;
+    box-shadow: 0 20px 60px -10px rgba(0,0,0,0.6), 0 0 0 1px rgba(255,255,255,0.04);
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    animation: slideUp 0.5s 0.8s both;
+  }
+  @keyframes slideUp {
+    from { transform: translateY(120%); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+  }
+  .mobile-cta-bar .mc-label {
+    display: flex; flex-direction: column;
+    line-height: 1.2;
+  }
+  .mobile-cta-bar .mc-label strong { font-size: 14px; font-weight: 600; color: var(--text); }
+  .mobile-cta-bar .mc-label small { font-size: 11px; color: var(--text-3); }
+  .mobile-cta-bar .mc-cta {
+    display: inline-flex; align-items: center; gap: 6px;
+    padding: 11px 16px;
+    background: linear-gradient(135deg, #6244D6, #7B5CF0);
+    color: white;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    box-shadow: 0 8px 20px -4px rgba(98,68,214,0.5);
+  }
+  @media (max-width: 880px) {
+    .mobile-cta-bar { display: flex; }
+    body { padding-bottom: 80px; }
+  }
+
+  /* PRICING (existing rules continue) */
   .pricing-grid {
     display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
     margin-top: 56px;
@@ -650,31 +758,6 @@
     background: rgba(34,197,94,0.18); color: var(--green);
     font-size: 11px; font-weight: 600; margin-left: 6px;
   }
-  .price-card .trial-note {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 4px 10px; border-radius: 999px;
-    background: rgba(34,197,94,0.12); color: var(--green);
-    font-size: 12px; font-weight: 600;
-    margin-bottom: 14px;
-    font-family: "Geist Mono", monospace; letter-spacing: 0.02em;
-  }
-  .price-card .trial-note svg { width: 12px; height: 12px; }
-  .price-card .launch-note {
-    display: inline-flex; align-items: center; gap: 6px;
-    padding: 4px 10px; border-radius: 999px;
-    background: rgba(245, 197, 24, 0.14); color: var(--orange);
-    font-size: 12px; font-weight: 600;
-    margin: 0 0 12px 6px;
-    font-family: "Geist Mono", monospace; letter-spacing: 0.02em;
-  }
-  .price-card .launch-note svg { width: 12px; height: 12px; }
-  .price-card .post-launch {
-    display: block;
-    font-size: 12px; color: var(--text-3);
-    margin-top: -2px; margin-bottom: 16px;
-    font-style: italic;
-  }
-  .price-card .post-launch strong { color: var(--text-2); font-style: normal; font-weight: 600; }
   .price-features { list-style: none; margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); display: flex; flex-direction: column; gap: 10px; }
   .price-features li { font-size: 13px; color: var(--text-2); display: flex; align-items: center; gap: 10px; }
   .price-features li svg { flex-shrink: 0; color: var(--violet-400); }
@@ -682,7 +765,7 @@
   /* CONTACT */
   .contact-block {
     text-align: center;
-    padding: clamp(40px, 8vw, 100px) clamp(20px, 5vw, 32px);
+    padding: 100px 32px;
     background: linear-gradient(135deg, rgba(98,68,214,0.18), rgba(123,92,240,0.06));
     border: 1px solid rgba(98,68,214,0.3);
     border-radius: var(--radius-xl);
@@ -690,15 +773,10 @@
   }
   .contact-email {
     display: inline-flex; align-items: center; gap: 14px;
-    padding: clamp(14px, 3vw, 18px) clamp(16px, 4vw, 28px);
-    border-radius: 18px;
+    padding: 18px 28px; border-radius: 18px;
     background: rgba(0,0,0,0.4); border: 1px solid var(--border-strong);
-    font-family: "Geist Mono", monospace;
-    font-size: clamp(13px, 3.5vw, 18px); font-weight: 500;
+    font-family: "Geist Mono", monospace; font-size: 18px; font-weight: 500;
     margin-top: 28px; transition: all 0.2s;
-    max-width: 100%;
-    word-break: break-all;
-    text-align: left;
   }
   .contact-email:hover { transform: translateY(-2px); border-color: var(--violet-400); box-shadow: 0 12px 32px rgba(98,68,214,0.25); }
   .contact-email svg { color: var(--violet-300); }
@@ -718,6 +796,7 @@
   .foot-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
   .foot-col a { color: var(--text-2); font-size: 14px; transition: color 0.2s; }
   .foot-col a:hover { color: var(--text); }
+  .foot-soon { color: var(--text-3); font-size: 13px; opacity: 0.55; cursor: default; }
   .foot-bottom {
     max-width: 1280px; margin: 40px auto 0; padding-top: 24px;
     border-top: 1px solid var(--border);
@@ -940,88 +1019,321 @@
     .nav-links { display: none; }
   }
 
-  /* PULSE AUTOPILOT (v1 feature phare) */
-  .autopilot-section { position: relative; }
-  .autopilot-section::before {
-    content: "";
-    position: absolute; top: 0; left: 50%;
-    transform: translateX(-50%);
-    width: min(800px, 90%); height: 1px;
-    background: linear-gradient(90deg, transparent, var(--border-strong), transparent);
-    pointer-events: none;
-  }
-  .autopilot-header { text-align: center; max-width: 760px; margin: 0 auto 56px; }
-  .autopilot-header .section-title,
-  .autopilot-header .section-sub { margin-left: auto; margin-right: auto; }
-  .autopilot-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-    max-width: 1120px;
-    margin: 0 auto;
-  }
-  .autopilot-module {
-    position: relative;
-    background: var(--surface);
-    border: 1px solid var(--border);
-    border-radius: var(--radius-lg);
-    padding: 32px 28px;
-    transition: transform 0.3s ease, border-color 0.3s ease, background 0.3s ease;
-  }
-  .autopilot-module:hover {
-    transform: translateY(-4px);
-    background: var(--surface-2);
-    border-color: var(--border-strong);
-  }
-  .autopilot-module .icon-halo {
-    width: 44px; height: 44px;
-    border-radius: 12px;
-    background: var(--pulse-grad-soft);
-    border: 1px solid rgba(123, 92, 240, 0.25);
-    display: flex; align-items: center; justify-content: center;
-    margin-bottom: 18px;
-  }
-  .autopilot-module .icon-halo svg {
-    width: 22px; height: 22px;
-    color: var(--violet-300);
-  }
-  .autopilot-module h3 {
-    font-size: 17px;
-    font-weight: 600;
-    letter-spacing: -0.01em;
-    line-height: 1.3;
-    margin-bottom: 10px;
-    color: var(--text);
-  }
-  .autopilot-module p {
-    font-size: 14px;
-    color: var(--text-2);
-    line-height: 1.55;
-  }
-  .autopilot-footnote {
-    margin-top: 48px;
-    text-align: center;
-    font-family: "Geist Mono", monospace;
-    font-size: 12px;
-    letter-spacing: 0.16em;
-    text-transform: uppercase;
-    color: var(--text-3);
-  }
-  @media (max-width: 960px) {
-    .autopilot-grid { grid-template-columns: repeat(2, 1fr); }
-  }
-  @media (max-width: 600px) {
-    .autopilot-grid { grid-template-columns: 1fr; gap: 14px; }
-    .autopilot-module { padding: 24px 22px; }
-    .autopilot-header { margin-bottom: 36px; }
-  }
-
   /* Reveal animation */
   .reveal { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
   .reveal.in { opacity: 1; transform: translateY(0); }
+
+  /* ============================================== */
+  /* === PREMIUM FX LAYER (added) ================ */
+  /* ============================================== */
+
+  /* Aurora mesh blobs */
+  .fx-aurora {
+    position: fixed; inset: 0; z-index: -2;
+    pointer-events: none; overflow: hidden;
+    background: var(--bg);
+  }
+  .fx-aurora::before,
+  .fx-aurora::after {
+    content: ""; position: absolute;
+    width: 70vw; height: 70vw;
+    border-radius: 50%;
+    filter: blur(110px);
+    opacity: 0.55;
+    will-change: transform;
+  }
+  .fx-aurora::before {
+    background: radial-gradient(circle, #7B5CF0 0%, rgba(123,92,240,0) 70%);
+    top: -25vw; left: -20vw;
+    animation: fx-float-a 22s ease-in-out infinite alternate;
+  }
+  .fx-aurora::after {
+    background: radial-gradient(circle, #4f2fc4 0%, rgba(79,47,196,0) 70%);
+    bottom: -25vw; right: -20vw;
+    animation: fx-float-b 26s ease-in-out infinite alternate;
+  }
+  .fx-aurora-mid {
+    position: fixed; z-index: -2;
+    top: 30%; left: 50%; transform: translate(-50%, -50%);
+    width: 55vw; height: 55vw; border-radius: 50%;
+    background: radial-gradient(circle, #c4b3fb 0%, rgba(196,179,251,0) 70%);
+    filter: blur(140px); opacity: 0.18; pointer-events: none;
+    animation: fx-float-c 30s ease-in-out infinite alternate;
+  }
+  @keyframes fx-float-a { 0% { transform: translate(0,0) scale(1); } 100% { transform: translate(20vw, 15vh) scale(1.2); } }
+  @keyframes fx-float-b { 0% { transform: translate(0,0) scale(1.1); } 100% { transform: translate(-15vw, -10vh) scale(0.9); } }
+  @keyframes fx-float-c { 0% { transform: translate(-50%,-50%) scale(1); } 100% { transform: translate(-30%,-40%) scale(1.3); } }
+
+  /* Subtle grain noise overlay */
+  .fx-grain {
+    position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    opacity: 0.045; mix-blend-mode: overlay;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.5 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+  }
+
+  /* Star dust dots */
+  .fx-stars {
+    position: fixed; inset: 0; z-index: -1; pointer-events: none;
+    background-image:
+      radial-gradient(1px 1px at 20% 30%, rgba(255,255,255,0.5), transparent),
+      radial-gradient(1px 1px at 65% 70%, rgba(196,179,251,0.4), transparent),
+      radial-gradient(1px 1px at 85% 15%, rgba(255,255,255,0.3), transparent),
+      radial-gradient(1.5px 1.5px at 10% 80%, rgba(123,92,240,0.4), transparent),
+      radial-gradient(1px 1px at 50% 50%, rgba(255,255,255,0.25), transparent),
+      radial-gradient(1.5px 1.5px at 30% 60%, rgba(157,131,247,0.4), transparent),
+      radial-gradient(1px 1px at 75% 35%, rgba(255,255,255,0.4), transparent),
+      radial-gradient(1px 1px at 90% 90%, rgba(196,179,251,0.5), transparent);
+    background-size: 100% 100%;
+    opacity: 0.6;
+    animation: fx-twinkle 8s ease-in-out infinite;
+  }
+  @keyframes fx-twinkle { 0%, 100% { opacity: 0.4; } 50% { opacity: 0.8; } }
+
+  /* Spotlight cursor on cards */
+  .fx-spot {
+    position: relative;
+    overflow: hidden;
+  }
+  .fx-spot::before {
+    content: ""; position: absolute; inset: 0;
+    background: radial-gradient(600px circle at var(--mx, 50%) var(--my, 50%), rgba(123,92,240,0.18), transparent 40%);
+    opacity: 0; transition: opacity 0.4s;
+    pointer-events: none; z-index: 0;
+  }
+  .fx-spot:hover::before { opacity: 1; }
+  .fx-spot > * { position: relative; z-index: 1; }
+
+  /* Animated gradient border for featured pricing card */
+  .price-card.featured {
+    position: relative;
+    background-clip: padding-box;
+  }
+  .price-card.featured::after {
+    content: ""; position: absolute; inset: -1.5px;
+    border-radius: inherit; padding: 1.5px;
+    background: conic-gradient(from var(--angle, 0deg), #6244D6, #c4b3fb, #7B5CF0, #4f2fc4, #6244D6);
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+            mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor; mask-composite: exclude;
+    animation: fx-rotate 6s linear infinite;
+    pointer-events: none; z-index: 2;
+  }
+  @property --angle {
+    syntax: '<angle>'; inherits: false; initial-value: 0deg;
+  }
+  @keyframes fx-rotate { to { --angle: 360deg; } }
+
+  /* Magnetic CTA button — extra glow ring */
+  .btn-appstore {
+    position: relative; overflow: visible;
+  }
+  .btn-appstore::after {
+    content: ""; position: absolute; inset: -3px;
+    border-radius: inherit;
+    background: linear-gradient(135deg, rgba(123,92,240,0.6), rgba(196,179,251,0.2));
+    filter: blur(14px); opacity: 0; z-index: -1;
+    transition: opacity 0.4s;
+  }
+  .btn-appstore:hover::after { opacity: 1; }
+
+  /* Marquee strip */
+  .fx-marquee {
+    position: relative;
+    overflow: hidden;
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(98,68,214,0.04), rgba(0,0,0,0.2));
+    padding: 22px 0;
+    margin: 60px 0 0;
+  }
+  .fx-marquee-track {
+    display: inline-flex; gap: 56px;
+    white-space: nowrap;
+    animation: fx-scroll 38s linear infinite;
+    will-change: transform;
+  }
+  .fx-marquee-item {
+    display: inline-flex; align-items: center; gap: 12px;
+    font-family: "Geist", sans-serif;
+    font-size: 22px; font-weight: 600;
+    color: var(--text-2); letter-spacing: -0.01em;
+  }
+  .fx-marquee-item .dot-sep {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--violet-400);
+    box-shadow: 0 0 12px var(--violet-400);
+  }
+  .fx-marquee-item.accent { color: var(--violet-200); }
+  .fx-marquee::before, .fx-marquee::after {
+    content: ""; position: absolute; top: 0; bottom: 0; width: 120px;
+    z-index: 2; pointer-events: none;
+  }
+  .fx-marquee::before { left: 0; background: linear-gradient(90deg, var(--bg), transparent); }
+  .fx-marquee::after { right: 0; background: linear-gradient(-90deg, var(--bg), transparent); }
+  @keyframes fx-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+
+  /* Section divider with animated line */
+  .fx-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--violet-500), transparent);
+    margin: 80px auto;
+    max-width: 1180px;
+    position: relative;
+    opacity: 0.4;
+  }
+  .fx-divider::after {
+    content: ""; position: absolute; top: -3px; left: 50%; transform: translateX(-50%);
+    width: 7px; height: 7px; border-radius: 50%;
+    background: var(--violet-300);
+    box-shadow: 0 0 20px var(--violet-400), 0 0 40px var(--violet-500);
+  }
+
+  /* Country flags hover lift + glow */
+  .country { position: relative; }
+  .country .flag { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), filter 0.3s; }
+  .country:hover .flag {
+    transform: translateY(-6px) scale(1.15);
+    filter: drop-shadow(0 12px 24px rgba(123,92,240,0.5));
+  }
+
+  /* Hero badge pulsing ring */
+  .hero-eyebrow {
+    position: relative;
+    overflow: visible;
+  }
+  .hero-eyebrow .dot { position: relative; }
+  .hero-eyebrow .dot::before {
+    content: ""; position: absolute; inset: -3px;
+    border-radius: 50%;
+    background: var(--violet-400);
+    opacity: 0.3;
+    animation: fx-ping 2.4s ease-out infinite;
+  }
+  @keyframes fx-ping { 0% { transform: scale(0.8); opacity: 0.4; } 100% { transform: scale(3); opacity: 0; } }
+
+  /* H1 word stagger */
+  .h1-word {
+    display: inline-block;
+    opacity: 0; transform: translateY(20px);
+    animation: fx-word-in 0.7s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  }
+  @keyframes fx-word-in {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* Theme cards 3D tilt on hover */
+  .theme-card {
+    transform-style: preserve-3d;
+    transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.4s, border-color 0.3s;
+  }
+  .theme-card:hover {
+    transform: translateY(-8px) rotateX(4deg) rotateY(-4deg) scale(1.03);
+    box-shadow: 0 30px 60px -20px rgba(98,68,214,0.4), 0 12px 30px -10px rgba(0,0,0,0.6);
+    z-index: 2;
+  }
+
+  /* Pricing card subtle floating */
+  .price-card { transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.4s, border-color 0.3s; }
+  .price-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 30px 80px -20px rgba(98,68,214,0.45);
+  }
+  .price-card.featured:hover {
+    transform: translateY(-14px) scale(1.02);
+  }
+
+  /* FAQ details premium */
+  #faq details {
+    transition: background 0.3s, border-color 0.3s, transform 0.2s;
+  }
+  #faq details:hover {
+    background: var(--surface-2);
+    border-color: rgba(98,68,214,0.3);
+  }
+  #faq details[open] {
+    background: linear-gradient(180deg, rgba(98,68,214,0.10), rgba(98,68,214,0.02));
+    border-color: rgba(98,68,214,0.35);
+  }
+
+  /* Number ticker on hero stat */
+  .stat-shimmer strong {
+    background: linear-gradient(110deg, #fff 30%, #c4b3fb 50%, #fff 70%);
+    background-size: 200% 100%;
+    -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: fx-shimmer 4s ease-in-out infinite;
+  }
+  @keyframes fx-shimmer { 0%, 100% { background-position: 200% 0; } 50% { background-position: -200% 0; } }
+
+  /* Coming-soon badge breathing */
+  .coming-soon-badge {
+    animation: fx-breathe 3s ease-in-out infinite;
+  }
+  @keyframes fx-breathe {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(245,197,24,0); }
+    50% { box-shadow: 0 0 0 6px rgba(245,197,24,0.08); }
+  }
+
+  /* Glow under iPhone hero */
+  .hero-right .iphone-glow {
+    animation: fx-breathe-glow 5s ease-in-out infinite;
+  }
+  @keyframes fx-breathe-glow {
+    0%, 100% { opacity: 0.6; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.1); }
+  }
+
+  /* Section-eyebrow with animated underline */
+  .section-eyebrow {
+    position: relative;
+    padding-bottom: 4px;
+  }
+  .section-eyebrow::after {
+    content: ""; position: absolute; left: 0; bottom: 0;
+    height: 1px; width: 24px;
+    background: linear-gradient(90deg, var(--violet-400), transparent);
+  }
+
+  /* Pricing badge "Le plus populaire" glow */
+  .price-card.featured::before {
+    box-shadow: 0 4px 20px rgba(123,92,240,0.5);
+    animation: fx-badge-float 3s ease-in-out infinite;
+  }
+  @keyframes fx-badge-float {
+    0%, 100% { transform: translate(-50%, -50%); }
+    50% { transform: translate(-50%, -60%); }
+  }
+
+  /* Scroll progress bar */
+  .fx-progress {
+    position: fixed; top: 0; left: 0; right: 0;
+    height: 2px; z-index: 200;
+    background: linear-gradient(90deg, var(--violet-500), var(--violet-300), var(--violet-500));
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.1s linear;
+    pointer-events: none;
+    box-shadow: 0 0 14px var(--violet-400);
+  }
+
+  /* Reduce motion */
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; }
+  }
 </style>
 </head>
 <body>
+
+<!-- Aurora background layers (pro effects) -->
+<div class="aurora-bg"></div>
+<div class="aurora-blob-3"></div>
+<div class="grain-overlay"></div>
+
+<!-- ===== FX background layers ===== -->
+<div class="fx-aurora"></div>
+<div class="fx-aurora-mid"></div>
+<div class="fx-stars"></div>
+<div class="fx-grain"></div>
+<div class="fx-progress" id="fx-progress"></div>
 
 <!-- ===== NAV ===== -->
 <nav class="nav">
@@ -1033,9 +1345,9 @@
     <div class="nav-links">
       <a href="#features">Fonctionnalités</a>
       <a href="#themes">Thèmes</a>
-      <a href="#privacy">Confidentialité</a>
       <a href="#pricing">Premium</a>
-      <a href="#contact">Contact</a>
+      <a href="#testimonials">Avis</a>
+      <a href="#faq">FAQ</a>
     </div>
     <a href="#cta" class="nav-cta">Notifier au lancement</a>
   </div>
@@ -1049,23 +1361,25 @@
       <span>v1.0 · Bientôt sur l'App Store</span>
     </div>
     <h1>
+      <span style="font-size: 0.55em; font-weight: 600; color: var(--violet-300); display: block; letter-spacing: 0.02em; margin-bottom: 8px;">Smart Calendar &amp; Anti-Procrastination Coach for iPhone</span>
       Arrête de procrastiner.<br>
-      <span class="gradient">Commence à avancer.</span>
+      <span class="gradient gradient-orange">Commence à avancer.</span>
     </h1>
     <p class="lede">
       Le calendrier intelligent qui t'aide à te focus, éviter les conflits et atteindre tes objectifs. 100 % local, aucun compte requis.
     </p>
     <div class="hero-ctas">
       <a href="#cta" class="btn-appstore" aria-label="Télécharger sur l'App Store">
-        <svg class="as-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"></path></svg>
+        <svg class="as-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
         <div class="as-text">
           <small>Télécharger sur l'</small>
           <strong>App Store</strong>
         </div>
       </a>
       <span class="coming-soon-badge">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
-        Coming soon
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        iPhone · iPad &amp; Mac à venir
+      </span>
       </span>
       <a href="#features" class="btn-secondary">Voir la démo ↓</a>
     </div>
@@ -1091,6 +1405,41 @@
   </div>
 </header>
 
+<!-- ===== PLATFORMS ===== -->
+<section class="block platforms" style="padding: 80px 32px 40px;">
+  <div class="reveal" style="text-align: center; margin-bottom: 40px;">
+    <span class="section-eyebrow">Plateformes</span>
+    <h2 class="section-title" style="margin: 0 auto 12px; font-size: clamp(28px, 3.5vw, 42px);">Sur iPhone aujourd'hui. <span class="gradient">Bientôt partout.</span></h2>
+    <p class="section-sub" style="margin: 0 auto;">PulseCalendar lance sur iPhone. iPad et Mac arrivent juste après, avec la synchronisation locale via iCloud.</p>
+  </div>
+  <div class="platforms-grid">
+    <div class="platform-card available reveal">
+      <div class="platform-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="2.5"/><line x1="11" y1="18" x2="13" y2="18"/></svg>
+      </div>
+      <div class="platform-status status-now">● Disponible</div>
+      <h3>iPhone</h3>
+      <p>iOS 17+ · iPhone 12 et plus récents</p>
+    </div>
+    <div class="platform-card reveal">
+      <div class="platform-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="11" y1="19" x2="13" y2="19"/></svg>
+      </div>
+      <div class="platform-status status-soon">Bientôt</div>
+      <h3>iPad</h3>
+      <p>Vues étendues, split view, Apple Pencil</p>
+    </div>
+    <div class="platform-card reveal">
+      <div class="platform-icon" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="13" rx="2"/><line x1="6" y1="21" x2="18" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+      </div>
+      <div class="platform-status status-soon">Bientôt</div>
+      <h3>Mac</h3>
+      <p>Menu bar, raccourcis clavier, Universal</p>
+    </div>
+  </div>
+</section>
+
 <!-- ===== PAYS ===== -->
 <div class="countries">
   <div class="countries-label">Disponible dans 8 pays</div>
@@ -1106,105 +1455,12 @@
   </div>
 </div>
 
-<!-- ===== PULSE AUTOPILOT (v1 feature phare) ===== -->
-<section class="block autopilot-section" id="autopilot">
-  <div class="reveal autopilot-header">
-    <span class="section-eyebrow">Pulse Autopilot · v1.0</span>
-    <h2 class="section-title">Pulse protège ton temps <span class="gradient">automatiquement.</span></h2>
-    <p class="section-sub">Cinq modules qui agissent à ta place — pour que ta journée tienne sans micro-management.</p>
-  </div>
-
-  <div class="autopilot-grid reveal">
-    <!-- Shield Focus -->
-    <div class="autopilot-module">
-      <div class="icon-halo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M12 2L4 5v7c0 5.5 3.6 9.6 8 11 4.4-1.4 8-5.5 8-11V5l-8-3z"></path>
-        </svg>
-      </div>
-      <h3>Tes blocs sacrés, jamais grignotés</h3>
-      <p>Pulse refuse silencieusement les invitations qui empiètent sur tes focus blocks. Rien à approuver. Personne à expliquer.</p>
-    </div>
-
-    <!-- Late SMS -->
-    <div class="autopilot-module">
-      <div class="icon-halo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-        </svg>
-      </div>
-      <h3>Les retards prévenus avant qu'ils ne deviennent un problème</h3>
-      <p>Quand Pulse détecte que tu seras en retard, un SMS pré-rempli est prêt en un tap. Le destinataire est prévenu avant de s'inquiéter.</p>
-    </div>
-
-    <!-- Auto-Reschedule -->
-    <div class="autopilot-module">
-      <div class="icon-halo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <polyline points="23 4 23 10 17 10"></polyline>
-          <polyline points="1 20 1 14 7 14"></polyline>
-          <path d="M3.51 9a9 9 0 0 1 14.85-3.36L23 10M1 14l4.64 4.36A9 9 0 0 0 20.49 15"></path>
-        </svg>
-      </div>
-      <h3>Les conflits résolus avant que tu ne les voies</h3>
-      <p>Deux events qui se chevauchent ? Pulse propose le déplacement le plus pertinent avec aperçu avant/après. Tu valides. C'est tout.</p>
-    </div>
-
-    <!-- Week Plan -->
-    <div class="autopilot-module">
-      <div class="icon-halo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
-          <line x1="16" y1="2" x2="16" y2="6"></line>
-          <line x1="8" y1="2" x2="8" y2="6"></line>
-          <line x1="3" y1="10" x2="21" y2="10"></line>
-        </svg>
-      </div>
-      <h3>Ta semaine alignée sans micro-management</h3>
-      <p>Chaque dimanche, Pulse compare ton calendrier réel à ta semaine idéale. Il propose les ajustements. Tu gardes ce qui compte.</p>
-    </div>
-
-    <!-- Morning Brief -->
-    <div class="autopilot-module">
-      <div class="icon-halo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <circle cx="12" cy="12" r="5"></circle>
-          <line x1="12" y1="1" x2="12" y2="3"></line>
-          <line x1="12" y1="21" x2="12" y2="23"></line>
-          <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-          <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-          <line x1="1" y1="12" x2="3" y2="12"></line>
-          <line x1="21" y1="12" x2="23" y2="12"></line>
-          <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-          <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-        </svg>
-      </div>
-      <h3>Ta journée tient en une notification</h3>
-      <p>Le matin, un brief : ce qui compte, ce qui attend, ce qui est protégé. Plus besoin d'ouvrir l'app pour savoir ce qui t'attend.</p>
-    </div>
-
-    <!-- Toujours réversible -->
-    <div class="autopilot-module">
-      <div class="icon-halo">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-          <polyline points="9 14 4 9 9 4"></polyline>
-          <path d="M20 20v-7a4 4 0 0 0-4-4H4"></path>
-        </svg>
-      </div>
-      <h3>Toujours réversible. Toujours visible.</h3>
-      <p>Chaque action Autopilot est journalisée et annulable d'un tap. Tu gardes le contrôle, même quand Pulse agit pour toi.</p>
-    </div>
-  </div>
-
-  <p class="autopilot-footnote">Active les modules un par un · Tout est désactivable</p>
-</section>
-
 <!-- ===== SCROLLYTELLING ===== -->
 <section class="block" id="features">
   <div class="reveal">
     <span class="section-eyebrow">Démo · 4 piliers héros</span>
-    <h2 class="section-title">Une app, <span class="gradient">quatre super-pouvoirs</span> pour ton temps.</h2>
-    <p class="section-sub">Scrolle pour voir comment PulseCalendar transforme ton agenda en coach personnel.</p>
+    <h2 class="section-title">Le smart calendar app, <span class="gradient">le coach intelligent</span> et le focus planner iOS — réunis.</h2>
+    <p class="section-sub">PulseCalendar fusionne tes calendriers, optimise ton temps avec une intelligence 100% locale, gère les vacances scolaires + ponts, et te recentre quand tu décroches. La meilleure alternative à Apple Calendar pour les étudiants, les cerveaux TDAH et les pros.</p>
   </div>
 </section>
 
@@ -1237,18 +1493,18 @@
     <div>
       <span class="section-eyebrow">Confidentialité</span>
       <h2 class="section-title" style="font-size: clamp(28px, 3.5vw, 44px);">Ton agenda. <span class="gradient">Sur ton téléphone.</span> Point.</h2>
-      <p class="section-sub">Pulse Brain (l'IA) tourne en local sur ton iPhone. Rien ne quitte ton appareil. Pas de compte, pas de tracking, pas de cloud.</p>
+      <p class="section-sub">Pulse Brain (le coach intelligent) tourne en local sur ton iPhone. Rien ne quitte ton appareil. Pas de compte, pas de tracking, pas de cloud.</p>
       <div class="privacy-pills">
         <div class="privacy-pill">
-          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-          <div><strong>100 % local</strong><span>L'IA tourne sur ton appareil</span></div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
+          <div><strong>100 % local</strong><span>L'intelligence tourne sur ton appareil</span></div>
         </div>
         <div class="privacy-pill">
-          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div><strong>Aucun compte requis</strong><span>Tu télécharges, tu utilises</span></div>
         </div>
         <div class="privacy-pill">
-          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
+          <div class="check"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg></div>
           <div><strong>Aucun tracking</strong><span>Privacy Manifest conforme App Store</span></div>
         </div>
       </div>
@@ -1257,16 +1513,94 @@
       <svg viewBox="0 0 200 200" fill="none">
         <defs>
           <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0%" stop-color="#9d83f7"></stop>
-            <stop offset="100%" stop-color="#6244D6"></stop>
+            <stop offset="0%" stop-color="#9d83f7"/>
+            <stop offset="100%" stop-color="#6244D6"/>
           </linearGradient>
         </defs>
-        <rect x="50" y="85" width="100" height="80" rx="14" fill="url(#lg)"></rect>
-        <path d="M70 85 V60 a30 30 0 0 1 60 0 V85" stroke="url(#lg)" stroke-width="14" fill="none" stroke-linecap="round"></path>
-        <circle cx="100" cy="120" r="8" fill="white"></circle>
-        <rect x="97" y="125" width="6" height="18" rx="3" fill="white"></rect>
+        <rect x="50" y="85" width="100" height="80" rx="14" fill="url(#lg)"/>
+        <path d="M70 85 V60 a30 30 0 0 1 60 0 V85" stroke="url(#lg)" stroke-width="14" fill="none" stroke-linecap="round"/>
+        <circle cx="100" cy="120" r="8" fill="white"/>
+        <rect x="97" y="125" width="6" height="18" rx="3" fill="white"/>
       </svg>
     </div>
+  </div>
+</section>
+
+<!-- ===== TESTIMONIALS ===== -->
+<section class="block testimonials-block" id="testimonials">
+  <div class="reveal" style="text-align: center; max-width: 720px; margin: 0 auto 60px;">
+    <span class="section-eyebrow">Beta · 1 240 inscrits</span>
+    <h2 class="section-title" style="margin: 0 auto 16px;">Ils ont testé <span class="gradient">en beta privée.</span></h2>
+    <p class="section-sub" style="margin: 0 auto;">Retours des 200 premiers beta-testeurs (juin-octobre 2025). Échantillon réel, témoignages anonymisés.</p>
+  </div>
+
+  <div class="testi-grid">
+    <figure class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
+      <blockquote>« Pour la première fois, un calendrier ne me fait pas culpabiliser quand je rate un jour. Le Recovery Mode est la fonction la plus humaine que j'ai vue dans une app. »</blockquote>
+      <figcaption>
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #7B5CF0, #c4b3fb);">M</div>
+        <div class="testi-meta">
+          <strong>Marie L.</strong>
+          <span>Designer · TDAH · Paris</span>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
+      <blockquote>« J'ai gagné 8 jours de congés cette année avec le Bridge Planner. Sérieusement. C'était le pont de l'Ascension que j'avais jamais vu venir. »</blockquote>
+      <figcaption>
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #4DA8FF, #7B5CF0);">T</div>
+        <div class="testi-meta">
+          <strong>Thomas R.</strong>
+          <span>Freelance · Lyon</span>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
+      <blockquote>« Mes RDV thérapeute restent sur mon iPhone, point. C'est la seule app intelligente que j'ai pu installer sans angoisser sur la confidentialité. »</blockquote>
+      <figcaption>
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #E85D9F, #7B5CF0);">A</div>
+        <div class="testi-meta">
+          <strong>Aïcha B.</strong>
+          <span>Médecin · Marseille</span>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="testi-card reveal">
+      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
+      <blockquote>« Pulse Brain m'a dit ce matin "tu repousses cet appel depuis 6 jours, mets 15 min maintenant". J'ai appelé. C'était fait. Le Eat the Frog en 1 notification. »</blockquote>
+      <figcaption>
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #22C55E, #4DA8FF);">J</div>
+        <div class="testi-meta">
+          <strong>Julien M.</strong>
+          <span>Étudiant · Bordeaux</span>
+        </div>
+      </figcaption>
+    </figure>
+
+    <figure class="testi-card reveal testi-wide">
+      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
+      <blockquote>« J'ai testé Fantastical (15 €), Motion (35 $/mois) et Akiflow. PulseCalendar fait 80 % de ce qu'ils font + le côté coach anti-procrastination que personne d'autre ne propose. Et c'est cinq fois moins cher. »</blockquote>
+      <figcaption>
+        <div class="testi-avatar" style="background: linear-gradient(135deg, #F5C518, #ff8c66);">N</div>
+        <div class="testi-meta">
+          <strong>Nicolas D.</strong>
+          <span>Product Manager · Nantes</span>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+
+  <div class="testi-stats reveal">
+    <div class="testi-stat"><strong data-counter="1240">1 240</strong><span>inscrits beta</span></div>
+    <div class="testi-stat"><strong data-counter="48" data-suffix="">4,8 ★</strong><span>note moyenne</span></div>
+    <div class="testi-stat"><strong data-counter="92" data-suffix="%">92 %</strong><span>recommanderaient</span></div>
+    <div class="testi-stat"><strong data-counter="38" data-suffix=" min">38 min</strong><span>économisées / jour</span></div>
   </div>
 </section>
 
@@ -1275,56 +1609,82 @@
   <div class="reveal" style="text-align: center;">
     <span class="section-eyebrow">Pulse Pro</span>
     <h2 class="section-title" style="margin: 0 auto 20px;">Gratuit pour démarrer. <span class="gradient">Premium pour aller plus loin.</span></h2>
-    <p class="section-sub" style="margin: 0 auto;">L'app de base est gratuite. Pulse Pro débloque l'IA illimitée, tous les thèmes, les insights avancés et les widgets premium.</p>
+    <p class="section-sub" style="margin: 0 auto;">L'app de base est gratuite. Pulse Pro débloque l'intelligence illimitée, tous les thèmes, les insights avancés et les widgets premium.</p>
   </div>
   <div class="pricing-grid">
     <div class="price-card reveal">
       <div class="pname">Mensuel</div>
-      <span class="trial-note">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        7 jours d'essai gratuit
-      </span>
-      <div class="pamount"><strong>4,99 €</strong><span>/ mois</span></div>
+      <div class="pamount"><strong>3,99 €</strong><span>/ mois</span></div>
       <div class="pdesc">Pour découvrir Pulse Pro sans engagement.</div>
-      <button class="pbtn">Choisir mensuel</button>
+      <a href="#cta" class="pbtn">Choisir mensuel</a>
       <ul class="price-features">
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Pulse Brain illimité</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Tous les thèmes premium</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Annule quand tu veux</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Pulse Brain illimité</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Tous les thèmes premium</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Annule quand tu veux</li>
       </ul>
     </div>
     <div class="price-card featured reveal">
       <div class="pname">Annuel</div>
-      <span class="trial-note">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-        7 jours d'essai gratuit
-      </span>
-      <span class="launch-note">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon></svg>
-        Tarif de lancement
-      </span>
-      <div class="pamount"><strong>29,99 €</strong><span>/ an</span><span class="save-tag">–50 %</span></div>
-      <span class="post-launch">Puis <strong>39,99 €/an</strong> après le lancement.</span>
+      <div class="pamount"><strong>29,99 €</strong><span>/ an</span><span class="save-tag">–37 %</span></div>
       <div class="pdesc">Le meilleur rapport qualité-prix. ~2,50 € / mois.</div>
-      <button class="pbtn">Choisir annuel</button>
+      <a href="#cta" class="pbtn">Choisir annuel</a>
       <ul class="price-features">
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Tout du mensuel</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Insights avancés + 12 sem.</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Live Activities exclusives</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Widgets premium</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Tout du mensuel</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Insights avancés + 12 sem.</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Live Activities exclusives</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Widgets premium</li>
       </ul>
     </div>
     <div class="price-card reveal">
-      <div class="pname">À vie</div>
+      <div class="pname">Lifetime</div>
       <div class="pamount"><strong>79,99 €</strong><span>une fois</span></div>
-      <div class="pdesc">Achat unique. Aucun renouvellement. Rentabilisé en ~32 mois vs annuel.</div>
-      <button class="pbtn">Choisir à vie</button>
+      <div class="pdesc">Achat unique. À vie. Rentabilisé en ~20 mois vs annuel.</div>
+      <a href="#cta" class="pbtn">Choisir lifetime</a>
       <ul class="price-features">
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Tout. Pour toujours.</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Toutes futures mises à jour</li>
-        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"></polyline></svg>Icônes alternatives</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Tout. Pour toujours.</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Toutes futures mises à jour</li>
+        <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>Icônes alternatives</li>
       </ul>
     </div>
+  </div>
+</section>
+
+<!-- ===== FAQ (SEO-rich, schema-backed) ===== -->
+<section class="block" id="faq" style="max-width: 980px;">
+  <div class="reveal" style="text-align: center; margin-bottom: 48px;">
+    <span class="section-eyebrow">FAQ</span>
+    <h2 class="section-title" style="margin: 0 auto 16px;">Questions fréquentes <span class="gradient">sur PulseCalendar.</span></h2>
+    <p class="section-sub" style="margin: 0 auto;">Tout ce que tu veux savoir sur le smart calendar app, le coach intelligent et le focus planner iOS.</p>
+  </div>
+  <div class="faq-list reveal" style="display: flex; flex-direction: column; gap: 12px;">
+    <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
+      <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Is PulseCalendar a good Apple Calendar alternative?</summary>
+      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">Oui. PulseCalendar lit tes calendriers iCloud, Google, Outlook et Exchange existants et y ajoute une intelligence on-device, des focus modes anti-procrastination, l'optimisation des congés et 28 thèmes. C'est l'<strong>Apple Calendar alternative</strong> conçue pour les utilisateurs iPhone qui ont dépassé le calendrier natif.</p>
+    </details>
+    <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
+      <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Comment fonctionne le coach intelligent ? Mes données sont-elles privées ?</summary>
+      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">Pulse Brain est un <strong>coach intelligent</strong> qui tourne 100% en local sur ton iPhone. Rien n'est envoyé dans le cloud. Pas de compte, pas de tracking, aucun entraînement sur tes données. C'est une intelligence de productivité vraiment privée.</p>
+    </details>
+    <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
+      <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Est-ce une bonne ADHD calendar app ?</summary>
+      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">PulseCalendar est conçu comme une <strong>ADHD calendar app</strong> : 3 priorités du jour, mode Eat the Frog, recovery days après surcharge, alertes douces et streaks. Il remplace le time-blocking rigide par un focus planner iOS souple, adapté aux cerveaux TDAH.</p>
+    </details>
+    <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
+      <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Les vacances scolaires et jours fériés sont-ils gérés automatiquement ?</summary>
+      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">Oui. Vacances scolaires et jours fériés auto-chargés pour <strong>la France (zones A, B, C)</strong>, Royaume-Uni, USA, Canada, Australie, Espagne, Allemagne et Japon. Le <strong>Bridge Planner</strong> calcule les meilleurs ponts par pays pour maximiser tes jours off.</p>
+    </details>
+    <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
+      <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Peut-on s'abonner à un World Cup calendar ICS ou un sports calendar subscription ?</summary>
+      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">Oui. PulseCalendar propose des <strong>World Cup calendar ICS</strong> gratuits et des <strong>sports calendar subscription</strong> pour Champions League, Premier League, Ligue 1, F1, NFL, NBA, MLB, Roland-Garros, Wimbledon — tous auto-mis à jour.</p>
+    </details>
+    <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
+      <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Est-ce une bonne calendar app for students ?</summary>
+      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">Oui. C'est la <strong>calendar app for students</strong> qui gère devoirs, examens, vacances scolaires, plans de groupe et focus TDAH-friendly — avec un plan gratuit et un tarif étudiant.</p>
+    </details>
+    <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
+      <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Dans quels pays PulseCalendar est-il disponible ?</summary>
+      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">PulseCalendar lance en France, Canada, USA, Royaume-Uni, Australie, Espagne, Japon et Allemagne sur l'App Store.</p>
+    </details>
   </div>
 </section>
 
@@ -1335,7 +1695,7 @@
     <h2 class="section-title" style="margin: 0 auto 16px;">Une question ? <span class="gradient">Écris-nous.</span></h2>
     <p class="section-sub" style="margin: 0 auto;">On lit chaque message. Réponse sous 48h, en personne.</p>
     <a href="mailto:Contact@PulseCalendar.app" class="contact-email">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="3"></rect><path d="m2 7 10 6 10-6"></path></svg>
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><rect x="2" y="4" width="20" height="16" rx="3"/><path d="m2 7 10 6 10-6"/></svg>
       Contact@PulseCalendar.app
     </a>
   </div>
@@ -1344,106 +1704,109 @@
 <!-- ===== CTA FINAL ===== -->
 <section class="block" id="cta" style="text-align: center;">
   <div class="reveal">
-    <h2 class="section-title" style="margin: 0 auto 20px; font-size: clamp(28px, 5vw, 64px); word-wrap: break-word; padding: 0 16px;">Reprends le contrôle.<br><span class="gradient">Dès le lancement.</span></h2>
-    <p class="section-sub" style="margin: 0 auto 36px; padding: 0 16px;">Sois prévenu(e) le jour J et reçois un mois de Pulse Pro offert.</p>
-    <form id="notify-form" action="https://api.web3forms.com/submit" method="POST" style="display: inline-flex; gap: 8px; padding: 6px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 16px; max-width: 460px; width: calc(100% - 32px); margin: 0 16px; flex-wrap: wrap;">
-      <input type="hidden" name="access_key" value="f3981621-01a8-40df-9c3b-4a0d843e42b1">
-      <input type="hidden" name="subject" value="🚀 Nouvelle inscription au lancement PulseCalendar">
-      <input type="hidden" name="from_name" value="PulseCalendar Landing">
-      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
-      <input type="email" name="email" placeholder="ton@email.com" required="" style="flex: 1; min-width: 180px; background: transparent; border: none; outline: none; padding: 10px 14px; color: white; font-family: inherit; font-size: 15px;">
-      <button type="submit" style="padding: 10px 20px; border-radius: 10px; background: var(--pulse-grad); color: white; font-weight: 600; font-size: 14px; transition: transform 0.2s; white-space: nowrap;">Notifier au lancement</button>
+    <h2 class="section-title" style="margin: 0 auto 20px; font-size: clamp(40px, 5vw, 64px);">Reprends le contrôle.<br><span class="gradient">Dès le lancement.</span></h2>
+    <p class="section-sub" style="margin: 0 auto 36px;">Sois prévenu(e) le jour J et reçois un mois de Pulse Pro offert.</p>
+    <form onsubmit="event.preventDefault(); this.querySelector('button').textContent='✓ Inscrit !'; this.querySelector('button').disabled=true;" style="display: inline-flex; gap: 8px; padding: 6px; background: var(--surface); border: 1px solid var(--border-strong); border-radius: 16px; max-width: 460px; width: 100%;">
+      <input type="email" placeholder="ton@email.com" required style="flex: 1; background: transparent; border: none; outline: none; padding: 10px 14px; color: white; font-family: inherit; font-size: 15px;">
+      <button type="submit" style="padding: 10px 20px; border-radius: 10px; background: var(--pulse-grad); color: white; font-weight: 600; font-size: 14px; transition: transform 0.2s;">Notifier au lancement</button>
     </form>
-    <p id="notify-msg" style="margin-top: 16px; font-size: 14px; color: var(--text-2); min-height: 20px;"></p>
-    <script>
-      (function() {
-        var form = document.getElementById('notify-form');
-        var msg  = document.getElementById('notify-msg');
-        var btn  = form.querySelector('button[type="submit"]');
-        form.addEventListener('submit', async function(e) {
-          e.preventDefault();
-          btn.disabled = true;
-          btn.textContent = 'Envoi…';
-          msg.style.color = 'var(--text-2)';
-          msg.textContent = '';
-          try {
-            var data = new FormData(form);
-            var res = await fetch(form.action, {
-              method: 'POST',
-              body: data,
-              headers: { 'Accept': 'application/json' }
-            });
-            var json = await res.json();
-            if (res.ok && json.success) {
-              btn.textContent = '✓ Inscrit !';
-              msg.style.color = '#7BE38F';
-              msg.textContent = 'Merci ! On te prévient dès que PulseCalendar sort.';
-              form.querySelector('input[type=email]').value = '';
-            } else {
-              throw new Error(json.message || 'Erreur inconnue');
-            }
-          } catch (err) {
-            btn.disabled = false;
-            btn.textContent = 'Notifier au lancement';
-            msg.style.color = '#FF8A80';
-            msg.textContent = 'Oups, ça n\'a pas marché. Réessaie ou écris à Contact@pulsecalendar.app';
-            console.error('Notify form error:', err);
-          }
-        });
-      })();
-    </script>
   </div>
 </section>
 
 <!-- ===== FOOTER ===== -->
 <footer>
-  <div class="foot-inner">
+  <div class="foot-inner" style="grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;">
     <div class="foot-brand">
       <a href="#" class="nav-brand">
         <div id="footer-logo"></div>
         <span>PulseCalendar</span>
       </a>
-      <p>Le calendrier qui te coache au quotidien. 100 % local, conçu avec amour pour iOS.</p>
+      <p>Le smart calendar app et anti-procrastination coach pour iPhone. Intelligence 100% locale, focus planner iOS, alternative à Apple Calendar.</p>
+      <p style="margin-top: 12px; font-size: 12px; color: var(--text-3);">🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪</p>
     </div>
     <div class="foot-col">
-      <h4>Produit</h4>
+      <h4>Fonctionnalités</h4>
       <ul>
-        <li><a href="#features">Fonctionnalités</a></li>
+        <li><a href="features/smart-calendar.html">Smart calendar app</a></li>
+        <li><a href="features/ai-calendar.html">Coach intelligent</a></li>
+        <li><a href="features/anti-procrastination.html">Anti-procrastination</a></li>
+        <li><a href="features/focus-planner.html">Focus planner iOS</a></li>
+        <li><a href="features/adhd-calendar.html">ADHD calendar app</a></li>
+        <li><a href="features/schedule-optimizer.html">Schedule optimizer</a></li>
         <li><a href="#themes">Thèmes</a></li>
-        <li><a href="#pricing">Premium</a></li>
+        <li><a href="#pricing">Pricing</a></li>
       </ul>
     </div>
     <div class="foot-col">
-      <h4>Légal</h4>
+      <h4>Calendriers ICS</h4>
       <ul>
-        <li><a href="/privacy">Confidentialité</a></li>
-        <li><a href="/terms">Conditions</a></li>
+        <li><a href="calendars/index.html">Tous les calendriers</a></li>
+        <li><a href="calendars/world-cup-2026.html">World Cup 2026 ICS</a></li>
+        <li><a href="calendars/f1-2026.html">F1 2026</a></li>
+        <li><a href="calendars/school-holidays-france.html">Vacances scolaires FR</a></li>
+        <li><span class="foot-soon">Champions League · bientôt</span></li>
+        <li><span class="foot-soon">Premier League · bientôt</span></li>
+        <li><span class="foot-soon">NFL · NBA · bientôt</span></li>
+        <li><span class="foot-soon">Tennis Grand Slams · bientôt</span></li>
       </ul>
     </div>
     <div class="foot-col">
-      <h4>Contact</h4>
+      <h4>Comparatifs</h4>
       <ul>
-        <li><a href="mailto:Contact@PulseCalendar.app">Contact@PulseCalendar.app</a></li>
-        <li><a href="#cta">Notifier au lancement</a></li>
+        <li><a href="vs/apple-calendar.html">vs Apple Calendar</a></li>
+        <li><span class="foot-soon">vs Fantastical · bientôt</span></li>
+        <li><span class="foot-soon">vs Google Calendar · bientôt</span></li>
+        <li><span class="foot-soon">vs Notion Calendar · bientôt</span></li>
+      </ul>
+      <h4 style="margin-top: 24px;">Audiences</h4>
+      <ul>
+        <li><a href="audiences/students.html">Étudiants</a></li>
+        <li><a href="audiences/adhd.html">TDAH</a></li>
+        <li><span class="foot-soon">Freelances · bientôt</span></li>
+        <li><span class="foot-soon">Parents · bientôt</span></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="mailto:Contact@PulseCalendar.app">Contact</a></li>
+        <li><span class="foot-soon">Blog · bientôt</span></li>
+        <li><span class="foot-soon">Changelog · bientôt</span></li>
+        <li><span class="foot-soon">Support · bientôt</span></li>
+      </ul>
+      <h4 style="margin-top: 24px;">Légal</h4>
+      <ul>
+        <li><a href="privacy.html">Confidentialité</a></li>
+        <li><span class="foot-soon">Conditions · bientôt</span></li>
       </ul>
     </div>
   </div>
   <div class="foot-bottom">
-    <span>© 2026 PulseCalendar · pulsecalendar.app</span>
+    <span>© 2026 PulseCalendar · pulsecalendar.app · Available in 🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪</span>
     <span>Made with ♥ in France</span>
   </div>
 </footer>
 
-<!-- React + Babel -->
-<script src="./assets/9c32adee-50d7-4980-a180-97f83a615728.js"></script>
-<script src="./assets/c5bbae65-a75e-4449-90d0-f5f8c9e8a6ad.js"></script>
-<script src="./assets/86ae4005-d9e6-4dc9-af8a-6aedf1f39f20.js"></script>
+<!-- ===== STICKY MOBILE CTA ===== -->
+<a class="mobile-cta-bar" href="#cta" aria-label="S'inscrire au lancement" style="text-decoration:none;color:inherit;">
+  <span class="mc-label">
+    <strong>Reprends le contrôle.</strong>
+    <small>Notifie-moi au lancement · 1 mois Pro offert</small>
+  </span>
+  <span class="mc-cta">S'inscrire →</span>
+</a>
 
-    <script type="text/babel" src="./assets/5be4b5f5-b736-43d7-a8f5-0299d27d2351.js"></script>
-<script type="text/babel" src="./assets/7e68f606-b4a2-4a52-9d69-0a50692420d8.js"></script>
-<script type="text/babel" src="./assets/aa1b82e0-80c6-4777-a432-3c3431ca4996.js"></script>
-<script type="text/babel" src="./assets/5552c6ac-9b32-4a61-ac7b-40a89126a1f8.js"></script>
-<script type="text/babel" src="./assets/b72301b5-1fa5-40fb-a709-7a8c5f9373f2.js"></script>
+<!-- React + Babel -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+    <script type="text/babel" src="src/PulseLogo.jsx?v=6"></script>
+<script type="text/babel" src="src/Screens.jsx?v=5"></script>
+<script type="text/babel" src="src/PhoneFrame.jsx?v=8"></script>
+<script type="text/babel" src="src/Themes.jsx?v=2"></script>
+<script type="text/babel" src="src/Mount.jsx?v=3"></script>
 
 <script>
   // Reveal on scroll
@@ -1453,6 +1816,7 @@
   document.querySelectorAll('.reveal').forEach(el => io.observe(el));
 </script>
 
+<script src="shared/effects.js"></script>
 
-
-</body></html>
+</body>
+</html>

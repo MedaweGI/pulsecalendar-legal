@@ -1,0 +1,27 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+
+# Allow major search engines explicitly
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: Yandex
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+Sitemap: https://pulsecalendar.app/sitemap.xml
+Sitemap: https://pulsecalendar.app/sitemap-calendars.xml
+Host: https://pulsecalendar.app
