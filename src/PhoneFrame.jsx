@@ -52,8 +52,8 @@ const SCROLLY_STEPS = [
   },
   {
     num: '03',
-    eyebrow: 'Pulse Brain · IA locale',
-    title: 'Une IA qui optimise ta journée. En local.',
+    eyebrow: 'Pulse Brain · 100 % on-device',
+    title: 'Un coach intelligent qui optimise ta journée. En local.',
     desc: 'En 1 tap, Pulse Brain résout les conflits, équilibre focus et récup, détecte les jours surchargés. Tout tourne sur ton iPhone, rien n\'est envoyé en ligne.',
     bullets: [
       'Optimisation 1 tap (focus + récup + transitions)',
