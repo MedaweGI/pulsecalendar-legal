@@ -72,7 +72,6 @@
     {"@type":"Offer","price":"29.99","priceCurrency":"EUR","name":"Yearly"},
     {"@type":"Offer","price":"79.99","priceCurrency":"EUR","name":"Lifetime"}
   ],
-  "aggregateRating": {"@type":"AggregateRating","ratingValue":"4.8","ratingCount":"1240","bestRating":"5"},
   "availableOnDevice": "iPhone",
   "inLanguage": ["fr","en","es","de","ja"],
   "countriesSupported": ["FR","CA","US","GB","AU","ES","JP","DE"]
@@ -580,94 +579,6 @@
     position: relative; overflow: hidden;
   }
   .lock-illus svg { width: 60%; height: 60%; }
-
-  /* === TESTIMONIALS === */
-  .testimonials-block { padding: 100px 32px; }
-  .testi-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-auto-rows: auto;
-    gap: 16px;
-    max-width: 1240px; margin: 0 auto;
-  }
-  .testi-card {
-    grid-column: span 2;
-    padding: 28px;
-    background: linear-gradient(165deg, rgba(255,255,255,0.05), rgba(255,255,255,0.01));
-    border: 1px solid var(--border);
-    border-radius: 20px;
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
-    transition: transform 0.4s cubic-bezier(0.2,0.8,0.2,1), border-color 0.3s, box-shadow 0.4s;
-    display: flex; flex-direction: column;
-  }
-  .testi-card.testi-wide { grid-column: span 4; max-width: 720px; margin: 0 auto; padding: 36px; }
-  .testi-card.testi-wide blockquote { font-size: 21px; }
-  .testi-card:hover {
-    transform: translateY(-4px);
-    border-color: rgba(123,92,240,0.4);
-    box-shadow: 0 24px 60px -20px rgba(98,68,214,0.35);
-  }
-  .testi-stars {
-    color: var(--violet-300);
-    font-size: 14px;
-    letter-spacing: 2px;
-    margin-bottom: 14px;
-  }
-  .testi-card blockquote {
-    font-size: 17px;
-    color: var(--text);
-    line-height: 1.55;
-    flex: 1;
-    margin-bottom: 22px;
-    text-wrap: pretty;
-  }
-  .testi-card figcaption {
-    display: flex; align-items: center; gap: 12px;
-    padding-top: 16px;
-    border-top: 1px solid var(--border);
-  }
-  .testi-avatar {
-    width: 40px; height: 40px;
-    border-radius: 50%;
-    display: flex; align-items: center; justify-content: center;
-    font-weight: 700; font-size: 16px;
-    color: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  }
-  .testi-meta { display: flex; flex-direction: column; line-height: 1.25; }
-  .testi-meta strong { font-size: 14px; font-weight: 600; }
-  .testi-meta span { font-size: 12px; color: var(--text-3); }
-
-  .testi-stats {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 16px;
-    max-width: 1240px;
-    margin: 56px auto 0;
-    padding: 28px;
-    background: linear-gradient(165deg, rgba(98,68,214,0.12), rgba(98,68,214,0.02));
-    border: 1px solid rgba(98,68,214,0.25);
-    border-radius: 24px;
-  }
-  .testi-stat { text-align: center; }
-  .testi-stat strong {
-    display: block;
-    font-size: clamp(28px, 3vw, 40px);
-    font-weight: 800;
-    letter-spacing: -0.025em;
-    background: linear-gradient(135deg, #c4b3fb, #7B5CF0);
-    -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent;
-    margin-bottom: 4px;
-  }
-  .testi-stat span { font-size: 13px; color: var(--text-2); }
-
-  @media (max-width: 880px) {
-    .testi-grid { grid-template-columns: 1fr; }
-    .testi-card, .testi-card.testi-wide { grid-column: span 1; }
-    .testi-stats { grid-template-columns: 1fr 1fr; }
-  }
 
   /* === STICKY MOBILE CTA === */
   .mobile-cta-bar {
@@ -1346,7 +1257,6 @@
       <a href="#features">Fonctionnalités</a>
       <a href="#themes">Thèmes</a>
       <a href="#pricing">Premium</a>
-      <a href="#testimonials">Avis</a>
       <a href="#faq">FAQ</a>
     </div>
     <a href="#cta" class="nav-cta">Notifier au lancement</a>
@@ -1523,84 +1433,6 @@
         <rect x="97" y="125" width="6" height="18" rx="3" fill="white"/>
       </svg>
     </div>
-  </div>
-</section>
-
-<!-- ===== TESTIMONIALS ===== -->
-<section class="block testimonials-block" id="testimonials">
-  <div class="reveal" style="text-align: center; max-width: 720px; margin: 0 auto 60px;">
-    <span class="section-eyebrow">Beta · 1 240 inscrits</span>
-    <h2 class="section-title" style="margin: 0 auto 16px;">Ils ont testé <span class="gradient">en beta privée.</span></h2>
-    <p class="section-sub" style="margin: 0 auto;">Retours des 200 premiers beta-testeurs (juin-octobre 2025). Échantillon réel, témoignages anonymisés.</p>
-  </div>
-
-  <div class="testi-grid">
-    <figure class="testi-card reveal">
-      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
-      <blockquote>« Pour la première fois, un calendrier ne me fait pas culpabiliser quand je rate un jour. Le Recovery Mode est la fonction la plus humaine que j'ai vue dans une app. »</blockquote>
-      <figcaption>
-        <div class="testi-avatar" style="background: linear-gradient(135deg, #7B5CF0, #c4b3fb);">M</div>
-        <div class="testi-meta">
-          <strong>Marie L.</strong>
-          <span>Designer · TDAH · Paris</span>
-        </div>
-      </figcaption>
-    </figure>
-
-    <figure class="testi-card reveal">
-      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
-      <blockquote>« J'ai gagné 8 jours de congés cette année avec le Bridge Planner. Sérieusement. C'était le pont de l'Ascension que j'avais jamais vu venir. »</blockquote>
-      <figcaption>
-        <div class="testi-avatar" style="background: linear-gradient(135deg, #4DA8FF, #7B5CF0);">T</div>
-        <div class="testi-meta">
-          <strong>Thomas R.</strong>
-          <span>Freelance · Lyon</span>
-        </div>
-      </figcaption>
-    </figure>
-
-    <figure class="testi-card reveal">
-      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
-      <blockquote>« Mes RDV thérapeute restent sur mon iPhone, point. C'est la seule app intelligente que j'ai pu installer sans angoisser sur la confidentialité. »</blockquote>
-      <figcaption>
-        <div class="testi-avatar" style="background: linear-gradient(135deg, #E85D9F, #7B5CF0);">A</div>
-        <div class="testi-meta">
-          <strong>Aïcha B.</strong>
-          <span>Médecin · Marseille</span>
-        </div>
-      </figcaption>
-    </figure>
-
-    <figure class="testi-card reveal">
-      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
-      <blockquote>« Pulse Brain m'a dit ce matin "tu repousses cet appel depuis 6 jours, mets 15 min maintenant". J'ai appelé. C'était fait. Le Eat the Frog en 1 notification. »</blockquote>
-      <figcaption>
-        <div class="testi-avatar" style="background: linear-gradient(135deg, #22C55E, #4DA8FF);">J</div>
-        <div class="testi-meta">
-          <strong>Julien M.</strong>
-          <span>Étudiant · Bordeaux</span>
-        </div>
-      </figcaption>
-    </figure>
-
-    <figure class="testi-card reveal testi-wide">
-      <div class="testi-stars" aria-label="5 étoiles">★ ★ ★ ★ ★</div>
-      <blockquote>« J'ai testé Fantastical (15 €), Motion (35 $/mois) et Akiflow. PulseCalendar fait 80 % de ce qu'ils font + le côté coach anti-procrastination que personne d'autre ne propose. Et c'est cinq fois moins cher. »</blockquote>
-      <figcaption>
-        <div class="testi-avatar" style="background: linear-gradient(135deg, #F5C518, #ff8c66);">N</div>
-        <div class="testi-meta">
-          <strong>Nicolas D.</strong>
-          <span>Product Manager · Nantes</span>
-        </div>
-      </figcaption>
-    </figure>
-  </div>
-
-  <div class="testi-stats reveal">
-    <div class="testi-stat"><strong data-counter="1240">1 240</strong><span>inscrits beta</span></div>
-    <div class="testi-stat"><strong data-counter="48" data-suffix="">4,8 ★</strong><span>note moyenne</span></div>
-    <div class="testi-stat"><strong data-counter="92" data-suffix="%">92 %</strong><span>recommanderaient</span></div>
-    <div class="testi-stat"><strong data-counter="38" data-suffix=" min">38 min</strong><span>économisées / jour</span></div>
   </div>
 </section>
 
