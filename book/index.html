@@ -417,7 +417,11 @@ initializeAppCheck(app, {
 const db = getFirestore(app);
 
 // ─── State ───────────────────────────────────────────────
-const shortId = new URL(location.href).pathname.split('/').filter(Boolean).pop();
+// shortId is read from `?id=...` (preferred — works directly with GitHub
+// Pages) or from the last path segment for backward compat (`/book/abc`).
+const __url = new URL(location.href);
+const shortId = __url.searchParams.get('id')
+              || __url.pathname.split('/').filter(Boolean).pop();
 let link = null;
 let slots = [];
 let selectedDate = null;
