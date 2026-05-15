@@ -632,6 +632,10 @@ $('bookingForm').addEventListener('submit', async (e) => {
         guestEmail: $('email').value.trim(),
         guestAnswer: $('answer').value.trim() || null,
         guestTimezone: guestTz,
+        // Locale du navigateur (ex: "fr-FR", "en-US") — sert à envoyer les
+        // emails de confirmation/decline dans la bonne langue.
+        guestLocale: (navigator.languages && navigator.languages[0])
+                     || navigator.language || 'en',
         startTime: selectedSlot.start.toISOString(),
         endTime: selectedSlot.end.toISOString(),
         recaptchaToken: token,
