@@ -18,7 +18,6 @@
       <a href="${home}index.html#themes">Thèmes</a>
       <a href="${home}index.html#pricing">Premium</a>
       <a href="${home}index.html#faq">FAQ</a>
-      <a href="${home}calendars/index.html">ICS</a>
     </div>
     <a href="${home}index.html#cta" class="nav-cta">Notifier au lancement</a>
   </div>
@@ -44,15 +43,6 @@
         <li><a href="${home}features/focus-planner.html">Focus planner iOS</a></li>
         <li><a href="${home}features/adhd-calendar.html">ADHD calendar app</a></li>
         <li><a href="${home}features/schedule-optimizer.html">Schedule optimizer</a></li>
-      </ul>
-    </div>
-    <div class="foot-col">
-      <h4>Calendriers ICS</h4>
-      <ul>
-        <li><a href="${home}calendars/world-cup-2026.html">World Cup 2026</a></li>
-        <li><a href="${home}calendars/f1-2026.html">F1 2026</a></li>
-        <li><a href="${home}calendars/school-holidays-france.html">Vacances scolaires FR</a></li>
-        <li><a href="${home}calendars/index.html">Tous les calendriers →</a></li>
       </ul>
     </div>
     <div class="foot-col">
