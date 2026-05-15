@@ -3,6 +3,14 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<!--
+  IMPORTANT iOS Safari : sans format-detection, iOS interprète automatiquement
+  les dates/heures/emails/téléphones comme des actions et les transforme en
+  liens (tap → "Send via Mail", "Add to Calendar"...). Pour une page de
+  booking où chaque créneau affiche une date/heure, ce comportement casse
+  l'UX : tap sur un slot → ouvre Mail au lieu de selectSlot().
+-->
+<meta name="format-detection" content="telephone=no, date=no, email=no, address=no">
 <title>Book a slot · Pulse Calendar</title>
 <meta name="description" content="Pick a time slot in seconds. No account required.">
 <meta name="robots" content="noindex">
@@ -434,12 +442,14 @@ document.getElementById('tzLabel').textContent = guestTz;
 
 // ─── Load booking link + slots ───────────────────────────
 async function load() {
+  console.log('[Pulse Booking] Loading link, shortId =', shortId);
   try {
     if (!shortId || shortId === 'book' || shortId.length < 6) {
       throw new Error('Invalid booking link');
     }
 
     const linkSnap = await getDoc(doc(db, 'bookingLinks', shortId));
+    console.log('[Pulse Booking] linkSnap.exists() =', linkSnap.exists());
     if (!linkSnap.exists()) throw new Error('Booking link not found');
 
     const linkData = linkSnap.data();
@@ -470,15 +480,21 @@ async function load() {
       start: d.data().start.toDate(),
       end: d.data().end.toDate(),
     }));
+    console.log('[Pulse Booking] slots loaded :', slots.length);
 
     if (slots.length === 0) {
-      throw new Error('No availability — please try again later');
+      // Message explicite : la cause la plus probable est que l'host n'a
+      // pas encore publié de disponibilités (besoin d'ouvrir l'app iOS
+      // au moins une fois après création du lien). On informe le guest
+      // plutôt que de laisser un message générique.
+      throw new Error('No available slots yet — the host has not published availability. Please ask them to open their Pulse Calendar app once.');
     }
 
     $('stateLoading').classList.add('hidden');
     $('step1').classList.remove('hidden');
     renderCalendar();
   } catch (err) {
+    console.error('[Pulse Booking] load() failed :', err);
     $('stateLoading').classList.add('hidden');
     $('stateError').classList.remove('hidden');
     $('errorMsg').textContent = err.message;
