@@ -1,23 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <!-- Homepage -->
   <url>
     <loc>https://pulsecalendar.app/</loc>
-    <lastmod>2026-05-08</lastmod>
+    <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://pulsecalendar.app/fr/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://pulsecalendar.app/en/"/>
-    <xhtml:link rel="alternate" hreflang="en-us" href="https://pulsecalendar.app/en-us/"/>
-    <xhtml:link rel="alternate" hreflang="en-gb" href="https://pulsecalendar.app/en-gb/"/>
-    <xhtml:link rel="alternate" hreflang="en-ca" href="https://pulsecalendar.app/en-ca/"/>
-    <xhtml:link rel="alternate" hreflang="en-au" href="https://pulsecalendar.app/en-au/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://pulsecalendar.app/es/"/>
-    <xhtml:link rel="alternate" hreflang="de" href="https://pulsecalendar.app/de/"/>
-    <xhtml:link rel="alternate" hreflang="ja" href="https://pulsecalendar.app/ja/"/>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://pulsecalendar.app/"/>
   </url>
 
   <!-- Features (target keywords) -->
@@ -28,13 +17,9 @@
   <url><loc>https://pulsecalendar.app/features/adhd-calendar</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
   <url><loc>https://pulsecalendar.app/features/schedule-optimizer</loc><changefreq>monthly</changefreq><priority>0.9</priority></url>
 
-  <!-- Static -->
-  <url><loc>https://pulsecalendar.app/pricing</loc><changefreq>monthly</changefreq><priority>0.7</priority></url>
+  <!-- Legal & Support -->
   <url><loc>https://pulsecalendar.app/privacy</loc><changefreq>yearly</changefreq><priority>0.5</priority></url>
   <url><loc>https://pulsecalendar.app/terms</loc><changefreq>yearly</changefreq><priority>0.4</priority></url>
-  <url><loc>https://pulsecalendar.app/blog</loc><changefreq>weekly</changefreq><priority>0.7</priority></url>
   <url><loc>https://pulsecalendar.app/support</loc><changefreq>monthly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://pulsecalendar.app/changelog</loc><changefreq>weekly</changefreq><priority>0.5</priority></url>
-  <url><loc>https://pulsecalendar.app/download</loc><changefreq>monthly</changefreq><priority>0.8</priority></url>
 
 </urlset>

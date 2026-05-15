@@ -23,5 +23,4 @@ User-agent: Baiduspider
 Allow: /
 
 Sitemap: https://pulsecalendar.app/sitemap.xml
-Sitemap: https://pulsecalendar.app/sitemap-calendars.xml
 Host: https://pulsecalendar.app
