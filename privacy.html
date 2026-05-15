@@ -4,11 +4,11 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Politique de confidentialité — PulseCalendar</title>
-<meta name="description" content="PulseCalendar est 100 % local. Aucune donnée d'agenda, aucun token envoyé au cloud, aucun tracker n'est envoyé sur nos serveurs. Voici exactement ce que ça veut dire."/>
+<meta name="description" content="PulseCalendar stocke tes événements et habitudes sur ton iPhone par défaut. Les calendriers partagés et sondages Doodle (optionnels) utilisent Firebase Firestore — anonyme, sans compte requis. Aucun tracker publicitaire."/>
 <link rel="canonical" href="https://pulsecalendar.app/privacy"/>
 <meta name="robots" content="index,follow"/>
 <meta property="og:title" content="Politique de confidentialité — PulseCalendar"/>
-<meta property="og:description" content="100 % local. Aucune donnée envoyée. Voici exactement ce que ça veut dire."/>
+<meta property="og:description" content="Stockage local par défaut. Pas de tracking publicitaire. Calendriers partagés et Doodle polls via Firebase (anonyme)."/>
 <meta property="og:image" content="https://pulsecalendar.app/og-cover.svg"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -23,21 +23,21 @@
 </nav>
 
 <header class="hero">
-  <div class="hero-eyebrow"><span>🔒</span> Privacy by design · 100 % local</div>
+  <div class="hero-eyebrow"><span>🔒</span> Privacy by design · stockage local par défaut</div>
   <h1>Politique de <span class="gradient">confidentialité</span>.</h1>
-  <p class="lede">PulseCalendar est conçu pour ne <strong>jamais</strong> envoyer ton agenda, tes contacts, ni les calculs de Pulse Brain en dehors de ton iPhone. Voici exactement ce que ça veut dire — sans jargon.</p>
-  <p style="font-family:'Geist Mono',monospace;font-size:13px;color:var(--text-3);margin-top:12px">Dernière mise à jour : 9 mai 2026</p>
+  <p class="lede">PulseCalendar stocke tes événements, habitudes et calculs Pulse Brain <strong>sur ton iPhone par défaut</strong>. Quand tu choisis de partager un calendrier ou créer un sondage Doodle, ces données utilisent Firebase Firestore — anonyme, sans compte requis. Pas de tracking publicitaire. Voici exactement ce que ça veut dire — sans jargon.</p>
+  <p style="font-family:'Geist Mono',monospace;font-size:13px;color:var(--text-3);margin-top:12px">Dernière mise à jour : 15 mai 2026</p>
 </header>
 
 <main class="content">
 
 <h2>TL;DR — Le résumé en 5 points</h2>
 <ul>
-  <li><strong>Tes événements de calendrier ne quittent jamais ton iPhone.</strong> Ils restent dans la base CalendarKit d'iOS (iCloud chez Apple, ou ton serveur Google/Outlook si tu connectes ces comptes).</li>
-  <li><strong>Pulse Brain (coach intelligent) tourne 100 % en local</strong> via les modèles on-device et le Neural Engine. Aucun token n'est envoyé à OpenAI, Anthropic, ou un quelconque serveur — pas même le nôtre.</li>
-  <li><strong>Aucun tracker tiers</strong> dans l'app. Pas de Google Analytics, pas de Firebase, pas de Mixpanel, pas de Facebook SDK.</li>
+  <li><strong>Tes événements de calendrier restent dans iCloud / Google / Outlook</strong> (selon les comptes que tu connectes) — via les API natives iOS. Ils ne sont copiés ailleurs <strong>que si tu choisis explicitement</strong> de partager un calendrier avec un proche (un miroir minimal va alors sur Firebase Firestore).</li>
+  <li><strong>Pulse Brain (coach intelligent) tourne 100 % en local</strong> via les modèles on-device et le Neural Engine. Aucun token n'est envoyé à OpenAI, Anthropic, ou un quelconque serveur LLM.</li>
+  <li><strong>Aucun tracker publicitaire.</strong> Pas de Google Analytics, pas de Mixpanel, pas de Facebook SDK, pas d'IDFA. <strong>Firebase Firestore</strong> est utilisé uniquement pour 2 features optionnelles (calendriers partagés + sondages Doodle), et <strong>Firebase Crashlytics</strong> pour les crash reports anonymes.</li>
   <li><strong>Aucun compte requis</strong> pour utiliser PulseCalendar. Tu peux acheter Pulse Pro avec Apple ID — c'est tout.</li>
-  <li><strong>Tu peux tout supprimer</strong> en désinstallant l'app : aucune donnée ne reste sur nos serveurs (parce qu'il n'y en a jamais eu).</li>
+  <li><strong>Tu peux tout supprimer</strong> en désinstallant l'app. Pour effacer les données Firebase associées (calendriers partagés, polls Doodle), écris-nous à <a href="mailto:Contact@PulseCalendar.app">Contact@PulseCalendar.app</a>.</li>
 </ul>
 
 <h2>1. Qui est responsable du traitement ?</h2>
@@ -60,28 +60,31 @@
 
 <h3>2.2 Données qu'on reçoit (oui, il y en a un peu)</h3>
 <table>
-  <thead><tr><th>Donnée</th><th>Pourquoi</th><th>Sous-traitant</th></tr></thead>
+  <thead><tr><th>Donnée</th><th>Pourquoi / Quand</th><th>Sous-traitant</th></tr></thead>
   <tbody>
     <tr><td>Email (si tu t'inscris à la newsletter de pré-lancement)</td><td>Te prévenir du lancement App Store</td><td>Apple iCloud Mail / Brevo</td></tr>
     <tr><td>Identifiants App Store anonymes (achat Pulse Pro)</td><td>Gérer ton abonnement</td><td>Apple App Store</td></tr>
-    <tr><td>Crash reports anonymisés (opt-in)</td><td>Corriger les bugs</td><td>Apple TestFlight / Xcode Cloud</td></tr>
+    <tr><td>Crash reports anonymisés</td><td>Corriger les bugs (diagnostic)</td><td>Firebase Crashlytics (Google) / Apple TestFlight</td></tr>
+    <tr><td>Calendrier partagé (events, participants, titre)</td><td><strong>Uniquement si tu actives le partage</strong> d'un calendrier avec un proche</td><td>Firebase Firestore (Google Cloud)</td></tr>
+    <tr><td>Sondage Doodle (poll, options, votes)</td><td><strong>Uniquement si tu crées un sondage Doodle</strong></td><td>Firebase Firestore (Google Cloud)</td></tr>
   </tbody>
 </table>
+<p style="font-size:14px;color:var(--text-3);margin-top:12px"><em>Firebase est un service de Google Cloud. Les données partagées sont accessibles uniquement aux participants invités via Apple ID anonyme. Aucun compte tiers requis.</em></p>
 
 <h2>3. Ce qu'on ne fait jamais</h2>
 <ul>
-  <li>❌ Envoyer tes événements de calendrier sur nos serveurs.</li>
-  <li>❌ Envoyer le contenu de tes événements à une intelligence cloud (ChatGPT, Claude, Gemini, etc.).</li>
+  <li>❌ Envoyer tes événements de calendrier en arrière-plan sans ton accord (seul le partage explicite déclenche un upload).</li>
+  <li>❌ Envoyer le contenu de tes événements à une intelligence cloud (ChatGPT, Claude, Gemini, etc.). Pulse Brain reste 100 % on-device.</li>
   <li>❌ Vendre ou partager tes données avec des annonceurs ou data brokers.</li>
   <li>❌ Te tracer entre apps (pas d'IDFA, pas de fingerprinting).</li>
-  <li>❌ Stocker tes RDV médicaux, thérapeute, ou tout autre info sensible — ils restent sur ton iPhone.</li>
+  <li>❌ Demander un compte ou un mot de passe pour utiliser PulseCalendar.</li>
 </ul>
 
 <h2>4. Tes droits RGPD</h2>
 <p>Comme PulseCalendar ne stocke pas tes données sur ses serveurs, l'essentiel des droits RGPD se règle directement dans l'app :</p>
 <ul>
   <li><strong>Droit d'accès / portabilité</strong> : tes événements sont déjà chez toi (iCloud / Google / Outlook). Export ICS natif possible.</li>
-  <li><strong>Droit à l'effacement</strong> : désinstalle l'app, et toutes les données locales partent.</li>
+  <li><strong>Droit à l'effacement</strong> : désinstalle l'app et toutes les données locales partent. Pour effacer les données partagées via Firebase (calendriers partagés, sondages Doodle), écris à <a href="mailto:Contact@PulseCalendar.app">Contact@PulseCalendar.app</a>.</li>
   <li><strong>Droit d'opposition au newsletter</strong> : lien de désinscription dans chaque mail, ou écris-nous.</li>
   <li><strong>Droit de réclamation</strong> : tu peux saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a> en France ou ton autorité locale (ICO au Royaume-Uni, AEPD en Espagne, BfDI en Allemagne, OPC au Canada, FTC aux États-Unis, OAIC en Australie, PPC au Japon).</li>
 </ul>
@@ -105,7 +108,7 @@
   <h2>Pour aller plus loin</h2>
   <div class="related-grid">
     <a href="index.html#privacy">Section Privacy de la home →</a>
-    <a href="features/ai-calendar.html">Coach intelligent 100 % local →</a>
+    <a href="features/ai-calendar.html">Coach intelligent on-device →</a>
     <a href="features/adhd-calendar.html">Confidentialité médicale →</a>
     <a href="index.html#faq">FAQ →</a>
   </div>
