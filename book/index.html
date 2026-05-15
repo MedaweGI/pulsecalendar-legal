@@ -8,8 +8,8 @@
 <meta name="robots" content="noindex">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
 
-<!-- reCAPTCHA Enterprise -->
-<script src="https://www.google.com/recaptcha/enterprise.js?render=YOUR_SITE_KEY"></script>
+<!-- reCAPTCHA v3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LeL4OssAAAAAEPEoBCWvALa0Acy2U4hWE-nzvjv"></script>
 
 <style>
 :root {
@@ -377,25 +377,29 @@ body {
 <!-- Firebase SDK + booking logic -->
 <script type="module">
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
-import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app-check.js";
+import { initializeAppCheck, ReCaptchaV3Provider } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app-check.js";
 import { getFirestore, doc, getDoc, collection, query, where, getDocs, orderBy } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
 
-// ⚠️ Remplacer par la vraie config Firebase de pulsecalendar
+// Firebase config — projet pulsecalendar-9b47f
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "pulsecalendar.firebaseapp.com",
-  projectId: "pulsecalendar",
-  storageBucket: "pulsecalendar.appspot.com",
+  apiKey: "AIzaSyDstL7mT2FQZZZTKbu4hR4KV2cPu02Ta98",
+  authDomain: "pulsecalendar-9b47f.firebaseapp.com",
+  projectId: "pulsecalendar-9b47f",
+  storageBucket: "pulsecalendar-9b47f.firebasestorage.app",
+  messagingSenderId: "529257635805",
+  appId: "1:529257635805:web:d56a0fd1802e2b8e1b6034",
+  measurementId: "G-1E9ZNCZB5Z"
 };
 
-const RECAPTCHA_SITE_KEY = "YOUR_SITE_KEY";
-const CLOUD_FUNCTION_URL = "https://europe-west1-pulsecalendar.cloudfunctions.net/createBooking";
+// reCAPTCHA v3 site key (créée sur www.google.com/recaptcha/admin)
+const RECAPTCHA_SITE_KEY = "6LeL4OssAAAAAEPEoBCWvALa0Acy2U4hWE-nzvjv";
+const CLOUD_FUNCTION_URL = "https://europe-west1-pulsecalendar-9b47f.cloudfunctions.net/createBooking";
 
 const app = initializeApp(firebaseConfig);
 
-// App Check obligatoire — bloque les bots non-attested
+// App Check obligatoire — bloque les bots non-attested (reCAPTCHA v3)
 initializeAppCheck(app, {
-  provider: new ReCaptchaEnterpriseProvider(RECAPTCHA_SITE_KEY),
+  provider: new ReCaptchaV3Provider(RECAPTCHA_SITE_KEY),
   isTokenAutoRefreshEnabled: true,
 });
 
@@ -586,8 +590,8 @@ $('bookingForm').addEventListener('submit', async (e) => {
   btn.textContent = 'Submitting…';
 
   try {
-    // 1. Get reCAPTCHA token
-    const token = await grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, {
+    // 1. Get reCAPTCHA v3 token
+    const token = await grecaptcha.execute(RECAPTCHA_SITE_KEY, {
       action: 'create_booking',
     });
 
