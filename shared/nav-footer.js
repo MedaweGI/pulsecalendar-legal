@@ -31,7 +31,7 @@
         <span class="nav-brand-icon"></span>
         <span>PulseCalendar</span>
       </a>
-      <p>Smart calendar app et anti-procrastination coach pour iPhone. Intelligence 100 % locale.</p>
+      <p>Smart calendar app et anti-procrastination coach pour iPhone. Intelligence on-device.</p>
       <p style="margin-top:10px;font-size:12px;color:var(--text-3)">🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪</p>
     </div>
     <div class="foot-col">
