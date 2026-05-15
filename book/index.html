@@ -55,13 +55,11 @@ body {
 }
 .header { text-align: center; margin-bottom: 32px; }
 .logo {
-  width: 56px; height: 56px;
+  width: 64px; height: 64px;
   border-radius: 14px;
-  background: linear-gradient(135deg, #6244D6, #9d83f7);
-  display: inline-flex;
-  align-items: center; justify-content: center;
-  font-size: 28px;
+  display: inline-block;
   margin-bottom: 16px;
+  object-fit: contain;
 }
 .brand { font-size: 14px; color: var(--text-mid); letter-spacing: 0.5px; text-transform: uppercase; }
 .host-name { font-size: 32px; font-weight: 700; margin: 12px 0 4px; letter-spacing: -0.02em; }
@@ -287,11 +285,11 @@ body {
 <div class="container">
 
   <div class="header">
-    <div class="logo">🟣</div>
+    <img class="logo" src="/icon-192.png" alt="Pulse Calendar">
     <div class="brand">Pulse Booking</div>
     <h1 class="host-name" id="hostName">Loading...</h1>
     <div class="title-tag" id="titleTag">
-      <span>⏱</span><span id="durationLabel">—</span>
+      <span id="durationLabel">—</span>
     </div>
   </div>
 
@@ -303,7 +301,6 @@ body {
 
   <!-- ERROR -->
   <div class="card state-error hidden" id="stateError">
-    <div class="err">⚠️</div>
     <h2 id="errorTitle">Something went wrong</h2>
     <p id="errorMsg" style="color:var(--text-mid);margin-top:8px"></p>
   </div>
@@ -312,9 +309,9 @@ body {
   <div class="card hidden" id="step1">
     <div class="section-title">Pick a date</div>
     <div class="cal-nav">
-      <button id="calPrev">←</button>
+      <button id="calPrev">Prev</button>
       <div class="cal-month" id="calMonth"></div>
-      <button id="calNext">→</button>
+      <button id="calNext">Next</button>
     </div>
     <div class="cal" id="calGrid"></div>
     <div class="tz">
@@ -363,7 +360,6 @@ body {
 
   <!-- SUCCESS -->
   <div class="card state-success hidden" id="stateSuccess">
-    <div class="check">✓</div>
     <h2>Booking received</h2>
     <p style="margin-top:8px;color:var(--text-mid)" id="successDetails">
       A confirmation email has been sent. The host will validate shortly.
@@ -377,7 +373,7 @@ body {
   <div class="footer-cta">
     <h3>Want this for yourself?</h3>
     <p>Pulse Calendar — privacy-first iOS calendar. No account required.</p>
-    <a href="/">Discover Pulse Calendar →</a>
+    <a href="/">Discover Pulse Calendar</a>
   </div>
 
 </div>
