@@ -56,21 +56,12 @@
       </ul>
     </div>
     <div class="foot-col">
-      <h4>Comparatifs</h4>
-      <ul>
-        <li><a href="${home}vs/apple-calendar.html">vs Apple Calendar</a></li>
-      </ul>
-      <h4 style="margin-top:18px">Audiences</h4>
-      <ul>
-        <li><a href="${home}audiences/students.html">Étudiants</a></li>
-        <li><a href="${home}audiences/adhd.html">TDAH</a></li>
-      </ul>
-    </div>
-    <div class="foot-col">
       <h4>Ressources</h4>
       <ul>
         <li><a href="${home}index.html#faq">FAQ</a></li>
+        <li><a href="${home}support/index.html">Support</a></li>
         <li><a href="${home}privacy.html">Confidentialité</a></li>
+        <li><a href="${home}terms.html">Conditions</a></li>
         <li><a href="mailto:Contact@PulseCalendar.app">Contact</a></li>
       </ul>
     </div>
