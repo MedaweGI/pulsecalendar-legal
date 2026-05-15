@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book a slot · Pulse Calendar</title>
+<meta name="description" content="Pick a time slot in seconds. No account required.">
+<meta name="robots" content="noindex">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+
+<!-- reCAPTCHA Enterprise -->
+<script src="https://www.google.com/recaptcha/enterprise.js?render=YOUR_SITE_KEY"></script>
+
+<style>
+:root {
+  --bg: #0B0818;
+  --surface: #14102A;
+  --surface-2: #1B1638;
+  --border: #2A2244;
+  --text: #F5F3FA;
+  --text-mid: #B8B3C9;
+  --text-low: #6E6A80;
+  --accent: #6B4FE8;
+  --accent-hover: #8B6FFF;
+  --success: #34C759;
+  --error: #FF3B30;
+  --warning: #FF9F0A;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Display", "Segoe UI", system-ui, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+body {
+  background:
+    radial-gradient(800px 600px at 20% -10%, rgba(98,68,214,0.20), transparent 60%),
+    radial-gradient(700px 500px at 90% 10%, rgba(123,92,240,0.14), transparent 60%),
+    var(--bg);
+}
+.container {
+  max-width: 540px;
+  margin: 0 auto;
+  padding: 40px 20px 60px;
+}
+.header { text-align: center; margin-bottom: 32px; }
+.logo {
+  width: 56px; height: 56px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #6244D6, #9d83f7);
+  display: inline-flex;
+  align-items: center; justify-content: center;
+  font-size: 28px;
+  margin-bottom: 16px;
+}
+.brand { font-size: 14px; color: var(--text-mid); letter-spacing: 0.5px; text-transform: uppercase; }
+.host-name { font-size: 32px; font-weight: 700; margin: 12px 0 4px; letter-spacing: -0.02em; }
+.title-tag {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 8px 16px;
+  font-size: 14px;
+  margin-top: 8px;
+}
+.card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 24px;
+  margin-bottom: 16px;
+}
+.section-title { font-size: 13px; color: var(--text-mid); font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 16px; }
+.tz {
+  font-size: 12px;
+  color: var(--text-low);
+  margin-top: 4px;
+}
+.tz a { color: var(--accent); text-decoration: none; }
+
+/* Date picker */
+.cal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 6px;
+  margin-top: 12px;
+}
+.cal-day-header {
+  text-align: center;
+  font-size: 11px;
+  color: var(--text-low);
+  font-weight: 600;
+  padding: 4px 0;
+}
+.cal-day {
+  aspect-ratio: 1;
+  display: flex;
+  align-items: center; justify-content: center;
+  border-radius: 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.15s;
+  position: relative;
+}
+.cal-day.empty { visibility: hidden; }
+.cal-day.has-slots {
+  background: var(--surface-2);
+  color: var(--text);
+}
+.cal-day.has-slots:hover { background: var(--accent); }
+.cal-day.full {
+  color: var(--text-low);
+  text-decoration: line-through;
+  cursor: not-allowed;
+}
+.cal-day.selected {
+  background: var(--accent);
+  color: white;
+}
+.cal-day .dot {
+  position: absolute;
+  bottom: 4px;
+  width: 4px; height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+.cal-day.selected .dot { background: white; }
+.cal-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.cal-nav button {
+  background: var(--surface-2);
+  border: none;
+  color: var(--text);
+  padding: 6px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.cal-month { font-weight: 600; font-size: 15px; }
+
+/* Time slots */
+.slots { display: grid; grid-template-columns: repeat(2, 1fr); gap: 8px; margin-top: 12px; }
+.slot {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 12px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 14px;
+  transition: all 0.15s;
+}
+.slot:hover { border-color: var(--accent); }
+.slot.selected {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: white;
+}
+.no-slots { color: var(--text-low); font-size: 14px; text-align: center; padding: 16px; }
+
+/* Form */
+.field { margin-bottom: 16px; }
+.field label { display: block; font-size: 12px; color: var(--text-mid); margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; font-weight: 600; }
+.field input, .field textarea {
+  width: 100%;
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: var(--text);
+  padding: 12px;
+  font-size: 16px;
+  font-family: inherit;
+}
+.field input:focus, .field textarea:focus {
+  outline: none;
+  border-color: var(--accent);
+}
+.field textarea { min-height: 80px; resize: vertical; }
+.honeypot {
+  position: absolute;
+  left: -9999px;
+  width: 1px; height: 1px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Checkbox */
+.consent {
+  display: flex; align-items: flex-start; gap: 10px;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+.consent input { margin-top: 2px; }
+.consent span { font-size: 13px; color: var(--text-mid); line-height: 1.5; }
+
+/* CTA */
+.cta {
+  width: 100%;
+  background: var(--accent);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.cta:hover { background: var(--accent-hover); }
+.cta:disabled { background: var(--text-low); cursor: not-allowed; }
+
+.summary {
+  display: flex; justify-content: space-between;
+  font-size: 14px; padding: 12px 0;
+  border-bottom: 1px solid var(--border);
+}
+.summary:last-child { border: none; }
+.summary strong { color: var(--text); }
+.summary span { color: var(--text-mid); }
+
+/* States */
+.state-loading, .state-error, .state-success {
+  text-align: center;
+  padding: 40px 20px;
+}
+.state-loading .spinner {
+  display: inline-block;
+  width: 32px; height: 32px;
+  border: 3px solid var(--border);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.state-success .check {
+  width: 64px; height: 64px;
+  background: var(--success);
+  border-radius: 50%;
+  margin: 0 auto 16px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 32px;
+  color: white;
+}
+.state-error .err { color: var(--error); font-size: 48px; margin-bottom: 12px; }
+
+.footer-cta {
+  margin-top: 40px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  text-align: center;
+}
+.footer-cta h3 { font-size: 16px; margin-bottom: 8px; }
+.footer-cta p { font-size: 13px; color: var(--text-mid); margin-bottom: 16px; }
+.footer-cta a {
+  display: inline-block;
+  background: linear-gradient(135deg, #6244D6, #9d83f7);
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.hidden { display: none !important; }
+</style>
+</head>
+<body>
+
+<div class="container">
+
+  <div class="header">
+    <div class="logo">🟣</div>
+    <div class="brand">Pulse Booking</div>
+    <h1 class="host-name" id="hostName">Loading...</h1>
+    <div class="title-tag" id="titleTag">
+      <span>⏱</span><span id="durationLabel">—</span>
+    </div>
+  </div>
+
+  <!-- LOADING -->
+  <div class="card state-loading" id="stateLoading">
+    <div class="spinner"></div>
+    <p style="margin-top:16px;color:var(--text-mid)">Loading availability…</p>
+  </div>
+
+  <!-- ERROR -->
+  <div class="card state-error hidden" id="stateError">
+    <div class="err">⚠️</div>
+    <h2 id="errorTitle">Something went wrong</h2>
+    <p id="errorMsg" style="color:var(--text-mid);margin-top:8px"></p>
+  </div>
+
+  <!-- STEP 1: Date picker -->
+  <div class="card hidden" id="step1">
+    <div class="section-title">Pick a date</div>
+    <div class="cal-nav">
+      <button id="calPrev">←</button>
+      <div class="cal-month" id="calMonth"></div>
+      <button id="calNext">→</button>
+    </div>
+    <div class="cal" id="calGrid"></div>
+    <div class="tz">
+      Your timezone: <strong id="tzLabel"></strong>
+    </div>
+  </div>
+
+  <!-- STEP 2: Time slots -->
+  <div class="card hidden" id="step2">
+    <div class="section-title" id="step2Title">Available times</div>
+    <div class="slots" id="slotsGrid"></div>
+  </div>
+
+  <!-- STEP 3: Form -->
+  <div class="card hidden" id="step3">
+    <div class="section-title">Your details</div>
+    <div class="summary"><strong id="summaryWhat">Coffee chat</strong><span id="summaryDuration">30 min</span></div>
+    <div class="summary"><strong id="summaryWhen">—</strong><span id="summaryTZ">—</span></div>
+
+    <form id="bookingForm" style="margin-top:24px">
+      <div class="field">
+        <label for="name">Your name *</label>
+        <input type="text" id="name" name="name" required maxlength="100" autocomplete="name">
+      </div>
+      <div class="field">
+        <label for="email">Your email *</label>
+        <input type="email" id="email" name="email" required maxlength="200" autocomplete="email">
+      </div>
+      <div class="field hidden" id="answerField">
+        <label for="answer" id="answerLabel">Your message</label>
+        <textarea id="answer" name="answer" maxlength="1000"></textarea>
+      </div>
+
+      <!-- Honeypot -->
+      <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
+
+      <label class="consent">
+        <input type="checkbox" id="consent" required>
+        <span>I accept that my name and email are stored to confirm this booking
+              (Firebase Firestore, deleted on request to Contact@PulseCalendar.app).</span>
+      </label>
+
+      <button type="submit" class="cta" id="submitBtn">Confirm booking</button>
+    </form>
+  </div>
+
+  <!-- SUCCESS -->
+  <div class="card state-success hidden" id="stateSuccess">
+    <div class="check">✓</div>
+    <h2>Booking received</h2>
+    <p style="margin-top:8px;color:var(--text-mid)" id="successDetails">
+      A confirmation email has been sent. The host will validate shortly.
+    </p>
+    <p style="margin-top:16px;font-size:13px;color:var(--text-low)">
+      Need to cancel? Use the link in the email we just sent you.
+    </p>
+  </div>
+
+  <!-- Marketing footer -->
+  <div class="footer-cta">
+    <h3>Want this for yourself?</h3>
+    <p>Pulse Calendar — privacy-first iOS calendar. No account required.</p>
+    <a href="/">Discover Pulse Calendar →</a>
+  </div>
+
+</div>
+
+<!-- Firebase SDK + booking logic -->
+<script type="module">
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app.js";
+import { initializeAppCheck, ReCaptchaEnterpriseProvider } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-app-check.js";
+import { getFirestore, doc, getDoc, collection, query, where, getDocs, orderBy } from "https://www.gstatic.com/firebasejs/10.7.0/firebase-firestore.js";
+
+// ⚠️ Remplacer par la vraie config Firebase de pulsecalendar
+const firebaseConfig = {
+  apiKey: "YOUR_API_KEY",
+  authDomain: "pulsecalendar.firebaseapp.com",
+  projectId: "pulsecalendar",
+  storageBucket: "pulsecalendar.appspot.com",
+};
+
+const RECAPTCHA_SITE_KEY = "YOUR_SITE_KEY";
+const CLOUD_FUNCTION_URL = "https://europe-west1-pulsecalendar.cloudfunctions.net/createBooking";
+
+const app = initializeApp(firebaseConfig);
+
+// App Check obligatoire — bloque les bots non-attested
+initializeAppCheck(app, {
+  provider: new ReCaptchaEnterpriseProvider(RECAPTCHA_SITE_KEY),
+  isTokenAutoRefreshEnabled: true,
+});
+
+const db = getFirestore(app);
+
+// ─── State ───────────────────────────────────────────────
+const shortId = new URL(location.href).pathname.split('/').filter(Boolean).pop();
+let link = null;
+let slots = [];
+let selectedDate = null;
+let selectedSlot = null;
+const guestTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+
+const $ = (id) => document.getElementById(id);
+
+document.getElementById('tzLabel').textContent = guestTz;
+
+// ─── Load booking link + slots ───────────────────────────
+async function load() {
+  try {
+    if (!shortId || shortId === 'book' || shortId.length < 6) {
+      throw new Error('Invalid booking link');
+    }
+
+    const linkSnap = await getDoc(doc(db, 'bookingLinks', shortId));
+    if (!linkSnap.exists()) throw new Error('Booking link not found');
+
+    const linkData = linkSnap.data();
+    if (!linkData.active) throw new Error('This booking link is no longer active');
+
+    link = JSON.parse(linkData.json);
+    document.title = `${link.title} · Pulse Booking`;
+    $('hostName').textContent = link.title;
+    $('durationLabel').textContent = `${link.durationMinutes} minutes`;
+    $('summaryWhat').textContent = link.title;
+    $('summaryDuration').textContent = `${link.durationMinutes} min`;
+
+    if (link.question) {
+      $('answerLabel').textContent = link.question;
+      $('answerField').classList.remove('hidden');
+    }
+
+    // Load slots
+    const slotsQ = query(
+      collection(db, 'publicAvailability', link.hostAnonymousUid, 'slots'),
+      where('linkShortId', '==', shortId),
+      where('bookable', '==', true),
+      orderBy('start')
+    );
+    const slotsSnap = await getDocs(slotsQ);
+    slots = slotsSnap.docs.map(d => ({
+      id: d.id,
+      start: d.data().start.toDate(),
+      end: d.data().end.toDate(),
+    }));
+
+    if (slots.length === 0) {
+      throw new Error('No availability — please try again later');
+    }
+
+    $('stateLoading').classList.add('hidden');
+    $('step1').classList.remove('hidden');
+    renderCalendar();
+  } catch (err) {
+    $('stateLoading').classList.add('hidden');
+    $('stateError').classList.remove('hidden');
+    $('errorMsg').textContent = err.message;
+  }
+}
+
+// ─── Calendar render ─────────────────────────────────────
+let calMonth = new Date();
+calMonth.setDate(1);
+
+function renderCalendar() {
+  const month = calMonth.getMonth();
+  const year = calMonth.getFullYear();
+  const monthName = calMonth.toLocaleDateString('en-US', { month: 'long', year: 'numeric' });
+  $('calMonth').textContent = monthName;
+
+  const grid = $('calGrid');
+  grid.innerHTML = '';
+
+  // Day headers
+  ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].forEach(d => {
+    const h = document.createElement('div');
+    h.className = 'cal-day-header';
+    h.textContent = d;
+    grid.appendChild(h);
+  });
+
+  // First day offset (mon=0 ... sun=6)
+  const firstDay = new Date(year, month, 1).getDay();
+  const offset = (firstDay + 6) % 7;
+  for (let i = 0; i < offset; i++) {
+    const e = document.createElement('div');
+    e.className = 'cal-day empty';
+    grid.appendChild(e);
+  }
+
+  const daysInMonth = new Date(year, month + 1, 0).getDate();
+  for (let d = 1; d <= daysInMonth; d++) {
+    const date = new Date(year, month, d);
+    const dateKey = date.toISOString().slice(0, 10);
+    const hasSlots = slots.some(s => s.start.toISOString().slice(0, 10) === dateKey);
+    const isPast = date < new Date(new Date().setHours(0,0,0,0));
+
+    const cell = document.createElement('div');
+    cell.className = 'cal-day';
+    cell.textContent = d;
+    if (isPast || !hasSlots) {
+      cell.classList.add('full');
+    } else {
+      cell.classList.add('has-slots');
+      const dot = document.createElement('div');
+      dot.className = 'dot';
+      cell.appendChild(dot);
+      cell.onclick = () => selectDate(date);
+    }
+    if (selectedDate && selectedDate.toDateString() === date.toDateString()) {
+      cell.classList.add('selected');
+    }
+    grid.appendChild(cell);
+  }
+}
+
+$('calPrev').onclick = () => {
+  calMonth.setMonth(calMonth.getMonth() - 1);
+  renderCalendar();
+};
+$('calNext').onclick = () => {
+  calMonth.setMonth(calMonth.getMonth() + 1);
+  renderCalendar();
+};
+
+function selectDate(date) {
+  selectedDate = date;
+  selectedSlot = null;
+  renderCalendar();
+  renderSlots();
+  $('step2').classList.remove('hidden');
+  $('step3').classList.add('hidden');
+}
+
+function renderSlots() {
+  const dayKey = selectedDate.toISOString().slice(0, 10);
+  const daySlots = slots.filter(s => s.start.toISOString().slice(0, 10) === dayKey);
+  const friendly = selectedDate.toLocaleDateString('en-US', {
+    weekday: 'short', month: 'short', day: 'numeric',
+  });
+  $('step2Title').textContent = `${friendly} — pick a time`;
+
+  const grid = $('slotsGrid');
+  grid.innerHTML = '';
+  daySlots.forEach(slot => {
+    const btn = document.createElement('div');
+    btn.className = 'slot';
+    btn.textContent = slot.start.toLocaleTimeString('en-US', {
+      hour: '2-digit', minute: '2-digit', hour12: false,
+    });
+    btn.onclick = () => selectSlot(slot, btn);
+    grid.appendChild(btn);
+  });
+}
+
+function selectSlot(slot, btn) {
+  selectedSlot = slot;
+  document.querySelectorAll('.slot').forEach(el => el.classList.remove('selected'));
+  btn.classList.add('selected');
+
+  $('summaryWhen').textContent = slot.start.toLocaleString('en-US', {
+    weekday: 'short', month: 'short', day: 'numeric',
+    hour: '2-digit', minute: '2-digit',
+  });
+  $('summaryTZ').textContent = guestTz;
+
+  $('step3').classList.remove('hidden');
+  $('step3').scrollIntoView({ behavior: 'smooth' });
+}
+
+// ─── Submit booking ──────────────────────────────────────
+$('bookingForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+  if (!selectedSlot) return;
+
+  const btn = $('submitBtn');
+  btn.disabled = true;
+  btn.textContent = 'Submitting…';
+
+  try {
+    // 1. Get reCAPTCHA token
+    const token = await grecaptcha.enterprise.execute(RECAPTCHA_SITE_KEY, {
+      action: 'create_booking',
+    });
+
+    // 2. POST to Cloud Function (which does server-side validation + rate limit)
+    const response = await fetch(CLOUD_FUNCTION_URL, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        linkShortId: shortId,
+        guestName: $('name').value.trim(),
+        guestEmail: $('email').value.trim(),
+        guestAnswer: $('answer').value.trim() || null,
+        guestTimezone: guestTz,
+        startTime: selectedSlot.start.toISOString(),
+        endTime: selectedSlot.end.toISOString(),
+        recaptchaToken: token,
+        honeypot: e.target.elements.website.value,
+      }),
+    });
+
+    if (!response.ok) {
+      const errData = await response.json().catch(() => ({}));
+      throw new Error(humanError(errData.error || 'unknown'));
+    }
+
+    // 3. Success
+    document.querySelectorAll('.card').forEach(c => c.classList.add('hidden'));
+    $('stateSuccess').classList.remove('hidden');
+    $('successDetails').textContent =
+      `Confirmation sent to ${$('email').value}. The host will validate shortly.`;
+
+  } catch (err) {
+    alert(err.message);
+    btn.disabled = false;
+    btn.textContent = 'Confirm booking';
+  }
+});
+
+function humanError(code) {
+  const msgs = {
+    invalid_link: 'This booking link is invalid.',
+    invalid_name: 'Please enter a valid name.',
+    invalid_email: 'Please enter a valid email.',
+    invalid_time: 'Invalid time slot.',
+    slot_not_available: 'This slot is no longer available. Please pick another.',
+    slot_already_booked: 'This slot was just booked by someone else. Please pick another.',
+    rate_limit_ip: 'Too many requests from your network. Try again in 15 minutes.',
+    rate_limit_email: 'You\'ve booked too many slots today. Try again tomorrow.',
+    recaptcha_failed: 'Security check failed. Please refresh and try again.',
+    link_inactive: 'This booking link is no longer active.',
+    link_not_found: 'Booking link not found.',
+    time_in_past: 'Cannot book a time in the past.',
+    duration_too_long: 'Duration too long.',
+  };
+  return msgs[code] || 'Something went wrong. Please try again.';
+}
+
+// Init
+load();
+</script>
+
+</body>
+</html>
