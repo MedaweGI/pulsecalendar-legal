@@ -74,7 +74,7 @@
   ],
   "availableOnDevice": "iPhone",
   "inLanguage": ["fr","en","es","de","ja"],
-  "countriesSupported": ["FR","CA","US","GB","AU","ES","JP","DE"]
+  "countriesSupported": ["AE","AF","AG","AI","AL","AM","AO","AR","AT","AU","AZ","BB","BD","BE","BF","BG","BH","BJ","BM","BN","BO","BR","BS","BT","BW","BY","BZ","CA","CD","CG","CH","CI","CL","CM","CN","CO","CR","CV","CY","CZ","DE","DK","DM","DO","DZ","EC","EE","EG","ES","FI","FJ","FM","FR","GA","GB","GD","GE","GH","GM","GR","GT","GW","GY","HK","HN","HR","HU","ID","IE","IL","IN","IQ","IS","IT","JM","JO","JP","KE","KG","KH","KN","KR","KW","KY","KZ","LA","LB","LC","LI","LK","LR","LT","LU","LV","MA","MD","ME","MG","MK","ML","MM","MN","MO","MR","MS","MT","MU","MW","MX","MY","MZ","NA","NE","NG","NI","NL","NO","NP","NZ","OM","PA","PE","PG","PH","PK","PL","PT","PW","PY","QA","RO","RS","RU","RW","SA","SB","SC","SE","SG","SI","SK","SL","SN","SR","ST","SV","SZ","TC","TD","TH","TJ","TM","TN","TO","TR","TT","TW","TZ","UA","UG","US","UY","UZ","VC","VE","VG","VN","VU","XK","YE","ZA","ZM","ZW"]
 }
 </script>
 
@@ -122,7 +122,7 @@
     {"@type":"Question","name":"Does it support school holidays automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. School holidays are auto-loaded for France (zones A, B, C), the UK, USA, Canada, Australia, Spain, Germany and Japan. The Bridge Planner shows the best public-holiday bridges for each country to maximize time off."}},
     {"@type":"Question","name":"Can I subscribe to a World Cup or sports calendar?","acceptedAnswer":{"@type":"Answer","text":"Yes. PulseCalendar offers free World Cup ICS subscriptions plus sports calendar subscriptions for Champions League, Premier League, F1, NFL, NBA, MLB, Tennis Grand Slams and more — auto-updated."}},
     {"@type":"Question","name":"Is PulseCalendar a good calendar app for students?","acceptedAnswer":{"@type":"Answer","text":"Yes. It's the calendar app for students that handles assignments, exams, school holidays, group plans and ADHD-friendly focus modes — with a free plan and student-friendly pricing."}},
-    {"@type":"Question","name":"Which countries support PulseCalendar?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar launches in France, Canada, USA, UK, Australia, Spain, Japan and Germany on the App Store."}}
+    {"@type":"Question","name":"Which countries support PulseCalendar?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar is available in 175 countries on the App Store worldwide. The app interface is localized in French, English, Spanish, German and Japanese, and the smart calendar engine works in every supported region."}}
   ]
 }
 </script>
@@ -409,15 +409,32 @@
     color: var(--text-3); margin-bottom: 24px;
   }
   .countries-list {
-    display: flex; justify-content: center; align-items: center; gap: 40px; flex-wrap: wrap;
+    display: flex; justify-content: center; align-items: center;
+    gap: 14px 22px; flex-wrap: wrap;
+    max-width: 1080px; margin: 0 auto;
   }
   .country {
-    display: flex; flex-direction: column; align-items: center; gap: 8px;
-    color: var(--text-2); font-size: 13px; font-weight: 500;
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: var(--text-2); font-size: 11px; font-weight: 500;
     transition: transform 0.2s, color 0.2s;
+    min-width: 64px;
   }
   .country:hover { transform: translateY(-3px); color: var(--text); }
-  .country .flag { font-size: 32px; line-height: 1; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4)); }
+  .country .flag { font-size: 30px; line-height: 1; filter: drop-shadow(0 4px 12px rgba(0,0,0,0.4)); }
+  .countries-more {
+    margin-top: 24px;
+    font-family: "Geist Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-3);
+    opacity: 0.7;
+  }
+  .countries-more strong {
+    color: var(--violet-300);
+    font-weight: 600;
+    letter-spacing: 0;
+  }
 
   /* SECTIONS */
   section.block {
@@ -1353,16 +1370,44 @@
 
 <!-- ===== PAYS ===== -->
 <div class="countries">
-  <div class="countries-label">Disponible dans 8 pays</div>
+  <div class="countries-label">Disponible dans 175 pays</div>
   <div class="countries-list">
     <div class="country"><span class="flag">🇫🇷</span><span>France</span></div>
-    <div class="country"><span class="flag">🇨🇦</span><span>Canada</span></div>
     <div class="country"><span class="flag">🇺🇸</span><span>États-Unis</span></div>
     <div class="country"><span class="flag">🇬🇧</span><span>Royaume-Uni</span></div>
-    <div class="country"><span class="flag">🇦🇺</span><span>Australie</span></div>
-    <div class="country"><span class="flag">🇪🇸</span><span>Espagne</span></div>
-    <div class="country"><span class="flag">🇯🇵</span><span>Japon</span></div>
     <div class="country"><span class="flag">🇩🇪</span><span>Allemagne</span></div>
+    <div class="country"><span class="flag">🇪🇸</span><span>Espagne</span></div>
+    <div class="country"><span class="flag">🇮🇹</span><span>Italie</span></div>
+    <div class="country"><span class="flag">🇨🇦</span><span>Canada</span></div>
+    <div class="country"><span class="flag">🇯🇵</span><span>Japon</span></div>
+    <div class="country"><span class="flag">🇰🇷</span><span>Corée</span></div>
+    <div class="country"><span class="flag">🇦🇺</span><span>Australie</span></div>
+    <div class="country"><span class="flag">🇲🇽</span><span>Mexique</span></div>
+    <div class="country"><span class="flag">🇧🇷</span><span>Brésil</span></div>
+    <div class="country"><span class="flag">🇮🇳</span><span>Inde</span></div>
+    <div class="country"><span class="flag">🇨🇭</span><span>Suisse</span></div>
+    <div class="country"><span class="flag">🇧🇪</span><span>Belgique</span></div>
+    <div class="country"><span class="flag">🇳🇱</span><span>Pays-Bas</span></div>
+    <div class="country"><span class="flag">🇸🇪</span><span>Suède</span></div>
+    <div class="country"><span class="flag">🇳🇴</span><span>Norvège</span></div>
+    <div class="country"><span class="flag">🇩🇰</span><span>Danemark</span></div>
+    <div class="country"><span class="flag">🇮🇪</span><span>Irlande</span></div>
+    <div class="country"><span class="flag">🇵🇹</span><span>Portugal</span></div>
+    <div class="country"><span class="flag">🇵🇱</span><span>Pologne</span></div>
+    <div class="country"><span class="flag">🇦🇹</span><span>Autriche</span></div>
+    <div class="country"><span class="flag">🇸🇬</span><span>Singapour</span></div>
+    <div class="country"><span class="flag">🇭🇰</span><span>Hong Kong</span></div>
+    <div class="country"><span class="flag">🇹🇼</span><span>Taïwan</span></div>
+    <div class="country"><span class="flag">🇦🇪</span><span>Émirats</span></div>
+    <div class="country"><span class="flag">🇮🇱</span><span>Israël</span></div>
+    <div class="country"><span class="flag">🇹🇷</span><span>Turquie</span></div>
+    <div class="country"><span class="flag">🇿🇦</span><span>Afrique du Sud</span></div>
+    <div class="country"><span class="flag">🇦🇷</span><span>Argentine</span></div>
+    <div class="country"><span class="flag">🇨🇱</span><span>Chili</span></div>
+    <div class="country"><span class="flag">🇳🇿</span><span>Nouvelle-Zélande</span></div>
+  </div>
+  <div class="countries-more">
+    + <strong>140 autres pays</strong> sur l'App Store
   </div>
 </div>
 
