@@ -226,9 +226,7 @@
   .nav-brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 17px; letter-spacing: -0.01em; }
   .nav-brand .pulse-icon { width: 40px; height: 40px; }
   /* Wrapper pour le logo PNG (image transparente, pas de border-radius
-     forcé). Le hero-logo est volontairement très grand pour servir
-     d'élément visuel principal. */
-  #hero-logo { display: block; line-height: 0; margin-bottom: 24px; }
+     forcé). Reste utile pour nav et footer. */
   #nav-logo, #footer-logo { display: flex; line-height: 0; }
   .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--text-2); }
   .nav-links a { transition: color 0.2s; }
@@ -1289,10 +1287,6 @@
 <!-- ===== HERO ===== -->
 <header class="hero">
   <div class="hero-left">
-    <!-- Hero icon : grosse icône PulseCalendar détourée (PNG transparent),
-         servie via React PulseLogo (size=120, withGlow). User feedback :
-         "icone bien découpé et en plus gros". -->
-    <div id="hero-logo"></div>
     <div class="hero-eyebrow">
       <span class="dot"></span>
       <span>Disponible sur l'App Store</span>
@@ -1672,7 +1666,7 @@
 <script type="text/babel" src="src/Screens.jsx?v=5"></script>
 <script type="text/babel" src="src/PhoneFrame.jsx?v=8"></script>
 <script type="text/babel" src="src/Themes.jsx?v=2"></script>
-<script type="text/babel" src="src/Mount.jsx?v=4"></script>
+<script type="text/babel" src="src/Mount.jsx?v=5"></script>
 
 <script>
   // Reveal on scroll
