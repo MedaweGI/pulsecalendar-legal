@@ -19,7 +19,7 @@
       <a href="${home}index.html#pricing">Premium</a>
       <a href="${home}index.html#faq">FAQ</a>
     </div>
-    <a href="${home}index.html#cta" class="nav-cta">Notifier au lancement</a>
+    <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" class="nav-cta" target="_blank" rel="noopener">Télécharger</a>
   </div>
 </nav>`;
 
