@@ -280,14 +280,23 @@
     line-height: 1.55;
   }
   .hero-ctas { display: flex; gap: 12px; flex-wrap: wrap; align-items: center; }
+  /* Apple App Store Badge — Dark version officielle (cf. guidelines
+     developer.apple.com/app-store/marketing/guidelines/).
+     Fond noir + texte blanc s'intègre au site dark mode (était blanc/noir
+     avant, ce qui faisait tâche visuelle sur le hero violet). */
   .btn-appstore {
     display: inline-flex; align-items: center; gap: 12px;
     padding: 12px 22px; border-radius: 14px;
-    background: white; color: black;
-    transition: transform 0.2s, box-shadow 0.2s;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.3);
+    background: #000; color: #fff;
+    border: 1px solid rgba(255,255,255,0.12);
+    transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.4);
   }
-  .btn-appstore:hover { transform: translateY(-2px); box-shadow: 0 12px 32px rgba(255,255,255,0.15); }
+  .btn-appstore:hover {
+    transform: translateY(-2px);
+    border-color: rgba(255,255,255,0.24);
+    box-shadow: 0 12px 32px rgba(123,92,240,0.35);
+  }
   .btn-appstore .as-icon { width: 28px; height: 28px; }
   .btn-appstore .as-text { display: flex; flex-direction: column; line-height: 1.1; }
   .btn-appstore .as-text small { font-size: 11px; opacity: 0.7; }
