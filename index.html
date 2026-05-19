@@ -13,16 +13,12 @@
 <meta name="theme-color" content="#6244D6"/>
 <link rel="canonical" href="https://pulsecalendar.app/"/>
 
-<!-- ===== HREFLANG (7 target markets) ===== -->
-<link rel="alternate" hreflang="fr" href="https://pulsecalendar.app/fr/"/>
-<link rel="alternate" hreflang="en" href="https://pulsecalendar.app/en/"/>
-<link rel="alternate" hreflang="en-us" href="https://pulsecalendar.app/en-us/"/>
-<link rel="alternate" hreflang="en-gb" href="https://pulsecalendar.app/en-gb/"/>
-<link rel="alternate" hreflang="en-ca" href="https://pulsecalendar.app/en-ca/"/>
-<link rel="alternate" hreflang="en-au" href="https://pulsecalendar.app/en-au/"/>
-<link rel="alternate" hreflang="es" href="https://pulsecalendar.app/es/"/>
-<link rel="alternate" hreflang="de" href="https://pulsecalendar.app/de/"/>
-<link rel="alternate" hreflang="ja" href="https://pulsecalendar.app/ja/"/>
+<!-- ===== HREFLANG ===== -->
+<!-- NOTE: Les pages localisées (/fr/, /en/, /es/, /de/, /ja/) ne sont
+     pas encore créées. Tant qu'elles n'existent pas, on ne déclare
+     que x-default pour éviter que Google pénalise pour hreflang
+     pointant vers des 404. La page principale est multilingue via
+     le SoftwareApplication.inLanguage du JSON-LD ci-dessous. -->
 <link rel="alternate" hreflang="x-default" href="https://pulsecalendar.app/"/>
 
 <!-- ===== OPEN GRAPH ===== -->
@@ -48,9 +44,22 @@
 <meta name="twitter:image" content="https://pulsecalendar.app/og-cover.jpg"/>
 
 <!-- ===== APPLE / iOS ===== -->
-<meta name="apple-itunes-app" content="app-id=PULSE_APP_ID"/>
+<!-- Smart App Banner : iOS Safari affiche un bandeau "Voir dans l'App Store"
+     en haut de la page quand un user iPhone visite le site. app-id =
+     l'Apple ID numérique de l'app dans App Store Connect. -->
+<meta name="apple-itunes-app" content="app-id=6764295184"/>
 <meta name="apple-mobile-web-app-title" content="PulseCalendar"/>
 <link rel="apple-touch-icon" href="/apple-touch-icon.png"/>
+
+<!-- ===== GOOGLE SEARCH CONSOLE ===== -->
+<!-- TODO Mehdi : remplacer le placeholder ci-dessous par le vrai code
+     fourni par Google Search Console après vérification du domaine.
+     Procédure : search.google.com/search-console → Add Property →
+     URL prefix → https://pulsecalendar.app/ → choisir "HTML tag" →
+     copier le content="..." ici. Une fois en place, Google Search
+     Console permet de soumettre le sitemap et voir les statistiques
+     d'indexation, requêtes, CTR, position moyenne, etc. -->
+<meta name="google-site-verification" content="REPLACE_WITH_GSC_TOKEN"/>
 
 <!-- ===== JSON-LD : SoftwareApplication ===== -->
 <script type="application/ld+json">
