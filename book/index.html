@@ -345,6 +345,20 @@ body {
         <textarea id="answer" name="answer" maxlength="1000"></textarea>
       </div>
 
+      <!--
+        Address / phone fields : caché par défaut. La fonction `load()` les
+        révèle si le BookingLink a `requireAddress === true` / `requirePhone === true`.
+        Le host coche ces options dans l'app iOS (CreateBookingLink / Detail).
+      -->
+      <div class="field hidden" id="phoneField">
+        <label for="phone">Your phone number *</label>
+        <input type="tel" id="phone" name="phone" maxlength="30" autocomplete="tel">
+      </div>
+      <div class="field hidden" id="addressField">
+        <label for="address">Your address *</label>
+        <input type="text" id="address" name="address" maxlength="500" autocomplete="street-address">
+      </div>
+
       <!-- Honeypot -->
       <input type="text" name="website" class="honeypot" tabindex="-1" autocomplete="off">
 
@@ -461,6 +475,19 @@ async function load() {
     if (link.question) {
       $('answerLabel').textContent = link.question;
       $('answerField').classList.remove('hidden');
+    }
+
+    // Champs optionnels demandés par le host (v1.4.0+) :
+    // requirePhone / requireAddress sont des bool dans le BookingLink JSON.
+    // On utilise === true pour éviter qu'une valeur "truthy" inattendue
+    // (string, nombre) active les champs sans intention explicite.
+    if (link.requirePhone === true) {
+      $('phoneField').classList.remove('hidden');
+      $('phone').setAttribute('required', '');
+    }
+    if (link.requireAddress === true) {
+      $('addressField').classList.remove('hidden');
+      $('address').setAttribute('required', '');
     }
 
     // Load slots
@@ -631,6 +658,13 @@ $('bookingForm').addEventListener('submit', async (e) => {
         guestName: $('name').value.trim(),
         guestEmail: $('email').value.trim(),
         guestAnswer: $('answer').value.trim() || null,
+        // Champs conditionnels (v1.4.0+) : seulement envoyés si le host
+        // les a demandés (i.e. le champ est visible). La Cloud Function
+        // re-vérifie côté serveur — un guest curieux qui force ces champs
+        // sans que le link les demande verra ses valeurs ignorées (anti-
+        // injection + data minimization RGPD).
+        guestPhone: $('phone').value.trim() || null,
+        guestAddress: $('address').value.trim() || null,
         guestTimezone: guestTz,
         // Locale du navigateur (ex: "fr-FR", "en-US") — sert à envoyer les
         // emails de confirmation/decline dans la bonne langue.
