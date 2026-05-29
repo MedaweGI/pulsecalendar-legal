@@ -32,7 +32,7 @@
         <span>PulseCalendar</span>
       </a>
       <p>Smart calendar app et anti-procrastination coach pour iPhone. Intelligence on-device.</p>
-      <p style="margin-top:10px;font-size:12px;color:var(--text-3)">🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪</p>
+      <p style="margin-top:10px;font-size:12px;color:var(--text-3)">🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪 🇰🇷 🇸🇦 🇷🇺 🇨🇳</p>
     </div>
     <div class="foot-col">
       <h4>Fonctionnalités</h4>
@@ -53,6 +53,7 @@
         <li><a href="${home}privacy.html">Confidentialité</a></li>
         <li><a href="${home}terms.html">Conditions</a></li>
         <li><a href="mailto:Contact@PulseCalendar.app">Contact</a></li>
+        <li><a href="https://x.com/PulseCalendar" target="_blank" rel="noopener">X (Twitter)</a></li>
       </ul>
     </div>
   </div>
