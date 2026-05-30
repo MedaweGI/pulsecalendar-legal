@@ -308,6 +308,20 @@
     transition: all 0.2s;
   }
   .btn-secondary:hover { border-color: var(--violet-400); background: var(--surface-2); }
+  .btn-icon-x {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 46px; height: 46px; border-radius: 14px;
+    border: 1px solid var(--border-strong);
+    background: var(--surface);
+    color: var(--text-1);
+    transition: all 0.2s;
+  }
+  .btn-icon-x:hover {
+    border-color: var(--violet-400);
+    background: var(--surface-2);
+    transform: translateY(-1px);
+  }
+  .btn-icon-x svg { width: 18px; height: 18px; }
   .coming-soon-badge {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 6px 12px; border-radius: 999px;
@@ -1334,6 +1348,9 @@
       </span>
       </span>
       <a href="#features" class="btn-secondary">Voir la démo ↓</a>
+      <a href="https://x.com/PulseCalendar" target="_blank" rel="noopener" class="btn-icon-x" aria-label="Suivre PulseCalendar sur X">
+        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+      </a>
     </div>
     <div class="hero-meta">
       <div class="meta-row">
