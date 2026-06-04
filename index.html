@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8" />
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://plausible.io https://unpkg.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://plausible.io https://*.googleapis.com https://www.google.com https://www.gstatic.com https://europe-west1-pulsecalendar-9b47f.cloudfunctions.net; frame-src https://www.google.com; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' https://plausible.io https://unpkg.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://plausible.io https://*.googleapis.com https://www.google.com https://www.gstatic.com https://europe-west1-pulsecalendar-9b47f.cloudfunctions.net; frame-src https://www.google.com; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
@@ -1634,10 +1634,8 @@
     <h2 class="section-title" style="margin: 0 auto 20px; font-size: clamp(40px, 5vw, 64px);">Reprends le contrôle.<br><span class="gradient">Aujourd'hui.</span></h2>
     <p class="section-sub" style="margin: 0 auto 36px;">PulseCalendar est disponible sur l'App Store. Télécharge-la maintenant.</p>
     <a href="https://apps.apple.com/app/pulsecalendar/id6764295184"
-       target="_blank" rel="noopener"
+       target="_blank" rel="noopener" class="js-hover-lift"
        style="display: inline-block; line-height: 0; transition: transform 0.2s;"
-       onmouseover="this.style.transform='translateY(-2px)'"
-       onmouseout="this.style.transform='translateY(0)'"
        aria-label="Télécharger PulseCalendar sur l'App Store">
       <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/fr-fr?size=250x83"
            alt="Télécharger dans l'App Store"
@@ -1702,24 +1700,17 @@
   <span class="mc-cta">Télécharger →</span>
 </a>
 
-<!-- React + Babel -->
+<!-- React (precompiled JSX — no Babel, no eval) -->
 <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
 <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
 
-    <script type="text/babel" src="src/PulseLogo.jsx?v=7"></script>
-<script type="text/babel" src="src/Screens.jsx?v=5"></script>
-<script type="text/babel" src="src/PhoneFrame.jsx?v=8"></script>
-<script type="text/babel" src="src/Themes.jsx?v=2"></script>
-<script type="text/babel" src="src/Mount.jsx?v=5"></script>
+<script src="src/PulseLogo.js?v=8"></script>
+<script src="src/Screens.js?v=6"></script>
+<script src="src/PhoneFrame.js?v=9"></script>
+<script src="src/Themes.js?v=3"></script>
+<script src="src/Mount.js?v=6"></script>
 
-<script>
-  // Reveal on scroll
-  const io = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
-  }, { threshold: 0.12 });
-  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
-</script>
+<script defer src="shared/reveal.js"></script>
 
 <script src="shared/effects.js"></script>
 

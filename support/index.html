@@ -2,7 +2,7 @@
 <html lang="fr">
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://plausible.io https://unpkg.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://plausible.io https://*.googleapis.com https://www.google.com https://www.gstatic.com https://europe-west1-pulsecalendar-9b47f.cloudfunctions.net; frame-src https://www.google.com; form-action 'self'; manifest-src 'self'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' https://plausible.io https://unpkg.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://plausible.io https://*.googleapis.com https://www.google.com https://www.gstatic.com https://europe-west1-pulsecalendar-9b47f.cloudfunctions.net; frame-src https://www.google.com; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Support — Pulse Calendar</title>
@@ -183,10 +183,10 @@
 <body>
 
 <div class="lang-switch">
-  <button onclick="setLang('fr')" id="btn-fr" class="active">FR</button>
-  <button onclick="setLang('en')" id="btn-en">EN</button>
-  <button onclick="setLang('es')" id="btn-es">ES</button>
-  <button onclick="setLang('ja')" id="btn-ja">日本語</button>
+  <button id="btn-fr" class="active">FR</button>
+  <button id="btn-en">EN</button>
+  <button id="btn-es">ES</button>
+  <button id="btn-ja">日本語</button>
 </div>
 
 <div class="container">
@@ -372,30 +372,7 @@
 
 </div>
 
-<script>
-  function setLang(lang) {
-    document.querySelectorAll('[data-lang]').forEach(el => {
-      el.classList.toggle('visible', el.dataset.lang === lang);
-    });
-    document.querySelectorAll('.lang-switch button').forEach(btn => {
-      btn.classList.remove('active');
-    });
-    document.getElementById('btn-' + lang).classList.add('active');
-    document.documentElement.lang = lang;
-    localStorage.setItem('pulse_support_lang', lang);
-  }
-
-  // Auto-detect from browser locale on first visit
-  const saved = localStorage.getItem('pulse_support_lang');
-  if (saved) {
-    setLang(saved);
-  } else {
-    const browserLang = (navigator.language || 'fr').slice(0, 2);
-    if (['fr', 'en', 'es', 'ja'].includes(browserLang)) {
-      setLang(browserLang);
-    }
-  }
-</script>
+<script defer src="support-lang.js"></script>
 
 </body>
 </html>
