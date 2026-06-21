@@ -63,7 +63,7 @@ const GALLERY_FEATURES = [
     eyebrow: "Bridge Planner",
     title: "Optimise tes cong\xE9s.",
     desc: "Rep\xE8re les meilleurs ponts par pays et te dit combien poser : \xAB 1 jour pos\xE9 = 4 jours off \xBB. Les vacances scolaires sont d\xE9j\xE0 charg\xE9es.",
-    img: "assets/screens/bridge.png?v=4"
+    img: "assets/screens/bridge.png?v=5"
   },
   {
     eyebrow: "Pulse Brain \xB7 on-device",

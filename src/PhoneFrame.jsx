@@ -84,7 +84,7 @@ const GALLERY_FEATURES = [
     eyebrow: 'Bridge Planner',
     title: 'Optimise tes congés.',
     desc: 'Repère les meilleurs ponts par pays et te dit combien poser : « 1 jour posé = 4 jours off ». Les vacances scolaires sont déjà chargées.',
-    img: 'assets/screens/bridge.png?v=4',
+    img: 'assets/screens/bridge.png?v=5',
   },
   {
     eyebrow: 'Pulse Brain · on-device',
