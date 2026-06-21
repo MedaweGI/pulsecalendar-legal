@@ -1,4 +1,4 @@
-// iPhone frame + scrollytelling component
+// iPhone frame + scrollytelling + galerie — vraies captures (thème laiton)
 
 function PhoneFrame({ children }) {
   return (
@@ -17,98 +17,110 @@ function PhoneFrame({ children }) {
 function HeroPhone() {
   return (
     <PhoneFrame>
-      <ScreenMois />
+      <img className="screen-photo" src="assets/screens/month.png?v=3" alt="PulseCalendar — vue Mois en Liquid Glass" />
     </PhoneFrame>
   );
 }
 
-// === SCROLLYTELLING — 4 piliers héros ===
+// === SCROLLYTELLING — 4 piliers 2.0 ===
 const SCROLLY_STEPS = [
   {
     num: '01',
-    eyebrow: 'Calendrier intelligent',
-    title: 'Tous tes calendriers. Une seule app.',
-    desc: 'Connecte iCloud, Google, Outlook, Exchange et CalDAV. PulseCalendar fusionne tout dans 6 vues fluides : Jour, 3 jours, Semaine, Mois, Année, Liste.',
+    eyebrow: 'Calendrier · iOS 26',
+    title: 'Tous tes calendriers, repensés en Liquid Glass.',
+    desc: 'Connecte iCloud, Google, Outlook, Exchange et CalDAV. PulseCalendar fusionne tout dans 6 vues fluides — Jour, 3 jours, Semaine, Mois, Année, Liste — habillées du nouveau design Liquid Glass d\'iOS 26.',
     bullets: [
       'Création en langage naturel (« déjeuner avec Marc demain 13h »)',
       'Détection auto des conflits',
-      'Jours fériés + congés scolaires · 8 pays (FR avec zones A/B/C, UK, US, ES, JP, DE, CA, AU)',
-      'Multi-pays : combine les fériés (ex. franco-allemand)',
+      'Jours fériés + congés scolaires · 8 pays',
+      'Ne déplace jamais tes matchs en direct ni ce que tu regardes à la télé',
     ],
-    Screen: 'mois',
+    img: 'assets/screens/month.png?v=3',
   },
   {
     num: '02',
-    eyebrow: 'Bridge Planner',
-    title: 'Optimise tes congés. Maximise tes ponts.',
-    desc: 'PulseCalendar repère les meilleurs ponts de l\'année par pays et te dit combien de jours poser pour transformer 1 férié en 4 jours off. Les vacances scolaires sont déjà chargées — combine-les avec les ponts familiaux en 1 tap.',
+    eyebrow: 'Ask Pulse · 100 % sur ton iPhone',
+    title: 'Parle à ton agenda. Il te répond.',
+    desc: 'Pose une question à ton planning en langage naturel — « trouve-moi 2 h cette semaine », « quand suis-je libre avec Léa ? ». Tout est calculé sur ton iPhone, rien n\'est envoyé en ligne.',
     bullets: [
-      'Suggère les meilleurs ponts par pays',
-      'Calcul ROI : « pose 1 jour, gagne 4 jours off »',
-      'Vacances scolaires FR (zones A/B/C) + 7 pays auto',
-      'Multi-pays pour les familles franco-internationales',
+      'Questions en langage naturel',
+      'Réponses instantanées, créneaux concrets',
+      '100 % local, aucune donnée envoyée',
+      'Nouveau dans la 2.0',
     ],
-    Screen: 'bridge',
+    img: 'assets/screens/askpulse.png?v=3',
   },
   {
     num: '03',
-    eyebrow: 'Pulse Brain · 100 % on-device',
-    title: 'Un coach intelligent qui optimise ta journée. En local.',
-    desc: 'En 1 tap, Pulse Brain résout les conflits, équilibre focus et récup, détecte les jours surchargés. Tout tourne sur ton iPhone, rien n\'est envoyé en ligne.',
+    eyebrow: 'Ton Rythme · Santé',
+    title: 'Vois l\'intensité de tes journées.',
+    desc: 'À partir de tes données Santé (HealthKit), Pulse met ton rythme en regard de ton agenda : journées intenses, variations d\'énergie, récupération. Une lecture, jamais un diagnostic.',
     bullets: [
-      'Optimisation 1 tap (focus + récup + transitions)',
-      'Briefing matinal personnalisé',
-      'Anticipation hebdomadaire',
-      '100 % local, aucune donnée envoyée',
+      'Intensité de chaque journée',
+      'Rythme mis en regard de l\'agenda',
+      'Observationnel — jamais médical',
+      'Données Santé, sur l\'appareil',
     ],
-    Screen: 'brain',
+    img: 'assets/screens/rhythm.png?v=3',
   },
   {
     num: '04',
     eyebrow: 'Pulse Score',
     title: 'Un score quotidien qui te tire vers le haut.',
-    desc: 'Suivi des habitudes récurrentes, défis hebdomadaires, streaks et 12 semaines d\'évolution. Day Battery sur l\'écran de verrouillage : ton Pulse Score live en jauge.',
+    desc: 'Au cœur de Pulse : un score quotidien pour battre la procrastination. Suivi des habitudes, défis hebdomadaires, streaks et 12 semaines d\'évolution. Day Battery sur l\'écran de verrouillage.',
     bullets: [
-      'Détection auto des habitudes (médecin, sport…)',
+      'Détection auto des habitudes',
       'Défis hebdomadaires avec XP',
       'Streaks + 12 semaines d\'évolution',
       'Widget Day Battery sur lock screen',
     ],
-    Screen: 'score',
+    img: 'assets/screens/suivi.png?v=3',
   },
 ];
 
-// === GALERIE App Store — 5 features secondaires ===
+// === GALERIE — features secondaires (vraies captures laiton) ===
 const GALLERY_FEATURES = [
+  {
+    eyebrow: 'Bridge Planner',
+    title: 'Optimise tes congés.',
+    desc: 'Repère les meilleurs ponts par pays et te dit combien poser : « 1 jour posé = 4 jours off ». Les vacances scolaires sont déjà chargées.',
+    img: 'assets/screens/bridge.png?v=3',
+  },
+  {
+    eyebrow: 'Pulse Brain · on-device',
+    title: 'Optimise ta journée en 1 tap.',
+    desc: 'Résout les conflits, équilibre focus et récup, détecte les jours surchargés. Briefing matinal personnalisé. 100 % local.',
+    img: 'assets/screens/brain.png?v=3',
+  },
   {
     eyebrow: 'Trajet auto',
     title: 'Calcule ton trajet.',
-    desc: 'Voiture, transports, marche comparés. Notif « Pars maintenant » au bon moment. Trafic Sytadin / Bison Futé temps réel.',
-    Screen: 'trajet',
+    desc: 'Voiture, transports, marche comparés. Notif « Pars maintenant » au bon moment, avec le trafic en temps réel.',
+    img: 'assets/screens/trajet.png?v=3',
   },
   {
     eyebrow: 'Resto intégré',
     title: 'Réserve sans quitter l\'app.',
-    desc: 'Recherche resto, appel direct en 1 tap depuis la fiche événement. L\'adresse alimente automatiquement le trajet.',
-    Screen: 'resto',
+    desc: 'Recherche resto + appel direct en 1 tap depuis la fiche événement. L\'adresse alimente automatiquement le trajet.',
+    img: 'assets/screens/resto.png?v=3',
   },
   {
     eyebrow: 'Doodle intégré',
     title: 'Trouve un créneau. À plusieurs.',
-    desc: 'Long-press sur le « + » : sondage Doodle ou partage de dispos par lien. Confirmation auto crée l\'événement à tous.',
-    Screen: 'doodle',
-  },
-  {
-    eyebrow: 'Priorités du jour',
-    title: '3 priorités. Zéro procrastination.',
-    desc: 'Eat the Frog, Mode « Juste 5 minutes », auto time-blocking. Friction Mode + Recovery Mode pour les jours difficiles.',
-    Screen: 'focus',
+    desc: 'Appui long sur le « + » : sondage de dispos par lien. La confirmation crée l\'événement pour tout le monde.',
+    img: 'assets/screens/doodle.png?v=3',
   },
   {
     eyebrow: 'Analyses',
     title: 'Comprends ton temps.',
-    desc: 'Donut par catégorie, heatmap semaine type, top des personnes. Behavior insights : « tes vendredis sont surchargés ».',
-    Screen: 'analyse',
+    desc: 'Donut par catégorie, heatmap de ta semaine type, top des personnes. « Tes vendredis sont surchargés ».',
+    img: 'assets/screens/analyse.png?v=3',
+  },
+  {
+    eyebrow: 'Actions rapides',
+    title: 'Ajoute, demande, planifie.',
+    desc: 'Appui long sur le « + » : ajout express, Ask Pulse, Doodle, partage de dispos. Tout part du même bouton.',
+    img: 'assets/screens/quickactions.png?v=3',
   },
 ];
 
@@ -118,29 +130,15 @@ function Scrollytelling() {
 
   React.useEffect(() => {
     const obs = new IntersectionObserver((entries) => {
-      // pick the entry with highest intersectionRatio that is intersecting
       let best = null;
-      entries.forEach(e => {
-        if (e.isIntersecting && (!best || e.intersectionRatio > best.intersectionRatio)) {
-          best = e;
-        }
+      entries.forEach((e) => {
+        if (e.isIntersecting && (!best || e.intersectionRatio > best.intersectionRatio)) best = e;
       });
-      if (best) {
-        const idx = parseInt(best.target.dataset.idx, 10);
-        setActiveIdx(idx);
-      }
-    }, {
-      threshold: [0.3, 0.5, 0.7],
-      rootMargin: '-30% 0px -30% 0px',
-    });
-    stepRefs.current.forEach(el => el && obs.observe(el));
+      if (best) setActiveIdx(parseInt(best.target.dataset.idx, 10));
+    }, { threshold: [0.3, 0.5, 0.7], rootMargin: '-30% 0px -30% 0px' });
+    stepRefs.current.forEach((el) => el && obs.observe(el));
     return () => obs.disconnect();
   }, []);
-
-  const ScreenComp = {
-    mois: ScreenMois, focus: ScreenFocus, brain: ScreenBrain, analyse: ScreenAnalyse, score: ScreenScore, bridge: ScreenBridge,
-    trajet: ScreenTrajet, resto: ScreenResto, doodle: ScreenDoodle,
-  }[SCROLLY_STEPS[activeIdx].Screen];
 
   return (
     <div className="scrolly-wrap">
@@ -149,7 +147,7 @@ function Scrollytelling() {
           {SCROLLY_STEPS.map((step, i) => (
             <div
               key={i}
-              ref={el => stepRefs.current[i] = el}
+              ref={(el) => stepRefs.current[i] = el}
               data-idx={i}
               className="scrolly-step"
               style={{ opacity: activeIdx === i ? 1 : 0.35, transition: 'opacity 0.6s' }}
@@ -157,9 +155,7 @@ function Scrollytelling() {
               <div className="step-num">{step.num} · {step.eyebrow}</div>
               <h3>{step.title}</h3>
               <p>{step.desc}</p>
-              <ul>
-                {step.bullets.map((b, j) => <li key={j}>{b}</li>)}
-              </ul>
+              <ul>{step.bullets.map((b, j) => <li key={j}>{b}</li>)}</ul>
             </div>
           ))}
         </div>
@@ -168,32 +164,23 @@ function Scrollytelling() {
             <div style={{
               position: 'absolute', inset: '-15%',
               background: 'radial-gradient(50% 50% at 50% 50%, rgba(123,92,240,0.35), transparent 70%)',
-              filter: 'blur(40px)',
-              pointerEvents: 'none',
+              filter: 'blur(40px)', pointerEvents: 'none',
             }}/>
             <div style={{ position: 'relative', zIndex: 1 }}>
               <PhoneFrame>
-                {SCROLLY_STEPS.map((step, i) => {
-                  const Comp = {
-                    mois: ScreenMois, focus: ScreenFocus, brain: ScreenBrain, analyse: ScreenAnalyse, score: ScreenScore, bridge: ScreenBridge,
-                    trajet: ScreenTrajet, resto: ScreenResto, doodle: ScreenDoodle,
-                  }[step.Screen];
-                  const isActive = i === activeIdx;
-                  return (
-                    <div
-                      key={i}
-                      style={{
-                        position: 'absolute',
-                        inset: 0,
-                        opacity: isActive ? 1 : 0,
-                        transition: 'opacity 0.5s ease',
-                        pointerEvents: isActive ? 'auto' : 'none',
-                      }}
-                    >
-                      <Comp />
-                    </div>
-                  );
-                })}
+                {SCROLLY_STEPS.map((step, i) => (
+                  <div
+                    key={i}
+                    style={{
+                      position: 'absolute', inset: 0,
+                      opacity: i === activeIdx ? 1 : 0,
+                      transition: 'opacity 0.5s ease',
+                      pointerEvents: i === activeIdx ? 'auto' : 'none',
+                    }}
+                  >
+                    <img className="screen-photo" src={step.img} alt={step.eyebrow} loading="lazy" />
+                  </div>
+                ))}
               </PhoneFrame>
             </div>
           </div>
@@ -203,30 +190,24 @@ function Scrollytelling() {
   );
 }
 
-// === GALERIE App Store Style ===
 function FeatureGallery() {
-  const ScreenMap = {
-    trajet: ScreenTrajet, resto: ScreenResto, doodle: ScreenDoodle,
-    focus: ScreenFocus, analyse: ScreenAnalyse,
-  };
   return (
     <div className="gallery-wrap">
       <div className="gallery-track">
-        {GALLERY_FEATURES.map((feat, i) => {
-          const ScreenComp = ScreenMap[feat.Screen];
-          return (
-            <div className="gallery-card" key={i}>
-              <div className="gallery-phone-wrap">
-                <PhoneFrame><ScreenComp /></PhoneFrame>
-              </div>
-              <div className="gallery-meta">
-                <div className="gallery-eyebrow">{feat.eyebrow}</div>
-                <h4>{feat.title}</h4>
-                <p>{feat.desc}</p>
-              </div>
+        {GALLERY_FEATURES.map((feat, i) => (
+          <div className="gallery-card" key={i}>
+            <div className="gallery-phone-wrap">
+              <PhoneFrame>
+                <img className="screen-photo" src={feat.img} alt={feat.eyebrow} loading="lazy" />
+              </PhoneFrame>
             </div>
-          );
-        })}
+            <div className="gallery-meta">
+              <div className="gallery-eyebrow">{feat.eyebrow}</div>
+              <h4>{feat.title}</h4>
+              <p>{feat.desc}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

@@ -1,5 +1,5 @@
 /* PulseCalendar website i18n engine.
- * Runtime translation of a French-default static site into 9 languages,
+ * Runtime translation of a French-default static site into 16 languages,
  * with a flag language switcher injected into the nav header.
  *
  * Design:

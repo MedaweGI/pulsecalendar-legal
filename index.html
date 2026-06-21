@@ -133,7 +133,7 @@
     {"@type":"Question","name":"Does it support school holidays automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. School holidays are auto-loaded for France (zones A, B, C), the UK, USA, Canada, Australia, Spain, Germany and Japan. The Bridge Planner shows the best public-holiday bridges for each country to maximize time off."}},
     {"@type":"Question","name":"Can I subscribe to a World Cup or sports calendar?","acceptedAnswer":{"@type":"Answer","text":"Yes. PulseCalendar offers free World Cup ICS subscriptions plus sports calendar subscriptions for Champions League, Premier League, F1, NFL, NBA, MLB, Tennis Grand Slams and more — auto-updated."}},
     {"@type":"Question","name":"Is PulseCalendar a good calendar app for students?","acceptedAnswer":{"@type":"Answer","text":"Yes. It's the calendar app for students that handles assignments, exams, school holidays, group plans and ADHD-friendly focus modes — with a free plan and student-friendly pricing."}},
-    {"@type":"Question","name":"Which countries support PulseCalendar?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar is available in 175 countries on the App Store worldwide. The app interface is localized in French, English, Spanish, German and Japanese, and the smart calendar engine works in every supported region."}}
+    {"@type":"Question","name":"Which countries support PulseCalendar?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar is available in 175 countries on the App Store worldwide. The app interface is localized in 16 languages including French, English, Spanish, German, Japanese, Korean, Chinese, Arabic and Russian, and the smart calendar engine works in every supported region."}}
   ]
 }
 </script>
@@ -540,7 +540,7 @@
   }
   .scrolly-phone-stage {
     position: relative;
-    width: 340px; height: 736px;
+    width: 344px; height: 736px;
   }
 
   /* GALLERY (App Store style) */
@@ -774,7 +774,7 @@
   /* === iPhone frame — Cosmic Orange titanium === */
   .iphone {
     position: relative;
-    width: 340px; height: 736px;
+    width: 344px; height: 736px;
     border-radius: 60px;
     /* Realistic brushed titanium with warm orange tone — multi-layered for depth */
     background:
@@ -878,10 +878,11 @@
     background: #000;
     overflow: hidden;
     position: relative;
+    z-index: 3;
     box-shadow:
       inset 0 0 0 1.5px #050103,
       inset 0 0 0 3px rgba(0,0,0,0.9),
-      inset 0 0 24px rgba(0,0,0,0.5);
+      inset 0 0 18px rgba(0,0,0,0.35);
   }
   /* Dynamic Island */
   .iphone-notch {
@@ -917,6 +918,7 @@
 
   /* In-screen UI */
   .screen-ui { width: 100%; height: 100%; padding: 64px 14px 0; display: flex; flex-direction: column; color: white; font-size: 13px; position: relative; }
+  .iphone-screen .screen-photo { width: 100%; height: 100%; object-fit: cover; object-position: top; display: block; }
   /* Status bar sits in the curved area on either side of the Dynamic Island */
   .ui-statusbar {
     position: absolute;
@@ -1369,7 +1371,7 @@
         <span>+ Exchange, CalDAV</span>
       </div>
       <div class="meta-row">
-        <strong>9 langues</strong>
+        <strong>16 langues</strong>
         <span>FR · EN · ES · DE · JA · KO · AR · RU · ZH</span>
       </div>
     </div>
@@ -1712,7 +1714,7 @@
 
 <script src="src/PulseLogo.js?v=8"></script>
 <script src="src/Screens.js?v=6"></script>
-<script src="src/PhoneFrame.js?v=9"></script>
+<script src="src/PhoneFrame.js?v=12"></script>
 <script src="src/Themes.js?v=3"></script>
 <script src="src/Mount.js?v=6"></script>
 
