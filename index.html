@@ -1091,9 +1091,11 @@
   }
   @keyframes fx-rotate { to { --angle: 360deg; } }
 
-  /* Magnetic CTA button — extra glow ring */
+  /* Magnetic CTA button — overflow:hidden pour clipper le shimmer ::before
+     (sinon il fuit à gauche du bouton = « trait » violet dans le hero). Le
+     halo au survol reste assuré par le box-shadow de .btn-appstore:hover. */
   .btn-appstore {
-    position: relative; overflow: visible;
+    position: relative; overflow: hidden;
   }
   .btn-appstore::after {
     content: ""; position: absolute; inset: -3px;
