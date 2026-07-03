@@ -2,8 +2,12 @@
 (function () {
   const path = window.location.pathname;
   const segs = path.split('/').filter(Boolean);
-  // depth = how many directories deep from root the current file lives
-  const depth = Math.max(0, segs.length - 1);
+  // depth = how many directories deep from root the current file lives.
+  // Une URL en "/dossier/" (index de répertoire, ex. /features/) a TOUS ses
+  // segments = dossiers ; une URL en "/dossier/page.html" a son dernier segment
+  // = fichier. Sans ce test, "/features/" calculait depth=0 → liens cassés.
+  const endsWithFile = /\.[a-z0-9]+$/i.test(path);
+  const depth = endsWithFile ? Math.max(0, segs.length - 1) : segs.length;
   const home = depth === 0 ? './' : '../'.repeat(depth);
 
   const NAV = `
