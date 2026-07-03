@@ -3,11 +3,15 @@
   const path = window.location.pathname;
   const segs = path.split('/').filter(Boolean);
   // depth = how many directories deep from root the current file lives.
-  // Une URL en "/dossier/" (index de répertoire, ex. /features/) a TOUS ses
-  // segments = dossiers ; une URL en "/dossier/page.html" a son dernier segment
-  // = fichier. Sans ce test, "/features/" calculait depth=0 → liens cassés.
-  const endsWithFile = /\.[a-z0-9]+$/i.test(path);
-  const depth = endsWithFile ? Math.max(0, segs.length - 1) : segs.length;
+  // GitHub Pages sert TOUJOURS les index de répertoire avec un slash final
+  // (/features → 301 → /features/). Donc : slash final = index de répertoire
+  // (tous les segments sont des dossiers) ; sinon = fichier (extensionless ou
+  // .html), dont le dernier segment est le nom de fichier. Ce test gère
+  // correctement /features/ (dossier) ET /features/smart-calendar (fichier
+  // extensionless = l'URL canonique), là où l'ancien "segs.length - 1"
+  // cassait les liens sur /features/.
+  const isDirIndex = path.endsWith('/');
+  const depth = isDirIndex ? segs.length : Math.max(0, segs.length - 1);
   const home = depth === 0 ? './' : '../'.repeat(depth);
 
   const NAV = `
