@@ -157,11 +157,11 @@
 
 .hero h1 .gradient {
   background: linear-gradient(120deg,
-    #c4b3fb 0%,
-    #7B5CF0 30%,
-    #c4b3fb 50%,
-    #9d83f7 75%,
-    #c4b3fb 100%
+    #ec4899 0%,
+    #f43f5e 30%,
+    #fb923c 50%,
+    #f43f5e 75%,
+    #ec4899 100%
   ) !important;
   background-size: 200% 100% !important;
   -webkit-background-clip: text !important;
@@ -283,7 +283,7 @@
 
 /* === SECTION TITLES with gradient shimmer === */
 .section-title .gradient {
-  background: linear-gradient(120deg, #c4b3fb, #7B5CF0, #c4b3fb, #7B5CF0) !important;
+  background: linear-gradient(120deg, #ec4899, #fb923c, #ec4899, #fb923c) !important;
   background-size: 300% 100% !important;
   -webkit-background-clip: text !important;
   background-clip: text !important;
