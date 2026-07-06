@@ -6,7 +6,7 @@
    (les images React arrivent tard). */
 (function () {
   var LANGS = { fr:1, de:1, es:1, ja:1, ko:1, ar:1, ru:1, "zh-Hans":1 }; // langues avec jeu localisé
-  var V = 8; // version de cache (aligne avec PhoneFrame ?v=)
+  var V = 9; // version de cache (aligne avec PhoneFrame ?v=)
 
   function curLang() {
     if (window.PCI18n && window.PCI18n.current) return window.PCI18n.current;

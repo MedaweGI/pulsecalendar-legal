@@ -17,7 +17,7 @@ function PhoneFrame({ children }) {
 function HeroPhone() {
   return (
     <PhoneFrame>
-      <img className="screen-photo" src="assets/screens/month.png?v=8" alt="PulseCalendar — vue Mois en Liquid Glass" />
+      <img className="screen-photo" src="assets/screens/month.png?v=9" alt="PulseCalendar — vue Mois en Liquid Glass" />
     </PhoneFrame>
   );
 }
@@ -35,7 +35,7 @@ const SCROLLY_STEPS = [
       'Jours fériés + congés scolaires · 8 pays',
       'Ne déplace jamais tes matchs en direct ni ce que tu regardes à la télé',
     ],
-    img: 'assets/screens/month.png?v=8',
+    img: 'assets/screens/month.png?v=9',
   },
   {
     num: '02',
@@ -48,7 +48,7 @@ const SCROLLY_STEPS = [
       '100 % local, aucune donnée envoyée',
       'Nouveau dans la 2.0',
     ],
-    img: 'assets/screens/askpulse.png?v=8',
+    img: 'assets/screens/askpulse.png?v=9',
   },
   {
     num: '03',
@@ -61,7 +61,7 @@ const SCROLLY_STEPS = [
       'Observationnel — jamais médical',
       'Données Santé, sur l\'appareil',
     ],
-    img: 'assets/screens/rhythm.png?v=8',
+    img: 'assets/screens/rhythm.png?v=9',
   },
   {
     num: '04',
@@ -74,7 +74,7 @@ const SCROLLY_STEPS = [
       'Streaks + 12 semaines d\'évolution',
       'Widget Day Battery sur lock screen',
     ],
-    img: 'assets/screens/suivi.png?v=8',
+    img: 'assets/screens/suivi.png?v=9',
   },
 ];
 
@@ -84,43 +84,43 @@ const GALLERY_FEATURES = [
     eyebrow: 'Bridge Planner',
     title: 'Optimise tes congés.',
     desc: 'Repère les meilleurs ponts par pays et te dit combien poser : « 1 jour posé = 4 jours off ». Les vacances scolaires sont déjà chargées.',
-    img: 'assets/screens/bridge.png?v=8',
+    img: 'assets/screens/bridge.png?v=9',
   },
   {
     eyebrow: 'Pulse Brain · on-device',
     title: 'Optimise ta journée en 1 tap.',
     desc: 'Résout les conflits, équilibre focus et récup, détecte les jours surchargés. Briefing matinal personnalisé. 100 % local.',
-    img: 'assets/screens/brain.png?v=8',
+    img: 'assets/screens/brain.png?v=9',
   },
   {
     eyebrow: 'Trajet auto',
     title: 'Calcule ton trajet.',
     desc: 'Voiture, transports, marche comparés. Notif « Pars maintenant » au bon moment, avec le trafic en temps réel.',
-    img: 'assets/screens/trajet.png?v=8',
+    img: 'assets/screens/trajet.png?v=9',
   },
   {
     eyebrow: 'Resto intégré',
     title: 'Réserve sans quitter l\'app.',
     desc: 'Recherche resto + appel direct en 1 tap depuis la fiche événement. L\'adresse alimente automatiquement le trajet.',
-    img: 'assets/screens/resto.png?v=8',
+    img: 'assets/screens/resto.png?v=9',
   },
   {
     eyebrow: 'Doodle intégré',
     title: 'Trouve un créneau. À plusieurs.',
     desc: 'Appui long sur le « + » : sondage de dispos par lien. La confirmation crée l\'événement pour tout le monde.',
-    img: 'assets/screens/doodle.png?v=8',
+    img: 'assets/screens/doodle.png?v=9',
   },
   {
     eyebrow: 'Analyses',
     title: 'Comprends ton temps.',
     desc: 'Donut par catégorie, heatmap de ta semaine type, top des personnes. « Tes vendredis sont surchargés ».',
-    img: 'assets/screens/analyse.png?v=8',
+    img: 'assets/screens/analyse.png?v=9',
   },
   {
     eyebrow: 'Actions rapides',
     title: 'Ajoute, demande, planifie.',
     desc: 'Appui long sur le « + » : ajout express, Ask Pulse, Doodle, partage de dispos. Tout part du même bouton.',
-    img: 'assets/screens/quickactions.png?v=8',
+    img: 'assets/screens/quickactions.png?v=9',
   },
 ];
 
