@@ -432,10 +432,10 @@
     .platforms-grid { grid-template-columns: 1fr; }
   }
 
-  /* DEVICE SHOWCASE (vrais cadres MacBook Air + iPad Pro) */
+  /* DEVICE SHOWCASE (vrais cadres MacBook Pro 16 + iPad Pro) */
   .device-showcase {
-    display: flex; align-items: center; justify-content: center;
-    max-width: 1080px; margin: 0 auto 16px; padding: 0 20px;
+    display: flex; align-items: flex-end; justify-content: center;
+    max-width: 1080px; margin: 0 auto 44px; padding: 0 20px;
     position: relative;
   }
   .device-glow {
@@ -448,8 +448,8 @@
     filter: drop-shadow(0 40px 70px rgba(0,0,0,0.5));
   }
   .device-showcase .dev-ipad {
-    width: min(31%, 340px); height: auto; position: relative; z-index: 2;
-    margin-left: -7%; margin-bottom: -2%;
+    width: min(30%, 330px); height: auto; position: relative; z-index: 2;
+    margin-left: -7%; margin-bottom: 0;
     filter: drop-shadow(0 44px 66px rgba(0,0,0,0.55));
   }
   @media (max-width: 720px) {
