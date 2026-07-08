@@ -432,35 +432,30 @@
     .platforms-grid { grid-template-columns: 1fr; }
   }
 
-  /* DEVICE SHOWCASE (iPad + Mac — vraies captures) */
+  /* DEVICE SHOWCASE (vrais cadres MacBook Air + iPad Pro) */
   .device-showcase {
-    display: flex; align-items: flex-end; justify-content: center;
-    max-width: 1000px; margin: 0 auto 12px; padding: 0 20px;
+    display: flex; align-items: center; justify-content: center;
+    max-width: 1080px; margin: 0 auto 16px; padding: 0 20px;
     position: relative;
   }
   .device-glow {
-    position: absolute; inset: 4% 14% 0; z-index: 0;
-    background: radial-gradient(50% 50% at 50% 50%, rgba(123,92,240,0.30), transparent 72%);
-    filter: blur(48px); pointer-events: none;
+    position: absolute; inset: 2% 10% 6%; z-index: 0;
+    background: radial-gradient(52% 52% at 50% 48%, rgba(123,92,240,0.32), transparent 72%);
+    filter: blur(52px); pointer-events: none;
   }
-  .device-showcase .mac-mock {
-    position: relative; width: min(58%, 620px); z-index: 1;
-    border-radius: 14px; overflow: hidden;
-    box-shadow: 0 44px 90px -34px rgba(0,0,0,0.78), 0 0 0 1px rgba(255,255,255,0.06);
+  .device-showcase .dev-mac {
+    width: min(64%, 730px); height: auto; position: relative; z-index: 1;
+    filter: drop-shadow(0 40px 70px rgba(0,0,0,0.5));
   }
-  .device-showcase .mac-mock img { display: block; width: 100%; }
-  .device-showcase .ipad-mock {
-    position: relative; width: min(33%, 330px); z-index: 2;
-    margin-left: -5%; margin-bottom: -1.5%;
-    padding: 2.2%; border-radius: 32px;
-    background: linear-gradient(158deg, #2c2c33, #161619);
-    box-shadow: 0 44px 84px -28px rgba(0,0,0,0.82), 0 0 0 1px rgba(255,255,255,0.08);
+  .device-showcase .dev-ipad {
+    width: min(31%, 340px); height: auto; position: relative; z-index: 2;
+    margin-left: -7%; margin-bottom: -2%;
+    filter: drop-shadow(0 44px 66px rgba(0,0,0,0.55));
   }
-  .device-showcase .ipad-mock img { display: block; width: 100%; border-radius: 19px; }
   @media (max-width: 720px) {
-    .device-showcase { flex-direction: column-reverse; align-items: center; gap: 22px; margin-bottom: 18px; }
-    .device-showcase .mac-mock, .device-showcase .ipad-mock { width: min(90%, 400px); margin: 0; }
-    .device-showcase .ipad-mock { padding: 12px; }
+    .device-showcase { flex-direction: column; align-items: center; gap: 0; margin-bottom: 8px; }
+    .device-showcase .dev-mac { width: min(94%, 470px); }
+    .device-showcase .dev-ipad { width: min(50%, 210px); margin: -16% 0 0 0; }
   }
 
   /* PAYS BAR */
@@ -1426,12 +1421,8 @@
   </div>
   <div class="device-showcase reveal">
     <div class="device-glow"></div>
-    <div class="mac-mock">
-      <img src="assets/screens/mac-month.png?v=1" alt="PulseCalendar sur Mac — vue Mois avec barre latérale, météo et thème" loading="lazy" width="1320" height="990">
-    </div>
-    <div class="ipad-mock">
-      <img src="assets/screens/ipad-month.png?v=1" alt="PulseCalendar sur iPad — vue Mois avec colonne d'événements du jour" loading="lazy" width="820" height="1093">
-    </div>
+    <img class="dev-mac" src="assets/screens/macbook-device.png?v=1" alt="PulseCalendar sur MacBook Air — vue Mois" loading="lazy" width="1500" height="860">
+    <img class="dev-ipad" src="assets/screens/ipad-device.png?v=1" alt="PulseCalendar sur iPad Pro — vue Mois" loading="lazy" width="760" height="992">
   </div>
   <div class="platforms-grid">
     <div class="platform-card available reveal">
