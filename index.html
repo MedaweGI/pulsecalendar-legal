@@ -328,8 +328,8 @@
   .coming-soon-badge {
     display: inline-flex; align-items: center; gap: 8px;
     padding: 6px 12px; border-radius: 999px;
-    background: rgba(245,197,24,0.1); border: 1px solid rgba(245,197,24,0.25);
-    font-size: 11px; font-weight: 600; color: var(--orange);
+    background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.28);
+    font-size: 11px; font-weight: 600; color: var(--green);
     text-transform: uppercase; letter-spacing: 0.08em;
     margin-left: 4px;
   }
@@ -430,6 +430,37 @@
   }
   @media (max-width: 780px) {
     .platforms-grid { grid-template-columns: 1fr; }
+  }
+
+  /* DEVICE SHOWCASE (iPad + Mac — vraies captures) */
+  .device-showcase {
+    display: flex; align-items: flex-end; justify-content: center;
+    max-width: 1000px; margin: 0 auto 12px; padding: 0 20px;
+    position: relative;
+  }
+  .device-glow {
+    position: absolute; inset: 4% 14% 0; z-index: 0;
+    background: radial-gradient(50% 50% at 50% 50%, rgba(123,92,240,0.30), transparent 72%);
+    filter: blur(48px); pointer-events: none;
+  }
+  .device-showcase .mac-mock {
+    position: relative; width: min(58%, 620px); z-index: 1;
+    border-radius: 14px; overflow: hidden;
+    box-shadow: 0 44px 90px -34px rgba(0,0,0,0.78), 0 0 0 1px rgba(255,255,255,0.06);
+  }
+  .device-showcase .mac-mock img { display: block; width: 100%; }
+  .device-showcase .ipad-mock {
+    position: relative; width: min(33%, 330px); z-index: 2;
+    margin-left: -5%; margin-bottom: -1.5%;
+    padding: 2.2%; border-radius: 32px;
+    background: linear-gradient(158deg, #2c2c33, #161619);
+    box-shadow: 0 44px 84px -28px rgba(0,0,0,0.82), 0 0 0 1px rgba(255,255,255,0.08);
+  }
+  .device-showcase .ipad-mock img { display: block; width: 100%; border-radius: 19px; }
+  @media (max-width: 720px) {
+    .device-showcase { flex-direction: column-reverse; align-items: center; gap: 22px; margin-bottom: 18px; }
+    .device-showcase .mac-mock, .device-showcase .ipad-mock { width: min(90%, 400px); margin: 0; }
+    .device-showcase .ipad-mock { padding: 12px; }
   }
 
   /* PAYS BAR */
@@ -1296,7 +1327,7 @@
 <script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
 
 <!-- ===== i18n : traduction runtime + sélecteur de langue (drapeaux) ===== -->
-<script defer src="shared/i18n-data.js?v=7"></script>
+<script defer src="shared/i18n-data.js?v=8"></script>
 <script defer src="shared/i18n.js"></script>
 <script defer src="shared/screens-i18n.js?v=3"></script>
 </head>
@@ -1355,8 +1386,8 @@
         </div>
       </a>
       <span class="coming-soon-badge">
-        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        iPhone &amp; Mac disponibles · iPad très bientôt
+        <svg width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
+        iPhone, iPad &amp; Mac disponibles
       </span>
       </span>
       <a href="#features" class="btn-secondary">Voir les fonctions ↓</a>
@@ -1393,6 +1424,15 @@
     <h2 class="section-title" style="margin: 0 auto 12px; font-size: clamp(28px, 3.5vw, 42px);">iPhone, iPad et Mac. <span class="gradient">Partout où tu es.</span></h2>
     <p class="section-sub" style="margin: 0 auto;">Un seul achat, tous tes appareils Apple. Ton agenda, tes analyses et ton focus — synchronisés en local via iCloud, sans compte.</p>
   </div>
+  <div class="device-showcase reveal">
+    <div class="device-glow"></div>
+    <div class="mac-mock">
+      <img src="assets/screens/mac-month.png?v=1" alt="PulseCalendar sur Mac — vue Mois avec barre latérale, météo et thème" loading="lazy" width="1320" height="990">
+    </div>
+    <div class="ipad-mock">
+      <img src="assets/screens/ipad-month.png?v=1" alt="PulseCalendar sur iPad — vue Mois avec colonne d'événements du jour" loading="lazy" width="820" height="1093">
+    </div>
+  </div>
   <div class="platforms-grid">
     <div class="platform-card available reveal">
       <div class="platform-icon" aria-hidden="true">
@@ -1402,11 +1442,11 @@
       <h3>iPhone</h3>
       <p>iOS 17+ · iPhone 12 et plus récents</p>
     </div>
-    <div class="platform-card reveal">
+    <div class="platform-card available reveal">
       <div class="platform-icon" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="11" y1="19" x2="13" y2="19"/></svg>
       </div>
-      <div class="platform-status status-soon">Très bientôt</div>
+      <div class="platform-status status-now">● Disponible</div>
       <h3>iPad</h3>
       <p>Vues étendues, split view, Apple Pencil</p>
     </div>
