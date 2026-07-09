@@ -14,11 +14,15 @@
 (function () {
   "use strict";
 
-  var LANGS = ["fr", "en", "es", "de", "ja", "ko", "ar", "ru", "zh"];
+  // Le code interne du chinois DOIT être "zh-Hans" — identique à la clé de
+  // window.PC_I18N (i18n-data.js) ET aux dossiers assets/screens/zh-Hans. Avec "zh"
+  // seul, dictFor("zh")=DATA["zh"]=undefined → le chinois ne se traduit jamais, et
+  // l'état "zh" invalide corrompt aussi les changements de langue suivants. (fix zh-Hans)
+  var LANGS = ["fr", "en", "es", "de", "ja", "ko", "ar", "ru", "zh-Hans"];
   var RTL = { ar: true };
-  var FLAG = { fr: "🇫🇷", en: "🇬🇧", es: "🇪🇸", de: "🇩🇪", ja: "🇯🇵", ko: "🇰🇷", ar: "🇸🇦", ru: "🇷🇺", zh: "🇨🇳" };
-  var NATIVE = { fr: "Français", en: "English", es: "Español", de: "Deutsch", ja: "日本語", ko: "한국어", ar: "العربية", ru: "Русский", zh: "中文" };
-  var HTML_LANG = { zh: "zh-Hans" }; // <html lang>; others use the code as-is
+  var FLAG = { fr: "🇫🇷", en: "🇬🇧", es: "🇪🇸", de: "🇩🇪", ja: "🇯🇵", ko: "🇰🇷", ar: "🇸🇦", ru: "🇷🇺", "zh-Hans": "🇨🇳" };
+  var NATIVE = { fr: "Français", en: "English", es: "Español", de: "Deutsch", ja: "日本語", ko: "한국어", ar: "العربية", ru: "Русский", "zh-Hans": "中文" };
+  var HTML_LANG = {}; // <html lang> = le code tel quel ("zh-Hans" inclus)
   var STORE = "pc_lang";
 
   var ORIG = new WeakMap();        // textNode -> original French value (with whitespace)
@@ -42,7 +46,10 @@
     if (lang === "fr") { if (node.nodeValue !== fr) node.nodeValue = fr; return; }
     var dict = dictFor(lang); if (!dict) return;
     var val = dict[norm(fr)];
-    if (val === undefined || val === null) return; // keep French fallback
+    if (val === undefined || val === null) { // pas de traduction → REVENIR au français
+      if (node.nodeValue !== fr) node.nodeValue = fr; // (ne PAS laisser la langue précédente = bug « bloqué en chinois »)
+      return;
+    }
     var lead = (fr.match(/^\s*/) || [""])[0];
     var trail = (fr.match(/\s*$/) || [""])[0];
     var next = lead + val + trail;
@@ -85,7 +92,7 @@
         if (lang === "fr") { el.setAttribute(a, fr); continue; }
         var dict = dictFor(lang); if (!dict) continue;
         var val = dict[norm(fr)];
-        if (val !== undefined && val !== null) el.setAttribute(a, val);
+        el.setAttribute(a, (val !== undefined && val !== null) ? val : fr); // fallback FR (pas la langue précédente)
       }
       ATTR_ORIG.set(el, store);
     }
@@ -178,7 +185,7 @@
     var f = wrap.querySelector(".pc-lang-btn .pc-lang-flag");
     var c = wrap.querySelector(".pc-lang-btn .pc-lang-code");
     if (f) f.textContent = FLAG[lang] || "🌐";
-    if (c) c.textContent = (lang === "zh" ? "ZH" : lang.toUpperCase());
+    if (c) c.textContent = (lang === "zh-Hans" ? "ZH" : lang.toUpperCase());
     var items = wrap.querySelectorAll(".pc-lang-menu li");
     for (var i = 0; i < items.length; i++) {
       items[i].setAttribute("aria-selected", items[i].dataset.lang === lang ? "true" : "false");
@@ -213,6 +220,7 @@
   function detect() {
     try {
       var saved = localStorage.getItem(STORE);
+      if (saved === "zh") saved = "zh-Hans"; // migration de l'ancien code chinois
       if (saved && LANGS.indexOf(saved) >= 0) return saved;
     } catch (e) {}
     try {
@@ -222,7 +230,7 @@
     var navs = navigator.languages || [navigator.language || "fr"];
     for (var i = 0; i < navs.length; i++) {
       var base = String(navs[i] || "").toLowerCase().split("-")[0];
-      if (base === "zh") return "zh";
+      if (base === "zh") return "zh-Hans";
       if (LANGS.indexOf(base) >= 0) return base;
     }
     return "fr";
