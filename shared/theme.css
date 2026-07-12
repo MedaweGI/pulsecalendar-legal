@@ -1,0 +1,125 @@
+/* ============================================================
+   PulseCalendar — thème CLAIR (bascule via shared/theme.js)
+   Sombre = design historique (défaut, aucune règle ici).
+   Clair = style "Apple Store" des mockups écosystème : fond
+   blanc→#f5f5f7 avec halos lavande, encre #1d1d1f, violets
+   inchangés. Les DEVICES (téléphones, écrans d'app, badges
+   App Store) restent sombres, comme sur les mockups.
+   Charger APRÈS effects.css (on surcharge son .nav.scrolled).
+   ============================================================ */
+
+/* ---- Bouton bascule (stylé pour les 2 thèmes) ---- */
+.theme-toggle {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px; border-radius: 999px; flex-shrink: 0;
+  color: var(--text-2); background: var(--surface);
+  border: 1px solid var(--border);
+  transition: color .2s, border-color .2s, transform .2s;
+}
+.theme-toggle:hover { color: var(--text); border-color: var(--border-strong); transform: translateY(-1px); }
+.theme-toggle svg { display: block; }
+
+/* ============================================================
+   TOKENS CLAIR
+   ============================================================ */
+html[data-theme="light"] {
+  --bg: #ffffff;
+  --bg-2: #fbfbfd;
+  --bg-3: #f5f5f7;
+  --surface: rgba(23, 15, 60, 0.045);
+  --surface-2: rgba(23, 15, 60, 0.075);
+  --border: rgba(15, 10, 40, 0.10);
+  --border-strong: rgba(15, 10, 40, 0.18);
+  --text: #1d1d1f;
+  --text-2: #56535f;
+  --text-3: #86868b;
+  --pulse-grad-soft: linear-gradient(135deg, rgba(98,68,214,0.10), rgba(123,92,240,0.05));
+}
+
+/* Fond de page façon mockup : halos lavande sur blanc → #f5f5f7.
+   PAS de background-attachment:fixed sur le body (4 dégradés repeints à
+   chaque frame = le compositor rend des frames BLANCHES au scroll en
+   clair, constaté en test) → on peint les halos sur les calques FIXES
+   déjà en place (.aurora-bg / .fx-aurora, position:fixed z:-2), même
+   architecture que le thème sombre. */
+html[data-theme="light"] body { background: var(--bg); }
+html[data-theme="light"] .aurora-bg,
+html[data-theme="light"] .fx-aurora {
+  background:
+    radial-gradient(1100px 640px at 70% -10%, #eeeafd 0%, rgba(238,234,253,0) 60%),
+    radial-gradient(880px 590px at 8% 28%, #f4f1fd 0%, rgba(244,241,253,0) 65%),
+    radial-gradient(980px 740px at 88% 92%, #f7f0fb 0%, rgba(247,240,251,0) 60%),
+    linear-gradient(180deg, #ffffff 0%, #fbfbfd 55%, #f5f5f7 100%);
+}
+
+/* ---- Nav (verre blanc) ---- */
+html[data-theme="light"] .nav { background: rgba(255, 255, 255, 0.72); }
+html[data-theme="light"] .nav.scrolled {
+  background: rgba(255, 255, 255, 0.86) !important;
+  border-bottom-color: rgba(98, 68, 214, 0.16) !important;
+}
+
+/* ---- Cartes plateformes (teinte encre au lieu de blanc) ---- */
+html[data-theme="light"] .platform-card {
+  background: linear-gradient(165deg, rgba(23,15,60,0.045), rgba(23,15,60,0.015));
+}
+html[data-theme="light"] .platform-card.available .platform-icon {
+  box-shadow: 0 0 0 1px rgba(15,10,40,0.08), 0 8px 24px -8px rgba(123,92,240,0.35);
+}
+
+/* ---- Ombres devices : encre froide douce (fini le voile noir) ---- */
+html[data-theme="light"] .device-showcase .dev-mac  { filter: drop-shadow(0 36px 60px rgba(23,15,60,0.28)); }
+html[data-theme="light"] .device-showcase .dev-ipad { filter: drop-shadow(0 38px 58px rgba(23,15,60,0.30)); }
+html[data-theme="light"] .country .flag { filter: drop-shadow(0 4px 10px rgba(23,15,60,0.22)); }
+
+/* ---- Blocs confidentialité / contact : puits clairs ---- */
+html[data-theme="light"] .privacy-pill { background: rgba(23,15,60,0.05); }
+html[data-theme="light"] .lock-illus {
+  background: radial-gradient(circle at 50% 40%, rgba(123,92,240,0.22), transparent 70%), rgba(23,15,60,0.06);
+}
+html[data-theme="light"] .contact-email { background: rgba(23,15,60,0.05); }
+
+/* ---- Étoiles décoratives : poussière violette sur clair ---- */
+html[data-theme="light"] .fx-stars {
+  background:
+    radial-gradient(1px 1px at 20% 30%, rgba(98,68,214,0.45), transparent),
+    radial-gradient(1px 1px at 85% 15%, rgba(98,68,214,0.30), transparent),
+    radial-gradient(1px 1px at 50% 50%, rgba(98,68,214,0.25), transparent),
+    radial-gradient(1px 1px at 75% 35%, rgba(98,68,214,0.38), transparent);
+}
+
+/* ---- Bandeau marquee : fond teinté clair ---- */
+html[data-theme="light"] .fx-marquee {
+  background: linear-gradient(180deg, rgba(98,68,214,0.05), rgba(23,15,60,0.04));
+}
+
+/* ---- Cartes thèmes : ombre allégée ---- */
+html[data-theme="light"] .theme-card,
+html[data-theme="light"] .theme-card:hover {
+  box-shadow: 0 24px 48px -20px rgba(98,68,214,0.30), 0 10px 24px -12px rgba(23,15,60,0.22);
+}
+
+/* ---- Titre shimmer : encre → violet → encre ---- */
+html[data-theme="light"] .stat-shimmer strong {
+  background: linear-gradient(110deg, #1d1d1f 30%, #6244D6 50%, #1d1d1f 70%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+/* ---- Grain d'effects.css : quasi invisible sur clair ---- */
+html[data-theme="light"] .grain-overlay { opacity: 0.10; }
+
+/* ---- Pastille héros : contraste renforcé sur clair ---- */
+html[data-theme="light"] .hero-eyebrow {
+  color: #4f2fc4;
+  border-color: rgba(98, 68, 214, 0.35);
+  background: rgba(98, 68, 214, 0.07);
+}
+
+/* ---- Barre CTA mobile : reste sombre → re-pinner les tokens texte
+       (sinon var(--text) devient encre = illisible sur la barre) ---- */
+html[data-theme="light"] .mobile-cta-bar {
+  --text: #f5f3fb;
+  --text-2: #b9b4cf;
+  --text-3: #a5a0bd;
+}
