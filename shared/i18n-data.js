@@ -1,6 +1,7 @@
 /* PulseCalendar website translations — generated for the live repo (pulsecalendar-legal/index.html). FR is default; missing key => French fallback. */
 window.PC_I18N = {
  "en": {
+  "Mois, rappels et saisie vocale au poignet": "Month, reminders and voice input on your wrist",
   "Pulse Brain, le coach intelligent, tourne en local sur ton iPhone. Pas de pub, pas de tracking publicitaire, aucun entraînement sur tes données. Le partage de calendriers et les réservations (optionnels) passent par un serveur Firebase sécurisé.": "Pulse Brain, the smart engine, runs on your iPhone. No ads, no ad-tracking, no training on your data. Optional calendar sharing and booking use a secure Firebase server.",
   "Calendrier · iOS 26": "Calendar · iOS 26",
   "Ask Pulse · 100 % sur ton iPhone": "Ask Pulse · 100% on your iPhone",
@@ -210,6 +211,7 @@ window.PC_I18N = {
   "Télécharger dans l'App Store": "Download on the App Store"
  },
  "de": {
+  "Mois, rappels et saisie vocale au poignet": "Monat, Erinnerungen und Spracheingabe am Handgelenk",
   "Pulse Brain, le coach intelligent, tourne en local sur ton iPhone. Pas de pub, pas de tracking publicitaire, aucun entraînement sur tes données. Le partage de calendriers et les réservations (optionnels) passent par un serveur Firebase sécurisé.": "Pulse Brain, die smarte Engine, läuft auf deinem iPhone. Keine Werbung, kein Ad-Tracking, kein Training mit deinen Daten. Optionale Kalenderfreigabe und Buchungen nutzen einen sicheren Firebase-Server.",
   "Calendrier · iOS 26": "Kalender · iOS 26",
   "Ask Pulse · 100 % sur ton iPhone": "Ask Pulse · 100 % auf deinem iPhone",
@@ -421,6 +423,7 @@ window.PC_I18N = {
   "Télécharger dans l'App Store": "Im App Store herunterladen"
  },
  "es": {
+  "Mois, rappels et saisie vocale au poignet": "Mes, recordatorios y entrada de voz en tu muñeca",
   "Pulse Brain, le coach intelligent, tourne en local sur ton iPhone. Pas de pub, pas de tracking publicitaire, aucun entraînement sur tes données. Le partage de calendriers et les réservations (optionnels) passent par un serveur Firebase sécurisé.": "Pulse Brain, el motor inteligente, funciona en tu iPhone. Sin anuncios, sin seguimiento publicitario, sin entrenar con tus datos. El uso compartido de calendarios y las reservas (opcionales) usan un servidor Firebase seguro.",
   "Calendrier · iOS 26": "Calendario · iOS 26",
   "Ask Pulse · 100 % sur ton iPhone": "Ask Pulse · 100 % en tu iPhone",
@@ -631,6 +634,7 @@ window.PC_I18N = {
   "Télécharger dans l'App Store": "Descargar en la App Store"
  },
  "ja": {
+  "Mois, rappels et saisie vocale au poignet": "月表示・リマインダー・音声入力を手首で",
   "Pulse Brain, le coach intelligent, tourne en local sur ton iPhone. Pas de pub, pas de tracking publicitaire, aucun entraînement sur tes données. Le partage de calendriers et les réservations (optionnels) passent par un serveur Firebase sécurisé.": "スマートエンジン「Pulse Brain」は iPhone 上で動きます。広告なし、広告トラッキングなし、あなたのデータで学習しません。カレンダー共有や予約（任意）は安全な Firebase サーバーを使います。",
   "Calendrier · iOS 26": "カレンダー · iOS 26",
   "Ask Pulse · 100 % sur ton iPhone": "Ask Pulse · 100% あなたのiPhoneで",
@@ -850,6 +854,7 @@ window.PC_I18N = {
   "Télécharger dans l'App Store": "App Storeでダウンロード"
  },
  "ko": {
+  "Mois, rappels et saisie vocale au poignet": "손목에서 월 보기, 미리 알림, 음성 입력",
   "Pulse Brain, le coach intelligent, tourne en local sur ton iPhone. Pas de pub, pas de tracking publicitaire, aucun entraînement sur tes données. Le partage de calendriers et les réservations (optionnels) passent par un serveur Firebase sécurisé.": "스마트 엔진 Pulse Brain은 iPhone에서 작동해요. 광고 없음, 광고 추적 없음, 당신의 데이터로 학습하지 않아요. 캘린더 공유와 예약(선택)은 안전한 Firebase 서버를 사용해요.",
   "Calendrier · iOS 26": "캘린더 · iOS 26",
   "Ask Pulse · 100 % sur ton iPhone": "Ask Pulse · 100% 당신의 iPhone에서",
@@ -1077,6 +1082,7 @@ window.PC_I18N = {
   "The anti-procrastination calendar with on-device intelligence, holiday optimizer and Apple Calendar alternative.": "온디바이스 인텔리전스, 휴가 최적화, Apple Calendar 대안을 갖춘 미루기 방지 캘린더."
  },
  "ar": {
+  "Mois, rappels et saisie vocale au poignet": "عرض الشهر والتذكيرات والإدخال الصوتي على معصمك",
   "Pulse Brain, le coach intelligent, tourne en local sur ton iPhone. Pas de pub, pas de tracking publicitaire, aucun entraînement sur tes données. Le partage de calendriers et les réservations (optionnels) passent par un serveur Firebase sécurisé.": "يعمل المحرّك الذكي Pulse Brain على جهاز iPhone الخاص بك. بدون إعلانات، بدون تتبّع إعلاني، وبدون تدريب على بياناتك. مشاركة التقويمات والحجوزات (اختيارية) تستخدم خادم Firebase آمنًا.",
   "Calendrier · iOS 26": "التقويم · iOS 26",
   "Ask Pulse · 100 % sur ton iPhone": "Ask Pulse · 100% على جهاز iPhone الخاص بك",
@@ -1300,6 +1306,7 @@ window.PC_I18N = {
   "Télécharger dans l'App Store": "التحميل من App Store"
  },
  "ru": {
+  "Mois, rappels et saisie vocale au poignet": "Месяц, напоминания и голосовой ввод на запястье",
   "Pulse Brain, le coach intelligent, tourne en local sur ton iPhone. Pas de pub, pas de tracking publicitaire, aucun entraînement sur tes données. Le partage de calendriers et les réservations (optionnels) passent par un serveur Firebase sécurisé.": "Умный движок Pulse Brain работает на твоём iPhone. Без рекламы, без рекламного трекинга, без обучения на твоих данных. Общий доступ к календарям и бронирования (по желанию) используют защищённый сервер Firebase.",
   "Calendrier · iOS 26": "Календарь · iOS 26",
   "Ask Pulse · 100 % sur ton iPhone": "Ask Pulse · 100 % на твоём iPhone",
@@ -1521,6 +1528,7 @@ window.PC_I18N = {
   "Télécharger dans l'App Store": "Скачать в App Store"
  },
  "zh-Hans": {
+  "Mois, rappels et saisie vocale au poignet": "手腕上的月视图、提醒事项和语音输入",
   "Pulse Brain, le coach intelligent, tourne en local sur ton iPhone. Pas de pub, pas de tracking publicitaire, aucun entraînement sur tes données. Le partage de calendriers et les réservations (optionnels) passent par un serveur Firebase sécurisé.": "智能引擎 Pulse Brain 在你的 iPhone 上运行。无广告、无广告追踪、不用你的数据训练模型。日历共享和预订（可选）使用安全的 Firebase 服务器。",
   "Calendrier · iOS 26": "日历 · iOS 26",
   "Ask Pulse · 100 % sur ton iPhone": "Ask Pulse · 100% 在你的 iPhone 上",

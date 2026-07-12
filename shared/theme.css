@@ -123,3 +123,4 @@ html[data-theme="light"] .mobile-cta-bar {
   --text-2: #b9b4cf;
   --text-3: #a5a0bd;
 }
+html[data-theme="light"] .device-showcase .dev-watch { filter: drop-shadow(0 22px 38px rgba(23,15,60,0.32)); }
