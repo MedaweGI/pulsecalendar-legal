@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
 
   <!-- Homepage -->
   <url>
@@ -7,6 +8,23 @@
     <lastmod>2026-05-15</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
+  </url>
+
+
+  <!-- Press kit (visuels écosystème) -->
+  <url>
+    <loc>https://pulsecalendar.app/press/</loc>
+    <lastmod>2026-07-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+    <image:image>
+      <image:loc>https://pulsecalendar.app/press/assets/pulsecalendar-iphone-ipad-mac-apple-watch.jpg</image:loc>
+      <image:title>PulseCalendar on iPhone, iPad, Mac and Apple Watch</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://pulsecalendar.app/press/assets/pulsecalendar-iphone-ipad-mac-apple-watch-fr.jpg</image:loc>
+      <image:title>PulseCalendar sur iPhone, iPad, Mac et Apple Watch</image:title>
+    </image:image>
   </url>
 
   <!-- Features hub -->
