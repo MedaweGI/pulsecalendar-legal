@@ -18,10 +18,12 @@
   // window.PC_I18N (i18n-data.js) ET aux dossiers assets/screens/zh-Hans. Avec "zh"
   // seul, dictFor("zh")=DATA["zh"]=undefined → le chinois ne se traduit jamais, et
   // l'état "zh" invalide corrompt aussi les changements de langue suivants. (fix zh-Hans)
-  var LANGS = ["fr", "en", "es", "de", "ja", "ko", "ar", "ru", "zh-Hans"];
+  // "en-US" = variante régionale : MÊME texte que "en" (alias dans dictFor), mais
+  // son propre jeu de captures (°F) via screens-i18n.js.
+  var LANGS = ["fr", "en", "en-US", "es", "de", "ja", "ko", "ar", "ru", "zh-Hans"];
   var RTL = { ar: true };
-  var FLAG = { fr: "🇫🇷", en: "🇬🇧", es: "🇪🇸", de: "🇩🇪", ja: "🇯🇵", ko: "🇰🇷", ar: "🇸🇦", ru: "🇷🇺", "zh-Hans": "🇨🇳" };
-  var NATIVE = { fr: "Français", en: "English", es: "Español", de: "Deutsch", ja: "日本語", ko: "한국어", ar: "العربية", ru: "Русский", "zh-Hans": "中文" };
+  var FLAG = { fr: "🇫🇷", en: "🇬🇧", "en-US": "🇺🇸", es: "🇪🇸", de: "🇩🇪", ja: "🇯🇵", ko: "🇰🇷", ar: "🇸🇦", ru: "🇷🇺", "zh-Hans": "🇨🇳" };
+  var NATIVE = { fr: "Français", en: "English", "en-US": "English (US)", es: "Español", de: "Deutsch", ja: "日本語", ko: "한국어", ar: "العربية", ru: "Русский", "zh-Hans": "中文" };
   var HTML_LANG = {}; // <html lang> = le code tel quel ("zh-Hans" inclus)
   var STORE = "pc_lang";
 
@@ -34,6 +36,7 @@
 
   // Read the translation table lazily so script load-order never matters.
   function dictFor(lang) {
+    if (lang === "en-US") lang = "en";           // même texte que l'anglais
     var DATA = (typeof window !== "undefined" && window.PC_I18N) ? window.PC_I18N : {};
     return (lang !== "fr" && DATA[lang]) ? DATA[lang] : null;
   }
@@ -185,7 +188,7 @@
     var f = wrap.querySelector(".pc-lang-btn .pc-lang-flag");
     var c = wrap.querySelector(".pc-lang-btn .pc-lang-code");
     if (f) f.textContent = FLAG[lang] || "🌐";
-    if (c) c.textContent = (lang === "zh-Hans" ? "ZH" : lang.toUpperCase());
+    if (c) c.textContent = (lang === "zh-Hans" ? "ZH" : lang === "en-US" ? "US" : lang.toUpperCase());
     var items = wrap.querySelectorAll(".pc-lang-menu li");
     for (var i = 0; i < items.length; i++) {
       items[i].setAttribute("aria-selected", items[i].dataset.lang === lang ? "true" : "false");
@@ -229,7 +232,9 @@
     } catch (e) {}
     var navs = navigator.languages || [navigator.language || "fr"];
     for (var i = 0; i < navs.length; i++) {
-      var base = String(navs[i] || "").toLowerCase().split("-")[0];
+      var full = String(navs[i] || "").toLowerCase();
+      if (full === "en-us" && LANGS.indexOf("en-US") >= 0) return "en-US"; // US → °F
+      var base = full.split("-")[0];
       if (base === "zh") return "zh-Hans";
       if (LANGS.indexOf(base) >= 0) return base;
     }

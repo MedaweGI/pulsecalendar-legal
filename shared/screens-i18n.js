@@ -6,7 +6,7 @@
    On DÉTECTE le changement par POLLING de PCI18n.current (fiable, quel que soit le
    déclencheur). CSP-safe (fichier externe). */
 (function () {
-  var LANGS = { fr:1, de:1, es:1, ja:1, ko:1, ar:1, ru:1, "zh-Hans":1 }; // langues avec jeu localisé
+  var LANGS = { fr:1, de:1, es:1, ja:1, ko:1, ar:1, ru:1, "zh-Hans":1, "en-US":1 }; // langues avec jeu localisé (en-US = captures °F, repli racine)
   var V = 8;   // version de cache des captures téléphone
   var DV = 3;  // version de cache des images device (macbook-device / ipad-device)
 
