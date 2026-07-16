@@ -31,6 +31,17 @@
 <meta name="theme-color" content="#6244D6"/>
 <meta name="apple-itunes-app" content="app-id=6764295184"/>
 
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../shared/effects.css?v=2"/>
+<link rel="stylesheet" href="../shared/theme.css"/>
+<link rel="stylesheet" href="../shared/home.css?v=1"/>
+<script src="../shared/theme.js"></script>
+
+<!-- ===== PLAUSIBLE ANALYTICS (privacy-friendly, no cookies, no banner RGPD) ===== -->
+<script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
+
 <!-- ===== JSON-LD ===== -->
 <script type="application/ld+json">
 {
@@ -55,91 +66,229 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="../shared/seo-page.css"/>
-<link rel="stylesheet" href="../shared/theme.css"/>
-<script src="../shared/theme.js"></script>
-
-<!-- ===== PLAUSIBLE ANALYTICS (privacy-friendly, no cookies, no banner RGPD) ===== -->
-<script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
+<style>
+/* Contenu SEO — mêmes tokens que l'accueil */
+.fp-breadcrumb { max-width: 1200px; margin: 0 auto; padding: 100px 32px 0; font-family: var(--font-mono, monospace); font-size: 13px; color: var(--text-3); letter-spacing: .01em; }
+.fp-breadcrumb a { color: var(--text-3); text-decoration: none; }
+.fp-breadcrumb a:hover { color: var(--violet-300); }
+.fp-breadcrumb .sep { opacity: .5; margin: 0 6px; }
+.fp-main { max-width: 1000px; margin: 0 auto; padding: 40px 32px 40px; }
+.fp-block { padding: 44px 0; border-top: 1px solid var(--border); }
+.fp-block:first-child { border-top: 0; }
+.fp-block h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -.02em; margin: 0 0 14px; color: var(--text); line-height: 1.15; }
+.fp-block p { font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 0 0 14px; max-width: 68ch; }
+.fp-block p strong { color: var(--text); }
+.fp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 26px; }
+.fp-stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg, 18px); padding: 24px; }
+.fp-stat strong { display: block; font-size: 40px; font-weight: 800; line-height: 1; background: var(--pulse-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+.fp-stat span { font-size: 14px; line-height: 1.5; color: var(--text-3); }
+.fp-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.fp-pill { display: inline-flex; align-items: center; gap: 6px; padding: 9px 15px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--text-2); }
+.fp-steps { counter-reset: step; list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; max-width: 720px; }
+.fp-steps li { counter-increment: step; position: relative; padding: 18px 20px 18px 60px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius, 14px); font-size: 16px; line-height: 1.55; color: var(--text-2); }
+.fp-steps li::before { content: counter(step); position: absolute; left: 16px; top: 16px; width: 30px; height: 30px; border-radius: 50%; background: var(--pulse-grad); color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+.fp-steps li em { color: var(--text); font-style: normal; font-weight: 600; }
+.fp-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
+.fp-related a { display: block; padding: 20px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius, 14px); color: var(--text); font-weight: 600; text-decoration: none; transition: border-color .2s, transform .2s; }
+.fp-related a:hover { border-color: var(--violet-500); transform: translateY(-2px); }
+.fp-final { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl, 24px); padding: 48px 32px; margin-top: 20px; }
+.fp-final h2 { border: 0; }
+.fp-final .btn-appstore { margin: 8px auto 0; }
+@media (max-width: 720px) {
+  .fp-stats, .fp-related { grid-template-columns: 1fr; }
+  .fp-breadcrumb { padding-top: 88px; }
+}
+</style>
 </head>
 <body>
-<div id="nav-mount"></div>
+<div class="fx-grain"></div>
+<div class="fx-progress" id="fx-progress"></div>
 
-<nav class="breadcrumb">
-  <a href="../index.html">Accueil</a> / <a href="./">Fonctionnalités</a> / <span>ADHD calendar app</span>
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <div id="nav-logo"></div>
+      <span>PulseCalendar</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../index.html#themes">Thèmes</a>
+      <a href="../index.html#pricing">Premium</a>
+      <a href="../index.html#faq">FAQ</a>
+    </div>
+    <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" class="nav-cta" target="_blank" rel="noopener">Télécharger</a>
+  </div>
 </nav>
 
+<!-- ===== BREADCRUMB ===== -->
+<nav class="fp-breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a><span class="sep">/</span><a href="./">Fonctionnalités</a><span class="sep">/</span><span>ADHD calendar app</span>
+</nav>
+
+<!-- ===== HERO ===== -->
 <header class="hero">
-  <div class="hero-eyebrow"><span>⚡</span> Conçu avec et pour des cerveaux TDAH</div>
-  <h1>L'<span class="gradient">ADHD calendar app</span> qui ne te juge pas.</h1>
-  <p class="lede">PulseCalendar applique les 4 principes de la planification TDAH-friendly : externalisation totale, friction zéro pour démarrer, feedback visuel immédiat, et zéro culpabilisation quand tu rates une journée.</p>
-  <div class="cta-row">
-    <a href="../index.html#cta" class="btn-appstore">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-      <span class="as-text"><small>Télécharger sur</small><strong>App Store</strong></span>
-    </a>
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span>Fonctionnalité phare</span>
+    </div>
+    <h1>
+      L'<span class="gradient">ADHD calendar app</span> qui ne te juge pas.
+    </h1>
+    <p class="lede">
+      PulseCalendar applique les 4 principes de la planification TDAH-friendly : externalisation totale, friction zéro pour démarrer, feedback visuel immédiat, et zéro culpabilisation quand tu rates une journée.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" target="_blank" rel="noopener" class="btn-appstore" aria-label="Télécharger PulseCalendar sur l'App Store">
+        <svg class="as-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        <div class="as-text">
+          <small>Télécharger sur l'</small>
+          <strong>App Store</strong>
+        </div>
+      </a>
+      <a href="./" class="btn-secondary">Voir toutes les fonctionnalités →</a>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-row">
+        <strong>4 principes</strong>
+        <span>Externalisation · friction zéro · feedback · zéro culpabilisation</span>
+      </div>
+      <div class="meta-row">
+        <strong>3 priorités max</strong>
+        <span>Par jour, jamais 10 — calibré pour le TDAH</span>
+      </div>
+      <div class="meta-row">
+        <strong>Stockage local</strong>
+        <span>RDV médecin, psy, thérapeute gardés sur ton iPhone</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="iphone-glow"></div>
+    <div id="hero-phone" style="position: relative; z-index: 1;"></div>
   </div>
 </header>
 
-<main class="content">
+<!-- ===== CONTENU ===== -->
+<main class="fp-main">
 
-<h2>Pourquoi les calendriers classiques ne marchent pas pour le TDAH</h2>
-<p>Apple Calendar suppose que tu te souviens de planifier. Google Calendar suppose que tu lis ton agenda. Notion Calendar suppose que tu maintiens un système. <strong>Aucune de ces suppositions ne tient avec un cerveau TDAH.</strong></p>
+  <section class="fp-block reveal">
+    <h2>Pourquoi les calendriers classiques ne marchent pas pour le TDAH</h2>
+    <p>Apple Calendar suppose que tu te souviens de planifier. Google Calendar suppose que tu lis ton agenda. Notion Calendar suppose que tu maintiens un système. <strong>Aucune de ces suppositions ne tient avec un cerveau TDAH.</strong></p>
+  </section>
 
-<h2>Les 4 principes de PulseCalendar pour le TDAH</h2>
+  <section class="fp-block reveal">
+    <h2>Les 4 principes de PulseCalendar pour le TDAH</h2>
+    <h3>1. Externalisation totale (« si c'est pas dans l'app, ça n'existe pas »)</h3>
+    <p>Création par voix, par langage naturel, par dictée — la friction d'ajouter un événement doit être proche de zéro. Pulse Brain ajoute des rappels automatiques pour les RDV importants (médecin, démarches admin).</p>
+    <h3>2. Friction zéro pour démarrer</h3>
+    <p>Le mode « Juste 5 minutes » fait office de starter. Tap sur la tâche, timer de 5 min, plus rien d'autre à l'écran. Casse l'inertie sans demander d'effort cognitif.</p>
+    <h3>3. Feedback visuel immédiat</h3>
+    <p>Pulse Score sous forme de jauge colorée. Day Battery sur le lock screen. Streaks pour les habitudes. Récompense dopaminergique en temps réel — le carburant des cerveaux TDAH.</p>
+    <h3>4. Zéro culpabilisation : Recovery Mode</h3>
+    <p>Tu rates une journée ? Pulse Brain ne te montre pas un compteur de tâches échouées. Il bascule en <strong>Recovery Mode</strong> : on repart à zéro le lendemain, avec une seule micro-tâche pour reprendre confiance.</p>
+    <div class="fp-stats">
+      <div class="fp-stat"><strong>0</strong><span>compteur de tâches ratées</span></div>
+      <div class="fp-stat"><strong>3</strong><span>priorités max/jour, jamais 10</span></div>
+      <div class="fp-stat"><strong>5 min</strong><span>pour démarrer, peu importe la tâche</span></div>
+    </div>
+  </section>
 
-<h3>1. Externalisation totale (« si c'est pas dans l'app, ça n'existe pas »)</h3>
-<p>Création par voix, par langage naturel, par dictée — la friction d'ajouter un événement doit être proche de zéro. Pulse Brain ajoute des rappels automatiques pour les RDV importants (médecin, démarches admin).</p>
+  <section class="fp-block reveal">
+    <h2>Ce que les utilisateurs TDAH adorent</h2>
+    <ul>
+      <li><strong>Auto-création de buffer time</strong> avant les RDV pour éviter d'être en retard.</li>
+      <li><strong>Rappels par paliers</strong> (24h, 1h, 15 min, 5 min) — pas qu'un seul rappel manqué.</li>
+      <li><strong>Détection auto des habitudes</strong> : médecin tous les 6 mois, sport, dentiste — l'app les ajoute pour toi.</li>
+      <li><strong>Mode plein écran sans distractions</strong> pendant les focus blocks.</li>
+      <li><strong>Body doubling visuel</strong> : un timer partagé avec une silhouette qui « bosse avec toi ».</li>
+    </ul>
+  </section>
 
-<h3>2. Friction zéro pour démarrer</h3>
-<p>Le mode « Juste 5 minutes » fait office de starter. Tap sur la tâche, timer de 5 min, plus rien d'autre à l'écran. Casse l'inertie sans demander d'effort cognitif.</p>
+  <section class="fp-block reveal">
+    <h2>Stockage local par défaut — important pour la confidentialité médicale</h2>
+    <p>Tes RDV thérapeute, psy, médecin restent sur ton iPhone par défaut. L'analyse Pulse Brain tourne 100 % en local (on-device, jamais envoyée à un LLM cloud). Le partage de calendrier est <strong>explicite</strong> — un événement n'est uploadé que si tu choisis de le partager. Pas de tracker publicitaire. <a href="../index.html#privacy">Voir la section confidentialité.</a></p>
+  </section>
 
-<h3>3. Feedback visuel immédiat</h3>
-<p>Pulse Score sous forme de jauge colorée. Day Battery sur le lock screen. Streaks pour les habitudes. Récompense dopaminergique en temps réel — le carburant des cerveaux TDAH.</p>
+  <section class="fp-block reveal">
+    <h2>Pour aller plus loin</h2>
+    <div class="fp-related">
+      <a href="anti-procrastination.html">Anti-procrastination →</a>
+      <a href="focus-planner.html">Focus planner iOS →</a>
+      <a href="ai-calendar.html">Coach intelligent →</a>
+    </div>
+  </section>
 
-<h3>4. Zéro culpabilisation : Recovery Mode</h3>
-<p>Tu rates une journée ? Pulse Brain ne te montre pas un compteur de tâches échouées. Il bascule en <strong>Recovery Mode</strong> : on repart à zéro le lendemain, avec une seule micro-tâche pour reprendre confiance.</p>
-
-<div class="stat-row">
-  <div class="stat"><strong>0</strong><span>compteur de tâches ratées</span></div>
-  <div class="stat"><strong>3</strong><span>priorités max/jour, jamais 10</span></div>
-  <div class="stat"><strong>5 min</strong><span>pour démarrer, peu importe la tâche</span></div>
-</div>
-
-<h2>Ce que les utilisateurs TDAH adorent</h2>
-<ul>
-  <li><strong>Auto-création de buffer time</strong> avant les RDV pour éviter d'être en retard.</li>
-  <li><strong>Rappels par paliers</strong> (24h, 1h, 15 min, 5 min) — pas qu'un seul rappel manqué.</li>
-  <li><strong>Détection auto des habitudes</strong> : médecin tous les 6 mois, sport, dentiste — l'app les ajoute pour toi.</li>
-  <li><strong>Mode plein écran sans distractions</strong> pendant les focus blocks.</li>
-  <li><strong>Body doubling visuel</strong> : un timer partagé avec une silhouette qui « bosse avec toi ».</li>
-</ul>
-
-<h2>Stockage local par défaut — important pour la confidentialité médicale</h2>
-<p>Tes RDV thérapeute, psy, médecin restent sur ton iPhone par défaut. L'analyse Pulse Brain tourne 100 % en local (on-device, jamais envoyée à un LLM cloud). Le partage de calendrier est <strong>explicite</strong> — un événement n'est uploadé que si tu choisis de le partager. Pas de tracker publicitaire. <a href="../index.html#privacy">Voir la section confidentialité.</a></p>
-
-<div class="related">
-  <h2>Pour aller plus loin</h2>
-  <div class="related-grid">
-    <a href="anti-procrastination.html">Anti-procrastination →</a>
-    <a href="focus-planner.html">Focus planner iOS →</a>
-    <a href="ai-calendar.html">Coach intelligent →</a>
-  </div>
-</div>
-
-<div class="final-cta">
-  <h2>Un calendrier qui fonctionne avec ton cerveau, pas contre.</h2>
-  <a href="../index.html#cta" class="btn-appstore">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-      <span class="as-text"><small>Télécharger sur</small><strong>App Store</strong></span>
-  </a>
-</div>
+  <section class="fp-final reveal">
+    <h2>Un calendrier qui fonctionne avec ton cerveau, pas contre.</h2>
+    <p style="max-width: 52ch; margin: 0 auto 22px; color: var(--text-2);">Télécharge PulseCalendar sur l'App Store. Pulse Pro à -48 % pour les early adopters.</p>
+    <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" target="_blank" rel="noopener" class="btn-appstore" aria-label="Télécharger PulseCalendar sur l'App Store">
+      <svg class="as-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+      <div class="as-text">
+        <small>Télécharger sur l'</small>
+        <strong>App Store</strong>
+      </div>
+    </a>
+  </section>
 
 </main>
 
-<div id="footer-mount"></div>
-<script src="../shared/nav-footer.js"></script>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-inner" style="grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;">
+    <div class="foot-brand">
+      <a href="../index.html" class="nav-brand">
+        <div id="footer-logo"></div>
+        <span>PulseCalendar</span>
+      </a>
+      <p>Le smart calendar app et anti-procrastination coach pour iPhone, iPad, Mac et Apple Watch. Intelligence on-device, focus planner iOS, alternative à Apple Calendar.</p>
+      <p style="margin-top: 12px; font-size: 12px; color: var(--text-3);">🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪 🇰🇷 🇸🇦 🇷🇺 🇨🇳</p>
+    </div>
+    <div class="foot-col">
+      <h4>Fonctionnalités</h4>
+      <ul>
+        <li><a href="smart-calendar.html">Smart calendar app</a></li>
+        <li><a href="ai-calendar.html">Coach intelligent</a></li>
+        <li><a href="anti-procrastination.html">Anti-procrastination</a></li>
+        <li><a href="focus-planner.html">Focus planner iOS</a></li>
+        <li><a href="adhd-calendar.html">ADHD calendar app</a></li>
+        <li><a href="schedule-optimizer.html">Schedule optimizer</a></li>
+        <li><a href="../index.html#themes">Thèmes</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../support/">Support</a></li>
+        <li><a href="mailto:Contact@PulseCalendar.app">Contact</a></li>
+        <li><a href="../press/">Kit presse</a></li>
+        <li><a href="https://x.com/PulseCalendar" target="_blank" rel="noopener">X (Twitter)</a></li>
+      </ul>
+      <h4 style="margin-top: 24px;">Légal</h4>
+      <ul>
+        <li><a href="../privacy.html">Confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 PulseCalendar · pulsecalendar.app · Available in 🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪 🇰🇷 🇸🇦 🇷🇺 🇨🇳</span>
+    <span>Made with ♥ in France</span>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../src/PulseLogo.js?v=9"></script>
+<script src="../src/Screens.js?v=6"></script>
+<script src="../src/PhoneFrame.js?v=15"></script>
+<script src="../src/Themes.js?v=3"></script>
+<script src="../src/Mount.js?v=6"></script>
+<script defer src="../shared/reveal.js"></script>
+<script src="../shared/effects.js"></script>
 </body>
 </html>

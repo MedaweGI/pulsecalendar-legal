@@ -11,7 +11,7 @@ function PulseLogo({
   // v3 : 680x700 PNG transparent (icon + notif badge intégrés).
   // L'aspect ratio est 680/700 ≈ 0.971 — on garde la largeur effective
   // légèrement inférieure à la hauteur pour rendu correct.
-  const src = "assets/pulse-app-icon-v3.png";
+  const src = "/assets/pulse-app-icon-v3.png";
   const aspect = 680 / 700;
   return /*#__PURE__*/React.createElement("img", {
     src: src,

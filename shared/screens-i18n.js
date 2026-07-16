@@ -22,9 +22,9 @@
       var m = (img.getAttribute("src") || "").match(re);
       if (!m) continue;
       var name = m[1];
-      var root = "assets/screens/" + name + ".png?v=" + ver;
+      var root = "/assets/screens/" + name + ".png?v=" + ver;
       var useLang = !!LANGS[lang] && img.getAttribute("data-scr-fb") !== "1";
-      var want = useLang ? ("assets/screens/" + lang + "/" + name + ".png?v=" + ver) : root;
+      var want = useLang ? ("/assets/screens/" + lang + "/" + name + ".png?v=" + ver) : root;
       if (useLang) {
         (function (im, rt) {                       // repli anglais une fois si la loc échoue
           im.onerror = function () {

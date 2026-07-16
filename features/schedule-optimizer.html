@@ -8,8 +8,6 @@
 <title>Schedule optimizer iPhone & Bridge Planner — PulseCalendar</title>
 <meta name="description" content="Schedule optimizer qui équilibre focus, récup et meetings en 1 tap. Bridge Planner pour maximiser tes ponts et congés. Optimisation on-device sur iPhone."/>
 <link rel="canonical" href="https://pulsecalendar.app/features/schedule-optimizer"/>
-
-<!-- ===== OPEN GRAPH ===== -->
 <meta property="og:type" content="article"/>
 <meta property="og:url" content="https://pulsecalendar.app/features/schedule-optimizer"/>
 <meta property="og:site_name" content="PulseCalendar"/>
@@ -31,7 +29,17 @@
 <meta name="theme-color" content="#6244D6"/>
 <meta name="apple-itunes-app" content="app-id=6764295184"/>
 
-<!-- ===== JSON-LD ===== -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../shared/effects.css?v=2"/>
+<link rel="stylesheet" href="../shared/theme.css"/>
+<link rel="stylesheet" href="../shared/home.css?v=1"/>
+<script src="../shared/theme.js"></script>
+
+<!-- ===== PLAUSIBLE ANALYTICS (privacy-friendly, no cookies, no banner RGPD) ===== -->
+<script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
@@ -55,84 +63,223 @@
 }
 </script>
 
-<link rel="preconnect" href="https://fonts.googleapis.com"/>
-<link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="../shared/seo-page.css"/>
-<link rel="stylesheet" href="../shared/theme.css"/>
-<script src="../shared/theme.js"></script>
-
-<!-- ===== PLAUSIBLE ANALYTICS (privacy-friendly, no cookies, no banner RGPD) ===== -->
-<script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
+<style>
+/* Contenu SEO — mêmes tokens que l'accueil */
+.fp-breadcrumb { max-width: 1200px; margin: 0 auto; padding: 100px 32px 0; font-family: var(--font-mono, monospace); font-size: 13px; color: var(--text-3); letter-spacing: .01em; }
+.fp-breadcrumb a { color: var(--text-3); text-decoration: none; }
+.fp-breadcrumb a:hover { color: var(--violet-300); }
+.fp-breadcrumb .sep { opacity: .5; margin: 0 6px; }
+.fp-main { max-width: 1000px; margin: 0 auto; padding: 40px 32px 40px; }
+.fp-block { padding: 44px 0; border-top: 1px solid var(--border); }
+.fp-block:first-child { border-top: 0; }
+.fp-block h2 { font-size: clamp(24px, 3vw, 34px); font-weight: 800; letter-spacing: -.02em; margin: 0 0 14px; color: var(--text); line-height: 1.15; }
+.fp-block p { font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 0 0 14px; max-width: 68ch; }
+.fp-block p strong { color: var(--text); }
+.fp-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 26px; }
+.fp-stat { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-lg, 18px); padding: 24px; }
+.fp-stat strong { display: block; font-size: 40px; font-weight: 800; line-height: 1; background: var(--pulse-grad); -webkit-background-clip: text; background-clip: text; -webkit-text-fill-color: transparent; margin-bottom: 10px; }
+.fp-stat span { font-size: 14px; line-height: 1.5; color: var(--text-3); }
+.fp-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 22px; }
+.fp-pill { display: inline-flex; align-items: center; gap: 6px; padding: 9px 15px; background: var(--surface); border: 1px solid var(--border); border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--text-2); }
+.fp-steps { counter-reset: step; list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 14px; max-width: 720px; }
+.fp-steps li { counter-increment: step; position: relative; padding: 18px 20px 18px 60px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius, 14px); font-size: 16px; line-height: 1.55; color: var(--text-2); }
+.fp-steps li::before { content: counter(step); position: absolute; left: 16px; top: 16px; width: 30px; height: 30px; border-radius: 50%; background: var(--pulse-grad); color: #fff; font-weight: 700; font-size: 14px; display: flex; align-items: center; justify-content: center; }
+.fp-steps li em { color: var(--text); font-style: normal; font-weight: 600; }
+.fp-related { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 24px; }
+.fp-related a { display: block; padding: 20px 22px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius, 14px); color: var(--text); font-weight: 600; text-decoration: none; transition: border-color .2s, transform .2s; }
+.fp-related a:hover { border-color: var(--violet-500); transform: translateY(-2px); }
+.fp-final { text-align: center; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius-xl, 24px); padding: 48px 32px; margin-top: 20px; }
+.fp-final h2 { border: 0; }
+.fp-final .btn-appstore { margin: 8px auto 0; }
+@media (max-width: 720px) {
+  .fp-stats, .fp-related { grid-template-columns: 1fr; }
+  .fp-breadcrumb { padding-top: 88px; }
+}
+</style>
 </head>
 <body>
-<div id="nav-mount"></div>
+<div class="fx-grain"></div>
+<div class="fx-progress" id="fx-progress"></div>
 
-<nav class="breadcrumb">
-  <a href="../index.html">Accueil</a> / <a href="./">Fonctionnalités</a> / <span>Schedule optimizer</span>
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <div id="nav-logo"></div>
+      <span>PulseCalendar</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#features">Fonctionnalités</a>
+      <a href="../index.html#themes">Thèmes</a>
+      <a href="../index.html#pricing">Premium</a>
+      <a href="../index.html#faq">FAQ</a>
+    </div>
+    <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" class="nav-cta" target="_blank" rel="noopener">Télécharger</a>
+  </div>
 </nav>
 
+<!-- ===== BREADCRUMB ===== -->
+<nav class="fp-breadcrumb" aria-label="Fil d'Ariane">
+  <a href="../index.html">Accueil</a><span class="sep">/</span><a href="./">Fonctionnalités</a><span class="sep">/</span><span>Schedule optimizer</span>
+</nav>
+
+<!-- ===== HERO ===== -->
 <header class="hero">
-  <div class="hero-eyebrow"><span>⚙️</span> Bridge Planner · 1-tap optimize</div>
-  <h1>Le <span class="gradient">schedule optimizer</span> qui rééquilibre ta journée en 1 tap.</h1>
-  <p class="lede">Pulse Brain réorganise focus, récup, meetings et trajets en respectant tes pics d'énergie. Et Bridge Planner repère les ponts qui transforment 1 jour de congé en 4 jours off.</p>
-  <div class="cta-row">
-    <a href="../index.html#cta" class="btn-appstore">
-      <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-      <span class="as-text"><small>Télécharger sur</small><strong>App Store</strong></span>
-    </a>
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="dot"></span>
+      <span>Fonctionnalité phare</span>
+    </div>
+    <h1>
+      Le <span class="gradient">schedule optimizer</span> qui rééquilibre ta journée en 1 tap.
+    </h1>
+    <p class="lede">
+      Pulse Brain réorganise focus, récup, meetings et trajets en respectant tes pics d'énergie. Et Bridge Planner repère les ponts qui transforment 1 jour de congé en 4 jours off.
+    </p>
+    <div class="hero-ctas">
+      <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" target="_blank" rel="noopener" class="btn-appstore" aria-label="Télécharger PulseCalendar sur l'App Store">
+        <svg class="as-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        <div class="as-text">
+          <small>Télécharger sur l'</small>
+          <strong>App Store</strong>
+        </div>
+      </a>
+      <a href="./" class="btn-secondary">Voir toutes les fonctionnalités →</a>
+    </div>
+    <div class="hero-meta">
+      <div class="meta-row">
+        <strong>1 tap</strong>
+        <span>Pulse Brain réorganise ta journée</span>
+      </div>
+      <div class="meta-row">
+        <strong>Bridge Planner</strong>
+        <span>Pose 1 jour, gagne 4 jours off</span>
+      </div>
+      <div class="meta-row">
+        <strong>3 pays</strong>
+        <span>Fériés croisés simultanés</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="iphone-glow"></div>
+    <div id="hero-phone" style="position: relative; z-index: 1;"></div>
   </div>
 </header>
 
-<main class="content">
+<!-- ===== CONTENU ===== -->
+<main class="fp-main">
 
-<h2>1-tap schedule optimizer</h2>
-<p>Tap sur ⚡ — Pulse Brain analyse ta journée et la réorganise selon 4 critères :</p>
-<ol>
-  <li><strong>Énergie</strong> : deep work sur tes pics historiques (matin ou après-midi).</li>
-  <li><strong>Cohérence</strong> : groupe les meetings consécutifs pour éviter le context-switching.</li>
-  <li><strong>Récup</strong> : insère des micro-pauses toutes les 90 min.</li>
-  <li><strong>Trajets</strong> : ajoute du buffer time si un déplacement est détecté entre deux RDV.</li>
-</ol>
+  <section class="fp-block reveal">
+    <h2>1-tap schedule optimizer</h2>
+    <p>Tap sur ⚡ — Pulse Brain analyse ta journée et la réorganise selon 4 critères :</p>
+    <ol class="fp-steps">
+      <li><em>Énergie</em> : deep work sur tes pics historiques (matin ou après-midi).</li>
+      <li><em>Cohérence</em> : groupe les meetings consécutifs pour éviter le context-switching.</li>
+      <li><em>Récup</em> : insère des micro-pauses toutes les 90 min.</li>
+      <li><em>Trajets</em> : ajoute du buffer time si un déplacement est détecté entre deux RDV.</li>
+    </ol>
+  </section>
 
-<h2>Bridge Planner : optimise tes congés</h2>
-<p>PulseCalendar repère <strong>les meilleurs ponts de l'année</strong> en croisant fériés + week-ends + vacances scolaires de ton pays. ROI affiché : « pose 1 jour, gagne 4 jours off ».</p>
+  <section class="fp-block reveal">
+    <h2>Bridge Planner : optimise tes congés</h2>
+    <p>PulseCalendar repère <strong>les meilleurs ponts de l'année</strong> en croisant fériés + week-ends + vacances scolaires de ton pays. ROI affiché : « pose 1 jour, gagne 4 jours off ». Exemples de ponts 2026 en France :</p>
+    <div class="fp-stats">
+      <div class="fp-stat"><strong>4</strong><span>jours off — Pont de l'Ascension (14-17 mai), 1 jour à poser</span></div>
+      <div class="fp-stat"><strong>10</strong><span>jours off — Lundi de Pâques + 1 sem., 4 jours à poser</span></div>
+      <div class="fp-stat"><strong>9</strong><span>jours off — 1er + 8 mai (jeudi-vendredi), 2 jours à poser</span></div>
+      <div class="fp-stat"><strong>11</strong><span>jours off — Toussaint + zone scolaire, 3 jours à poser</span></div>
+    </div>
+  </section>
 
-<table>
-  <thead><tr><th>Pont 2026 (France)</th><th>Jours à poser</th><th>Total off</th></tr></thead>
-  <tbody>
-    <tr><td>Pont de l'Ascension (14-17 mai)</td><td>1</td><td><strong>4 jours</strong></td></tr>
-    <tr><td>Lundi de Pâques + 1 sem.</td><td>4</td><td><strong>10 jours</strong></td></tr>
-    <tr><td>1er + 8 mai (jeudi-vendredi)</td><td>2</td><td><strong>9 jours</strong></td></tr>
-    <tr><td>Toussaint + zone scolaire</td><td>3</td><td><strong>11 jours</strong></td></tr>
-  </tbody>
-</table>
+  <section class="fp-block reveal">
+    <h2>Multi-pays pour les familles internationales</h2>
+    <p>Active jusqu'à 3 pays simultanément. Idéal si tu vis en France mais bosses avec une boîte américaine, ou si ton conjoint est britannique. Pulse Brain prend en compte tous les fériés croisés pour planifier vacances et meetings.</p>
+  </section>
 
-<h2>Multi-pays pour les familles internationales</h2>
-<p>Active jusqu'à 3 pays simultanément. Idéal si tu vis en France mais bosses avec une boîte américaine, ou si ton conjoint est britannique. Pulse Brain prend en compte tous les fériés croisés pour planifier vacances et meetings.</p>
+  <section class="fp-block reveal">
+    <h2>Détection des semaines surchargées</h2>
+    <p>Quand ta semaine dépasse 28h de meetings, PulseCalendar t'alerte avec un signal violet sur la vue Mois — bien avant que tu sois noyé.</p>
+  </section>
 
-<h2>Détection des semaines surchargées</h2>
-<p>Quand ta semaine dépasse 28h de meetings, PulseCalendar t'alerte avec un signal violet sur la vue Mois — bien avant que tu sois noyé.</p>
+  <section class="fp-block reveal">
+    <h2>Pour aller plus loin</h2>
+    <div class="fp-related">
+      <a href="ai-calendar.html">Coach intelligent →</a>
+      <a href="focus-planner.html">Focus planner iOS →</a>
+      <a href="smart-calendar.html">Smart calendar app →</a>
+    </div>
+  </section>
 
-<div class="related">
-  <h2>Pour aller plus loin</h2>
-  <div class="related-grid">
-    <a href="ai-calendar.html">Coach intelligent →</a>
-    <a href="focus-planner.html">Focus planner iOS →</a>
-    <a href="smart-calendar.html">Smart calendar app →</a>
-  </div>
-</div>
-
-<div class="final-cta">
-  <h2>1 tap pour une meilleure journée. Vraiment.</h2>
-  <a href="../index.html#cta" class="btn-appstore">
-    <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-      <span class="as-text"><small>Télécharger sur</small><strong>App Store</strong></span>
-  </a>
-</div>
+  <section class="fp-final reveal">
+    <h2>1 tap pour une meilleure journée. Vraiment.</h2>
+    <p style="max-width:52ch;margin:0 auto 22px;color:var(--text-2);">Laisse Pulse Brain réorganiser ta journée et repérer tes meilleurs ponts. Optimisation 100 % on-device sur iPhone.</p>
+    <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" target="_blank" rel="noopener" class="btn-appstore" aria-label="Télécharger PulseCalendar sur l'App Store">
+      <svg class="as-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+      <div class="as-text">
+        <small>Télécharger sur l'</small>
+        <strong>App Store</strong>
+      </div>
+    </a>
+  </section>
 
 </main>
 
-<div id="footer-mount"></div>
-<script src="../shared/nav-footer.js"></script>
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-inner" style="grid-template-columns: 1.6fr 1fr 1fr 1fr 1fr;">
+    <div class="foot-brand">
+      <a href="../index.html" class="nav-brand">
+        <div id="footer-logo"></div>
+        <span>PulseCalendar</span>
+      </a>
+      <p>Le smart calendar app et anti-procrastination coach pour iPhone, iPad, Mac et Apple Watch. Intelligence on-device, focus planner iOS, alternative à Apple Calendar.</p>
+      <p style="margin-top: 12px; font-size: 12px; color: var(--text-3);">🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪 🇰🇷 🇸🇦 🇷🇺 🇨🇳</p>
+    </div>
+    <div class="foot-col">
+      <h4>Fonctionnalités</h4>
+      <ul>
+        <li><a href="smart-calendar.html">Smart calendar app</a></li>
+        <li><a href="ai-calendar.html">Coach intelligent</a></li>
+        <li><a href="anti-procrastination.html">Anti-procrastination</a></li>
+        <li><a href="focus-planner.html">Focus planner iOS</a></li>
+        <li><a href="adhd-calendar.html">ADHD calendar app</a></li>
+        <li><a href="schedule-optimizer.html">Schedule optimizer</a></li>
+        <li><a href="../index.html#themes">Thèmes</a></li>
+        <li><a href="../index.html#pricing">Pricing</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="../index.html#faq">FAQ</a></li>
+        <li><a href="../support/">Support</a></li>
+        <li><a href="mailto:Contact@PulseCalendar.app">Contact</a></li>
+        <li><a href="../press/">Kit presse</a></li>
+        <li><a href="https://x.com/PulseCalendar" target="_blank" rel="noopener">X (Twitter)</a></li>
+      </ul>
+      <h4 style="margin-top: 24px;">Légal</h4>
+      <ul>
+        <li><a href="../privacy.html">Confidentialité</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 PulseCalendar · pulsecalendar.app · Available in 🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪 🇰🇷 🇸🇦 🇷🇺 🇨🇳</span>
+    <span>Made with ♥ in France</span>
+  </div>
+</footer>
+
+<!-- ===== SCRIPTS ===== -->
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="../src/PulseLogo.js?v=9"></script>
+<script src="../src/Screens.js?v=6"></script>
+<script src="../src/PhoneFrame.js?v=15"></script>
+<script src="../src/Themes.js?v=3"></script>
+<script src="../src/Mount.js?v=6"></script>
+<script defer src="../shared/reveal.js"></script>
+<script src="../shared/effects.js"></script>
 </body>
 </html>
