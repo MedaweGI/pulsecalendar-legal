@@ -1,0 +1,45 @@
+# PulseCalendar
+
+> PulseCalendar is a smart calendar app for iPhone, iPad, Mac and Apple Watch made by PULSE (France). It reads existing iCloud, Google, Outlook, Exchange and CalDAV calendars and adds an on-device planning coach (Pulse Brain), an energy score, ADHD-friendly focus modes, school holidays for 8 countries with a public-holiday Bridge Planner, sports calendar subscriptions, weather from Apple Weather, and dozens of themes. Free plan available; Pulse Pro costs 4.99 EUR/month or 29.99 EUR/year with a 7-day free trial, plus a one-time lifetime license. Available in 175 countries, interface localized in 16 languages. App Store: https://apps.apple.com/app/pulsecalendar/id6764295184
+
+Key facts:
+- Platforms: iPhone (iOS 16+), iPad, Mac, Apple Watch. Widgets, lock screen widgets and Live Activities on iOS.
+- Works on top of existing calendar accounts: iCloud, Google Calendar, Outlook, Exchange, CalDAV. Nothing to migrate.
+- Privacy: local storage by default, the assistant (Pulse Brain / Ask Pulse) runs on-device, no ads, no ad tracking, no training on user data. Optional sharing and booking features use a secure Firebase backend.
+- ADHD support: 3 daily priorities, Eat the Frog mode, 5-minute starter mode, staged reminders, Recovery Mode after an overloaded day.
+- Planning: energy score, week Rhythm view, automatic buffer time, focus blocks, natural language event creation ("find me 2h for the gym this week").
+- Time off: school holidays auto-loaded for France (zones A, B, C), UK, USA, Canada, Australia, Spain, Germany and Japan; Bridge Planner finds the best public-holiday bridges.
+- Extras: free World Cup ICS and sports calendar subscriptions (Champions League, Premier League, Ligue 1, F1, NFL, NBA, MLB, tennis Grand Slams), weather powered by Apple Weather, dozens of themes, Pulse Booking for sharing availabilities.
+
+Site pages are written in French.
+
+## App
+
+- [PulseCalendar on the App Store](https://apps.apple.com/app/pulsecalendar/id6764295184): download page, current pricing per country
+- [Homepage](https://pulsecalendar.app/): overview, themes, pricing and FAQ
+- [Features hub](https://pulsecalendar.app/features): all feature pages
+
+## Features
+
+- [Smart calendar](https://pulsecalendar.app/features/smart-calendar): the smart calendar app for iPhone, energy score and week rhythm
+- [Intelligent coach](https://pulsecalendar.app/features/ai-calendar): Pulse Brain, the on-device planning coach
+- [Anti-procrastination](https://pulsecalendar.app/features/anti-procrastination): Eat the Frog, 5-minute mode, automatic time-blocking
+- [Focus planner](https://pulsecalendar.app/features/focus-planner): focus blocks and distraction-free mode
+- [ADHD calendar](https://pulsecalendar.app/features/adhd-calendar): externalization, zero friction, immediate feedback, no guilt
+- [Schedule optimizer](https://pulsecalendar.app/features/schedule-optimizer): balance focus, recovery and meetings; Bridge Planner for days off
+
+## Comparisons
+
+- [PulseCalendar vs Fantastical](https://pulsecalendar.app/compare/fantastical): pricing, platforms and feature comparison
+- [PulseCalendar vs Google Calendar](https://pulsecalendar.app/compare/google-calendar): using PulseCalendar as the iPhone and Mac app on top of a Google account
+
+## Press and contact
+
+- [Press kit](https://pulsecalendar.app/press/): logos, screenshots, ecosystem visuals
+- [Support](https://pulsecalendar.app/support/): help and contact
+- Contact email: Contact@PulseCalendar.app
+
+## Legal
+
+- [Privacy policy](https://pulsecalendar.app/privacy)
+- [Terms](https://pulsecalendar.app/terms)
