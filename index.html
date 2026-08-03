@@ -173,14 +173,14 @@
   </svg>
 </template>
 
-<link rel="stylesheet" href="shared/home.css?v=1"/>
+<link rel="stylesheet" href="shared/home.css?v=2"/>
 
 <!-- ===== PLAUSIBLE ANALYTICS (privacy-friendly, no cookies, no banner RGPD) ===== -->
 <!-- Ajoute pulsecalendar.app sur plausible.io pour activer le dashboard. -->
 <script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
 
 <!-- ===== i18n : traduction runtime + sélecteur de langue (drapeaux) ===== -->
-<script defer src="shared/i18n-data.js?v=10"></script>
+<script defer src="shared/i18n-data.js?v=11"></script>
 <script defer src="shared/i18n.js?v=4"></script>
 <script defer src="shared/screens-i18n.js?v=6"></script>
 </head>
@@ -362,8 +362,53 @@
   </div>
 </div>
 
-<!-- ===== SCROLLYTELLING ===== -->
+<!-- ===== FONCTIONNALITÉS (3 familles) ===== -->
 <section class="block" id="features">
+  <div class="reveal">
+    <span class="section-eyebrow">Fonctionnalités</span>
+    <h2 class="section-title">Ce que fait Pulse. <span class="gradient">En trois familles.</span></h2>
+    <p class="section-sub">Voir clair. Rester concentré. Gagner du temps.</p>
+  </div>
+  <div class="families-grid">
+    <div class="family-card reveal">
+      <div class="family-num">01</div>
+      <h3>Voir clair</h3>
+      <ul class="family-list">
+        <li>Vues jour, semaine, mois et année</li>
+        <li>Météo sur tes journées</li>
+        <li>Jours fériés et vacances scolaires</li>
+        <li>Anniversaires</li>
+        <li>Widgets écran d'accueil et écran verrouillé</li>
+      </ul>
+    </div>
+    <div class="family-card reveal">
+      <div class="family-num">02</div>
+      <h3>Rester concentré</h3>
+      <ul class="family-list">
+        <li>Mode Focus</li>
+        <li>Pulse Score</li>
+        <li>Suivis et habitudes</li>
+        <li>Rappels</li>
+        <li>Journal</li>
+      </ul>
+    </div>
+    <div class="family-card reveal">
+      <div class="family-num">03</div>
+      <h3>Gagner du temps</h3>
+      <ul class="family-list">
+        <li>Saisie en langage naturel</li>
+        <li>Scan photo pour créer un événement</li>
+        <li>Notes</li>
+        <li>Sondages de dispos</li>
+        <li>Page de réservation</li>
+        <li>Calcul des trajets</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ===== SCROLLYTELLING ===== -->
+<section class="block" id="demo">
   <div class="reveal">
     <span class="section-eyebrow">Démo · 4 piliers héros</span>
     <h2 class="section-title">Le smart calendar app, <span class="gradient">le coach intelligent</span> et le focus planner iOS — réunis.</h2>
