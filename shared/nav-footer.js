@@ -18,7 +18,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="${home}index.html" class="nav-brand">
-      <span class="nav-brand-icon"></span>
+      <img src="${home}assets/pulse-app-icon-v3.png" alt="" style="width:28px;height:28px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 12px rgba(98,68,214,0.3))">
       <span>PulseCalendar</span>
     </a>
     <div class="nav-links">
@@ -36,7 +36,7 @@
   <div class="foot-inner">
     <div class="foot-brand">
       <a href="${home}index.html" class="nav-brand">
-        <span class="nav-brand-icon"></span>
+        <img src="${home}assets/pulse-app-icon-v3.png" alt="" style="width:28px;height:28px;object-fit:contain;flex:none;filter:drop-shadow(0 4px 12px rgba(98,68,214,0.3))">
         <span>PulseCalendar</span>
       </a>
       <p>Smart calendar app et anti-procrastination coach pour iPhone, iPad, Mac et Apple Watch. Intelligence on-device.</p>
