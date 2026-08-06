@@ -7,7 +7,7 @@
    déclencheur). CSP-safe (fichier externe). */
 (function () {
   var LANGS = { fr:1, de:1, es:1, ja:1, ko:1, ar:1, ru:1, "zh-Hans":1, "en-US":1 }; // langues avec jeu localisé (en-US = captures °F, repli racine)
-  var V = 8;   // version de cache des captures téléphone
+  var V = 10;  // version de cache des captures téléphone (WebP)
   var DV = 3;  // version de cache des images device (macbook-device / ipad-device)
 
   function curLang() {
@@ -22,9 +22,9 @@
       var m = (img.getAttribute("src") || "").match(re);
       if (!m) continue;
       var name = m[1];
-      var root = "/assets/screens/" + name + ".png?v=" + ver;
+      var root = "/assets/screens/" + name + ".webp?v=" + ver;
       var useLang = !!LANGS[lang] && img.getAttribute("data-scr-fb") !== "1";
-      var want = useLang ? ("/assets/screens/" + lang + "/" + name + ".png?v=" + ver) : root;
+      var want = useLang ? ("/assets/screens/" + lang + "/" + name + ".webp?v=" + ver) : root;
       if (useLang) {
         (function (im, rt) {                       // repli anglais une fois si la loc échoue
           im.onerror = function () {
@@ -40,9 +40,9 @@
   function swap() {
     var lang = curLang();
     swapList(document.querySelectorAll("img.screen-photo"),
-             /screens\/(?:[a-zA-Z-]+\/)?([a-z]+)\.png/, V, lang);
+             /screens\/(?:[a-zA-Z-]+\/)?([a-z]+)\.webp/,V, lang);
     swapList(document.querySelectorAll("img.dev-mac, img.dev-ipad"),
-             /screens\/(?:[a-zA-Z-]+\/)?((?:macbook|ipad)-device)\.png/, DV, lang);
+             /screens\/(?:[a-zA-Z-]+\/)?((?:macbook|ipad)-device)\.webp/,DV, lang);
   }
 
   var lastLang = " ";
