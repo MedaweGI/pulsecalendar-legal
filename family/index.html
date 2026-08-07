@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' https://plausible.io; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://plausible.io; form-action 'self'; manifest-src 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Pulse Family — l'organiseur du foyer qui équilibre la charge</title>
+<meta name="description" content="Pulse Family réunit l'agenda, les tâches, le budget et les routines de toute la maison. Sa différence : l'Équilibre, qui révèle qui porte la charge du foyer et propose de rééquilibrer. Famille ou colocation. 100% sur l'appareil. Membre de l'écosystème Pulse."/>
+<link rel="canonical" href="https://pulsecalendar.app/family"/>
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://pulsecalendar.app/family"/>
+<meta property="og:site_name" content="Pulse"/>
+<meta property="og:title" content="Pulse Family — l'organiseur du foyer qui équilibre la charge"/>
+<meta property="og:description" content="Agenda, tâches, budget, routines de toute la maison — et l'Équilibre qui rééquilibre la charge mentale. Famille ou coloc. Bientôt sur l'App Store."/>
+<meta property="og:image" content="https://pulsecalendar.app/family/pulse-family-icon.png"/>
+<meta property="og:locale" content="fr_FR"/>
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:site" content="@PulseCalendar"/>
+<meta name="twitter:title" content="Pulse Family — l'organiseur du foyer qui équilibre la charge"/>
+<meta name="twitter:description" content="Agenda, tâches, budget, routines — et l'Équilibre qui rééquilibre la charge du foyer. Famille ou coloc."/>
+<meta name="twitter:image" content="https://pulsecalendar.app/family/pulse-family-icon.png"/>
+<meta name="theme-color" content="#7C5CFF"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Geist:wght@300;400;500;600;700;800;900&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="../shared/effects.css?v=2"/>
+<link rel="stylesheet" href="../shared/theme.css?v=flags1"/>
+<link rel="stylesheet" href="../shared/home.css?v=1"/>
+<script src="../shared/theme.js"></script>
+<script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Pulse Family",
+  "applicationCategory": "LifestyleApplication",
+  "operatingSystem": "iOS 17, iPadOS 17",
+  "description": "Organiseur du foyer : agenda, tâches, budget et routines, avec l'Équilibre qui révèle et rééquilibre la charge mentale de la maison. Famille ou colocation. Intelligence on-device. Membre de l'écosystème Pulse.",
+  "offers": { "@type": "Offer", "price": "0", "priceCurrency": "EUR" },
+  "isPartOf": { "@type": "WebSite", "name": "Pulse", "url": "https://pulsecalendar.app/" }
+}
+</script>
+
+<style>
+  :root { --pf-violet: var(--violet-400); --pf-violet-deep: var(--violet-500); --pf-grad: var(--pulse-grad); }
+  .pf-wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
+  .gradient, .pf-grad-text {
+    background: var(--pf-grad); -webkit-background-clip: text; background-clip: text;
+    -webkit-text-fill-color: transparent; color: transparent;
+  }
+
+  /* ---- HERO ---- */
+  .pf-hero { display: grid; grid-template-columns: 1.05fr .95fr; gap: 48px; align-items: center;
+             max-width: 1120px; margin: 0 auto; padding: 132px 32px 56px; }
+  .pf-eyebrow { display: inline-flex; align-items: center; gap: 8px; padding: 7px 14px; border-radius: 999px;
+                font-size: 13px; font-weight: 600; letter-spacing: .01em; color: var(--pf-violet);
+                background: rgba(123,92,240,0.10); border: 1px solid rgba(123,92,240,0.28); }
+  .pf-eyebrow .dot { width: 7px; height: 7px; border-radius: 50%; background: var(--pf-violet);
+                     box-shadow: 0 0 0 4px rgba(123,92,240,0.20); }
+  .pf-h1 { font-size: clamp(34px, 5vw, 58px); font-weight: 800; letter-spacing: -.03em; line-height: 1.06;
+           margin: 20px 0 0; color: var(--text); text-wrap: balance; }
+  .pf-lede { font-size: clamp(16px, 2vw, 19px); line-height: 1.6; color: var(--text-2); max-width: 56ch; margin: 20px 0 0; }
+  .pf-ctas { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; margin-top: 30px; }
+  .pf-soon { display: inline-flex; align-items: center; gap: 12px; padding: 13px 22px; border-radius: 15px;
+             background: var(--pf-grad); color: #fff; font-weight: 700; box-shadow: 0 14px 34px -12px rgba(98,68,214,0.65); }
+  .pf-soon small { display: block; font-size: 11px; font-weight: 600; opacity: .82; letter-spacing: .02em; }
+  .pf-soon strong { display: block; font-size: 16px; font-weight: 800; margin-top: 1px; }
+  .pf-soon .as-icon { width: 26px; height: 26px; fill: #fff; }
+  .pf-secondary { color: var(--text); font-weight: 600; text-decoration: none; padding: 12px 4px;
+                  border-bottom: 1.5px solid transparent; transition: border-color .2s, color .2s; }
+  .pf-secondary:hover { border-bottom-color: var(--pf-violet); color: var(--pf-violet); }
+  .pf-meta { display: flex; flex-wrap: wrap; gap: 22px; margin-top: 34px; }
+  .pf-metarow { display: flex; flex-direction: column; gap: 2px; }
+  .pf-metarow strong { font-size: 15px; color: var(--text); font-weight: 700; }
+  .pf-metarow span { font-size: 13px; color: var(--text-3); }
+
+  /* ---- HERO VISUEL : icône + carte Équilibre ---- */
+  .pf-visual { position: relative; display: flex; justify-content: center; align-items: center; min-height: 380px; }
+  .pf-glow { position: absolute; width: 340px; height: 340px; border-radius: 50%;
+             background: radial-gradient(circle, rgba(123,92,240,0.42), transparent 68%); filter: blur(18px); z-index: 0; }
+  .pf-tile { position: relative; z-index: 1; width: 190px; height: 190px; border-radius: 44px;
+             box-shadow: 0 34px 70px -22px rgba(98,68,214,0.7); overflow: hidden; }
+  .pf-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .pf-balance { position: absolute; z-index: 2; right: -6px; bottom: 24px; width: 244px;
+                background: var(--surface); backdrop-filter: blur(12px);
+                border: 1px solid var(--border-strong); border-radius: 20px; padding: 16px 16px 15px;
+                box-shadow: 0 24px 50px -22px rgba(23,15,60,0.5); }
+  .pf-balance h4 { font-size: 13px; font-weight: 700; color: var(--text); margin: 0 0 12px;
+                   display: flex; align-items: center; gap: 7px; }
+  .pf-brow { display: flex; align-items: center; gap: 9px; margin-bottom: 9px; }
+  .pf-brow .ava { width: 24px; height: 24px; border-radius: 50%; display: grid; place-items: center;
+                  font-size: 13px; flex-shrink: 0; }
+  .pf-bar { flex: 1; height: 8px; border-radius: 5px; background: rgba(123,92,240,0.14); overflow: hidden; }
+  .pf-bar i { display: block; height: 100%; border-radius: 5px; background: var(--pf-grad); }
+  .pf-brow .pct { font-size: 12px; font-weight: 700; color: var(--text-2); width: 34px; text-align: right; }
+  .pf-suggest { margin-top: 11px; padding-top: 11px; border-top: 1px solid var(--border);
+                font-size: 12px; color: var(--pf-violet); font-weight: 600; }
+
+  /* ---- SECTIONS ---- */
+  .pf-section { max-width: 1000px; margin: 0 auto; padding: 46px 32px; border-top: 1px solid var(--border); }
+  .pf-star { border-radius: 26px; border: 1px solid rgba(123,92,240,0.28);
+             background: linear-gradient(165deg, rgba(123,92,240,0.09), rgba(123,92,240,0.02)); padding: 40px 34px; }
+  .pf-kicker { font-family: var(--font-mono, ui-monospace, monospace); font-size: 12px; letter-spacing: .08em;
+               text-transform: uppercase; color: var(--pf-violet); font-weight: 600; }
+  .pf-h2 { font-size: clamp(24px, 3.2vw, 34px); font-weight: 800; letter-spacing: -.02em; line-height: 1.15;
+           color: var(--text); margin: 10px 0 14px; text-wrap: balance; }
+  .pf-p { font-size: 17px; line-height: 1.7; color: var(--text-2); margin: 0 0 14px; max-width: 66ch; }
+  .pf-p strong { color: var(--text); font-weight: 600; }
+
+  .pf-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin-top: 28px; }
+  .pf-card { background: var(--surface); border: 1px solid var(--border); border-radius: 18px; padding: 24px; }
+  .pf-card .ic { font-size: 26px; line-height: 1; }
+  .pf-card h3 { font-size: 17px; font-weight: 700; color: var(--text); margin: 14px 0 7px; }
+  .pf-card p { font-size: 14.5px; line-height: 1.6; color: var(--text-3); margin: 0; }
+
+  .pf-pills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+  .pf-pill { display: inline-flex; align-items: center; gap: 7px; padding: 9px 15px; background: var(--surface);
+             border: 1px solid var(--border); border-radius: 999px; font-size: 14px; font-weight: 500; color: var(--text-2); }
+
+  .pf-privacy { display: flex; align-items: center; gap: 20px; background: var(--surface); border: 1px solid var(--border);
+                border-radius: 22px; padding: 28px 30px; margin-top: 8px; }
+  .pf-privacy .lock { font-size: 34px; flex-shrink: 0; }
+  .pf-privacy p { margin: 0; font-size: 15.5px; line-height: 1.6; color: var(--text-2); }
+  .pf-privacy p strong { color: var(--text); }
+
+  .pf-final { text-align: center; border-radius: 28px; border: 1px solid rgba(123,92,240,0.28);
+              background: linear-gradient(165deg, rgba(123,92,240,0.11), rgba(123,92,240,0.02));
+              padding: 52px 32px; margin: 8px auto 0; max-width: 1000px; }
+  .pf-final .pf-h2 { border: 0; }
+  .pf-final .pf-soon { margin: 18px auto 0; }
+  .pf-note { font-size: 13px; color: var(--text-3); margin-top: 14px; }
+
+  @media (max-width: 860px) {
+    .pf-hero { grid-template-columns: 1fr; padding-top: 108px; gap: 8px; }
+    .pf-visual { min-height: 320px; margin-top: 16px; }
+    .pf-grid { grid-template-columns: 1fr; }
+    .pf-privacy { flex-direction: column; text-align: center; gap: 12px; }
+  }
+</style>
+</head>
+<body>
+<div class="fx-grain"></div>
+<div class="fx-progress" id="fx-progress"></div>
+
+<!-- ===== NAV ===== -->
+<nav class="nav">
+  <div class="nav-inner">
+    <a href="../index.html" class="nav-brand">
+      <span style="display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#7B5CF0,#6244D6);color:#fff;font-weight:800;font-size:14px;">P</span>
+      <span>Pulse</span>
+    </a>
+    <div class="nav-links">
+      <a href="../index.html#features">Pulse Calendar</a>
+      <a href="./" aria-current="page">Pulse Family</a>
+      <a href="../index.html#pricing">Premium</a>
+      <a href="../support/">Support</a>
+    </div>
+    <span class="nav-cta" style="opacity:.9;cursor:default;">Bientôt</span>
+  </div>
+</nav>
+
+<!-- ===== HERO ===== -->
+<header class="pf-hero">
+  <div class="pf-hero-left">
+    <div class="pf-eyebrow"><span class="dot"></span><span>Nouveau · écosystème Pulse</span></div>
+    <h1 class="pf-h1">Toute la maison à sa place. Et la charge <span class="gradient">enfin équilibrée</span>.</h1>
+    <p class="pf-lede">Pulse Family réunit l'agenda, les tâches, le budget et les routines de tout le foyer. Sa vraie différence : <strong>l'Équilibre</strong>, qui révèle qui porte la charge de la maison et propose de rééquilibrer. Pour les familles comme pour les colocs.</p>
+    <div class="pf-ctas">
+      <span class="pf-soon" role="text" aria-label="Bientôt sur l'App Store">
+        <svg class="as-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+        <span><small>Bientôt sur l'</small><strong>App Store</strong></span>
+      </span>
+      <a href="../index.html" class="pf-secondary">Découvrir Pulse Calendar →</a>
+    </div>
+    <div class="pf-meta">
+      <div class="pf-metarow"><strong>⚖️ Équilibre</strong><span>La charge du foyer, révélée</span></div>
+      <div class="pf-metarow"><strong>💰 Budget</strong><span>Revenus, solde, dépenses</span></div>
+      <div class="pf-metarow"><strong>🏠 Famille ou coloc</strong><span>L'app s'adapte au foyer</span></div>
+    </div>
+  </div>
+
+  <div class="pf-visual">
+    <div class="pf-glow"></div>
+    <div class="pf-tile"><img src="pulse-family-icon.png" alt="Icône de l'application Pulse Family" width="190" height="190"/></div>
+    <div class="pf-balance" aria-hidden="true">
+      <h4>⚖️ Équilibre du foyer</h4>
+      <div class="pf-brow">
+        <span class="ava" style="background:rgba(232,91,143,0.18)">👩</span>
+        <span class="pf-bar"><i style="width:68%"></i></span>
+        <span class="pct">68%</span>
+      </div>
+      <div class="pf-brow">
+        <span class="ava" style="background:rgba(91,163,244,0.18)">🧑</span>
+        <span class="pf-bar"><i style="width:32%"></i></span>
+        <span class="pct">32%</span>
+      </div>
+      <div class="pf-suggest">→ « Répartir 2 tâches vers Papa »</div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- Différenciateur -->
+  <section class="pf-section reveal">
+    <div class="pf-star">
+      <div class="pf-kicker">La différence</div>
+      <h2 class="pf-h2">L'Équilibre : la charge mentale, enfin visible</h2>
+      <p class="pf-p">La plupart des apps famille se contentent d'une liste de tâches partagée. Pulse Family va plus loin : elle <strong>additionne la charge réelle de chacun</strong> (tâches, courses, rendez-vous, qui accompagne les enfants) et montre, sans jugement, comment elle se répartit dans le foyer.</p>
+      <p class="pf-p">Quand un déséquilibre s'installe, l'app le <strong>rend visible</strong> et propose de rééquilibrer en douceur. Fini le « je fais tout, personne ne voit rien ». Chacun voit sa part, et la conversation devient simple.</p>
+      <div class="pf-pills">
+        <span class="pf-pill">⚖️ Part de chacun</span>
+        <span class="pf-pill">🔁 Rééquilibrage proposé</span>
+        <span class="pf-pill">📊 Historique de la charge</span>
+        <span class="pf-pill">🙂 Sans jugement</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Tout le foyer -->
+  <section class="pf-section reveal">
+    <div class="pf-kicker">Le quotidien</div>
+    <h2 class="pf-h2">Tout le foyer, au même endroit</h2>
+    <p class="pf-p">Une seule app pour arrêter de jongler entre le calendrier, les post-its sur le frigo et les listes de courses éparpillées.</p>
+    <div class="pf-grid">
+      <div class="pf-card"><div class="ic">📅</div><h3>Agenda partagé</h3><p>Les évènements de chacun, qui accompagne, qui récupère. Une vue claire de la journée et de la semaine.</p></div>
+      <div class="pf-card"><div class="ic">✅</div><h3>Tâches & routines</h3><p>Corvées assignées, routines du matin et du soir. Chacun sait quoi faire, sans qu'on ait à le répéter.</p></div>
+      <div class="pf-card"><div class="ic">💰</div><h3>Budget du foyer</h3><p>Revenus, dépenses par membre, solde et prévisions. Masquable pour les enfants ou le baby-sitter.</p></div>
+      <div class="pf-card"><div class="ic">🧩</div><h3>École · Santé · Documents</h3><p>Devoirs, rendez-vous, vaccins, papiers importants avec alertes d'expiration. Tout retrouvé en un geste.</p></div>
+    </div>
+  </section>
+
+  <!-- Famille ou coloc -->
+  <section class="pf-section reveal">
+    <div class="pf-kicker">Ton foyer, ton mode</div>
+    <h2 class="pf-h2">Famille <span class="gradient">ou</span> colocation</h2>
+    <p class="pf-p">Pulse Family s'adapte. En mode <strong>Famille</strong>, tu retrouves les rôles parents / enfants, l'école et la santé. En mode <strong>Colocation</strong>, tout le monde est à égalité, les dépenses sont partagées et le vocabulaire suit (« colocataires », pas « enfants »).</p>
+    <div class="pf-pills">
+      <span class="pf-pill">👨‍👩‍👧 Rôles adaptés</span>
+      <span class="pf-pill">🤝 Colocs à égalité</span>
+      <span class="pf-pill">🧾 Dépenses partagées</span>
+      <span class="pf-pill">🔒 Budget masquable</span>
+    </div>
+  </section>
+
+  <!-- Pulse Brain -->
+  <section class="pf-section reveal">
+    <div class="pf-kicker">Intelligence on-device</div>
+    <h2 class="pf-h2">Pulse Brain anticipe, sur ton appareil</h2>
+    <p class="pf-p">Pulse Family repère les <strong>conflits d'agenda</strong>, te rappelle le <strong>prochain départ</strong> (et qui conduit), et signale quand la charge penche trop d'un côté. Le tout calculé <strong>sur ton iPhone</strong> : rien ne part sur un serveur.</p>
+    <div class="pf-privacy">
+      <span class="lock">🔒</span>
+      <p><strong>Tes données restent chez toi.</strong> Sur ton appareil et ton iCloud privé. Aucune revente, aucun pistage publicitaire. Une app famille en qui tu peux avoir confiance.</p>
+    </div>
+  </section>
+
+  <!-- Pensé pour le quotidien -->
+  <section class="pf-section reveal">
+    <div class="pf-kicker">Les détails qui comptent</div>
+    <h2 class="pf-h2">Pensé pour la vraie vie</h2>
+    <div class="pf-grid">
+      <div class="pf-card"><div class="ic">🖨️</div><h3>Impression papier</h3><p>Le planning de la semaine en PDF soigné, avec le logo Pulse Family. Pour ceux qui aiment l'afficher sur le frigo.</p></div>
+      <div class="pf-card"><div class="ic">📲</div><h3>Widgets</h3><p>La journée du foyer sur l'écran d'accueil et l'écran verrouillé, en plusieurs tailles.</p></div>
+      <div class="pf-card"><div class="ic">🔔</div><h3>Rappels intelligents</h3><p>Résumé du matin, rappels d'évènements et de tâches. Générés sur l'appareil, jamais intrusifs.</p></div>
+      <div class="pf-card"><div class="ic">🗓️</div><h3>Pont Pulse Calendar</h3><p>Les évènements de la famille apparaissent aussi dans Pulse Calendar, ton calendrier iOS et ta Watch.</p></div>
+    </div>
+  </section>
+
+  <!-- Final -->
+  <section class="pf-final reveal">
+    <div class="pf-kicker">Écosystème Pulse</div>
+    <h2 class="pf-h2">Pulse Family arrive bientôt</h2>
+    <p class="pf-p" style="max-width:52ch;margin:0 auto;color:var(--text-2);">La 3ᵉ app de l'écosystème Pulse, aux côtés de Pulse Calendar. Un foyer plus léger, une charge mieux partagée.</p>
+    <span class="pf-soon" role="text" aria-label="Bientôt sur l'App Store">
+      <svg class="as-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+      <span><small>Bientôt sur l'</small><strong>App Store</strong></span>
+    </span>
+    <p class="pf-note">iPhone & iPad · iOS 17+ · en français, puis dans le monde entier</p>
+  </section>
+</main>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="foot-inner" style="grid-template-columns: 1.6fr 1fr 1fr;">
+    <div class="foot-brand">
+      <a href="../index.html" class="nav-brand">
+        <span style="display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#7B5CF0,#6244D6);color:#fff;font-weight:800;font-size:14px;">P</span>
+        <span>Pulse</span>
+      </a>
+      <p>L'écosystème Pulse : Pulse Calendar pour ton temps, Pulse Family pour ton foyer. Intelligence on-device, respect de ta vie privée.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Écosystème</h4>
+      <ul>
+        <li><a href="../index.html">Pulse Calendar</a></li>
+        <li><a href="./">Pulse Family</a></li>
+        <li><a href="../index.html#features">Fonctionnalités</a></li>
+        <li><a href="../index.html#pricing">Premium</a></li>
+      </ul>
+    </div>
+    <div class="foot-col">
+      <h4>Ressources</h4>
+      <ul>
+        <li><a href="../support/">Support</a></li>
+        <li><a href="../privacy.html">Confidentialité</a></li>
+        <li><a href="../terms.html">Conditions</a></li>
+        <li><a href="mailto:Contact@PulseCalendar.app">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span>© 2026 Pulse · pulsecalendar.app</span>
+    <span>Made with ♥ in France</span>
+  </div>
+</footer>
+
+<script src="../shared/effects.js"></script>
+<script defer src="../shared/reveal.js"></script>
+</body>
+</html>
