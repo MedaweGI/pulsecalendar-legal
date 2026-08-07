@@ -21,6 +21,8 @@
 <meta name="twitter:description" content="Agenda, tâches, budget, routines — et l'Équilibre qui rééquilibre la charge du foyer. Famille ou coloc."/>
 <meta name="twitter:image" content="https://pulsecalendar.app/family/pulse-family-icon.png"/>
 <meta name="theme-color" content="#7C5CFF"/>
+<link rel="icon" type="image/png" href="pulse-family-favicon.png"/>
+<link rel="apple-touch-icon" href="pulse-family-house.png"/>
 
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
@@ -47,11 +49,12 @@
 <style>
   :root { --pf-violet: var(--violet-400); --pf-violet-deep: var(--violet-500); --pf-grad: var(--pulse-grad); }
   .pf-wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
-  /* Repli robuste : violet plein si background-clip:text n'est pas supporté (jamais de titre invisible) */
-  .pf-grad-text { color: var(--violet-400); }
+  /* Titres accent en ORANGE (choix user) — repli plein si background-clip:text non supporté */
+  .pf-grad-text { color: #FF8A3D; }
   @supports ((-webkit-background-clip: text) or (background-clip: text)) {
     .pf-grad-text {
-      background: var(--pf-grad); -webkit-background-clip: text; background-clip: text;
+      background: linear-gradient(115deg, #FFC24B 0%, #FF7A2F 55%, #FF5A34 100%);
+      -webkit-background-clip: text; background-clip: text;
       -webkit-text-fill-color: transparent; color: transparent;
     }
   }
@@ -88,7 +91,7 @@
   .pf-tile { position: relative; z-index: 1; width: 190px; height: 190px; border-radius: 44px;
              background: #ffffff; box-shadow: 0 34px 70px -22px rgba(98,68,214,0.7), 0 0 0 1px rgba(255,255,255,0.6);
              overflow: hidden; }
-  .pf-tile img { width: 100%; height: 100%; object-fit: contain; padding: 14px; display: block; }
+  .pf-tile img { width: 100%; height: 100%; object-fit: cover; display: block; }
   .pf-balance { position: absolute; z-index: 2; right: -6px; bottom: 24px; width: 244px;
                 background: var(--surface); backdrop-filter: blur(12px);
                 border: 1px solid var(--border-strong); border-radius: 20px; padding: 16px 16px 15px;
@@ -154,7 +157,7 @@
 <nav class="nav">
   <div class="nav-inner">
     <a href="../index.html" class="nav-brand">
-      <span style="display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#7B5CF0,#6244D6);color:#fff;font-weight:800;font-size:14px;">P</span>
+      <img src="../assets/pulse-app-icon-v3.png" alt="Pulse" width="28" height="28" style="border-radius:8px;display:block;flex-shrink:0;"/>
       <span>Pulse</span>
     </a>
     <div class="nav-links">
@@ -189,7 +192,7 @@
 
   <div class="pf-visual">
     <div class="pf-glow"></div>
-    <div class="pf-tile"><img src="pulse-family-icon.png" alt="Icône de l'application Pulse Family" width="190" height="190"/></div>
+    <div class="pf-tile"><img src="pulse-family-house.png" alt="Icône de l'application Pulse Family" width="190" height="190"/></div>
     <div class="pf-balance" aria-hidden="true">
       <h4>⚖️ Équilibre du foyer</h4>
       <div class="pf-brow">
@@ -291,7 +294,7 @@
   <div class="foot-inner" style="grid-template-columns: 1.6fr 1fr 1fr;">
     <div class="foot-brand">
       <a href="../index.html" class="nav-brand">
-        <span style="display:inline-grid;place-items:center;width:26px;height:26px;border-radius:8px;background:linear-gradient(135deg,#7B5CF0,#6244D6);color:#fff;font-weight:800;font-size:14px;">P</span>
+        <img src="../assets/pulse-app-icon-v3.png" alt="Pulse" width="28" height="28" style="border-radius:8px;display:block;flex-shrink:0;"/>
         <span>Pulse</span>
       </a>
       <p>L'écosystème Pulse : Pulse Calendar pour ton temps, Pulse Family pour ton foyer. Intelligence on-device, respect de ta vie privée.</p>
