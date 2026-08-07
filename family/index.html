@@ -47,9 +47,13 @@
 <style>
   :root { --pf-violet: var(--violet-400); --pf-violet-deep: var(--violet-500); --pf-grad: var(--pulse-grad); }
   .pf-wrap { max-width: 1120px; margin: 0 auto; padding: 0 32px; }
-  .gradient, .pf-grad-text {
-    background: var(--pf-grad); -webkit-background-clip: text; background-clip: text;
-    -webkit-text-fill-color: transparent; color: transparent;
+  /* Repli robuste : violet plein si background-clip:text n'est pas supporté (jamais de titre invisible) */
+  .pf-grad-text { color: var(--violet-400); }
+  @supports ((-webkit-background-clip: text) or (background-clip: text)) {
+    .pf-grad-text {
+      background: var(--pf-grad); -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+    }
   }
 
   /* ---- HERO ---- */
@@ -167,7 +171,7 @@
 <header class="pf-hero">
   <div class="pf-hero-left">
     <div class="pf-eyebrow"><span class="dot"></span><span>Nouveau · écosystème Pulse</span></div>
-    <h1 class="pf-h1">Toute la maison à sa place. Et la charge <span class="gradient">enfin équilibrée</span>.</h1>
+    <h1 class="pf-h1">Toute la maison à sa place. Et la charge <span class="pf-grad-text">enfin équilibrée</span>.</h1>
     <p class="pf-lede">Pulse Family réunit l'agenda, les tâches, le budget et les routines de tout le foyer. Sa vraie différence : <strong>l'Équilibre</strong>, qui révèle qui porte la charge de la maison et propose de rééquilibrer. Pour les familles comme pour les colocs.</p>
     <div class="pf-ctas">
       <span class="pf-soon" role="text" aria-label="Bientôt sur l'App Store">
@@ -236,7 +240,7 @@
   <!-- Famille ou coloc -->
   <section class="pf-section reveal">
     <div class="pf-kicker">Ton foyer, ton mode</div>
-    <h2 class="pf-h2">Famille <span class="gradient">ou</span> colocation</h2>
+    <h2 class="pf-h2">Famille <span class="pf-grad-text">ou</span> colocation</h2>
     <p class="pf-p">Pulse Family s'adapte. En mode <strong>Famille</strong>, tu retrouves les rôles parents / enfants, l'école et la santé. En mode <strong>Colocation</strong>, tout le monde est à égalité, les dépenses sont partagées et le vocabulaire suit (« colocataires », pas « enfants »).</p>
     <div class="pf-pills">
       <span class="pf-pill">👨‍👩‍👧 Rôles adaptés</span>
