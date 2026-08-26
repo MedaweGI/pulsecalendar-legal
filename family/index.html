@@ -12,14 +12,14 @@
 <meta property="og:url" content="https://pulsecalendar.app/family/"/>
 <meta property="og:site_name" content="Pulse"/>
 <meta property="og:title" content="Pulse Family — l'organiseur du foyer qui équilibre la charge"/>
-<meta property="og:description" content="Agenda, tâches, budget, routines de toute la maison — et l'Équilibre qui rééquilibre la charge mentale. Famille ou coloc. Bientôt sur l'App Store."/>
-<meta property="og:image" content="https://pulsecalendar.app/family/pulse-family-icon.png"/>
+<meta property="og:description" content="Agenda, tâches, budget, routines de toute la maison, et l'Équilibre qui rééquilibre la charge mentale. Famille ou coloc. Sur l'App Store, iPhone, iPad, Mac et Apple Watch."/>
+<meta property="og:image" content="https://pulsecalendar.app/family/pulse-family-house.png"/>
 <meta property="og:locale" content="fr_FR"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@PulseCalendar"/>
 <meta name="twitter:title" content="Pulse Family — l'organiseur du foyer qui équilibre la charge"/>
 <meta name="twitter:description" content="Agenda, tâches, budget, routines — et l'Équilibre qui rééquilibre la charge du foyer. Famille ou coloc."/>
-<meta name="twitter:image" content="https://pulsecalendar.app/family/pulse-family-icon.png"/>
+<meta name="twitter:image" content="https://pulsecalendar.app/family/pulse-family-house.png"/>
 <meta name="theme-color" content="#7C5CFF"/>
 <link rel="icon" type="image/png" href="pulse-family-favicon.png"/>
 <link rel="apple-touch-icon" href="pulse-family-house.png"/>
@@ -141,7 +141,28 @@
   .pf-final .pf-soon { margin: 18px auto 0; }
   .pf-note { font-size: 13px; color: var(--text-3); margin-top: 14px; }
 
+  /* ---- APERÇU : captures localisées ---- */
+  .pf-langs { display: flex; flex-wrap: wrap; gap: 8px; margin: 24px 0 28px; }
+  .pf-flag { display: inline-flex; align-items: center; gap: 7px; padding: 7px 13px; border-radius: 999px;
+             background: var(--surface); border: 1px solid var(--border); cursor: pointer; font-family: inherit;
+             font-size: 13.5px; font-weight: 600; color: var(--text-2); transition: border-color .18s, color .18s, background .18s; }
+  .pf-flag:hover { border-color: var(--pf-violet); color: var(--text); }
+  .pf-flag[aria-selected="true"] { background: rgba(123,92,240,0.12); border-color: var(--pf-violet); color: var(--pf-violet); }
+  .pf-flag .fl { font-size: 16px; line-height: 1; }
+  .pf-shots { display: flex; gap: 22px; overflow-x: auto; padding: 6px 2px 24px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
+  .pf-shots::-webkit-scrollbar { height: 8px; }
+  .pf-shots::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
+  .pf-shots::-webkit-scrollbar-track { background: transparent; }
+  .pf-shot { flex: 0 0 auto; width: 262px; scroll-snap-align: center; }
+  .pf-shot img { width: 100%; height: auto; display: block; border-radius: 24px;
+                 box-shadow: 0 26px 54px -22px rgba(98,68,214,0.5), 0 0 0 1px rgba(255,255,255,0.35); }
+  .pf-macshot { margin-top: 34px; }
+  .pf-macshot img { width: 100%; height: auto; display: block; border-radius: 16px;
+                    box-shadow: 0 34px 70px -28px rgba(98,68,214,0.55), 0 0 0 1px var(--border); }
+  .pf-maccap { text-align: center; font-size: 13px; color: var(--text-3); margin-top: 14px; }
+
   @media (max-width: 860px) {
+    .pf-shot { width: 220px; }
     .pf-hero { grid-template-columns: 1fr; padding-top: 108px; gap: 8px; }
     .pf-visual { min-height: 320px; margin-top: 16px; }
     .pf-grid { grid-template-columns: 1fr; }
@@ -166,7 +187,7 @@
       <a href="../index.html#pricing">Premium</a>
       <a href="../support/">Support</a>
     </div>
-    <span class="nav-cta" style="opacity:.9;cursor:default;">Bientôt</span>
+    <a class="nav-cta" href="https://apps.apple.com/app/id6799214653">Télécharger</a>
   </div>
 </nav>
 
@@ -177,10 +198,10 @@
     <h1 class="pf-h1">Toute la maison à sa place. Et la charge <span class="pf-grad-text">enfin équilibrée</span>.</h1>
     <p class="pf-lede">Pulse Family réunit l'agenda, les tâches, le budget et les routines de tout le foyer. Sa vraie différence : <strong>l'Équilibre</strong>, qui révèle qui porte la charge de la maison et propose de rééquilibrer. Pour les familles comme pour les colocs.</p>
     <div class="pf-ctas">
-      <span class="pf-soon" role="text" aria-label="Bientôt sur l'App Store">
+      <a class="pf-soon" href="https://apps.apple.com/app/id6799214653" aria-label="Télécharger Pulse Family sur l'App Store">
         <svg class="as-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-        <span><small>Bientôt sur l'</small><strong>App Store</strong></span>
-      </span>
+        <span><small>Télécharger sur l'</small><strong>App Store</strong></span>
+      </a>
       <a href="../index.html" class="pf-secondary">Découvrir Pulse Calendar →</a>
     </div>
     <div class="pf-meta">
@@ -227,6 +248,19 @@
     </div>
   </section>
 
+  <!-- Aperçu localisé -->
+  <section class="pf-section reveal" id="apercu">
+    <div class="pf-kicker">En images</div>
+    <h2 class="pf-h2">Pulse Family, dans ta langue</h2>
+    <p class="pf-p">L'app est traduite dans 15 langues. Choisis la tienne et parcours l'organiseur du foyer : l'Équilibre, l'agenda partagé, le budget, le mode colocation et les tâches.</p>
+    <div class="pf-langs" id="pf-langs" role="tablist" aria-label="Langue des captures d'écran"></div>
+    <div class="pf-shots" id="pf-shots"></div>
+    <div class="pf-macshot">
+      <img id="pf-mac" src="screens/fr-FR/mac.webp" alt="Pulse Family sur Mac — l'Équilibre du foyer" loading="lazy" decoding="async" width="1200" height="750"/>
+      <p class="pf-maccap">Aussi une vraie app de bureau sur Mac.</p>
+    </div>
+  </section>
+
   <!-- Tout le foyer -->
   <section class="pf-section reveal">
     <div class="pf-kicker">Le quotidien</div>
@@ -244,11 +278,13 @@
   <section class="pf-section reveal">
     <div class="pf-kicker">Ton foyer, ton mode</div>
     <h2 class="pf-h2">Famille <span class="pf-grad-text">ou</span> colocation</h2>
-    <p class="pf-p">Pulse Family s'adapte. En mode <strong>Famille</strong>, tu retrouves les rôles parents / enfants, l'école et la santé. En mode <strong>Colocation</strong>, tout le monde est à égalité, les dépenses sont partagées et le vocabulaire suit (« colocataires », pas « enfants »).</p>
+    <p class="pf-p">Pulse Family s'adapte à ton foyer. En mode <strong>Famille</strong>, tu retrouves les rôles parents et enfants, l'école et la santé. En mode <strong>Colocation</strong>, tout le monde est à égalité et le vocabulaire suit (« colocataires », pas « enfants »).</p>
+    <p class="pf-p">Côté argent, chaque dépense se partage entre les colocs concernés. Pulse Family tient les comptes en continu, montre <strong>qui doit combien à qui</strong>, et il suffit d'un geste pour marquer un remboursement. Fini le tableur sur le frigo et les rappels gênants.</p>
     <div class="pf-pills">
-      <span class="pf-pill">👨‍👩‍👧 Rôles adaptés</span>
+      <span class="pf-pill">👥 Rôles adaptés</span>
       <span class="pf-pill">🤝 Colocs à égalité</span>
-      <span class="pf-pill">🧾 Dépenses partagées</span>
+      <span class="pf-pill">🧾 Qui doit quoi</span>
+      <span class="pf-pill">✅ Remboursements suivis</span>
       <span class="pf-pill">🔒 Budget masquable</span>
     </div>
   </section>
@@ -279,13 +315,13 @@
   <!-- Final -->
   <section class="pf-final reveal">
     <div class="pf-kicker">Écosystème Pulse</div>
-    <h2 class="pf-h2">Pulse Family arrive bientôt</h2>
+    <h2 class="pf-h2">Pulse Family est là</h2>
     <p class="pf-p" style="max-width:52ch;margin:0 auto;color:var(--text-2);">La 3ᵉ app de l'écosystème Pulse, aux côtés de Pulse Calendar. Un foyer plus léger, une charge mieux partagée.</p>
-    <span class="pf-soon" role="text" aria-label="Bientôt sur l'App Store">
+    <a class="pf-soon" href="https://apps.apple.com/app/id6799214653" aria-label="Télécharger Pulse Family sur l'App Store">
       <svg class="as-icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.1l.01-.02zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
-      <span><small>Bientôt sur l'</small><strong>App Store</strong></span>
-    </span>
-    <p class="pf-note">iPhone & iPad · iOS 17+ · en français, puis dans le monde entier</p>
+      <span><small>Télécharger sur l'</small><strong>App Store</strong></span>
+    </a>
+    <p class="pf-note">iPhone · iPad · Mac · Apple Watch · iOS 17+ · 15 langues</p>
   </section>
 </main>
 
@@ -326,5 +362,6 @@
 
 <script src="../shared/effects.js"></script>
 <script defer src="../shared/reveal.js"></script>
+<script defer src="family-screens.js?v=1"></script>
 </body>
 </html>
