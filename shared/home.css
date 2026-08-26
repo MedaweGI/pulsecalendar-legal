@@ -68,6 +68,10 @@
      forcé). Reste utile pour nav et footer. */
   #nav-logo, #footer-logo { display: flex; line-height: 0; }
   .nav-links { display: flex; gap: 28px; font-size: 14px; color: var(--text-2); }
+  .nav-family-m { display: none; align-items: center; gap: 6px; padding: 5px 12px 5px 7px;
+    border-radius: 999px; background: rgba(123,92,240,0.12); border: 1px solid rgba(123,92,240,0.32);
+    color: var(--violet-400); font-size: 13px; font-weight: 700; white-space: nowrap; }
+  .nav-family-m img { border-radius: 5px; display: block; flex-shrink: 0; }
   .nav-links a { transition: color 0.2s; }
   .nav-links a:hover { color: var(--text); }
   .nav-cta {
@@ -857,6 +861,14 @@
     .pricing-grid { grid-template-columns: 1fr; }
     .foot-inner { grid-template-columns: 1fr 1fr; gap: 30px; }
     .nav-links { display: none; }
+    .nav-family-m { display: inline-flex; margin-left: 10px; margin-right: auto; flex-shrink: 0; }
+    .nav-cta { flex-shrink: 0; }
+  }
+  /* Sur téléphone : logo en icône seule + padding resserré pour caser le lien Family + Télécharger. */
+  @media (max-width: 600px) {
+    .nav-inner { padding-left: 18px; padding-right: 18px; }
+    .nav-brand span { display: none; }
+    .nav-family-m { margin-left: 8px; }
   }
 
   /* Reveal animation */
