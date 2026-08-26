@@ -174,7 +174,7 @@
   </svg>
 </template>
 
-<link rel="stylesheet" href="shared/home.css?v=3"/>
+<link rel="stylesheet" href="shared/home.css?v=4"/>
 
 <!-- ===== PLAUSIBLE ANALYTICS (privacy-friendly, no cookies, no banner RGPD) ===== -->
 <!-- Ajoute pulsecalendar.app sur plausible.io pour activer le dashboard. -->
@@ -206,15 +206,15 @@
       <div id="nav-logo"></div>
       <span>PulseCalendar</span>
     </a>
-    <a href="family/" class="nav-family-m" aria-label="Pulse Family"><img src="family/pulse-family-favicon.png" alt="" width="17" height="17"/>Family</a>
-    <div class="nav-links">
+    <div class="nav-links" id="nav-links">
       <a href="#features">Fonctionnalités</a>
       <a href="#themes">Thèmes</a>
       <a href="#pricing">Premium</a>
       <a href="#faq">FAQ</a>
-      <a href="family/" style="color:var(--violet-400);font-weight:600;">Pulse&nbsp;Family</a>
+      <a href="family/" class="nav-fam"><img src="family/pulse-family-favicon.png" alt="" width="18" height="18"/>Pulse&nbsp;Family</a>
     </div>
     <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" class="nav-cta" target="_blank" rel="noopener">Télécharger</a>
+    <button class="nav-burger" id="nav-burger" aria-label="Menu" aria-expanded="false" aria-controls="nav-links"><span></span><span></span><span></span></button>
   </div>
 </nav>
 
@@ -678,6 +678,7 @@
 <script defer src="shared/reveal.js"></script>
 
 <script src="shared/effects.js"></script>
+<script defer src="shared/nav-menu.js?v=1"></script>
 
 </body>
 </html>
