@@ -149,20 +149,28 @@
   .pf-flag:hover { border-color: var(--pf-violet); color: var(--text); }
   .pf-flag[aria-selected="true"] { background: rgba(123,92,240,0.12); border-color: var(--pf-violet); color: var(--pf-violet); }
   .pf-flag .fl { font-size: 16px; line-height: 1; }
-  .pf-shots { display: flex; gap: 22px; overflow-x: auto; padding: 6px 2px 24px; scroll-snap-type: x mandatory; -webkit-overflow-scrolling: touch; }
-  .pf-shots::-webkit-scrollbar { height: 8px; }
-  .pf-shots::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 4px; }
-  .pf-shots::-webkit-scrollbar-track { background: transparent; }
-  .pf-shot { flex: 0 0 auto; width: 262px; scroll-snap-align: center; }
-  .pf-shot img { width: 100%; height: auto; display: block; border-radius: 24px;
-                 box-shadow: 0 26px 54px -22px rgba(98,68,214,0.5), 0 0 0 1px rgba(255,255,255,0.35); }
-  .pf-macshot { margin-top: 34px; }
-  .pf-macshot img { width: 100%; height: auto; display: block; border-radius: 16px;
-                    box-shadow: 0 34px 70px -28px rgba(98,68,214,0.55), 0 0 0 1px var(--border); }
-  .pf-maccap { text-align: center; font-size: 13px; color: var(--text-3); margin-top: 14px; }
+  /* fond blanc pour faire ressortir l'app */
+  .pf-devicecard { background: #ffffff; border-radius: 30px; padding: 48px 24px 40px; margin-top: 26px;
+                   border: 1px solid rgba(23,15,60,0.06); box-shadow: 0 26px 74px -36px rgba(23,15,60,0.32); }
+  .pf-showcase { display: flex; align-items: flex-end; justify-content: center; position: relative;
+                 max-width: 860px; margin: 0 auto; }
+  .pf-showcase .glow { position: absolute; inset: 4% 10% 8%; z-index: 0; pointer-events: none;
+                       background: radial-gradient(52% 52% at 50% 46%, rgba(123,92,240,0.18), transparent 72%); filter: blur(48px); }
+  .pf-showcase img { height: auto; position: relative; display: block; }
+  .pf-dev-mac   { width: min(66%, 640px); z-index: 1; filter: drop-shadow(0 34px 56px rgba(23,15,60,0.26)); }
+  .pf-dev-phone { width: min(21%, 198px); z-index: 2; margin-left: -8%; margin-bottom: -0.5%;
+                  filter: drop-shadow(0 26px 46px rgba(23,15,60,0.30)); }
+  .pf-dev-watch { width: min(10.5%, 100px); z-index: 3; margin-left: -3.5%;
+                  filter: drop-shadow(0 20px 34px rgba(23,15,60,0.30)); }
 
+  @media (max-width: 720px) {
+    .pf-devicecard { padding: 30px 10px 22px; }
+    .pf-showcase { flex-direction: column; align-items: center; }
+    .pf-dev-mac { width: min(94%, 440px); }
+    .pf-dev-phone { width: min(38%, 150px); margin: -18% 0 0; }
+    .pf-dev-watch { width: min(22%, 84px); margin: -14% 0 0; }
+  }
   @media (max-width: 860px) {
-    .pf-shot { width: 220px; }
     .pf-hero { grid-template-columns: 1fr; padding-top: 108px; gap: 8px; }
     .pf-visual { min-height: 320px; margin-top: 16px; }
     .pf-grid { grid-template-columns: 1fr; }
@@ -182,8 +190,8 @@
       <span>Pulse</span>
     </a>
     <div class="nav-links">
-      <a href="../index.html#features">Pulse Calendar</a>
-      <a href="./" aria-current="page">Pulse Family</a>
+      <a href="../index.html#features" style="display:inline-flex;align-items:center;gap:7px;"><img src="../assets/pulse-app-icon-v3.png" alt="" width="18" height="18" style="border-radius:5px;display:block;flex-shrink:0;"/>Pulse Calendar</a>
+      <a href="./" aria-current="page" style="display:inline-flex;align-items:center;gap:7px;"><img src="pulse-family-favicon.png" alt="" width="18" height="18" style="border-radius:5px;display:block;flex-shrink:0;"/>Pulse Family</a>
       <a href="../index.html#pricing">Premium</a>
       <a href="../support/">Support</a>
     </div>
@@ -250,14 +258,17 @@
 
   <!-- Aperçu localisé -->
   <section class="pf-section reveal" id="apercu">
-    <div class="pf-kicker">En images</div>
-    <h2 class="pf-h2">Pulse Family, dans ta langue</h2>
-    <p class="pf-p">L'app est traduite dans 15 langues. Choisis la tienne et parcours l'organiseur du foyer : l'Équilibre, l'agenda partagé, le budget, le mode colocation et les tâches.</p>
-    <div class="pf-langs" id="pf-langs" role="tablist" aria-label="Langue des captures d'écran"></div>
-    <div class="pf-shots" id="pf-shots"></div>
-    <div class="pf-macshot">
-      <img id="pf-mac" src="screens/fr-FR/mac.webp" alt="Pulse Family sur Mac — l'Équilibre du foyer" loading="lazy" decoding="async" width="1200" height="750"/>
-      <p class="pf-maccap">Aussi une vraie app de bureau sur Mac.</p>
+    <div class="pf-kicker">Sur tous tes appareils</div>
+    <h2 class="pf-h2">iPhone, Mac et Apple Watch</h2>
+    <p class="pf-p">Un seul abonnement pour tout le foyer, sur tous tes appareils Apple. Choisis ta langue et découvre l'app.</p>
+    <div class="pf-langs" id="pf-langs" role="tablist" aria-label="Langue de l'aperçu"></div>
+    <div class="pf-devicecard">
+      <div class="pf-showcase">
+        <div class="glow"></div>
+        <img class="pf-dev-mac" id="dev-mac" src="screens/fr-FR/macbook-device.webp" alt="Pulse Family sur MacBook Pro" loading="lazy" decoding="async"/>
+        <img class="pf-dev-phone" id="dev-phone" src="screens/fr-FR/iphone-device.webp" alt="Pulse Family sur iPhone" loading="lazy" decoding="async"/>
+        <img class="pf-dev-watch" id="dev-watch" src="screens/fr-FR/watch-device.webp" alt="Pulse Family sur Apple Watch" loading="lazy" decoding="async"/>
+      </div>
     </div>
   </section>
 
@@ -362,6 +373,6 @@
 
 <script src="../shared/effects.js"></script>
 <script defer src="../shared/reveal.js"></script>
-<script defer src="family-screens.js?v=1"></script>
+<script defer src="family-screens.js?v=2"></script>
 </body>
 </html>

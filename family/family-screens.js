@@ -1,6 +1,6 @@
-/* Galerie de captures Pulse Family, localisée par sélecteur de drapeaux.
-   Externe (CSP : script-src 'self'). Swap les <img data-scr> + le showcase Mac
-   vers family/screens/<lang>/<nom>.webp. Défaut = langue du navigateur, repli fr-FR. */
+/* Aperçu Pulse Family : mockups iPhone + MacBook + Apple Watch, localisés par sélecteur de drapeaux.
+   Externe (CSP : script-src 'self'). Swap les 3 <img> vers family/screens/<lang>/<device>.webp.
+   Défaut = langue du navigateur, repli fr-FR. */
 (function () {
   var LANGS = [
     ["fr-FR","🇫🇷","Français"], ["en-US","🇺🇸","English"],
@@ -12,27 +12,15 @@
     ["tr","🇹🇷","Türkçe"], ["vi","🇻🇳","Tiếng Việt"],
     ["ar-SA","🇸🇦","العربية"]
   ];
-  var SCREENS = ["today","balance","agenda","budget","coloc","tasks"];
-  var ALT = { today:"Accueil du foyer", balance:"L'Équilibre de la charge", agenda:"Agenda partagé",
-              budget:"Budget du foyer", coloc:"Mode colocation, dépenses partagées", tasks:"Tâches partagées" };
+  var DEVICES = { "dev-mac":"macbook-device", "dev-phone":"iphone-device", "dev-watch":"watch-device" };
   var langsEl = document.getElementById("pf-langs");
-  var shotsEl = document.getElementById("pf-shots");
-  var macEl   = document.getElementById("pf-mac");
-  if (!langsEl || !shotsEl) return;
-
-  SCREENS.forEach(function (s) {
-    var d = document.createElement("div"); d.className = "pf-shot";
-    var im = document.createElement("img");
-    im.setAttribute("data-scr", s); im.loading = "lazy"; im.decoding = "async";
-    im.alt = ALT[s] || s; im.width = 560; im.height = 1215;
-    d.appendChild(im); shotsEl.appendChild(d);
-  });
+  if (!langsEl || !document.getElementById("dev-mac")) return;
 
   function setLang(code) {
-    shotsEl.querySelectorAll("img[data-scr]").forEach(function (im) {
-      im.src = "screens/" + code + "/" + im.getAttribute("data-scr") + ".webp";
-    });
-    if (macEl) macEl.src = "screens/" + code + "/mac.webp";
+    for (var id in DEVICES) {
+      var im = document.getElementById(id);
+      if (im) im.src = "screens/" + code + "/" + DEVICES[id] + ".webp";
+    }
     langsEl.querySelectorAll(".pf-flag").forEach(function (b) {
       b.setAttribute("aria-selected", b.getAttribute("data-l") === code ? "true" : "false");
     });
