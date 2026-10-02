@@ -1,7 +1,7 @@
 {
-  "version": 3,
-  "updated": "2026-05-07",
-  "notes": "Vacances scolaires publiées par les ministères/gouvernements. Éditer ce fichier puis push sur gh-pages pour livrer les dates à tous les users sans maj App Store. Les entrées 2027-28 sont indicatives (calendriers officiels parfois non publiés au moment de la rédaction).",
+  "version": 7,
+  "updated": "2026-10-02",
+  "notes": "Vacances scolaires publiées par les ministères/gouvernements. Éditer ce fichier puis push sur gh-pages pour livrer les dates à tous les users sans maj App Store. Les entrées 2027-28 sont indicatives (calendriers officiels parfois non publiés au moment de la rédaction). v4 (2026-05-27) : ajout KR/RU/SA en best-effort. v5 (2026-05-27) : ajout CN (Chine continentale).",
   "countries": {
     "FR": {
       "label": "France",
@@ -324,68 +324,68 @@
       }
     },
     "JP": {
-      "label": "Japon",
+      "label": "日本",
       "regions": {
         "generic": {
-          "label": "Japon (calendrier scolaire national)",
+          "label": "全国",
           "periods": [
             {
-              "name": "春休み 2024 (Haruyasumi · printemps)",
+              "name": "春休み 2024",
               "start": "2024-03-25",
               "end": "2024-04-07"
             },
             {
-              "name": "夏休み 2024 (Natsuyasumi · été)",
+              "name": "夏休み 2024",
               "start": "2024-07-20",
               "end": "2024-08-31"
             },
             {
-              "name": "冬休み 2024 (Fuyuyasumi · hiver)",
+              "name": "冬休み 2024",
               "start": "2024-12-25",
               "end": "2025-01-07"
             },
             {
-              "name": "春休み 2025 (Haruyasumi · printemps)",
+              "name": "春休み 2025",
               "start": "2025-03-25",
               "end": "2025-04-06"
             },
             {
-              "name": "夏休み 2025 (Natsuyasumi · été)",
+              "name": "夏休み 2025",
               "start": "2025-07-20",
               "end": "2025-08-31"
             },
             {
-              "name": "冬休み 2025 (Fuyuyasumi · hiver)",
+              "name": "冬休み 2025",
               "start": "2025-12-25",
               "end": "2026-01-07"
             },
             {
-              "name": "春休み 2026 (Haruyasumi · printemps)",
+              "name": "春休み 2026",
               "start": "2026-03-25",
               "end": "2026-04-05"
             },
             {
-              "name": "夏休み 2026 (Natsuyasumi · été)",
+              "name": "夏休み 2026",
               "start": "2026-07-20",
               "end": "2026-08-31"
             },
             {
-              "name": "冬休み 2026 (Fuyuyasumi · hiver)",
+              "name": "冬休み 2026",
               "start": "2026-12-25",
               "end": "2027-01-07"
             },
             {
-              "name": "春休み 2027 (Haruyasumi · printemps)",
+              "name": "春休み 2027",
               "start": "2027-03-25",
               "end": "2027-04-05"
             },
             {
-              "name": "夏休み 2027 (Natsuyasumi · été)",
+              "name": "夏休み 2027",
               "start": "2027-07-20",
               "end": "2027-08-31"
             },
             {
-              "name": "冬休み 2027 (Fuyuyasumi · hiver)",
+              "name": "冬休み 2027",
               "start": "2027-12-25",
               "end": "2028-01-07"
             }
@@ -9263,6 +9263,421 @@
               "name": "Sommerferien 2026",
               "start": "2026-07-11",
               "end": "2026-09-13"
+            }
+          ]
+        }
+      }
+    },
+    "KR": {
+      "label": "대한민국",
+      "regions": {
+        "national": {
+          "label": "전국 (Nationwide)",
+          "periods": [
+            {
+              "name": "겨울방학 2024-25 (Winter break)",
+              "start": "2024-12-26",
+              "end": "2025-02-28"
+            },
+            {
+              "name": "여름방학 2025 (Summer break)",
+              "start": "2025-07-21",
+              "end": "2025-08-22"
+            },
+            {
+              "name": "겨울방학 2025-26 (Winter break)",
+              "start": "2025-12-26",
+              "end": "2026-02-27"
+            },
+            {
+              "name": "여름방학 2026 (Summer break)",
+              "start": "2026-07-20",
+              "end": "2026-08-21"
+            },
+            {
+              "name": "겨울방학 2026-27 (Winter break)",
+              "start": "2026-12-28",
+              "end": "2027-02-26"
+            }
+          ]
+        }
+      }
+    },
+    "RU": {
+      "label": "Россия",
+      "regions": {
+        "national": {
+          "label": "Общероссийские (Nationwide)",
+          "periods": [
+            {
+              "name": "Осенние каникулы 2024 (Autumn break)",
+              "start": "2024-10-28",
+              "end": "2024-11-04"
+            },
+            {
+              "name": "Зимние каникулы 2024-25 (Winter break)",
+              "start": "2024-12-30",
+              "end": "2025-01-08"
+            },
+            {
+              "name": "Весенние каникулы 2025 (Spring break)",
+              "start": "2025-03-24",
+              "end": "2025-03-30"
+            },
+            {
+              "name": "Летние каникулы 2025 (Summer break)",
+              "start": "2025-06-01",
+              "end": "2025-08-31"
+            },
+            {
+              "name": "Осенние каникулы 2025 (Autumn break)",
+              "start": "2025-10-27",
+              "end": "2025-11-03"
+            },
+            {
+              "name": "Зимние каникулы 2025-26 (Winter break)",
+              "start": "2025-12-29",
+              "end": "2026-01-08"
+            },
+            {
+              "name": "Весенние каникулы 2026 (Spring break)",
+              "start": "2026-03-23",
+              "end": "2026-03-29"
+            },
+            {
+              "name": "Летние каникулы 2026 (Summer break)",
+              "start": "2026-06-01",
+              "end": "2026-08-31"
+            },
+            {
+              "name": "Осенние каникулы 2026 (Autumn break)",
+              "start": "2026-10-26",
+              "end": "2026-11-03"
+            },
+            {
+              "name": "Зимние каникулы 2026-27 (Winter break)",
+              "start": "2026-12-28",
+              "end": "2027-01-08"
+            }
+          ]
+        }
+      }
+    },
+    "SA": {
+      "label": "المملكة العربية السعودية",
+      "regions": {
+        "national": {
+          "label": "على المستوى الوطني (Nationwide)",
+          "periods": [
+            {
+              "name": "إجازة منتصف العام 2024-25 (Mid-year break)",
+              "start": "2024-12-08",
+              "end": "2024-12-22"
+            },
+            {
+              "name": "إجازة الربيع 2025 (Spring break)",
+              "start": "2025-03-23",
+              "end": "2025-03-30"
+            },
+            {
+              "name": "إجازة نهاية العام 2025 (Summer break)",
+              "start": "2025-06-23",
+              "end": "2025-08-23"
+            },
+            {
+              "name": "إجازة منتصف العام 2025-26 (Mid-year break)",
+              "start": "2025-12-07",
+              "end": "2025-12-21"
+            },
+            {
+              "name": "إجازة الربيع 2026 (Spring break)",
+              "start": "2026-03-22",
+              "end": "2026-03-29"
+            },
+            {
+              "name": "إجازة نهاية العام 2026 (Summer break)",
+              "start": "2026-06-22",
+              "end": "2026-08-22"
+            },
+            {
+              "name": "إجازة منتصف العام 2026-27 (Mid-year break)",
+              "start": "2026-12-06",
+              "end": "2026-12-20"
+            }
+          ]
+        }
+      }
+    },
+    "CN": {
+      "label": "中国",
+      "regions": {
+        "national": {
+          "label": "全国 (Nationwide)",
+          "periods": [
+            {
+              "name": "寒假 2025 (Winter break)",
+              "start": "2025-01-13",
+              "end": "2025-02-16"
+            },
+            {
+              "name": "暑假 2025 (Summer break)",
+              "start": "2025-07-05",
+              "end": "2025-08-31"
+            },
+            {
+              "name": "寒假 2026 (Winter break)",
+              "start": "2026-01-26",
+              "end": "2026-02-28"
+            },
+            {
+              "name": "暑假 2026 (Summer break)",
+              "start": "2026-07-04",
+              "end": "2026-08-30"
+            },
+            {
+              "name": "寒假 2027 (Winter break)",
+              "start": "2027-01-25",
+              "end": "2027-02-27"
+            }
+          ]
+        }
+      }
+    },
+    "GR": {
+      "label": "Ελλάδα",
+      "regions": {
+        "generic": {
+          "label": "Πανελλαδικά",
+          "periods": [
+            {
+              "name": "Διακοπές Χριστουγέννων 2025-2026",
+              "start": "2025-12-24",
+              "end": "2026-01-07"
+            },
+            {
+              "name": "Διακοπές Πάσχα 2026",
+              "start": "2026-04-06",
+              "end": "2026-04-19"
+            },
+            {
+              "name": "Θερινές διακοπές 2026",
+              "start": "2026-06-16",
+              "end": "2026-09-10"
+            },
+            {
+              "name": "Διακοπές Χριστουγέννων 2026-2027",
+              "start": "2026-12-24",
+              "end": "2027-01-07"
+            },
+            {
+              "name": "Διακοπές Πάσχα 2027",
+              "start": "2027-04-27",
+              "end": "2027-05-09"
+            },
+            {
+              "name": "Θερινές διακοπές 2027",
+              "start": "2027-06-16",
+              "end": "2027-09-10"
+            }
+          ]
+        }
+      }
+    },
+    "TR": {
+      "label": "Türkiye",
+      "regions": {
+        "generic": {
+          "label": "Türkiye geneli",
+          "periods": [
+            {
+              "name": "Birinci dönem ara tatili 2025",
+              "start": "2025-11-10",
+              "end": "2025-11-14"
+            },
+            {
+              "name": "Yarıyıl tatili 2026",
+              "start": "2026-01-19",
+              "end": "2026-01-30"
+            },
+            {
+              "name": "İkinci dönem ara tatili 2026",
+              "start": "2026-03-16",
+              "end": "2026-03-20"
+            },
+            {
+              "name": "Yaz tatili 2026",
+              "start": "2026-06-27",
+              "end": "2026-09-13"
+            },
+            {
+              "name": "Birinci dönem ara tatili 2026",
+              "start": "2026-11-16",
+              "end": "2026-11-20"
+            },
+            {
+              "name": "Yarıyıl tatili 2027",
+              "start": "2027-01-25",
+              "end": "2027-02-05"
+            },
+            {
+              "name": "İkinci dönem ara tatili 2027",
+              "start": "2027-03-08",
+              "end": "2027-03-12"
+            },
+            {
+              "name": "Yaz tatili 2027",
+              "start": "2027-06-26",
+              "end": "2027-09-12"
+            }
+          ]
+        }
+      }
+    },
+    "IT": {
+      "label": "Italia",
+      "regions": {
+        "generic": {
+          "label": "Nazionale",
+          "periods": [
+            {
+              "name": "Vacanze di Natale 2025",
+              "start": "2025-12-23",
+              "end": "2026-01-06"
+            },
+            {
+              "name": "Vacanze di Pasqua 2026",
+              "start": "2026-04-02",
+              "end": "2026-04-07"
+            },
+            {
+              "name": "Vacanze estive 2026",
+              "start": "2026-06-10",
+              "end": "2026-09-13"
+            },
+            {
+              "name": "Vacanze di Natale 2026",
+              "start": "2026-12-23",
+              "end": "2027-01-06"
+            },
+            {
+              "name": "Vacanze di Pasqua 2027",
+              "start": "2027-03-25",
+              "end": "2027-03-30"
+            },
+            {
+              "name": "Vacanze estive 2027",
+              "start": "2027-06-10",
+              "end": "2027-09-13"
+            }
+          ]
+        }
+      }
+    },
+    "BR": {
+      "label": "Brasil",
+      "regions": {
+        "generic": {
+          "label": "Nacional",
+          "periods": [
+            {
+              "name": "Férias de julho 2025",
+              "start": "2025-07-03",
+              "end": "2025-07-22"
+            },
+            {
+              "name": "Férias de verão 2025-2026",
+              "start": "2025-12-13",
+              "end": "2026-02-01"
+            },
+            {
+              "name": "Férias de julho 2026",
+              "start": "2026-07-07",
+              "end": "2026-07-23"
+            },
+            {
+              "name": "Férias de verão 2026-2027",
+              "start": "2026-12-19",
+              "end": "2027-02-01"
+            }
+          ]
+        }
+      }
+    },
+    "PT": {
+      "label": "Portugal",
+      "regions": {
+        "generic": {
+          "label": "Nacional",
+          "periods": [
+            {
+              "name": "Interrupção do Natal 2025",
+              "start": "2025-12-16",
+              "end": "2026-01-05"
+            },
+            {
+              "name": "Interrupção do Carnaval 2026",
+              "start": "2026-02-16",
+              "end": "2026-02-18"
+            },
+            {
+              "name": "Interrupção da Páscoa 2026",
+              "start": "2026-03-30",
+              "end": "2026-04-10"
+            },
+            {
+              "name": "Férias de verão 2026",
+              "start": "2026-06-30",
+              "end": "2026-09-10"
+            },
+            {
+              "name": "Interrupção do Natal 2026",
+              "start": "2026-12-16",
+              "end": "2027-01-03"
+            },
+            {
+              "name": "Interrupção do Carnaval 2027",
+              "start": "2027-02-08",
+              "end": "2027-02-10"
+            },
+            {
+              "name": "Interrupção da Páscoa 2027",
+              "start": "2027-03-22",
+              "end": "2027-04-02"
+            },
+            {
+              "name": "Férias de verão 2027",
+              "start": "2027-06-30",
+              "end": "2027-09-10"
+            }
+          ]
+        }
+      }
+    },
+    "VN": {
+      "label": "Việt Nam",
+      "regions": {
+        "generic": {
+          "label": "Toàn quốc",
+          "periods": [
+            {
+              "name": "Nghỉ hè 2026",
+              "start": "2026-06-01",
+              "end": "2026-09-04"
+            },
+            {
+              "name": "Nghỉ Tết Nguyên đán 2026",
+              "start": "2026-02-16",
+              "end": "2026-02-20"
+            },
+            {
+              "name": "Nghỉ Tết Nguyên đán 2027",
+              "start": "2027-02-05",
+              "end": "2027-02-13"
+            },
+            {
+              "name": "Nghỉ hè 2027",
+              "start": "2027-06-01",
+              "end": "2027-09-04"
             }
           ]
         }
