@@ -141,3 +141,5 @@ html[data-theme="light"] .mobile-cta-bar {
   --text-3: #a5a0bd;
 }
 html[data-theme="light"] .device-showcase .dev-watch { filter: drop-shadow(0 22px 38px rgba(23,15,60,0.32)); }
+html[data-theme="light"] .device-showcase .dev-duo { filter: drop-shadow(0 36px 56px rgba(23,15,60,0.30)); }
+html[data-theme="light"] .device-showcase .dev-iphone { filter: drop-shadow(0 26px 42px rgba(23,15,60,0.32)); }

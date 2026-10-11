@@ -8,7 +8,8 @@
 (function () {
   var LANGS = { fr:1, de:1, es:1, ja:1, ko:1, ar:1, ru:1, "zh-Hans":1, "en-US":1 }; // langues avec jeu localisé (en-US = captures °F, repli racine)
   var V = 10;  // version de cache des captures téléphone (WebP)
-  var DV = 3;  // version de cache des images device (macbook-device / ipad-device)
+  var DV = 4;  // version de cache des images device (macbook-device / ipad-device) — v4 : WebP transparents
+  var DUOV = 1; // version de cache de duo-device (iPhone Duo déplié)
 
   function curLang() {
     if (window.PCI18n && window.PCI18n.current) return window.PCI18n.current;
@@ -41,8 +42,10 @@
     var lang = curLang();
     swapList(document.querySelectorAll("img.screen-photo"),
              /screens\/(?:[a-zA-Z-]+\/)?([a-z]+)\.webp/,V, lang);
-    swapList(document.querySelectorAll("img.dev-mac, img.dev-ipad"),
-             /screens\/(?:[a-zA-Z-]+\/)?((?:macbook|ipad)-device)\.webp/,DV, lang);
+    swapList(document.querySelectorAll("img.dev-mac, img.dev-ipad, img.dev-iphone"),
+             /screens\/(?:[a-zA-Z-]+\/)?((?:macbook|ipad|iphone)-device)\.webp/,DV, lang);
+    swapList(document.querySelectorAll("img.dev-duo"),            // iPhone Duo (10/2026)
+             /screens\/(?:[a-zA-Z-]+\/)?(duo-device)\.webp/, DUOV, lang);
   }
 
   var lastLang = " ";
