@@ -1,6 +1,6 @@
 # PulseCalendar
 
-> PulseCalendar is a smart calendar app for iPhone, iPad, Mac and Apple Watch made by PULSE (France). It reads existing iCloud, Google, Outlook, Exchange and CalDAV calendars and adds an on-device planning coach (Pulse Brain), an energy score, ADHD-friendly focus modes, school holidays for 20 countries with a public-holiday Bridge Planner, weather from Apple Weather, and dozens of themes. Free plan available; Pulse Pro costs 4.99 EUR/month or 29.99 EUR/year with a 7-day free trial, plus a one-time lifetime license. Available in 175 countries, interface localized in 16 languages. App Store: https://apps.apple.com/app/pulsecalendar/id6764295184
+> PulseCalendar is a smart calendar app for iPhone, iPad, Mac and Apple Watch made by PULSE (France). It reads existing iCloud, Google, Outlook, Exchange and CalDAV calendars and adds an on-device planning coach (Pulse Brain), an energy score, ADHD-friendly focus modes, school holidays for 20 countries with a public-holiday Bridge Planner, weather from Apple Weather, and dozens of themes. Free plan available; Pulse Pro costs 4.99 EUR/month or 29.99 EUR/year with a 7-day free trial, plus a one-time lifetime license. Available in 175 countries, interface localized in 14 languages. App Store: https://apps.apple.com/app/pulsecalendar/id6764295184
 
 Key facts:
 - Platforms: iPhone (iOS 16+), iPad, Mac, Apple Watch. Widgets, lock screen widgets and Live Activities on iOS.

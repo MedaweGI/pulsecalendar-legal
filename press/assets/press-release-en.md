@@ -1,28 +1,26 @@
-# Press Release
+# Press release
 
-## Pulse Calendar is now native on iPhone, iPad and Mac — with the weather, your rhythm, and on-device AI in every day
+## Pulse Calendar is ready for iPhone Duo: your whole week on one screen
 
-**France — Summer 2026** — Pulse Calendar, the smart, privacy-first calendar, is now a true Universal app across iPhone, iPad and Mac. Version 2.1 brings a hand-crafted big-screen experience — a Mac menu bar, keyboard shortcuts and multi-column views — on top of the 2.0 foundation, and it's built on Apple frameworks end to end.
+**Paris, October 2026.** Pulse Calendar, the calendar for iPhone, iPad, Mac and Apple Watch that helps you get things done, is ready for iPhone Duo from its launch on October 23. Version 2.3.4 is available now on the App Store.
 
-Where most calendars are passive grids, Pulse Calendar acts like a coach. Its on-device AI gives every day a **Pulse Score**, lets users talk to their schedule in plain words, and helps them beat procrastination — all without an account, and with events staying on the device.
+Folded, Pulse respects the new vertical bar and keeps its full interface on the outer display. Unfolded, the Week view shows all seven days at once, the Month view becomes a large grid with the weather, and Focus switches to two columns, just like on iPad.
 
-### Highlights
-- **Native on iPad & Mac** — a Universal app with a layout made for the big screen: Mac menu bar, keyboard shortcuts and multi-column views.
-- **Weather in your calendar (WeatherKit)** — each day's temperature and conditions, right in every view, plus a smart heads-up that proposes a better slot when an outdoor plan meets the rain.
-- **Your Rhythm (HealthKit)** — see how intense your days are, drawn from Apple Health. Observational, never medical.
-- **Your Month** — a personal recap of where you went, with whom, and your time per activity.
-- **Memory** — keep a note for each contact, surfaced at the right moment.
-- **Ask Pulse** — ask your schedule a question in natural language, fully on-device.
+The same update makes notifications more useful: one reminder per appointment, a heads-up when it's time to leave, a morning briefing and an evening preview of tomorrow. Typing in Chinese, Japanese and Korean is smooth again.
 
-### Built on Apple technologies
-Pulse showcases **WeatherKit, HealthKit, WidgetKit & Live Activities, App Intents** (Siri, Shortcuts, Focus filters), **SwiftUI, Mac Catalyst** and **StoreKit 2** — localized in 16 languages.
+### What Pulse does
+- Puts the weather inside every day, with a nudge to move outdoor plans away from the rain (WeatherKit).
+- Notices what comes back, like the dentist or a haircut, and reminds you when it's time.
+- Starts a focus timer in one tap when you keep putting something off, with a Live Activity on the Lock Screen.
+- Answers questions about your schedule with Apple's on-device AI (Foundation Models): no account, and your questions never leave your iPhone.
 
 ### About Pulse Calendar
-Pulse Calendar is a smart, privacy-first calendar for iPhone, iPad and Mac, available in 16 languages. Its on-device AI scores the day's balance, answers questions in plain words, and fights procrastination — no account, no tracking, no ads. Events stay on the device, synced through the user's own iCloud.
+Pulse Calendar is developed by Mehdi Salmi, a solo developer in Paris, and published by PULSE. It is native on iPhone, iPad, Mac and Apple Watch, available in 14 languages, and built on Apple frameworks end to end: Foundation Models, WeatherKit, HealthKit, WidgetKit and Live Activities, App Intents, SwiftUI, Mac Catalyst and StoreKit 2.
 
-### Availability & pricing
-Free on the App Store. Pulse Pro is €4.99/month or €29.99/year, with a 7-day free trial.
+### Availability and pricing
+Free on the App Store in 175 countries. Pulse Pro is €4.99 a month or €29.99 a year ($3.99 / $24.99), or €44.99 once for life, with a 7-day free trial.
 App Store: https://apps.apple.com/app/id6764295184
+20-second video and images: https://pulsecalendar.app/press/#iphone-duo
 
 ---
 **Press contact:** contact@pulsecalendar.app · **Website:** https://pulsecalendar.app

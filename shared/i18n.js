@@ -1,5 +1,5 @@
 /* PulseCalendar website i18n engine.
- * Runtime translation of a French-default static site into 16 languages,
+ * Runtime translation of a French-default static site into its 10 site languages,
  * with a flag language switcher injected into the nav header.
  *
  * Design:
@@ -35,9 +35,13 @@
   function norm(s) { return s.replace(/\s+/g, " ").trim(); }
 
   // Read the translation table lazily so script load-order never matters.
+  var US_DICT = null;                          // anglais + surcouche « en-US » (prix en dollars)
   function dictFor(lang) {
-    if (lang === "en-US") lang = "en";           // même texte que l'anglais
     var DATA = (typeof window !== "undefined" && window.PC_I18N) ? window.PC_I18N : {};
+    if (lang === "en-US") {
+      if (!US_DICT && DATA.en) US_DICT = Object.assign({}, DATA.en, DATA["en-US"] || {});
+      return US_DICT;
+    }
     return (lang !== "fr" && DATA[lang]) ? DATA[lang] : null;
   }
 

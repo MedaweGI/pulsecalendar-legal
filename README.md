@@ -82,6 +82,6 @@ sitemap.xml
 
 ## Plateformes
 
-- **iPhone** : disponible au lancement (iOS 17+)
+- **iPhone** : disponible au lancement (iOS 16+)
 - **iPad** : bientôt
 - **Mac** : bientôt
