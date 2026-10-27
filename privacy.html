@@ -5,141 +5,236 @@
 <meta http-equiv="Content-Security-Policy" content="default-src 'self'; base-uri 'self'; object-src 'none'; upgrade-insecure-requests; script-src 'self' https://plausible.io https://unpkg.com https://www.google.com https://www.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' data: https://fonts.gstatic.com; connect-src 'self' https://plausible.io https://*.googleapis.com https://www.google.com https://www.gstatic.com https://europe-west1-pulsecalendar-9b47f.cloudfunctions.net; frame-src https://www.google.com; form-action 'self'; manifest-src 'self'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Politique de confidentialité — PulseCalendar</title>
-<meta name="description" content="PulseCalendar stocke tes événements et habitudes sur ton iPhone par défaut. Les calendriers partagés et sondages Doodle (optionnels) utilisent Firebase Firestore — anonyme, sans compte requis. Aucun tracker publicitaire."/>
+<title>Politique de confidentialité · Pulse Calendar</title>
+<meta name="description" content="Pulse Calendar garde tes événements et tes habitudes sur ton appareil. Calendriers partagés, sondages et liens de réservation passent par Firebase, sans compte. Aucune publicité, aucun pistage. Privacy policy in English below."/>
 <link rel="canonical" href="https://pulsecalendar.app/privacy"/>
 <meta name="robots" content="index,follow"/>
-<meta property="og:title" content="Politique de confidentialité — PulseCalendar"/>
-<meta property="og:description" content="Stockage local par défaut. Pas de tracking publicitaire. Calendriers partagés et Doodle polls via Firebase (anonyme)."/>
+<meta property="og:title" content="Politique de confidentialité · Pulse Calendar"/>
+<meta property="og:description" content="Tes données restent sur ton appareil. Aucune publicité, aucun pistage. Privacy policy in English included."/>
 <meta property="og:image" content="https://pulsecalendar.app/og-cover.jpg"/>
 <meta property="og:image:width" content="1200"/>
 <meta property="og:image:height" content="630"/>
 <meta name="twitter:card" content="summary_large_image"/>
 <meta name="twitter:site" content="@PulseCalendar"/>
-<meta name="twitter:title" content="Politique de confidentialité — PulseCalendar"/>
-<meta name="twitter:description" content="Stockage local par défaut. Pas de tracking publicitaire. Firebase anonyme uniquement pour calendriers partagés."/>
+<meta name="twitter:title" content="Politique de confidentialité · Pulse Calendar"/>
+<meta name="twitter:description" content="Tes données restent sur ton appareil. Aucune publicité, aucun pistage."/>
 <meta name="twitter:image" content="https://pulsecalendar.app/og-cover.jpg"/>
 <meta name="theme-color" content="#6244D6"/>
 <link rel="preconnect" href="https://fonts.googleapis.com"/>
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400;500;600;700;800&family=Geist+Mono:wght@400;500;600&display=swap" rel="stylesheet"/>
-<link rel="stylesheet" href="shared/seo-page.css"/>
-<link rel="stylesheet" href="shared/theme.css?v=flags1"/>
-<script src="shared/theme.js"></script>
-
-<!-- ===== PLAUSIBLE ANALYTICS (privacy-friendly, no cookies, no banner RGPD) ===== -->
+<link rel="stylesheet" href="/shared/seo-page.css"/>
+<link rel="stylesheet" href="/shared/theme.css?v=flags1"/>
+<script src="/shared/theme.js"></script>
 <script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
+<style>
+  .lang-switch { text-align: right; margin: 0 0 8px; font-size: 14px; font-weight: 600; }
+  .lang-switch a { color: var(--violet-300); text-decoration: none; }
+  .updated { font-family: 'Geist Mono', monospace; font-size: 13px; color: var(--text-3); margin-top: 12px; }
+  .note { font-size: 14px; color: var(--text-3); margin-top: 12px; }
+  .content table { display: block; overflow-x: auto; }
+</style>
 </head>
 <body>
 <div id="nav-mount"></div>
 
 <nav class="breadcrumb">
-  <a href="index.html">Accueil</a> / <span>Confidentialité</span>
+  <a href="/">Accueil</a> / <span>Confidentialité</span>
 </nav>
 
 <header class="hero">
-  <div class="hero-eyebrow"><span>🔒</span> Privacy by design · stockage local par défaut</div>
+  <p class="lang-switch"><a href="#en">English ↓</a></p>
+  <div class="hero-eyebrow"><span>🔒</span> Confidentialité dès la conception · stockage local par défaut</div>
   <h1>Politique de <span class="gradient">confidentialité</span>.</h1>
-  <p class="lede">PulseCalendar stocke tes événements, habitudes et calculs Pulse Brain <strong>sur ton iPhone par défaut</strong>. Quand tu choisis de partager un calendrier ou créer un sondage Doodle, ces données utilisent Firebase Firestore — anonyme, sans compte requis. Pas de tracking publicitaire. Voici exactement ce que ça veut dire — sans jargon.</p>
-  <p style="font-family:'Geist Mono',monospace;font-size:13px;color:var(--text-3);margin-top:12px">Dernière mise à jour : 15 mai 2026</p>
+  <p class="lede">Pulse Calendar garde tes événements, tes habitudes et les calculs de Pulse Brain <strong>sur ton appareil</strong>. Trois fonctions que tu choisis d'utiliser, le calendrier partagé, le sondage et le lien de réservation, passent par nos serveurs Firebase, sans compte ni mot de passe. Aucune publicité, aucun pistage. Voici le détail, sans jargon.</p>
+  <p class="updated">Dernière mise à jour : 27 octobre 2026</p>
 </header>
 
 <main class="content">
 
-<h2>TL;DR — Le résumé en 5 points</h2>
+<h2>L'essentiel en 5 points</h2>
 <ul>
-  <li><strong>Tes événements de calendrier restent dans iCloud / Google / Outlook</strong> (selon les comptes que tu connectes) — via les API natives iOS. Ils ne sont copiés ailleurs <strong>que si tu choisis explicitement</strong> de partager un calendrier avec un proche (un miroir minimal va alors sur Firebase Firestore).</li>
-  <li><strong>Pulse Brain (coach intelligent) tourne 100 % en local</strong> via les modèles on-device et le Neural Engine. Aucun token n'est envoyé à OpenAI, Anthropic, ou un quelconque serveur LLM.</li>
-  <li><strong>Aucun tracker publicitaire.</strong> Pas de Google Analytics, pas de Mixpanel, pas de Facebook SDK, pas d'IDFA. <strong>Firebase Firestore</strong> est utilisé uniquement pour 2 features optionnelles (calendriers partagés + sondages Doodle), et <strong>Firebase Crashlytics</strong> pour les crash reports anonymes.</li>
-  <li><strong>Aucun compte requis</strong> pour utiliser PulseCalendar. Tu peux acheter Pulse Pro avec Apple ID — c'est tout.</li>
-  <li><strong>Tu peux tout supprimer</strong> en désinstallant l'app. Pour effacer les données Firebase associées (calendriers partagés, polls Doodle), écris-nous à <a href="mailto:Contact@PulseCalendar.app">Contact@PulseCalendar.app</a>.</li>
+  <li><strong>Tes événements restent dans iCloud, Google ou Outlook</strong>, selon les comptes reliés à ton iPhone. Pulse les lit avec les outils d'Apple et ne les copie sur ses serveurs que si tu partages un calendrier.</li>
+  <li><strong>L'intelligence de Pulse tourne sur ton appareil.</strong> Pulse Brain, Ask Pulse et la création rapide utilisent les modèles d'Apple sur ton iPhone. Rien n'est envoyé à OpenAI, Anthropic, Google ni à aucun service d'IA en ligne.</li>
+  <li><strong>Aucune publicité ni aucun pistage.</strong> Pas de Google Analytics, pas de Crashlytics, pas de SDK Facebook, pas d'identifiant publicitaire (IDFA).</li>
+  <li><strong>Nos serveurs ne servent qu'à trois fonctions optionnelles</strong> : les calendriers partagés, les sondages et les liens de réservation Pulse Booking. Ils sont hébergés par Firebase (Google Cloud).</li>
+  <li><strong>Aucun compte à créer.</strong> Pour effacer les données envoyées par ces trois fonctions, écris-nous à <a href="mailto:contact@pulsecalendar.app">contact@pulsecalendar.app</a>.</li>
 </ul>
 
 <h2>1. Qui est responsable du traitement ?</h2>
-<p>L'éditeur de PulseCalendar est responsable de traitement au sens du <strong>RGPD</strong>. Pour toute question : <a href="mailto:Contact@PulseCalendar.app">Contact@PulseCalendar.app</a>.</p>
+<p>Pulse Calendar est édité par <strong>PULSE</strong>, SASU au capital de 1 €, SIREN 104 793 179, responsable du traitement au sens du <strong>RGPD</strong>. Pour toute question : <a href="mailto:contact@pulsecalendar.app">contact@pulsecalendar.app</a>.</p>
 
 <h2>2. Quelles données sont traitées ?</h2>
 
-<h3>2.1 Données qui restent sur ton iPhone</h3>
+<h3>2.1 Données qui restent chez toi</h3>
 <table>
-  <thead><tr><th>Donnée</th><th>Où elle est stockée</th></tr></thead>
+  <thead><tr><th>Donnée</th><th>Où elle se trouve</th></tr></thead>
   <tbody>
-    <tr><td>Tes événements de calendrier</td><td>iCloud / Google / Outlook (selon le compte que tu connectes) — via les API natives iOS</td></tr>
-    <tr><td>Tes participants / contacts liés</td><td>App Contacts iOS</td></tr>
-    <tr><td>Tes 3 priorités du jour, focus blocks, Pulse Score</td><td>Local sur ton iPhone (CoreData)</td></tr>
-    <tr><td>Tes pics d'énergie / habitudes apprises</td><td>Local sur ton iPhone (CoreData)</td></tr>
-    <tr><td>Tes préférences (thème, fériés actifs, etc.)</td><td>Local sur ton iPhone (UserDefaults)</td></tr>
-    <tr><td>Calculs Pulse Brain (briefing, optimisation)</td><td>Apple Neural Engine — sur ton iPhone uniquement</td></tr>
+    <tr><td>Tes événements de calendrier</td><td>iCloud, Google ou Outlook, selon les comptes reliés à ton iPhone, lus avec les outils d'Apple</td></tr>
+    <tr><td>Tes contacts et participants</td><td>L'app Contacts de ton iPhone</td></tr>
+    <tr><td>Tes priorités, notes, séances de concentration, suivis, Pulse Score, habitudes apprises et réglages</td><td>Sur ton appareil, et dans ton iCloud privé si tu actives « Sauvegarder sur iCloud »</td></tr>
+    <tr><td>Ton journal et les photos jointes à tes notes</td><td>Ton iCloud privé (CloudKit). Nous n'y avons pas accès.</td></tr>
+    <tr><td>Ta position, pour la météo et les temps de trajet</td><td>Utilisée sur ton appareil et envoyée seulement à Apple (WeatherKit et Plans) pour obtenir la météo et les itinéraires. Jamais à nos serveurs.</td></tr>
+    <tr><td>Les calculs de Pulse Brain et d'Ask Pulse</td><td>Sur ton appareil, avec les modèles d'Apple</td></tr>
   </tbody>
 </table>
 
-<h3>2.2 Données qu'on reçoit (oui, il y en a un peu)</h3>
+<h3>2.2 Données que nous recevons, seulement si tu utilises la fonction</h3>
 <table>
-  <thead><tr><th>Donnée</th><th>Pourquoi / Quand</th><th>Sous-traitant</th></tr></thead>
+  <thead><tr><th>Donnée</th><th>Quand et pourquoi</th><th>Prestataire</th></tr></thead>
   <tbody>
-    <tr><td>Email (si tu t'inscris à la newsletter de pré-lancement)</td><td>Te prévenir du lancement App Store</td><td>Apple iCloud Mail / Brevo</td></tr>
-    <tr><td>Identifiants App Store anonymes (achat Pulse Pro)</td><td>Gérer ton abonnement</td><td>Apple App Store</td></tr>
-    <tr><td>Crash reports anonymisés</td><td>Corriger les bugs (diagnostic)</td><td>Firebase Crashlytics (Google) / Apple TestFlight</td></tr>
-    <tr><td>Calendrier partagé (events, participants, titre)</td><td><strong>Uniquement si tu actives le partage</strong> d'un calendrier avec un proche</td><td>Firebase Firestore (Google Cloud)</td></tr>
-    <tr><td>Sondage Doodle (poll, options, votes)</td><td><strong>Uniquement si tu crées un sondage Doodle</strong></td><td>Firebase Firestore (Google Cloud)</td></tr>
+    <tr><td>Calendrier partagé : titre, événements, participants</td><td><strong>Seulement si tu partages un calendrier</strong> avec un proche</td><td>Firebase Firestore (Google Cloud)</td></tr>
+    <tr><td>Sondage : question, options, votes</td><td><strong>Seulement si tu crées un sondage</strong></td><td>Firebase Firestore (Google Cloud)</td></tr>
+    <tr><td>Lien de réservation : tes créneaux libres, et pour chaque réservation le nom et l'e-mail de la personne, plus son téléphone, son adresse ou sa réponse si elle les donne</td><td><strong>Seulement si tu crées un lien de réservation</strong> Pulse Booking</td><td>Firebase Firestore et Cloud Functions (Google Cloud). La page de réservation est protégée par Google reCAPTCHA.</td></tr>
+    <tr><td>Identifiant anonyme</td><td>Sécuriser ces trois fonctions, sans compte ni e-mail</td><td>Firebase Authentication et App Check (Google Cloud)</td></tr>
+    <tr><td>Jeton de notification</td><td>Te prévenir quand quelqu'un réserve un créneau sur ton lien</td><td>Firebase Cloud Messaging (Google Cloud)</td></tr>
+    <tr><td>Achats Pulse Pro : identifiant anonyme et transactions App Store</td><td>Vérifier ton abonnement, y compris sur un nouvel iPhone</td><td>Apple App Store, RevenueCat</td></tr>
+    <tr><td>Rapports de plantage</td><td>Corriger les bugs, seulement si tu as accepté de partager les analyses avec les développeurs dans les réglages de ton iPhone</td><td>Apple</td></tr>
   </tbody>
 </table>
-<p style="font-size:14px;color:var(--text-3);margin-top:12px"><em>Firebase est un service de Google Cloud. Les données partagées sont accessibles uniquement aux participants invités via Apple ID anonyme. Aucun compte tiers requis.</em></p>
+<p class="note"><em>Les données partagées ne sont lisibles que par les personnes que tu invites. Des règles de sécurité vérifiées par le serveur limitent chaque lecture et chaque écriture.</em></p>
 
-<h2>3. Ce qu'on ne fait jamais</h2>
+<h2>3. Ce que nous ne faisons jamais</h2>
 <ul>
-  <li>❌ Envoyer tes événements de calendrier en arrière-plan sans ton accord (seul le partage explicite déclenche un upload).</li>
-  <li>❌ Envoyer le contenu de tes événements à une intelligence cloud (ChatGPT, Claude, Gemini, etc.). Pulse Brain reste 100 % on-device.</li>
-  <li>❌ Vendre ou partager tes données avec des annonceurs ou data brokers.</li>
-  <li>❌ Te tracer entre apps (pas d'IDFA, pas de fingerprinting).</li>
-  <li>❌ Demander un compte ou un mot de passe pour utiliser PulseCalendar.</li>
+  <li>Envoyer tes événements sur nos serveurs sans que tu le demandes. Seul un partage le déclenche.</li>
+  <li>Envoyer tes événements à une IA en ligne (ChatGPT, Claude, Gemini ou autre).</li>
+  <li>Vendre ou transmettre tes données à des annonceurs ou à des courtiers en données.</li>
+  <li>Te suivre d'une app à l'autre : pas d'IDFA, pas d'empreinte de ton appareil.</li>
+  <li>Te demander un compte ou un mot de passe.</li>
 </ul>
 
-<h2>4. Tes droits RGPD</h2>
-<p>Comme PulseCalendar ne stocke pas tes données sur ses serveurs, l'essentiel des droits RGPD se règle directement dans l'app :</p>
+<h2>4. Tes droits</h2>
+<p>Comme l'essentiel de tes données reste chez toi, la plupart de tes droits s'exercent directement :</p>
 <ul>
-  <li><strong>Droit d'accès / portabilité</strong> : tes événements sont déjà chez toi (iCloud / Google / Outlook). Export ICS natif possible.</li>
-  <li><strong>Droit à l'effacement</strong> : désinstalle l'app et toutes les données locales partent. Pour effacer les données partagées via Firebase (calendriers partagés, sondages Doodle), écris à <a href="mailto:Contact@PulseCalendar.app">Contact@PulseCalendar.app</a>.</li>
-  <li><strong>Droit d'opposition au newsletter</strong> : lien de désinscription dans chaque mail, ou écris-nous.</li>
-  <li><strong>Droit de réclamation</strong> : tu peux saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a> en France ou ton autorité locale (ICO au Royaume-Uni, AEPD en Espagne, BfDI en Allemagne, OPC au Canada, FTC aux États-Unis, OAIC en Australie, PPC au Japon).</li>
+  <li><strong>Accès et portabilité</strong> : tes événements sont déjà dans ton calendrier, et Pulse peut les exporter au format .ics.</li>
+  <li><strong>Effacement</strong> : supprimer l'app efface toutes ses données locales. Pour les calendriers partagés, les sondages et les réservations, écris à <a href="mailto:contact@pulsecalendar.app">contact@pulsecalendar.app</a>. Nous les supprimons dans le délai d'un mois prévu par le RGPD.</li>
+  <li><strong>Réclamation</strong> : tu peux saisir la <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a> en France ou l'autorité de ton pays (ICO au Royaume-Uni, AEPD en Espagne, BfDI en Allemagne, OPC au Canada, FTC aux États-Unis, OAIC en Australie, PPC au Japon).</li>
 </ul>
 
-<h2>5. Cookies et trackers sur ce site</h2>
-<p>Ce site web utilise <strong>uniquement</strong> des cookies techniques (préférences linguistiques, thème). Aucun cookie publicitaire, aucun tracker analytics tiers. La police Geist est servie depuis Google Fonts (Google peut connaître ton IP au chargement de la police — voir leur <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique</a>).</p>
+<h2>5. Ce site : cookies et mesure d'audience</h2>
+<p>Ce site n'utilise aucun cookie publicitaire. Il garde seulement ta langue et ton thème dans ton navigateur. Il mesure son audience avec Plausible, un outil sans cookie qui ne collecte aucune donnée personnelle. La police Geist vient de Google Fonts, qui voit ton adresse IP au chargement. La page de réservation utilise Google reCAPTCHA pour bloquer les robots, et Google peut alors déposer ses propres cookies (voir la <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">politique de Google</a>).</p>
 
 <h2>6. Sécurité</h2>
-<p>Comme la majorité de tes données ne quitte pas ton iPhone, leur sécurité dépend d'iOS : code, Face ID / Touch ID, chiffrement matériel Apple. Sur la newsletter et les achats App Store, c'est Apple et Brevo qui appliquent le chiffrement standard de l'industrie (TLS 1.3, AES-256 au repos).</p>
+<p>Les données restées sur ton appareil sont protégées par iOS : code, Face ID ou Touch ID, chiffrement matériel d'Apple. Les échanges avec Firebase, RevenueCat et Apple sont chiffrés, et l'accès aux données Firebase est contrôlé par des règles de sécurité vérifiées côté serveur.</p>
 
 <h2>7. Mineurs</h2>
-<p>PulseCalendar n'est pas destiné aux moins de 13 ans (ou âge minimum local pour les services numériques). Nous ne collectons sciemment aucune donnée d'enfant.</p>
+<p>Pulse Calendar n'est pas destiné aux moins de 13 ans, ou à l'âge minimum fixé dans ton pays pour les services numériques. Nous ne collectons sciemment aucune donnée d'enfant.</p>
 
-<h2>8. Modifications de cette politique</h2>
-<p>Si on change quelque chose de significatif, on prévient via la newsletter de lancement et on met à jour la date en haut de cette page. Les changements mineurs (clarifications) peuvent être appliqués sans préavis.</p>
+<h2>8. Modifications</h2>
+<p>Si nous changeons quelque chose d'important, nous mettons à jour cette page et la date en haut. Les simples clarifications peuvent être faites sans préavis.</p>
 
 <h2>9. Nous contacter</h2>
-<p>Pour toute question, demande RGPD ou commentaire sur cette politique : <a href="mailto:Contact@PulseCalendar.app">Contact@PulseCalendar.app</a>.</p>
+<p>Pour toute question ou demande liée à tes données : <a href="mailto:contact@pulsecalendar.app">contact@pulsecalendar.app</a>.</p>
 
+</main>
+
+<a id="en"></a>
+<header class="hero" lang="en">
+  <div class="hero-eyebrow"><span>🔒</span> Private by design · stored on your device by default</div>
+  <h1>Privacy <span class="gradient">Policy</span>.</h1>
+  <p class="lede">Pulse Calendar keeps your events, your habits and Pulse Brain's calculations <strong>on your device</strong>. Three features you choose to use, shared calendars, polls and booking links, go through our Firebase servers, with no account and no password. No ads, no tracking. Here are the details, in plain words.</p>
+  <p class="updated">Last updated: October 27, 2026</p>
+</header>
+
+<section class="content" lang="en">
+
+<h2>The essentials in 5 points</h2>
+<ul>
+  <li><strong>Your events stay in iCloud, Google or Outlook</strong>, depending on the accounts on your iPhone. Pulse reads them through Apple's tools and only copies them to its servers if you share a calendar.</li>
+  <li><strong>Pulse's intelligence runs on your device.</strong> Pulse Brain, Ask Pulse and Quick Add use Apple's on-device models. Nothing is sent to OpenAI, Anthropic, Google or any online AI service.</li>
+  <li><strong>No ads, no tracking.</strong> No Google Analytics, no Crashlytics, no Facebook SDK, no advertising identifier (IDFA).</li>
+  <li><strong>Our servers are only used for three optional features</strong>: shared calendars, polls and Pulse Booking links. They are hosted by Firebase (Google Cloud).</li>
+  <li><strong>No account needed.</strong> To erase the data sent by these three features, email us at <a href="mailto:contact@pulsecalendar.app">contact@pulsecalendar.app</a>.</li>
+</ul>
+
+<h2>1. Who is responsible for your data?</h2>
+<p>Pulse Calendar is published by <strong>PULSE</strong>, a French SASU with a share capital of €1, SIREN 104 793 179, the data controller under the <strong>GDPR</strong>. For any question: <a href="mailto:contact@pulsecalendar.app">contact@pulsecalendar.app</a>.</p>
+
+<h2>2. What data is processed?</h2>
+
+<h3>2.1 Data that stays with you</h3>
+<table>
+  <thead><tr><th>Data</th><th>Where it lives</th></tr></thead>
+  <tbody>
+    <tr><td>Your calendar events</td><td>iCloud, Google or Outlook, depending on the accounts on your iPhone, read through Apple's tools</td></tr>
+    <tr><td>Your contacts and attendees</td><td>Your iPhone's Contacts app</td></tr>
+    <tr><td>Your priorities, notes, focus sessions, follow-ups, Pulse Score, learned habits and settings</td><td>On your device, and in your private iCloud if you turn on "Back up to iCloud"</td></tr>
+    <tr><td>Your journal and photos attached to notes</td><td>Your private iCloud (CloudKit). We have no access to it.</td></tr>
+    <tr><td>Your location, for weather and travel times</td><td>Used on your device and only sent to Apple (WeatherKit and Maps) to get the weather and directions. Never to our servers.</td></tr>
+    <tr><td>Pulse Brain and Ask Pulse calculations</td><td>On your device, with Apple's models</td></tr>
+  </tbody>
+</table>
+
+<h3>2.2 Data we receive, only if you use the feature</h3>
+<table>
+  <thead><tr><th>Data</th><th>When and why</th><th>Provider</th></tr></thead>
+  <tbody>
+    <tr><td>Shared calendar: title, events, attendees</td><td><strong>Only if you share a calendar</strong> with someone</td><td>Firebase Firestore (Google Cloud)</td></tr>
+    <tr><td>Poll: question, options, votes</td><td><strong>Only if you create a poll</strong></td><td>Firebase Firestore (Google Cloud)</td></tr>
+    <tr><td>Booking link: your free slots, and for each booking the person's name and email, plus their phone, address or answer if they provide them</td><td><strong>Only if you create a Pulse Booking link</strong></td><td>Firebase Firestore and Cloud Functions (Google Cloud). The booking page is protected by Google reCAPTCHA.</td></tr>
+    <tr><td>Anonymous identifier</td><td>Securing these three features, with no account or email</td><td>Firebase Authentication and App Check (Google Cloud)</td></tr>
+    <tr><td>Notification token</td><td>Letting you know when someone books a slot on your link</td><td>Firebase Cloud Messaging (Google Cloud)</td></tr>
+    <tr><td>Pulse Pro purchases: anonymous identifier and App Store transactions</td><td>Checking your subscription, including on a new iPhone</td><td>Apple App Store, RevenueCat</td></tr>
+    <tr><td>Crash reports</td><td>Fixing bugs, only if you agreed to share analytics with developers in your iPhone settings</td><td>Apple</td></tr>
+  </tbody>
+</table>
+<p class="note"><em>Shared data can only be read by the people you invite. Server-side security rules check every read and write.</em></p>
+
+<h2>3. What we never do</h2>
+<ul>
+  <li>Send your events to our servers without you asking. Only sharing does that.</li>
+  <li>Send your events to an online AI (ChatGPT, Claude, Gemini or any other).</li>
+  <li>Sell or pass on your data to advertisers or data brokers.</li>
+  <li>Track you across apps: no IDFA, no device fingerprinting.</li>
+  <li>Ask you for an account or a password.</li>
+</ul>
+
+<h2>4. Your rights</h2>
+<p>Since most of your data stays with you, most of your rights work directly:</p>
+<ul>
+  <li><strong>Access and portability</strong>: your events are already in your calendar, and Pulse can export them as .ics files.</li>
+  <li><strong>Erasure</strong>: deleting the app erases all its local data. For shared calendars, polls and bookings, email <a href="mailto:contact@pulsecalendar.app">contact@pulsecalendar.app</a>. We delete them within the one month set by the GDPR.</li>
+  <li><strong>Complaints</strong>: you can contact the <a href="https://www.cnil.fr" target="_blank" rel="noopener">CNIL</a> in France or the authority in your country (ICO in the UK, AEPD in Spain, BfDI in Germany, OPC in Canada, FTC in the United States, OAIC in Australia, PPC in Japan).</li>
+</ul>
+
+<h2>5. This website: cookies and audience measurement</h2>
+<p>This website uses no advertising cookies. It only keeps your language and theme in your browser. It measures its audience with Plausible, a cookie-free tool that collects no personal data. The Geist font comes from Google Fonts, which sees your IP address when it loads. The booking page uses Google reCAPTCHA to block bots, and Google may set its own cookies there (see <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's policy</a>).</p>
+
+<h2>6. Security</h2>
+<p>Data on your device is protected by iOS: passcode, Face ID or Touch ID, Apple's hardware encryption. Exchanges with Firebase, RevenueCat and Apple are encrypted, and access to Firebase data is controlled by server-side security rules.</p>
+
+<h2>7. Children</h2>
+<p>Pulse Calendar is not intended for children under 13, or the minimum age for digital services in your country. We do not knowingly collect any data from children.</p>
+
+<h2>8. Changes</h2>
+<p>If we change anything important, we update this page and the date at the top. Simple clarifications may be made without notice.</p>
+
+<h2>9. Contact us</h2>
+<p>For any question or request about your data: <a href="mailto:contact@pulsecalendar.app">contact@pulsecalendar.app</a>.</p>
+
+</section>
+
+<div class="content">
 <div class="related">
   <h2>Pour aller plus loin</h2>
   <div class="related-grid">
-    <a href="index.html#privacy">Section Privacy de la home →</a>
-    <a href="features/ai-calendar.html">Coach intelligent on-device →</a>
-    <a href="features/adhd-calendar.html">Confidentialité médicale →</a>
-    <a href="index.html#faq">FAQ →</a>
+    <a href="/#privacy">Confidentialité, sur l'accueil →</a>
+    <a href="/features/ai-calendar.html">L'IA sur ton appareil →</a>
+    <a href="/terms/">Conditions d'utilisation →</a>
+    <a href="/#faq">FAQ →</a>
   </div>
 </div>
 
 <div class="final-cta">
   <h2>Le calendrier le plus personnel. Et le plus discret.</h2>
-  <a href="index.html#cta" class="btn-appstore">
+  <a href="https://apps.apple.com/app/pulsecalendar/id6764295184" class="btn-appstore" target="_blank" rel="noopener">
     <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
     <span class="as-text"><small>Télécharger sur</small><strong>App Store</strong></span>
   </a>
 </div>
-
-</main>
+</div>
 
 <div id="footer-mount"></div>
-<script src="shared/nav-footer.js"></script>
+<script src="/shared/nav-footer.js"></script>
 </body>
 </html>
