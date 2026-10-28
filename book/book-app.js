@@ -132,6 +132,14 @@ async function load() {
 let calMonth = new Date();
 calMonth.setDate(1);
 
+// Jour dans le fuseau de l'invité (AAAA-MM-JJ). toISOString() donnait le jour UTC :
+// en France, la case du 31 affichait les créneaux du 30 (et le 30 ceux du 29) ;
+// aux États-Unis, les créneaux du soir glissaient au lendemain.
+function localDayKey(d) {
+  const p = n => String(n).padStart(2, '0');
+  return `${d.getFullYear()}-${p(d.getMonth() + 1)}-${p(d.getDate())}`;
+}
+
 function renderCalendar() {
   const month = calMonth.getMonth();
   const year = calMonth.getFullYear();
@@ -161,8 +169,8 @@ function renderCalendar() {
   const daysInMonth = new Date(year, month + 1, 0).getDate();
   for (let d = 1; d <= daysInMonth; d++) {
     const date = new Date(year, month, d);
-    const dateKey = date.toISOString().slice(0, 10);
-    const hasSlots = slots.some(s => s.start.toISOString().slice(0, 10) === dateKey);
+    const dateKey = localDayKey(date);
+    const hasSlots = slots.some(s => localDayKey(s.start) === dateKey);
     const isPast = date < new Date(new Date().setHours(0,0,0,0));
 
     const cell = document.createElement('div');
@@ -203,8 +211,8 @@ function selectDate(date) {
 }
 
 function renderSlots() {
-  const dayKey = selectedDate.toISOString().slice(0, 10);
-  const daySlots = slots.filter(s => s.start.toISOString().slice(0, 10) === dayKey);
+  const dayKey = localDayKey(selectedDate);
+  const daySlots = slots.filter(s => localDayKey(s.start) === dayKey);
   const friendly = selectedDate.toLocaleDateString('en-US', {
     weekday: 'short', month: 'short', day: 'numeric',
   });
