@@ -12,7 +12,7 @@ The same update makes notifications more useful: one reminder per appointment, a
 - Puts the weather inside every day, with a nudge to move outdoor plans away from the rain (WeatherKit).
 - Notices what comes back, like the dentist or a haircut, and reminds you when it's time.
 - Starts a focus timer in one tap when you keep putting something off, with a Live Activity on the Lock Screen.
-- Answers questions about your schedule with Apple's on-device AI (Foundation Models): no account, and your questions never leave your iPhone.
+- Answers questions about your schedule with Apple's AI (Foundation Models, plus Private Cloud Compute for longer requests): no account, and nothing is kept.
 
 ### About Pulse Calendar
 Pulse Calendar is developed by Mehdi Salmi, a solo developer in Paris, and published by PULSE. It is native on iPhone, iPad, Mac and Apple Watch, available in 14 languages, and built on Apple frameworks end to end: Foundation Models, WeatherKit, HealthKit, WidgetKit and Live Activities, App Intents, SwiftUI, Mac Catalyst and StoreKit 2.

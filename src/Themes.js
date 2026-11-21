@@ -134,6 +134,6 @@ function ThemesGallery() {
       fontFamily: 'Geist Mono, monospace',
       marginTop: 2
     }
-  }, "28 au total")));
+  }, "53 au total")));
 }
 window.ThemesGallery = ThemesGallery;

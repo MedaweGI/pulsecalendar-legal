@@ -5,11 +5,11 @@
 Key facts:
 - Platforms: iPhone (iOS 16+), iPad, Mac, Apple Watch. Widgets, lock screen widgets and Live Activities on iOS.
 - Works on top of existing calendar accounts: iCloud, Google Calendar, Outlook, Exchange, CalDAV. Nothing to migrate.
-- Privacy: local storage by default, the assistant (Pulse Brain / Ask Pulse) runs on-device, no ads, no ad tracking, no training on user data. Optional sharing and booking features use a secure Firebase backend.
+- Privacy: local storage by default, the assistant (Pulse Brain / Ask Pulse) only uses Apple's AI (on-device, or Apple's Private Cloud Compute for longer requests, nothing stored), no ads, no ad tracking, no training on user data. Optional sharing and booking features use a secure Firebase backend.
 - ADHD support: a "My Day" view built around 3 daily priorities, Eat the Frog mode, a 5-minute starter mode, staged reminders, and a Recovery Mode that pares a low-score day down to a few light tasks.
 - Planning: energy score, week Rhythm view, automatic buffer time, focus blocks, natural language event creation ("find me 2h for the gym this week").
-- Time off: school holidays auto-loaded for 20 countries (including France with zones A, B, C); Bridge Planner finds the best public-holiday bridges.
-- Extras: weather powered by Apple Weather, dozens of themes, Pulse Booking for sharing availabilities.
+- Time off: public holidays for 27 countries and school holidays for 20 countries auto-loaded (including France with zones A, B, C); Bridge Planner finds the best public-holiday bridges. Your region's weekend (Friday-Saturday in the Gulf), optional prayer times and Ramadan (calculated on device), Hijri or Persian secondary calendar.
+- Extras: weather powered by Apple Weather, more than 50 themes including Pure Black, Pulse Booking for sharing availabilities.
 
 Site pages are written in French.
 

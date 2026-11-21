@@ -32,16 +32,16 @@ const SCROLLY_STEPS = [
     bullets: [
       'Création en langage naturel (« déjeuner avec Marc demain 13h »)',
       'Détection auto des conflits',
-      'Jours fériés + congés scolaires · 8 pays',
+      'Jours fériés de 27 pays, congés scolaires de 20 pays',
       'Ne déplace jamais tes matchs en direct ni ce que tu regardes à la télé',
     ],
     img: 'assets/screens/month.png?v=9',
   },
   {
     num: '02',
-    eyebrow: 'Ask Pulse · 100 % sur ton iPhone',
+    eyebrow: 'Ask Pulse · avec l\'IA d\'Apple',
     title: 'Parle à ton agenda. Il te répond.',
-    desc: 'Pose une question à ton planning en langage naturel — « trouve-moi 2 h cette semaine », « quand suis-je libre avec Léa ? ». Tout est calculé sur ton iPhone, rien n\'est envoyé en ligne.',
+    desc: 'Pose une question à ton planning en langage naturel — « trouve-moi 2 h cette semaine », « quand suis-je libre avec Léa ? ». Tout passe par l\'IA d\'Apple, sur ton iPhone ou sur Private Cloud Compute, sans rien conserver.',
     bullets: [
       'Questions en langage naturel',
       'Réponses instantanées, créneaux concrets',

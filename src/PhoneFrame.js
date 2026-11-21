@@ -13,16 +13,16 @@ const SCROLLY_STEPS = [
     bullets: [
       "Cr\xE9ation en langage naturel (\xAB d\xE9jeuner avec Marc demain 13h \xBB)",
       "D\xE9tection auto des conflits",
-      "Jours f\xE9ri\xE9s + cong\xE9s scolaires \xB7 8 pays",
+      "Jours f\xE9ri\xE9s de 27 pays, cong\xE9s scolaires de 20 pays",
       "Ne d\xE9place jamais tes matchs en direct ni ce que tu regardes \xE0 la t\xE9l\xE9"
     ],
     img: "/assets/screens/month.webp?v=11"
   },
   {
     num: "02",
-    eyebrow: "Ask Pulse \xB7 100 % sur ton iPhone",
+    eyebrow: "Ask Pulse \xB7 avec l'IA d'Apple",
     title: "Parle \xE0 ton agenda. Il te r\xE9pond.",
-    desc: "Pose une question \xE0 ton planning en langage naturel \u2014 \xAB trouve-moi 2 h cette semaine \xBB, \xAB quand suis-je libre avec L\xE9a ? \xBB. Tout est calcul\xE9 sur ton iPhone, rien n'est envoy\xE9 en ligne.",
+    desc: "Pose une question \xE0 ton planning en langage naturel \u2014 \xAB trouve-moi 2 h cette semaine \xBB, \xAB quand suis-je libre avec L\xE9a ? \xBB. Tout passe par l'IA d'Apple, sur ton iPhone ou sur Private Cloud Compute, sans rien conserver.",
     bullets: [
       "Questions en langage naturel",
       "R\xE9ponses instantan\xE9es, cr\xE9neaux concrets",

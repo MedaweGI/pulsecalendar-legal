@@ -10,22 +10,24 @@
 - **Technologies Apple :** Foundation Models · WeatherKit · HealthKit · WidgetKit & Live Activities · App Intents (Siri, Raccourcis, Focus) · SwiftUI · Mac Catalyst · StoreKit 2
 - **Prix :** Gratuit · Pulse Pro 4,99 €/mois ou 29,99 €/an, ou 44,99 € une fois pour toutes · essai gratuit de 7 jours
 - **Langues :** 14 : français, anglais, allemand, espagnol, italien, portugais, russe, turc, grec, japonais, coréen, chinois simplifié, arabe, vietnamien
-- **Dernière version :** 2.3.4, octobre 2026
+- **Dernière version :** 2.3.8, novembre 2026
 - **App Store :** https://apps.apple.com/fr/app/id6764295184
 - **Site :** https://pulsecalendar.app
 - **Contact presse :** contact@pulsecalendar.app
 
 ## Présentation (courte)
-Pulse Calendar est un agenda pour iPhone, iPad, Mac et Apple Watch qui aide à passer à l'action. Il met la météo dans chaque journée, rappelle ce qui revient, lance un minuteur en un geste et répond à tes questions sur ton agenda avec l'IA d'Apple sur l'appareil. Sans compte ni pistage : tes événements restent sur tes appareils.
+Pulse Calendar est un agenda pour iPhone, iPad, Mac et Apple Watch qui aide à passer à l'action. Il met la météo dans chaque journée, rappelle ce qui revient, lance un minuteur en un geste et répond à tes questions sur ton agenda avec l'IA d'Apple. Sans compte ni pistage : tes événements restent sur tes appareils.
 
 ## Présentation (longue)
-Pulse Calendar est conçu par un développeur indépendant en France autour d'une idée : un agenda doit aider à agir, pas seulement dire où être. Il lit tes calendriers iCloud, Google et Outlook existants, met la météo de chaque jour dans tes vues (WeatherKit), repère ce qui revient, comme le dentiste, le coiffeur ou la vidange, et te prévient quand c'est le moment. Quand tu repousses quelque chose, « Je m'y mets » lance un minuteur en un geste, avec une activité en direct sur l'écran verrouillé. Ask Pulse répond à tes questions sur ton agenda avec les Foundation Models d'Apple : tes questions ne quittent pas ton iPhone. La version 2.3.4 est prête pour l'iPhone Duo dès sa sortie : plié, l'essentiel ; déplié, toute ta semaine sur un écran. Natif sur iPhone, iPad, Mac et Apple Watch, en 14 langues.
+Pulse Calendar est conçu par un développeur indépendant en France autour d'une idée : un agenda doit aider à agir, pas seulement dire où être. Il lit tes calendriers iCloud, Google et Outlook existants, met la météo de chaque jour dans tes vues (WeatherKit), repère ce qui revient, comme le dentiste, le coiffeur ou la vidange, et te prévient quand c'est le moment. Quand tu repousses quelque chose, « Je m'y mets » lance un minuteur en un geste, avec une activité en direct sur l'écran verrouillé. Ask Pulse répond à tes questions sur ton agenda avec l'IA d'Apple : sur ton iPhone, ou pour les demandes longues sur Private Cloud Compute, sans que rien soit conservé. Pulse est prêt pour l'iPhone Duo : plié, l'essentiel ; déplié, toute ta semaine sur un écran. La version 2.3.8 ajoute les heures de prière et le Ramadan, le calendrier hégirien ou persan, les jours fériés du Golfe et du Benelux, une barre du bas en bulles et les thèmes Noir Absolu. Natif sur iPhone, iPad, Mac et Apple Watch, en 14 langues.
 
 ## Fonctions clés
 - **La météo dans ton agenda (WeatherKit) :** la température et les conditions de chaque jour, avec un rappel pour décaler les sorties les jours de pluie.
 - **Ce qui revient :** Pulse repère ce qui revient et te prévient quand c'est le moment.
 - **Je m'y mets :** un minuteur en un geste, avec une activité en direct sur l'écran verrouillé.
-- **Ask Pulse :** parle à ton agenda en langage naturel, sur l'appareil.
+- **Ask Pulse :** parle à ton agenda en langage naturel, avec l'IA d'Apple.
+- **Ton pays :** jours fériés de 27 pays, vacances scolaires de 20 pays, week-end de ta région, calendrier hégirien ou persan.
+- **Heures de prière et Ramadan :** selon ta position, avec des rappels, le suhour et l'iftar, tout calculé sur l'appareil.
 - **Prêt pour l'iPhone Duo :** plié, l'essentiel ; déplié, toute ta semaine.
 - **Des notifications plus utiles :** un seul rappel par rendez-vous, une alerte quand il est l'heure de partir, ta journée le matin et le lendemain le soir.
 - **iPhone, iPad, Mac et Apple Watch :** des apps natives pour chaque écran.

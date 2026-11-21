@@ -12,7 +12,7 @@ La même mise à jour rend les notifications plus utiles : un seul rappel par re
 - Il met la météo dans chaque journée, avec un rappel pour décaler les sorties les jours de pluie (WeatherKit).
 - Il repère ce qui revient, comme le dentiste ou le coiffeur, et prévient quand c'est le moment.
 - Il lance un minuteur en un geste quand on repousse quelque chose, avec une activité en direct sur l'écran verrouillé.
-- Il répond aux questions sur l'agenda avec l'IA d'Apple sur l'appareil (Foundation Models) : sans compte, et les questions ne quittent pas l'iPhone.
+- Il répond aux questions sur l'agenda avec l'IA d'Apple (Foundation Models, et Private Cloud Compute pour les demandes longues) : sans compte, et rien n'est conservé.
 
 ### À propos de Pulse Calendar
 Pulse Calendar est développé par Mehdi Salmi, développeur indépendant à Paris, et édité par PULSE. Il est natif sur iPhone, iPad, Mac et Apple Watch, traduit en 14 langues et construit de bout en bout sur les frameworks Apple : Foundation Models, WeatherKit, HealthKit, WidgetKit et Live Activities, App Intents, SwiftUI, Mac Catalyst et StoreKit 2.

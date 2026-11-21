@@ -130,7 +130,7 @@
     {"@type":"Question","name":"Can I talk to my calendar in PulseCalendar?","acceptedAnswer":{"@type":"Answer","text":"Yes. Type what you want — \"find me 2h for the gym this week\", \"move my meeting to Thursday\", \"recap my week\" — and Pulse understands, proposes options, you confirm. What you ask it is processed on your iPhone."}},
     {"@type":"Question","name":"Does PulseCalendar use intelligence? Is it private?","acceptedAnswer":{"@type":"Answer","text":"Pulse Brain and Ask Pulse run on your iPhone — what you ask doesn't leave your device. Local storage by default, no ads, no ad-tracking, no training on your data. Optional features like calendar sharing and booking use a secure Firebase server."}},
     {"@type":"Question","name":"Is PulseCalendar good for ADHD?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar is built as an ADHD calendar app: 3-priorities focus, Eat-the-Frog mode, a recovery mode that simplifies a tough day, gentle visual cues and streaks. It replaces rigid time-blocking with a flexible focus planner for iOS."}},
-    {"@type":"Question","name":"Does it support school holidays automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. School holidays are auto-loaded for 20 countries, including France with zones A, B, C. The Bridge Planner shows the best public-holiday bridges for each country to maximize time off."}},
+    {"@type":"Question","name":"Does it support school holidays automatically?","acceptedAnswer":{"@type":"Answer","text":"Yes. Public holidays for 27 countries and school holidays for 20 countries are auto-loaded, including France with zones A, B, C. The Bridge Planner shows the best public-holiday bridges for each country to maximize time off."}},
     {"@type":"Question","name":"Is PulseCalendar a good calendar app for students?","acceptedAnswer":{"@type":"Answer","text":"Yes. It's the calendar app for students that handles assignments, exams, school holidays, group plans and ADHD-friendly focus modes — with a free plan and student-friendly pricing."}},
     {"@type":"Question","name":"Which countries support PulseCalendar?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar is available in 175 countries on the App Store worldwide. The app interface is localized in 14 languages including French, English, Spanish, German, Italian, Portuguese, Japanese, Korean, Chinese, Arabic and Russian, and the smart calendar engine works in every supported region."}},
     {"@type":"Question","name":"What is the best alternative to Fantastical?","acceptedAnswer":{"@type":"Answer","text":"PulseCalendar costs about half as much as Fantastical per year (29.99 euros versus 56.99 dollars) and also offers a one-time lifetime purchase, which Fantastical does not. Both apps read the same iCloud, Google and Outlook accounts, so there is nothing to migrate."}},
@@ -181,7 +181,7 @@
 <script defer data-domain="pulsecalendar.app" src="https://plausible.io/js/script.js"></script>
 
 <!-- ===== i18n : traduction runtime + sélecteur de langue (drapeaux) ===== -->
-<script defer src="shared/i18n-data.js?v=13"></script>
+<script defer src="shared/i18n-data.js?v=14"></script>
 <script defer src="shared/i18n.js?v=5"></script>
 <script defer src="shared/screens-i18n.js?v=8"></script>
 </head>
@@ -390,6 +390,8 @@
         <li>Vues jour, semaine, mois et année</li>
         <li>Météo sur tes journées</li>
         <li>Jours fériés et vacances scolaires</li>
+        <li>Heures de prière et Ramadan</li>
+        <li>Calendrier hégirien ou persan</li>
         <li>Anniversaires</li>
         <li>Widgets écran d'accueil et écran verrouillé</li>
       </ul>
@@ -447,7 +449,7 @@
   <div class="reveal">
     <span class="section-eyebrow">Plus de 50 thèmes · 11 icônes d'app</span>
     <h2 class="section-title">Choisis l'ambiance qui te <span class="gradient">ressemble.</span></h2>
-    <p class="section-sub">Onyx, Aurora, Saphir, Tropical Mango, Caraïbe, Crépuscule, Miami… L'app s'adapte au mode système et change de tête quand tu veux.</p>
+    <p class="section-sub">Noir Absolu, Onyx, Aurora, Saphir, Tropical Mango, Caraïbe, Crépuscule, Miami… L'app s'adapte au mode système et change de tête quand tu veux.</p>
   </div>
   <div id="themes-grid-mount"></div>
 </section>
@@ -566,7 +568,7 @@
     </details>
     <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
       <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Les vacances scolaires et jours fériés sont-ils gérés automatiquement ?</summary>
-      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">Oui. Les vacances scolaires et les jours fériés de 20 pays se chargent tout seuls, dont les zones A, B et C pour la France. Pulse repère aussi les meilleurs ponts de chaque pays pour profiter au mieux de tes jours de congé.</p>
+      <p style="color: var(--text-2); margin-top: 12px; line-height: 1.7;">Oui. Les jours fériés de 27 pays et les vacances scolaires de 20 pays se chargent tout seuls, dont les zones A, B et C pour la France. Pulse repère aussi les meilleurs ponts de chaque pays pour profiter au mieux de tes jours de congé.</p>
     </details>
     <details style="background: var(--surface); border: 1px solid var(--border); border-radius: 16px; padding: 20px 24px;">
       <summary style="font-size: 17px; font-weight: 600; cursor: pointer; list-style: none;">Est-ce un bon agenda pour les étudiants ?</summary>
@@ -681,8 +683,8 @@
 
 <script src="src/PulseLogo.js?v=9"></script>
 <script src="src/Screens.js?v=6"></script>
-<script src="src/PhoneFrame.js?v=16"></script>
-<script src="src/Themes.js?v=3"></script>
+<script src="src/PhoneFrame.js?v=17"></script>
+<script src="src/Themes.js?v=4"></script>
 <script src="src/Mount.js?v=6"></script>
 
 <script defer src="shared/reveal.js"></script>
