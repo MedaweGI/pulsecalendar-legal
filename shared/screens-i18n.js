@@ -8,7 +8,8 @@
 (function () {
   var LANGS = { fr:1, de:1, es:1, ja:1, ko:1, ar:1, ru:1, "zh-Hans":1, "en-US":1 }; // langues avec jeu localisé (en-US = captures °F, repli racine)
   var V = 11;  // version de cache des captures téléphone (WebP)
-  var DV = 4;  // version de cache des images device (macbook-device / ipad-device) — v4 : WebP transparents
+  var DV = 4;  // version de cache des images device (ipad-device / iphone-device) — v4 : WebP transparents
+  var MACV = 5; // macbook-device en PNG (21/11/2026) : le calendrier remplit tout l'écran, plus de fond blanc
   var DUOV = 1; // version de cache de duo-device (iPhone Duo déplié)
 
   function curLang() {
@@ -17,15 +18,16 @@
   }
 
   // swap générique : list = NodeList d'<img>, re = regex capturant le <nom>, ver = version cache
-  function swapList(list, re, ver, lang) {
+  function swapList(list, re, ver, lang, ext) {
+    ext = ext || "webp";
     for (var i = 0; i < list.length; i++) {
       var img = list[i];
       var m = (img.getAttribute("src") || "").match(re);
       if (!m) continue;
       var name = m[1];
-      var root = "/assets/screens/" + name + ".webp?v=" + ver;
+      var root = "/assets/screens/" + name + "." + ext + "?v=" + ver;
       var useLang = !!LANGS[lang] && img.getAttribute("data-scr-fb") !== "1";
-      var want = useLang ? ("/assets/screens/" + lang + "/" + name + ".webp?v=" + ver) : root;
+      var want = useLang ? ("/assets/screens/" + lang + "/" + name + "." + ext + "?v=" + ver) : root;
       if (useLang) {
         (function (im, rt) {                       // repli anglais une fois si la loc échoue
           im.onerror = function () {
@@ -42,8 +44,10 @@
     var lang = curLang();
     swapList(document.querySelectorAll("img.screen-photo"),
              /screens\/(?:[a-zA-Z-]+\/)?([a-z]+)\.webp/,V, lang);
-    swapList(document.querySelectorAll("img.dev-mac, img.dev-ipad, img.dev-iphone"),
-             /screens\/(?:[a-zA-Z-]+\/)?((?:macbook|ipad|iphone)-device)\.webp/,DV, lang);
+    swapList(document.querySelectorAll("img.dev-ipad, img.dev-iphone"),
+             /screens\/(?:[a-zA-Z-]+\/)?((?:ipad|iphone)-device)\.webp/,DV, lang);
+    swapList(document.querySelectorAll("img.dev-mac"),                 // MacBook : PNG plein écran
+             /screens\/(?:[a-zA-Z-]+\/)?(macbook-device)\.(?:webp|png)/, MACV, lang, "png");
     swapList(document.querySelectorAll("img.dev-duo"),            // iPhone Duo (10/2026)
              /screens\/(?:[a-zA-Z-]+\/)?(duo-device)\.webp/, DUOV, lang);
   }
