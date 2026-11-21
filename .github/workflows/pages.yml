@@ -39,6 +39,12 @@ jobs:
         with:
           path: '_site'
 
+      # Laisse l'artefact s'enregistrer côté GitHub : sans cette pause, deploy-pages
+      # échouait parfois en « No artifacts named github-pages » juste après l'envoi
+      # (21/11/2026, trois échecs d'affilée puis succès sans rien changer).
+      - name: Attendre l'enregistrement de l'artefact
+        run: sleep 20
+
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4
