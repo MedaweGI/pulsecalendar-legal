@@ -7,7 +7,7 @@
    déclencheur). CSP-safe (fichier externe). */
 (function () {
   var LANGS = { fr:1, de:1, es:1, ja:1, ko:1, ar:1, ru:1, "zh-Hans":1, "en-US":1 }; // langues avec jeu localisé (en-US = captures °F, repli racine)
-  var V = 11;  // version de cache des captures téléphone (WebP)
+  var V = 12;  // version de cache des captures téléphone — v12 (21/11/2026) : JPEG, barre en bulles et année grise
   var DV = 4;  // version de cache des images device (ipad-device / iphone-device) — v4 : WebP transparents
   var MACV = 5; // macbook-device en PNG (21/11/2026) : le calendrier remplit tout l'écran, plus de fond blanc
   var DUOV = 1; // version de cache de duo-device (iPhone Duo déplié)
@@ -43,7 +43,7 @@
   function swap() {
     var lang = curLang();
     swapList(document.querySelectorAll("img.screen-photo"),
-             /screens\/(?:[a-zA-Z-]+\/)?([a-z]+)\.webp/,V, lang);
+             /screens\/(?:[a-zA-Z-]+\/)?([a-z]+)\.(?:webp|jpg)/, V, lang, "jpg");
     swapList(document.querySelectorAll("img.dev-ipad, img.dev-iphone"),
              /screens\/(?:[a-zA-Z-]+\/)?((?:ipad|iphone)-device)\.webp/,DV, lang);
     swapList(document.querySelectorAll("img.dev-mac"),                 // MacBook : PNG plein écran
