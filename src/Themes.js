@@ -120,7 +120,7 @@ function ThemesGallery() {
       fontWeight: 800,
       color: '#7B5CF0'
     }
-  }, "+16"), /*#__PURE__*/React.createElement("div", {
+  }, "+44"), /*#__PURE__*/React.createElement("div", {
     style: {
       fontSize: 11,
       color: '#b9b4cf',
@@ -134,6 +134,6 @@ function ThemesGallery() {
       fontFamily: 'Geist Mono, monospace',
       marginTop: 2
     }
-  }, "53 au total")));
+  }, "56 au total")));
 }
 window.ThemesGallery = ThemesGallery;

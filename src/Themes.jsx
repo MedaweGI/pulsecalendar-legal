@@ -49,9 +49,9 @@ function ThemesGallery() {
         display: 'flex', alignItems: 'center', justifyContent: 'center',
         flexDirection: 'column', gap: 6,
       }}>
-        <div style={{ fontSize: 28, fontWeight: 800, color: '#7B5CF0' }}>+16</div>
+        <div style={{ fontSize: 28, fontWeight: 800, color: '#7B5CF0' }}>+44</div>
         <div style={{ fontSize: 11, color: '#b9b4cf', fontWeight: 500, textAlign: 'center' }}>autres themes</div>
-        <div style={{ fontSize: 9, color: '#7d7798', fontFamily: 'Geist Mono, monospace', marginTop: 2 }}>53 au total</div>
+        <div style={{ fontSize: 9, color: '#7d7798', fontFamily: 'Geist Mono, monospace', marginTop: 2 }}>56 au total</div>
       </div>
     </div>
   );

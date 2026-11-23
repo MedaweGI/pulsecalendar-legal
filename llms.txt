@@ -9,7 +9,8 @@ Key facts:
 - ADHD support: a "My Day" view built around 3 daily priorities, Eat the Frog mode, a 5-minute starter mode, staged reminders, and a Recovery Mode that pares a low-score day down to a few light tasks.
 - Planning: energy score, week Rhythm view, automatic buffer time, focus blocks, natural language event creation ("find me 2h for the gym this week").
 - Time off: public holidays for 27 countries and school holidays for 20 countries auto-loaded (including France with zones A, B, C); Bridge Planner finds the best public-holiday bridges. Your region's weekend (Friday-Saturday in the Gulf), optional prayer times and Ramadan (calculated on device), Hijri or Persian secondary calendar.
-- Extras: weather powered by Apple Weather, more than 50 themes including Pure Black, Pulse Booking for sharing availabilities.
+- Extras: weather powered by Apple Weather, 56 themes including Pure Black and Pure White, Pulse Booking for sharing availabilities.
+- Add-on modules (11): Pulse Pilot (papers to renew, bills and parcels to return, spotted in a text or a screenshot and reminded at the right time; free for up to 3 items), Prayers & Ramadan, Shift Work, Studies, Shared Custody, Seasons, Countdown Planner, Outdoors, Sky & Photo, Pets and Official Deadlines. All 11 are included in Pulse Pro; every module except Pulse Pilot can also be bought on its own as a one-time purchase (2.99 to 6.99 EUR in France).
 
 Site pages are written in French.
 

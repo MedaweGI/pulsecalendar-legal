@@ -1268,3 +1268,49 @@
             mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'/%3E%3C/svg%3E") center/contain no-repeat;
   }
   @media (max-width: 860px) { .families-grid { grid-template-columns: 1fr; } }
+
+  /* ==========================================================================
+     MODULES COMPLÉMENTAIRES (section #modules, 2.3.9).
+     Volontairement sobres : surface pleine, filet, icône au trait dans une
+     pastille teintée, une seule couleur d'accent. Ni dégradé, ni halo, ni
+     verre (règle « pas de visuel IA »). 4 colonnes, Pulse Pilot sur 2.
+     ========================================================================== */
+  #modules .section-title { text-wrap: balance; }
+  .modules-grid {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px;
+    max-width: 1180px; margin: 56px auto 0;
+  }
+  .module-card {
+    display: flex; flex-direction: column; gap: 10px;
+    padding: 22px 22px 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    transition: border-color 0.2s;
+  }
+  .module-card:hover { border-color: var(--border-strong); }
+  .module-card.module-wide { grid-column: span 2; }
+  .module-head { display: flex; align-items: center; gap: 12px; }
+  .module-icon {
+    flex-shrink: 0; width: 36px; height: 36px;
+    display: flex; align-items: center; justify-content: center;
+    border-radius: 10px;
+    background: rgba(123,92,240,0.14);
+    color: var(--violet-200);
+  }
+  .module-icon svg { width: 20px; height: 20px; }
+  .module-card h3 { font-size: 17px; font-weight: 600; letter-spacing: -0.01em; line-height: 1.25; }
+  .module-card p { font-size: 14px; color: var(--text-2); line-height: 1.5; }
+  .module-price {
+    margin-top: auto; padding-top: 12px;
+    border-top: 1px solid var(--border);
+    font-size: 13px; font-weight: 600; color: var(--text);
+    font-variant-numeric: tabular-nums;
+  }
+  @media (max-width: 1100px) { .modules-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 640px) {
+    .modules-grid { grid-template-columns: minmax(0, 1fr); gap: 10px; margin-top: 40px; }
+    .module-card { padding: 18px 18px 14px; gap: 8px; }
+    .module-price { padding-top: 10px; }
+    .module-card.module-wide { grid-column: auto; }
+  }

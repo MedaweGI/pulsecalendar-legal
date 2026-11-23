@@ -1,6 +1,6 @@
 {
-  "version": 7,
-  "updated": "2026-10-02",
+  "version": 8,
+  "updated": "2026-11-22",
   "notes": "Vacances scolaires publiées par les ministères/gouvernements. Éditer ce fichier puis push sur gh-pages pour livrer les dates à tous les users sans maj App Store. Les entrées 2027-28 sont indicatives (calendriers officiels parfois non publiés au moment de la rédaction). v4 (2026-05-27) : ajout KR/RU/SA en best-effort. v5 (2026-05-27) : ajout CN (Chine continentale).",
   "countries": {
     "FR": {
@@ -81,8 +81,8 @@
             },
             {
               "name": "Congés d'Été 2027",
-              "start": "2027-07-10",
-              "end": "2027-09-01"
+              "start": "2027-07-03",
+              "end": "2027-09-02"
             },
             {
               "name": "Congés de Toussaint 2027",
@@ -96,17 +96,17 @@
             },
             {
               "name": "Congés d'Hiver 2028",
-              "start": "2028-02-05",
-              "end": "2028-02-21"
+              "start": "2028-02-19",
+              "end": "2028-03-06"
             },
             {
               "name": "Congés de Printemps 2028",
-              "start": "2028-04-08",
-              "end": "2028-04-24"
+              "start": "2028-04-22",
+              "end": "2028-05-09"
             },
             {
               "name": "Congés d'Été 2028",
-              "start": "2028-07-08",
+              "start": "2028-07-04",
               "end": "2028-09-04"
             }
           ]
@@ -186,8 +186,8 @@
             },
             {
               "name": "Congés d'Été 2027",
-              "start": "2027-07-10",
-              "end": "2027-09-01"
+              "start": "2027-07-03",
+              "end": "2027-09-02"
             },
             {
               "name": "Congés de Toussaint 2027",
@@ -201,17 +201,17 @@
             },
             {
               "name": "Congés d'Hiver 2028",
-              "start": "2028-02-12",
-              "end": "2028-02-28"
+              "start": "2028-02-05",
+              "end": "2028-02-21"
             },
             {
               "name": "Congés de Printemps 2028",
-              "start": "2028-04-01",
-              "end": "2028-04-17"
+              "start": "2028-04-08",
+              "end": "2028-04-24"
             },
             {
               "name": "Congés d'Été 2028",
-              "start": "2028-07-08",
+              "start": "2028-07-04",
               "end": "2028-09-04"
             }
           ]
@@ -291,8 +291,8 @@
             },
             {
               "name": "Congés d'Été 2027",
-              "start": "2027-07-07",
-              "end": "2027-09-01"
+              "start": "2027-07-03",
+              "end": "2027-09-02"
             },
             {
               "name": "Congés de Toussaint 2027",
@@ -306,17 +306,17 @@
             },
             {
               "name": "Congés d'Hiver 2028",
-              "start": "2028-02-19",
-              "end": "2028-03-06"
+              "start": "2028-02-12",
+              "end": "2028-02-28"
             },
             {
               "name": "Congés de Printemps 2028",
-              "start": "2028-04-22",
-              "end": "2028-05-08"
+              "start": "2028-04-15",
+              "end": "2028-05-02"
             },
             {
               "name": "Congés d'Été 2028",
-              "start": "2028-07-05",
+              "start": "2028-07-04",
               "end": "2028-09-04"
             }
           ]
