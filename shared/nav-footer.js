@@ -40,7 +40,7 @@
         <span>PulseCalendar</span>
       </a>
       <p>Smart calendar app et anti-procrastination coach pour iPhone, iPad, Mac et Apple Watch. Intelligence on-device.</p>
-      <p style="margin-top:10px;font-size:12px;color:var(--text-3)">🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪 🇰🇷 🇸🇦 🇷🇺 🇨🇳</p>
+      <p style="margin-top:10px;font-size:12px;color:var(--text-3)">🇫🇷 🇨🇦 🇺🇸 🇬🇧 🇦🇺 🇪🇸 🇯🇵 🇩🇪 🇰🇷 🇸🇦 🇷🇺 🇨🇳 🇮🇹 🇧🇷 🇵🇹 🇳🇱 🇵🇱 🇸🇪 🇩🇰 🇳🇴 🇫🇮 🇨🇿 🇸🇰 🇭🇺 🇷🇴 🇭🇷 🇺🇦 🇬🇷 🇹🇷 🇮🇱 🇮🇳 🇹🇭 🇻🇳 🇮🇩 🇲🇾 🇹🇼 🇦🇩</p>
     </div>
     <div class="foot-col">
       <h4>Fonctionnalités</h4>
@@ -67,7 +67,7 @@
   </div>
   <div class="foot-bottom">
     <span>© 2026 PulseCalendar · pulsecalendar.app</span>
-    <span>Made with ♥ in France</span>
+    <span style="white-space:nowrap">Made with ♥ in France</span>
   </div>
 </footer>`;
 
