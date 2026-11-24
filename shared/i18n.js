@@ -48,6 +48,37 @@
     return (lang !== "fr" && DATA[lang]) ? DATA[lang] : null;
   }
 
+  // ---- dictionnaires par langue (24/11/2026) ------------------------------
+  // Un fichier par langue (shared/i18n/<langue>.js, généré par tools/split_i18n.py
+  // depuis i18n-data.js). i18n-boot.js lance déjà celui du visiteur ; ici on attend
+  // qu'il soit là, ou on le charge au changement de langue.
+  var DICT_V = "1";
+  var DICT_BASE = (function () {
+    try { var s = document.currentScript && document.currentScript.src; if (s) return s.replace(/i18n\.js(\?.*)?$/, "i18n/"); } catch (e) {}
+    return "shared/i18n/";
+  })();
+  function ensureDict(lang, cb) {
+    var DATA = window.PC_I18N || (window.PC_I18N = {});
+    var need = lang === "fr" ? [] : (lang === "en-US" ? ["en", "en-US"] : [lang]);
+    var want = need.filter(function (l) { return !DATA[l]; });
+    if (!want.length) { cb(); return; }
+    var left = want.length, done = false;
+    function finish() { if (!done) { done = true; US_DICT = null; cb(); } }
+    function one() { if (--left <= 0) finish(); }
+    want.forEach(function (l) {
+      var id = "pc-i18n-" + l, el = document.getElementById(id);
+      if (!el) {
+        el = document.createElement("script");
+        el.id = id; el.async = true;
+        el.src = DICT_BASE + l + ".js?v=" + DICT_V;
+        document.head.appendChild(el);
+      }
+      el.addEventListener("load", one);
+      el.addEventListener("error", one);
+    });
+    setTimeout(finish, 5000); // réseau lent : on applique quand même (repli français)
+  }
+
   // ---- text nodes ----------------------------------------------------------
   function translateTextNode(node, lang) {
     var fr = ORIG.get(node);
@@ -232,7 +263,7 @@
     document.head.appendChild(s);
   }
 
-  function setLang(lang) { apply(lang); }
+  function setLang(lang) { ensureDict(lang, function () { apply(lang); }); }
 
   // ---- initial language detection ------------------------------------------
   function detect() {
@@ -288,7 +319,8 @@
       var tries = 0;
       (function ensureSwitcher() {
         if (buildSwitcher() || tries++ > 40) {
-          apply(detect());
+          var first = detect();
+          ensureDict(first, function () { apply(first); });
         } else {
           setTimeout(ensureSwitcher, 100); // nav injected late (sub-pages via nav-footer.js)
         }

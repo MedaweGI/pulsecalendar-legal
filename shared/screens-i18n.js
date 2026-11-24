@@ -13,7 +13,10 @@
   var DUOV = 1; // version de cache de duo-device (iPhone Duo déplié)
 
   function curLang() {
-    if (window.PCI18n && window.PCI18n.current) return window.PCI18n.current;
+    // Avant l'init de i18n.js, PCI18n.current vaut encore « fr » : la langue voulue
+    // est déjà connue par i18n-boot.js.
+    if (window.PCI18n && window.PCI18n.current && (window.PCI18n.current !== "fr" || !window.PC_I18N_WANTED)) return window.PCI18n.current;
+    if (window.PC_I18N_WANTED) return window.PC_I18N_WANTED;
     try { return localStorage.getItem("pc_lang") || "en"; } catch (e) { return "en"; }
   }
 
@@ -51,6 +54,13 @@
     swapList(document.querySelectorAll("img.dev-duo"),            // iPhone Duo (10/2026)
              /screens\/(?:[a-zA-Z-]+\/)?(duo-device)\.webp/, DUOV, lang);
   }
+
+  // Chemin INITIAL d'une capture téléphone, déjà dans la langue du visiteur : évite de
+  // télécharger la version anglaise puis la version localisée (24/11/2026).
+  window.PCScreenSrc = function (name) {
+    var lang = curLang();
+    return (LANGS[lang] ? "/assets/screens/" + lang + "/" : "/assets/screens/") + name + ".jpg?v=" + V;
+  };
 
   var lastLang = " ";
   function poll() {

@@ -22,8 +22,8 @@
   src: url("/assets/fonts/TwemojiCountryFlags.woff2") format("woff2");
   font-display: swap;
 }
-.flag,
-.pc-lang-flag { font-family: "Twemoji Country Flags", "Geist", system-ui, -apple-system, sans-serif; }
+.pc-win .flag,
+.pc-win .pc-lang-flag { font-family: "Twemoji Country Flags", "Geist", system-ui, -apple-system, sans-serif; }
 
 /* ---- Bouton bascule (stylé pour les 2 thèmes) ---- */
 .theme-toggle {

@@ -1,8 +1,15 @@
+// Capture dans la langue du visiteur dès le premier rendu (i18n-boot.js a fixé PC_I18N_WANTED) :
+// plus de double téléchargement anglais puis langue (24/11/2026). Mêmes langues que screens-i18n.js.
+var PCSrc = function (n) {
+  var L = { fr: 1, de: 1, es: 1, ja: 1, ko: 1, ar: 1, ru: 1, "zh-Hans": 1, "en-US": 1 };
+  var l = window.PC_I18N_WANTED;
+  return (L[l] ? "/assets/screens/" + l + "/" : "/assets/screens/") + n + ".jpg?v=12";
+};
 function PhoneFrame({ children }) {
   return /* @__PURE__ */ React.createElement("div", { className: "iphone" }, /* @__PURE__ */ React.createElement("div", { className: "iphone-buttons-left" }), /* @__PURE__ */ React.createElement("div", { className: "iphone-volume2" }), /* @__PURE__ */ React.createElement("div", { className: "iphone-buttons-right" }), /* @__PURE__ */ React.createElement("div", { className: "iphone-screen" }, /* @__PURE__ */ React.createElement("div", { className: "iphone-notch" }), children));
 }
 function HeroPhone() {
-  return /* @__PURE__ */ React.createElement(PhoneFrame, null, /* @__PURE__ */ React.createElement("img", { className: "screen-photo", src: "/assets/screens/month.jpg?v=12", alt: "PulseCalendar \u2014 vue Mois en Liquid Glass" }));
+  return /* @__PURE__ */ React.createElement(PhoneFrame, null, /* @__PURE__ */ React.createElement("img", { className: "screen-photo", src: PCSrc("month"), alt: "PulseCalendar \u2014 vue Mois en Liquid Glass" }));
 }
 const SCROLLY_STEPS = [
   {
@@ -16,7 +23,7 @@ const SCROLLY_STEPS = [
       "Jours f\xE9ri\xE9s de 27 pays, cong\xE9s scolaires de 20 pays",
       "Ne d\xE9place jamais tes matchs en direct ni ce que tu regardes \xE0 la t\xE9l\xE9"
     ],
-    img: "/assets/screens/month.jpg?v=12"
+    img: PCSrc("month")
   },
   {
     num: "02",
@@ -29,7 +36,7 @@ const SCROLLY_STEPS = [
       "100 % local, aucune donn\xE9e envoy\xE9e",
       "Nouveau dans la 2.0"
     ],
-    img: "/assets/screens/askpulse.jpg?v=12"
+    img: PCSrc("askpulse")
   },
   {
     num: "03",
@@ -42,7 +49,7 @@ const SCROLLY_STEPS = [
       "Observationnel \u2014 jamais m\xE9dical",
       "Donn\xE9es Sant\xE9, sur l'appareil"
     ],
-    img: "/assets/screens/rhythm.jpg?v=12"
+    img: PCSrc("rhythm")
   },
   {
     num: "04",
@@ -55,7 +62,7 @@ const SCROLLY_STEPS = [
       "Streaks + 12 semaines d'\xE9volution",
       "Widget Day Battery sur lock screen"
     ],
-    img: "/assets/screens/suivi.jpg?v=12"
+    img: PCSrc("suivi")
   }
 ];
 const GALLERY_FEATURES = [
@@ -63,43 +70,43 @@ const GALLERY_FEATURES = [
     eyebrow: "Bridge Planner",
     title: "Optimise tes cong\xE9s.",
     desc: "Rep\xE8re les meilleurs ponts par pays et te dit combien poser : \xAB 1 jour pos\xE9 = 4 jours off \xBB. Les vacances scolaires sont d\xE9j\xE0 charg\xE9es.",
-    img: "/assets/screens/bridge.jpg?v=12"
+    img: PCSrc("bridge")
   },
   {
     eyebrow: "Pulse Brain \xB7 on-device",
     title: "Optimise ta journ\xE9e en 1 tap.",
     desc: "R\xE9sout les conflits, \xE9quilibre focus et r\xE9cup, d\xE9tecte les jours surcharg\xE9s. Briefing matinal personnalis\xE9. 100 % local.",
-    img: "/assets/screens/brain.jpg?v=12"
+    img: PCSrc("brain")
   },
   {
     eyebrow: "Trajet auto",
     title: "Calcule ton trajet.",
     desc: "Voiture, transports, marche compar\xE9s. Notif \xAB Pars maintenant \xBB au bon moment, avec le trafic en temps r\xE9el.",
-    img: "/assets/screens/trajet.jpg?v=12"
+    img: PCSrc("trajet")
   },
   {
     eyebrow: "Resto int\xE9gr\xE9",
     title: "R\xE9serve sans quitter l'app.",
     desc: "Recherche resto + appel direct en 1 tap depuis la fiche \xE9v\xE9nement. L'adresse alimente automatiquement le trajet.",
-    img: "/assets/screens/resto.jpg?v=12"
+    img: PCSrc("resto")
   },
   {
     eyebrow: "Doodle int\xE9gr\xE9",
     title: "Trouve un cr\xE9neau. \xC0 plusieurs.",
     desc: "Appui long sur le \xAB + \xBB : sondage de dispos par lien. La confirmation cr\xE9e l'\xE9v\xE9nement pour tout le monde.",
-    img: "/assets/screens/doodle.jpg?v=12"
+    img: PCSrc("doodle")
   },
   {
     eyebrow: "Analyses",
     title: "Comprends ton temps.",
     desc: "Donut par cat\xE9gorie, heatmap de ta semaine type, top des personnes. \xAB Tes vendredis sont surcharg\xE9s \xBB.",
-    img: "/assets/screens/analyse.jpg?v=12"
+    img: PCSrc("analyse")
   },
   {
     eyebrow: "Actions rapides",
     title: "Ajoute, demande, planifie.",
     desc: "Appui long sur le \xAB + \xBB : ajout express, Ask Pulse, Doodle, partage de dispos. Tout part du m\xEAme bouton.",
-    img: "/assets/screens/quickactions.jpg?v=12"
+    img: PCSrc("quickactions")
   }
 ];
 function Scrollytelling() {

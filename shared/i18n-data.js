@@ -1,4 +1,6 @@
-/* PulseCalendar website translations — generated for the live repo (pulsecalendar-legal/index.html). FR is default; missing key => French fallback. */
+/* SOURCE des traductions du site (24/11/2026) : ce fichier N'EST PLUS chargé par les pages.
+   Après toute modification : python3 tools/split_i18n.py (écrit shared/i18n/<langue>.js),
+   puis monter DICT_V dans shared/i18n-boot.js ET shared/i18n.js. */
 window.PC_I18N = {
  "en": {
   "Heures de prière et Ramadan": "Prayer times and Ramadan",
