@@ -314,7 +314,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi Arabia",
   "Russie": "Russia",
-  "128 autres pays": "128 more countries"
+  "128 autres pays": "128 more countries",
+  "33 langues": "33 languages",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar is available in 175 countries on the App Store, with an interface in 33 languages."
  },
  "de": {
   "Heures de prière et Ramadan": "Gebetszeiten und Ramadan",
@@ -632,7 +634,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi-Arabien",
   "Russie": "Russland",
-  "128 autres pays": "128 weitere Länder"
+  "128 autres pays": "128 weitere Länder",
+  "33 langues": "33 Sprachen",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar ist in 175 Ländern im App Store erhältlich, mit einer Oberfläche in 33 Sprachen."
  },
  "es": {
   "Heures de prière et Ramadan": "Horarios de oración y Ramadán",
@@ -949,7 +953,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arabia Saudí",
   "Russie": "Rusia",
-  "128 autres pays": "128 países más"
+  "128 autres pays": "128 países más",
+  "33 langues": "33 idiomas",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar está disponible en 175 países en la App Store, con la interfaz en 33 idiomas."
  },
  "ja": {
   "Heures de prière et Ramadan": "礼拝時刻とラマダン",
@@ -1275,7 +1281,9 @@ window.PC_I18N = {
   "Vietnam": "ベトナム",
   "Arabie saoudite": "サウジアラビア",
   "Russie": "ロシア",
-  "128 autres pays": "他128か国"
+  "128 autres pays": "他128か国",
+  "33 langues": "33言語対応",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendarは175か国のApp Storeで配信中で、画面は33言語に対応しています。"
  },
  "ko": {
   "Heures de prière et Ramadan": "기도 시간과 라마단",
@@ -1609,7 +1617,9 @@ window.PC_I18N = {
   "Vietnam": "베트남",
   "Arabie saoudite": "사우디아라비아",
   "Russie": "러시아",
-  "128 autres pays": "128개국 더"
+  "128 autres pays": "128개국 더",
+  "33 langues": "33개 언어",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar는 175개국 App Store에서 이용할 수 있으며, 33개 언어를 지원합니다."
  },
  "ar": {
   "Heures de prière et Ramadan": "مواقيت الصلاة ورمضان",
@@ -1939,7 +1949,9 @@ window.PC_I18N = {
   "Vietnam": "فيتنام",
   "Arabie saoudite": "المملكة العربية السعودية",
   "Russie": "روسيا",
-  "128 autres pays": "128 دولة أخرى"
+  "128 autres pays": "128 دولة أخرى",
+  "33 langues": "33 لغة",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "يتوفر PulseCalendar في 175 دولة على App Store، بواجهة بـ33 لغة."
  },
  "ru": {
   "Heures de prière et Ramadan": "Время молитв и Рамадан",
@@ -2267,7 +2279,9 @@ window.PC_I18N = {
   "Vietnam": "Вьетнам",
   "Arabie saoudite": "Саудовская Аравия",
   "Russie": "Россия",
-  "128 autres pays": "ещё 128 стран"
+  "128 autres pays": "ещё 128 стран",
+  "33 langues": "33 языка",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar доступен в 175 странах в App Store, интерфейс переведён на 33 языка."
  },
  "zh-Hans": {
   "Heures de prière et Ramadan": "礼拜时间与斋月",
@@ -2602,7 +2616,9 @@ window.PC_I18N = {
   "Vietnam": "越南",
   "Arabie saoudite": "沙特阿拉伯",
   "Russie": "俄罗斯",
-  "128 autres pays": "另外 128 个国家/地区"
+  "128 autres pays": "另外 128 个国家/地区",
+  "33 langues": "33 种语言",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar 已在 175 个国家和地区的 App Store 上架，界面支持 33 种语言。"
  },
  "en-US": {
   "4,99 €": "$3.99",
@@ -2969,7 +2985,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arabia Saudita",
   "Russie": "Russia",
-  "128 autres pays": "128 altri paesi"
+  "128 autres pays": "128 altri paesi",
+  "33 langues": "33 lingue",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar è disponibile in 175 paesi su App Store, con un'interfaccia in 33 lingue."
  },
  "pt-BR": {
   "Heures de prière et Ramadan": "Horários de oração e Ramadã",
@@ -3309,7 +3327,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnã",
   "Arabie saoudite": "Arábia Saudita",
   "Russie": "Rússia",
-  "128 autres pays": "128 outros países"
+  "128 autres pays": "128 outros países",
+  "33 langues": "33 idiomas",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "O PulseCalendar está disponível em 175 países na App Store, com interface em 33 idiomas."
  },
  "pt-PT": {
   "Heures de prière et Ramadan": "Horários de oração e Ramadão",
@@ -3649,7 +3669,9 @@ window.PC_I18N = {
   "Vietnam": "Vietname",
   "Arabie saoudite": "Arábia Saudita",
   "Russie": "Rússia",
-  "128 autres pays": "128 outros países"
+  "128 autres pays": "128 outros países",
+  "33 langues": "33 idiomas",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "O PulseCalendar está disponível em 175 países na App Store, com interface em 33 idiomas."
  },
  "tr": {
   "Heures de prière et Ramadan": "Namaz vakitleri ve Ramazan",
@@ -3989,7 +4011,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Suudi Arabistan",
   "Russie": "Rusya",
-  "128 autres pays": "128 ülke daha"
+  "128 autres pays": "128 ülke daha",
+  "33 langues": "33 dil",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar App Store'da 175 ülkede mevcut, arayüzü 33 dilde."
  },
  "el": {
   "Heures de prière et Ramadan": "Ώρες προσευχής και Ραμαζάνι",
@@ -4329,7 +4353,9 @@ window.PC_I18N = {
   "Vietnam": "Βιετνάμ",
   "Arabie saoudite": "Σαουδική Αραβία",
   "Russie": "Ρωσία",
-  "128 autres pays": "128 ακόμη χώρες"
+  "128 autres pays": "128 ακόμη χώρες",
+  "33 langues": "33 γλώσσες",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "Το PulseCalendar είναι διαθέσιμο σε 175 χώρες στο App Store, με διεπαφή σε 33 γλώσσες."
  },
  "vi": {
   "Heures de prière et Ramadan": "Giờ cầu nguyện và Ramadan",
@@ -4669,7 +4695,9 @@ window.PC_I18N = {
   "Vietnam": "Việt Nam",
   "Arabie saoudite": "Ả Rập Xê-út",
   "Russie": "Nga",
-  "128 autres pays": "128 quốc gia khác"
+  "128 autres pays": "128 quốc gia khác",
+  "33 langues": "33 ngôn ngữ",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar có mặt tại 175 quốc gia trên App Store, với giao diện 33 ngôn ngữ."
  },
  "da": {
   "Heures de prière et Ramadan": "Bønnetider og ramadan",
@@ -5009,7 +5037,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi-Arabien",
   "Russie": "Rusland",
-  "128 autres pays": "128 andre lande"
+  "128 autres pays": "128 andre lande",
+  "33 langues": "33 sprog",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar findes i 175 lande i App Store, med en brugerflade på 33 sprog."
  },
  "nl": {
   "Heures de prière et Ramadan": "Gebedstijden en Ramadan",
@@ -5349,7 +5379,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saoedi-Arabië",
   "Russie": "Rusland",
-  "128 autres pays": "128 andere landen"
+  "128 autres pays": "128 andere landen",
+  "33 langues": "33 talen",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar is beschikbaar in 175 landen in de App Store, met een interface in 33 talen."
  },
  "fi": {
   "Heures de prière et Ramadan": "Rukousajat ja ramadan",
@@ -5689,7 +5721,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi-Arabia",
   "Russie": "Venäjä",
-  "128 autres pays": "128 muuta maata"
+  "128 autres pays": "128 muuta maata",
+  "33 langues": "33 kieltä",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar on saatavilla 175 maassa App Storessa, ja käyttöliittymä on 33 kielellä."
  },
  "he": {
   "Heures de prière et Ramadan": "זמני תפילה ורמדאן",
@@ -6029,7 +6063,9 @@ window.PC_I18N = {
   "Vietnam": "וייטנאם",
   "Arabie saoudite": "ערב הסעודית",
   "Russie": "רוסיה",
-  "128 autres pays": "עוד 128 מדינות"
+  "128 autres pays": "עוד 128 מדינות",
+  "33 langues": "33 שפות",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar זמין ב-175 מדינות ב-App Store, עם ממשק ב-33 שפות."
  },
  "hi": {
   "Heures de prière et Ramadan": "नमाज़ के समय और रमज़ान",
@@ -6369,7 +6405,9 @@ window.PC_I18N = {
   "Vietnam": "वियतनाम",
   "Arabie saoudite": "सऊदी अरब",
   "Russie": "रूस",
-  "128 autres pays": "128 और देश"
+  "128 autres pays": "128 और देश",
+  "33 langues": "33 भाषाएँ",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar App Store पर 175 देशों में उपलब्ध है, 33 भाषाओं के इंटरफ़ेस के साथ।"
  },
  "hu": {
   "Heures de prière et Ramadan": "Imaidők és Ramadán",
@@ -6709,7 +6747,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnám",
   "Arabie saoudite": "Szaúd-Arábia",
   "Russie": "Oroszország",
-  "128 autres pays": "további 128 ország"
+  "128 autres pays": "további 128 ország",
+  "33 langues": "33 nyelv",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "A PulseCalendar 175 országban elérhető az App Store-ban, 33 nyelvű felülettel."
  },
  "id": {
   "Heures de prière et Ramadan": "Waktu salat dan Ramadan",
@@ -7049,7 +7089,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arab Saudi",
   "Russie": "Rusia",
-  "128 autres pays": "128 negara lainnya"
+  "128 autres pays": "128 negara lainnya",
+  "33 langues": "33 bahasa",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar tersedia di 175 negara di App Store, dengan antarmuka dalam 33 bahasa."
  },
  "ms": {
   "Heures de prière et Ramadan": "Waktu solat dan Ramadan",
@@ -7389,7 +7431,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arab Saudi",
   "Russie": "Rusia",
-  "128 autres pays": "128 negara lain"
+  "128 autres pays": "128 negara lain",
+  "33 langues": "33 bahasa",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar terdapat di 175 negara di App Store, dengan antara muka dalam 33 bahasa."
  },
  "nb": {
   "Heures de prière et Ramadan": "Bønnetider og ramadan",
@@ -7729,7 +7773,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi-Arabia",
   "Russie": "Russland",
-  "128 autres pays": "128 andre land"
+  "128 autres pays": "128 andre land",
+  "33 langues": "33 språk",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar er tilgjengelig i 175 land i App Store, med grensesnitt på 33 språk."
  },
  "pl": {
   "Heures de prière et Ramadan": "Godziny modlitw i Ramadan",
@@ -8069,7 +8115,9 @@ window.PC_I18N = {
   "Vietnam": "Wietnam",
   "Arabie saoudite": "Arabia Saudyjska",
   "Russie": "Rosja",
-  "128 autres pays": "128 innych krajów"
+  "128 autres pays": "128 innych krajów",
+  "33 langues": "33 języki",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar jest dostępny w 175 krajach w App Store, z interfejsem w 33 językach."
  },
  "ro": {
   "Heures de prière et Ramadan": "Orele de rugăciune și Ramadanul",
@@ -8409,7 +8457,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arabia Saudită",
   "Russie": "Rusia",
-  "128 autres pays": "alte 128 de țări"
+  "128 autres pays": "alte 128 de țări",
+  "33 langues": "33 de limbi",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar este disponibil în 175 de țări în App Store, cu interfața în 33 de limbi."
  },
  "sk": {
   "Heures de prière et Ramadan": "Časy modlitieb a ramadán",
@@ -8749,7 +8799,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudská Arábia",
   "Russie": "Rusko",
-  "128 autres pays": "128 ďalších krajín"
+  "128 autres pays": "128 ďalších krajín",
+  "33 langues": "33 jazykov",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar je dostupný v 175 krajinách v App Store, s rozhraním v 33 jazykoch."
  },
  "sv": {
   "Heures de prière et Ramadan": "Böne- och ramadantider",
@@ -9089,7 +9141,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudiarabien",
   "Russie": "Ryssland",
-  "128 autres pays": "128 länder till"
+  "128 autres pays": "128 länder till",
+  "33 langues": "33 språk",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar finns i 175 länder på App Store, med ett gränssnitt på 33 språk."
  },
  "th": {
   "Heures de prière et Ramadan": "เวลาละหมาดและรอมฎอน",
@@ -9429,7 +9483,9 @@ window.PC_I18N = {
   "Vietnam": "เวียดนาม",
   "Arabie saoudite": "ซาอุดีอาระเบีย",
   "Russie": "รัสเซีย",
-  "128 autres pays": "อีก 128 ประเทศ"
+  "128 autres pays": "อีก 128 ประเทศ",
+  "33 langues": "33 ภาษา",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar มีให้ใช้ใน 175 ประเทศบน App Store พร้อมอินเทอร์เฟซ 33 ภาษา"
  },
  "uk": {
   "Heures de prière et Ramadan": "Час намазу та Рамадан",
@@ -9769,7 +9825,9 @@ window.PC_I18N = {
   "Vietnam": "Вʼєтнам",
   "Arabie saoudite": "Саудівська Аравія",
   "Russie": "Росія",
-  "128 autres pays": "ще 128 країн"
+  "128 autres pays": "ще 128 країн",
+  "33 langues": "33 мови",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar доступний у 175 країнах в App Store з інтерфейсом 33 мовами."
  },
  "zh-Hant": {
   "Heures de prière et Ramadan": "禱告時間與齋戒月",
@@ -10109,7 +10167,9 @@ window.PC_I18N = {
   "Vietnam": "越南",
   "Arabie saoudite": "沙烏地阿拉伯",
   "Russie": "俄羅斯",
-  "128 autres pays": "另外 128 個國家"
+  "128 autres pays": "另外 128 個國家",
+  "33 langues": "33 種語言",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar 在 App Store 的 175 個國家和地區上架，介面支援 33 種語言。"
  },
  "ca": {
   "Heures de prière et Ramadan": "Hores de pregària i Ramadà",
@@ -10449,7 +10509,9 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Aràbia Saudí",
   "Russie": "Rússia",
-  "128 autres pays": "128 països més"
+  "128 autres pays": "128 països més",
+  "33 langues": "33 llengües",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar està disponible a 175 països de l'App Store, amb una interfície en 33 llengües."
  },
  "hr": {
   "Heures de prière et Ramadan": "Vrijeme molitve i ramazan",
@@ -10789,7 +10851,9 @@ window.PC_I18N = {
   "Vietnam": "Vijetnam",
   "Arabie saoudite": "Saudijska Arabija",
   "Russie": "Rusija",
-  "128 autres pays": "još 128 zemalja"
+  "128 autres pays": "još 128 zemalja",
+  "33 langues": "33 jezika",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar je dostupan u 175 zemalja na App Storeu, sa sučeljem na 33 jezika."
  },
  "cs": {
   "Heures de prière et Ramadan": "Časy modliteb a ramadán",
@@ -11129,6 +11193,8 @@ window.PC_I18N = {
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saúdská Arábie",
   "Russie": "Rusko",
-  "128 autres pays": "dalších 128 zemí"
+  "128 autres pays": "dalších 128 zemí",
+  "33 langues": "33 jazyků",
+  "PulseCalendar est disponible dans 175 pays sur l'App Store, avec une interface en 33 langues.": "PulseCalendar je dostupný ve 175 zemích v App Storu, s rozhraním ve 33 jazycích."
  }
 };

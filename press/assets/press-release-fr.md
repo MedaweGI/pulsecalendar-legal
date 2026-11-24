@@ -15,7 +15,7 @@ La même mise à jour rend les notifications plus utiles : un seul rappel par re
 - Il répond aux questions sur l'agenda avec l'IA d'Apple (Foundation Models, et Private Cloud Compute pour les demandes longues) : sans compte, et rien n'est conservé.
 
 ### À propos de Pulse Calendar
-Pulse Calendar est développé par Mehdi Salmi, développeur indépendant à Paris, et édité par PULSE. Il est natif sur iPhone, iPad, Mac et Apple Watch, traduit en 14 langues et construit de bout en bout sur les frameworks Apple : Foundation Models, WeatherKit, HealthKit, WidgetKit et Live Activities, App Intents, SwiftUI, Mac Catalyst et StoreKit 2.
+Pulse Calendar est développé par Mehdi Salmi, développeur indépendant à Paris, et édité par PULSE. Il est natif sur iPhone, iPad, Mac et Apple Watch, traduit en 33 langues et construit de bout en bout sur les frameworks Apple : Foundation Models, WeatherKit, HealthKit, WidgetKit et Live Activities, App Intents, SwiftUI, Mac Catalyst et StoreKit 2.
 
 ### Disponibilité et prix
 Gratuit sur l'App Store dans 175 pays. Pulse Pro coûte 4,99 € par mois ou 29,99 € par an, ou 44,99 € une fois pour toutes, avec un essai gratuit de 7 jours.
