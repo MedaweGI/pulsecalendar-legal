@@ -20,10 +20,13 @@
   // l'état "zh" invalide corrompt aussi les changements de langue suivants. (fix zh-Hans)
   // "en-US" = variante régionale : MÊME texte que "en" (alias dans dictFor), mais
   // son propre jeu de captures (°F) via screens-i18n.js.
-  var LANGS = ["fr", "en", "en-US", "es", "de", "ja", "ko", "ar", "ru", "zh-Hans"];
-  var RTL = { ar: true };
-  var FLAG = { fr: "🇫🇷", en: "🇬🇧", "en-US": "🇺🇸", es: "🇪🇸", de: "🇩🇪", ja: "🇯🇵", ko: "🇰🇷", ar: "🇸🇦", ru: "🇷🇺", "zh-Hans": "🇨🇳" };
-  var NATIVE = { fr: "Français", en: "English", "en-US": "English (US)", es: "Español", de: "Deutsch", ja: "日本語", ko: "한국어", ar: "العربية", ru: "Русский", "zh-Hans": "中文" };
+  var LANGS = ["fr", "en", "en-US", "es", "de", "ja", "ko", "ar", "ru", "zh-Hans",
+               "it", "pt-BR", "pt-PT", "tr", "el", "vi", "nl", "pl", "sv", "da", "nb", "fi", "cs", "sk", "hu", "ro", "hr", "uk", "ca", "he", "hi", "th", "id", "ms", "zh-Hant"];  // 33 langues, comme l'app (24/11/2026)
+  var RTL = { ar: true, he: true };
+  var FLAG = { fr: "🇫🇷", en: "🇬🇧", "en-US": "🇺🇸", es: "🇪🇸", de: "🇩🇪", ja: "🇯🇵", ko: "🇰🇷", ar: "🇸🇦", ru: "🇷🇺", "zh-Hans": "🇨🇳",
+               "it": "🇮🇹", "pt-BR": "🇧🇷", "pt-PT": "🇵🇹", "tr": "🇹🇷", "el": "🇬🇷", "vi": "🇻🇳", "nl": "🇳🇱", "pl": "🇵🇱", "sv": "🇸🇪", "da": "🇩🇰", "nb": "🇳🇴", "fi": "🇫🇮", "cs": "🇨🇿", "sk": "🇸🇰", "hu": "🇭🇺", "ro": "🇷🇴", "hr": "🇭🇷", "uk": "🇺🇦", "ca": "🌐", "he": "🇮🇱", "hi": "🇮🇳", "th": "🇹🇭", "id": "🇮🇩", "ms": "🇲🇾", "zh-Hant": "🌐" };
+  var NATIVE = { fr: "Français", en: "English", "en-US": "English (US)", es: "Español", de: "Deutsch", ja: "日本語", ko: "한국어", ar: "العربية", ru: "Русский", "zh-Hans": "中文",
+                 "it": "Italiano", "pt-BR": "Português (Brasil)", "pt-PT": "Português (Portugal)", "tr": "Türkçe", "el": "Ελληνικά", "vi": "Tiếng Việt", "nl": "Nederlands", "pl": "Polski", "sv": "Svenska", "da": "Dansk", "nb": "Norsk bokmål", "fi": "Suomi", "cs": "Čeština", "sk": "Slovenčina", "hu": "Magyar", "ro": "Română", "hr": "Hrvatski", "uk": "Українська", "ca": "Català", "he": "עברית", "hi": "हिन्दी", "th": "ไทย", "id": "Bahasa Indonesia", "ms": "Bahasa Melayu", "zh-Hant": "繁體中文" };
   var HTML_LANG = {}; // <html lang> = le code tel quel ("zh-Hans" inclus)
   var STORE = "pc_lang";
 
@@ -207,7 +210,7 @@
       ".pc-lang-btn:hover{background:rgba(255,255,255,.12);border-color:rgba(255,255,255,.30)}",
       ".pc-lang-flag{font-size:15px;line-height:1}",
       ".pc-lang-caret{font-size:10px;opacity:.7}",
-      ".pc-lang-menu{position:absolute;top:calc(100% + 8px);right:0;margin:0;padding:6px;list-style:none;min-width:168px;background:#16131f;border:1px solid rgba(255,255,255,.14);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.45);z-index:1000}",
+      ".pc-lang-menu{position:absolute;top:calc(100% + 8px);right:0;margin:0;padding:6px;list-style:none;min-width:168px;max-height:min(70vh,440px);overflow-y:auto;background:#16131f;border:1px solid rgba(255,255,255,.14);border-radius:12px;box-shadow:0 12px 32px rgba(0,0,0,.45);z-index:1000}",
       ".pc-lang-menu li{display:flex;align-items:center;gap:10px;padding:8px 10px;border-radius:8px;cursor:pointer;font-size:14px;color:#e9e6f2;white-space:nowrap}",
       ".pc-lang-menu li:hover{background:rgba(255,255,255,.08)}",
       ".pc-lang-menu li[aria-selected='true']{background:rgba(123,92,240,.22);color:#fff}",
@@ -239,7 +242,9 @@
       var full = String(navs[i] || "").toLowerCase();
       if (full === "en-us" && LANGS.indexOf("en-US") >= 0) return "en-US"; // US → °F
       var base = full.split("-")[0];
-      if (base === "zh") return "zh-Hans";
+      if (base === "zh") return (/^zh-(hant|tw|hk|mo)/.test(full)) ? "zh-Hant" : "zh-Hans";
+      if (base === "pt") return (full === "pt-pt") ? "pt-PT" : "pt-BR";
+      if (base === "no" || base === "nn") return "nb";
       if (LANGS.indexOf(base) >= 0) return base;
     }
     return "fr";
