@@ -313,7 +313,8 @@ window.PC_I18N = {
   "Grèce": "Greece",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi Arabia",
-  "129 autres pays": "129 more countries"
+  "Russie": "Russia",
+  "128 autres pays": "128 more countries"
  },
  "de": {
   "Heures de prière et Ramadan": "Gebetszeiten und Ramadan",
@@ -630,7 +631,8 @@ window.PC_I18N = {
   "Grèce": "Griechenland",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi-Arabien",
-  "129 autres pays": "129 weitere Länder"
+  "Russie": "Russland",
+  "128 autres pays": "128 weitere Länder"
  },
  "es": {
   "Heures de prière et Ramadan": "Horarios de oración y Ramadán",
@@ -946,7 +948,8 @@ window.PC_I18N = {
   "Grèce": "Grecia",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arabia Saudí",
-  "129 autres pays": "129 países más"
+  "Russie": "Rusia",
+  "128 autres pays": "128 países más"
  },
  "ja": {
   "Heures de prière et Ramadan": "礼拝時刻とラマダン",
@@ -1271,7 +1274,8 @@ window.PC_I18N = {
   "Grèce": "ギリシャ",
   "Vietnam": "ベトナム",
   "Arabie saoudite": "サウジアラビア",
-  "129 autres pays": "他129か国"
+  "Russie": "ロシア",
+  "128 autres pays": "他128か国"
  },
  "ko": {
   "Heures de prière et Ramadan": "기도 시간과 라마단",
@@ -1604,7 +1608,8 @@ window.PC_I18N = {
   "Grèce": "그리스",
   "Vietnam": "베트남",
   "Arabie saoudite": "사우디아라비아",
-  "129 autres pays": "129개국 더"
+  "Russie": "러시아",
+  "128 autres pays": "128개국 더"
  },
  "ar": {
   "Heures de prière et Ramadan": "مواقيت الصلاة ورمضان",
@@ -1933,7 +1938,8 @@ window.PC_I18N = {
   "Grèce": "اليونان",
   "Vietnam": "فيتنام",
   "Arabie saoudite": "المملكة العربية السعودية",
-  "129 autres pays": "129 دولة أخرى"
+  "Russie": "روسيا",
+  "128 autres pays": "128 دولة أخرى"
  },
  "ru": {
   "Heures de prière et Ramadan": "Время молитв и Рамадан",
@@ -2260,7 +2266,8 @@ window.PC_I18N = {
   "Grèce": "Греция",
   "Vietnam": "Вьетнам",
   "Arabie saoudite": "Саудовская Аравия",
-  "129 autres pays": "ещё 129 стран"
+  "Russie": "Россия",
+  "128 autres pays": "ещё 128 стран"
  },
  "zh-Hans": {
   "Heures de prière et Ramadan": "礼拜时间与斋月",
@@ -2594,7 +2601,8 @@ window.PC_I18N = {
   "Grèce": "希腊",
   "Vietnam": "越南",
   "Arabie saoudite": "沙特阿拉伯",
-  "129 autres pays": "另外 129 个国家/地区"
+  "Russie": "俄罗斯",
+  "128 autres pays": "另外 128 个国家/地区"
  },
  "en-US": {
   "4,99 €": "$3.99",
@@ -2620,7 +2628,8 @@ window.PC_I18N = {
   "Ukraine": "Ukraine",
   "Grèce": "Greece",
   "Vietnam": "Vietnam",
-  "Arabie saoudite": "Saudi Arabia"
+  "Arabie saoudite": "Saudi Arabia",
+  "Russie": "Russia"
  },
  "it": {
   "Heures de prière et Ramadan": "Orari di preghiera e Ramadan",
@@ -2959,7 +2968,8 @@ window.PC_I18N = {
   "Grèce": "Grecia",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arabia Saudita",
-  "129 autres pays": "129 altri paesi"
+  "Russie": "Russia",
+  "128 autres pays": "128 altri paesi"
  },
  "pt-BR": {
   "Heures de prière et Ramadan": "Horários de oração e Ramadã",
@@ -3298,7 +3308,8 @@ window.PC_I18N = {
   "Grèce": "Grécia",
   "Vietnam": "Vietnã",
   "Arabie saoudite": "Arábia Saudita",
-  "129 autres pays": "129 outros países"
+  "Russie": "Rússia",
+  "128 autres pays": "128 outros países"
  },
  "pt-PT": {
   "Heures de prière et Ramadan": "Horários de oração e Ramadão",
@@ -3637,7 +3648,8 @@ window.PC_I18N = {
   "Grèce": "Grécia",
   "Vietnam": "Vietname",
   "Arabie saoudite": "Arábia Saudita",
-  "129 autres pays": "129 outros países"
+  "Russie": "Rússia",
+  "128 autres pays": "128 outros países"
  },
  "tr": {
   "Heures de prière et Ramadan": "Namaz vakitleri ve Ramazan",
@@ -3976,7 +3988,8 @@ window.PC_I18N = {
   "Grèce": "Yunanistan",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Suudi Arabistan",
-  "129 autres pays": "129 ülke daha"
+  "Russie": "Rusya",
+  "128 autres pays": "128 ülke daha"
  },
  "el": {
   "Heures de prière et Ramadan": "Ώρες προσευχής και Ραμαζάνι",
@@ -4315,7 +4328,8 @@ window.PC_I18N = {
   "Grèce": "Ελλάδα",
   "Vietnam": "Βιετνάμ",
   "Arabie saoudite": "Σαουδική Αραβία",
-  "129 autres pays": "129 ακόμη χώρες"
+  "Russie": "Ρωσία",
+  "128 autres pays": "128 ακόμη χώρες"
  },
  "vi": {
   "Heures de prière et Ramadan": "Giờ cầu nguyện và Ramadan",
@@ -4654,7 +4668,8 @@ window.PC_I18N = {
   "Grèce": "Hy Lạp",
   "Vietnam": "Việt Nam",
   "Arabie saoudite": "Ả Rập Xê-út",
-  "129 autres pays": "129 quốc gia khác"
+  "Russie": "Nga",
+  "128 autres pays": "128 quốc gia khác"
  },
  "da": {
   "Heures de prière et Ramadan": "Bønnetider og ramadan",
@@ -4993,7 +5008,8 @@ window.PC_I18N = {
   "Grèce": "Grækenland",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi-Arabien",
-  "129 autres pays": "129 andre lande"
+  "Russie": "Rusland",
+  "128 autres pays": "128 andre lande"
  },
  "nl": {
   "Heures de prière et Ramadan": "Gebedstijden en Ramadan",
@@ -5332,7 +5348,8 @@ window.PC_I18N = {
   "Grèce": "Griekenland",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saoedi-Arabië",
-  "129 autres pays": "129 andere landen"
+  "Russie": "Rusland",
+  "128 autres pays": "128 andere landen"
  },
  "fi": {
   "Heures de prière et Ramadan": "Rukousajat ja ramadan",
@@ -5671,7 +5688,8 @@ window.PC_I18N = {
   "Grèce": "Kreikka",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi-Arabia",
-  "129 autres pays": "129 muuta maata"
+  "Russie": "Venäjä",
+  "128 autres pays": "128 muuta maata"
  },
  "he": {
   "Heures de prière et Ramadan": "זמני תפילה ורמדאן",
@@ -6010,7 +6028,8 @@ window.PC_I18N = {
   "Grèce": "יוון",
   "Vietnam": "וייטנאם",
   "Arabie saoudite": "ערב הסעודית",
-  "129 autres pays": "עוד 129 מדינות"
+  "Russie": "רוסיה",
+  "128 autres pays": "עוד 128 מדינות"
  },
  "hi": {
   "Heures de prière et Ramadan": "नमाज़ के समय और रमज़ान",
@@ -6349,7 +6368,8 @@ window.PC_I18N = {
   "Grèce": "यूनान",
   "Vietnam": "वियतनाम",
   "Arabie saoudite": "सऊदी अरब",
-  "129 autres pays": "129 और देश"
+  "Russie": "रूस",
+  "128 autres pays": "128 और देश"
  },
  "hu": {
   "Heures de prière et Ramadan": "Imaidők és Ramadán",
@@ -6688,7 +6708,8 @@ window.PC_I18N = {
   "Grèce": "Görögország",
   "Vietnam": "Vietnám",
   "Arabie saoudite": "Szaúd-Arábia",
-  "129 autres pays": "további 129 ország"
+  "Russie": "Oroszország",
+  "128 autres pays": "további 128 ország"
  },
  "id": {
   "Heures de prière et Ramadan": "Waktu salat dan Ramadan",
@@ -7027,7 +7048,8 @@ window.PC_I18N = {
   "Grèce": "Yunani",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arab Saudi",
-  "129 autres pays": "129 negara lainnya"
+  "Russie": "Rusia",
+  "128 autres pays": "128 negara lainnya"
  },
  "ms": {
   "Heures de prière et Ramadan": "Waktu solat dan Ramadan",
@@ -7366,7 +7388,8 @@ window.PC_I18N = {
   "Grèce": "Greece",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arab Saudi",
-  "129 autres pays": "129 negara lain"
+  "Russie": "Rusia",
+  "128 autres pays": "128 negara lain"
  },
  "nb": {
   "Heures de prière et Ramadan": "Bønnetider og ramadan",
@@ -7705,7 +7728,8 @@ window.PC_I18N = {
   "Grèce": "Hellas",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudi-Arabia",
-  "129 autres pays": "129 andre land"
+  "Russie": "Russland",
+  "128 autres pays": "128 andre land"
  },
  "pl": {
   "Heures de prière et Ramadan": "Godziny modlitw i Ramadan",
@@ -8044,7 +8068,8 @@ window.PC_I18N = {
   "Grèce": "Grecja",
   "Vietnam": "Wietnam",
   "Arabie saoudite": "Arabia Saudyjska",
-  "129 autres pays": "129 innych krajów"
+  "Russie": "Rosja",
+  "128 autres pays": "128 innych krajów"
  },
  "ro": {
   "Heures de prière et Ramadan": "Orele de rugăciune și Ramadanul",
@@ -8383,7 +8408,8 @@ window.PC_I18N = {
   "Grèce": "Grecia",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Arabia Saudită",
-  "129 autres pays": "alte 129 de țări"
+  "Russie": "Rusia",
+  "128 autres pays": "alte 128 de țări"
  },
  "sk": {
   "Heures de prière et Ramadan": "Časy modlitieb a ramadán",
@@ -8722,7 +8748,8 @@ window.PC_I18N = {
   "Grèce": "Grécko",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudská Arábia",
-  "129 autres pays": "129 ďalších krajín"
+  "Russie": "Rusko",
+  "128 autres pays": "128 ďalších krajín"
  },
  "sv": {
   "Heures de prière et Ramadan": "Böne- och ramadantider",
@@ -9061,7 +9088,8 @@ window.PC_I18N = {
   "Grèce": "Grekland",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saudiarabien",
-  "129 autres pays": "129 länder till"
+  "Russie": "Ryssland",
+  "128 autres pays": "128 länder till"
  },
  "th": {
   "Heures de prière et Ramadan": "เวลาละหมาดและรอมฎอน",
@@ -9400,7 +9428,8 @@ window.PC_I18N = {
   "Grèce": "กรีซ",
   "Vietnam": "เวียดนาม",
   "Arabie saoudite": "ซาอุดีอาระเบีย",
-  "129 autres pays": "อีก 129 ประเทศ"
+  "Russie": "รัสเซีย",
+  "128 autres pays": "อีก 128 ประเทศ"
  },
  "uk": {
   "Heures de prière et Ramadan": "Час намазу та Рамадан",
@@ -9739,7 +9768,8 @@ window.PC_I18N = {
   "Grèce": "Греція",
   "Vietnam": "Вʼєтнам",
   "Arabie saoudite": "Саудівська Аравія",
-  "129 autres pays": "ще 129 країн"
+  "Russie": "Росія",
+  "128 autres pays": "ще 128 країн"
  },
  "zh-Hant": {
   "Heures de prière et Ramadan": "禱告時間與齋戒月",
@@ -10078,7 +10108,8 @@ window.PC_I18N = {
   "Grèce": "希臘",
   "Vietnam": "越南",
   "Arabie saoudite": "沙烏地阿拉伯",
-  "129 autres pays": "另外 129 個國家"
+  "Russie": "俄羅斯",
+  "128 autres pays": "另外 128 個國家"
  },
  "ca": {
   "Heures de prière et Ramadan": "Hores de pregària i Ramadà",
@@ -10417,7 +10448,8 @@ window.PC_I18N = {
   "Grèce": "Grècia",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Aràbia Saudí",
-  "129 autres pays": "129 països més"
+  "Russie": "Rússia",
+  "128 autres pays": "128 països més"
  },
  "hr": {
   "Heures de prière et Ramadan": "Vrijeme molitve i ramazan",
@@ -10756,7 +10788,8 @@ window.PC_I18N = {
   "Grèce": "Grčka",
   "Vietnam": "Vijetnam",
   "Arabie saoudite": "Saudijska Arabija",
-  "129 autres pays": "još 129 zemalja"
+  "Russie": "Rusija",
+  "128 autres pays": "još 128 zemalja"
  },
  "cs": {
   "Heures de prière et Ramadan": "Časy modliteb a ramadán",
@@ -11095,6 +11128,7 @@ window.PC_I18N = {
   "Grèce": "Řecko",
   "Vietnam": "Vietnam",
   "Arabie saoudite": "Saúdská Arábie",
-  "129 autres pays": "dalších 129 zemí"
+  "Russie": "Rusko",
+  "128 autres pays": "dalších 128 zemí"
  }
 };
