@@ -172,7 +172,15 @@
       menu.appendChild(li);
     });
 
-    function openMenu() { menu.hidden = false; btn.setAttribute("aria-expanded", "true"); }
+    function openMenu() {
+      menu.hidden = false; btn.setAttribute("aria-expanded", "true");
+      // Écran étroit (iPhone) : le menu, calé à droite du bouton, sortait par la gauche
+      // et cachait la colonne des drapeaux. On le garde dans l'écran (24/11/2026).
+      menu.style.left = ""; menu.style.right = "";
+      var r = menu.getBoundingClientRect(), w = btn.getBoundingClientRect();
+      if (r.left < 8) { menu.style.right = "auto"; menu.style.left = Math.max(8 - w.left, Math.min(0, window.innerWidth - 8 - r.width - w.left)) + "px"; }
+      else if (r.right > window.innerWidth - 8) { menu.style.left = "auto"; menu.style.right = "0px"; }
+    }
     function closeMenu() { menu.hidden = true; btn.setAttribute("aria-expanded", "false"); }
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
