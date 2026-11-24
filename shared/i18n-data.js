@@ -298,7 +298,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Calendar for iPhone, iPad, Mac and Apple Watch",
   "Tes rendez-vous,": "Your appointments,",
   "sans rien oublier.": "nothing forgotten.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse reads your appointment letter, tells you when to leave and what to bring, then reminds you to book the next one. No account, on your iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse reads your appointment letter, tells you when to leave and what to bring, then reminds you to book the next one. No account, on your iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Your appointments, nothing forgotten."
  },
  "de": {
   "Heures de prière et Ramadan": "Gebetszeiten und Ramadan",
@@ -600,7 +601,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalender für iPhone, iPad, Mac und Apple Watch",
   "Tes rendez-vous,": "Deine Termine,",
   "sans rien oublier.": "nichts vergessen.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse liest deine Einladung, sagt dir, wann du losmusst und was du mitbringen sollst, und erinnert dich dann, den nächsten Termin zu vereinbaren. Ohne Konto, auf deinem iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse liest deine Einladung, sagt dir, wann du losmusst und was du mitbringen sollst, und erinnert dich dann, den nächsten Termin zu vereinbaren. Ohne Konto, auf deinem iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Deine Termine, nichts vergessen."
  },
  "es": {
   "Heures de prière et Ramadan": "Horarios de oración y Ramadán",
@@ -901,7 +903,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Calendario para iPhone, iPad, Mac y Apple Watch",
   "Tes rendez-vous,": "Tus citas,",
   "sans rien oublier.": "sin olvidar nada.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse lee tu convocatoria, te dice cuándo salir y qué llevar, y luego te recuerda pedir la siguiente. Sin cuenta, en tu iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse lee tu convocatoria, te dice cuándo salir y qué llevar, y luego te recuerda pedir la siguiente. Sin cuenta, en tu iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Tus citas, sin olvidar nada."
  },
  "ja": {
   "Heures de prière et Ramadan": "礼拝時刻とラマダン",
@@ -1211,7 +1214,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "iPhone、iPad、Mac、Apple Watch 対応のカレンダー",
   "Tes rendez-vous,": "予定を、",
   "sans rien oublier.": "もう忘れない。",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse は案内状を読み取り、いつ出発すべきか、何を持っていくかを教えてくれます。そして次の予約を忘れないようにお知らせ。アカウント不要、iPhone だけで。"
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse は案内状を読み取り、いつ出発すべきか、何を持っていくかを教えてくれます。そして次の予約を忘れないようにお知らせ。アカウント不要、iPhone だけで。",
+  "Tes rendez-vous, sans rien oublier.": "予定を、もう忘れない。"
  },
  "ko": {
   "Heures de prière et Ramadan": "기도 시간과 라마단",
@@ -1529,7 +1533,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "iPhone, iPad, Mac, Apple Watch용 캘린더",
   "Tes rendez-vous,": "내 약속을,",
   "sans rien oublier.": "하나도 놓치지 않게.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse가 안내문을 읽고, 언제 출발해야 하는지와 무엇을 챙길지 알려 주고, 다음 예약도 잊지 않게 챙겨 줘요. 계정 없이, 내 iPhone에서."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse가 안내문을 읽고, 언제 출발해야 하는지와 무엇을 챙길지 알려 주고, 다음 예약도 잊지 않게 챙겨 줘요. 계정 없이, 내 iPhone에서.",
+  "Tes rendez-vous, sans rien oublier.": "내 약속을, 하나도 놓치지 않게."
  },
  "ar": {
   "Heures de prière et Ramadan": "مواقيت الصلاة ورمضان",
@@ -1843,7 +1848,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "تقويم لأجهزة iPhone وiPad وMac وApple Watch",
   "Tes rendez-vous,": "مواعيدك،",
   "sans rien oublier.": "دون أن تنسى شيئًا.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "يقرأ Pulse استدعاءك ويخبرك متى تغادر وماذا تحمل معك، ثم يذكّرك بحجز الموعد التالي. بلا حساب، على iPhone الخاص بك."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "يقرأ Pulse استدعاءك ويخبرك متى تغادر وماذا تحمل معك، ثم يذكّرك بحجز الموعد التالي. بلا حساب، على iPhone الخاص بك.",
+  "Tes rendez-vous, sans rien oublier.": "مواعيدك، دون أن تنسى شيئًا."
  },
  "ru": {
   "Heures de prière et Ramadan": "Время молитв и Рамадан",
@@ -2155,7 +2161,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Календарь для iPhone, iPad, Mac и Apple Watch",
   "Tes rendez-vous,": "Твои встречи,",
   "sans rien oublier.": "ничего не забыто.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse читает твоё приглашение, подсказывает, когда выходить и что взять с собой, а потом напоминает записаться на следующий приём. Без аккаунта, на твоём iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse читает твоё приглашение, подсказывает, когда выходить и что взять с собой, а потом напоминает записаться на следующий приём. Без аккаунта, на твоём iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Твои встречи, ничего не забыто."
  },
  "zh-Hans": {
   "Heures de prière et Ramadan": "礼拜时间与斋月",
@@ -2474,7 +2481,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "适用于 iPhone、iPad、Mac 和 Apple Watch 的日历",
   "Tes rendez-vous,": "你的预约，",
   "sans rien oublier.": "一件都不落下。",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse 会读懂你的通知函，告诉你何时出发、该带什么，再提醒你预约下一次。无需账户，就在你的 iPhone 上。"
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse 会读懂你的通知函，告诉你何时出发、该带什么，再提醒你预约下一次。无需账户，就在你的 iPhone 上。",
+  "Tes rendez-vous, sans rien oublier.": "你的预约，一件都不落下。"
  },
  "en-US": {
   "4,99 €": "$3.99",
@@ -2811,7 +2819,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Agenda per iPhone, iPad, Mac e Apple Watch",
   "Tes rendez-vous,": "I tuoi appuntamenti,",
   "sans rien oublier.": "senza dimenticare nulla.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse legge la tua convocazione, ti dice quando partire e cosa portare, poi ti ricorda di prenotare il prossimo. Senza account, sul tuo iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse legge la tua convocazione, ti dice quando partire e cosa portare, poi ti ricorda di prenotare il prossimo. Senza account, sul tuo iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "I tuoi appuntamenti, senza dimenticare nulla."
  },
  "pt-BR": {
   "Heures de prière et Ramadan": "Horários de oração e Ramadã",
@@ -3135,7 +3144,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Agenda para iPhone, iPad, Mac e Apple Watch",
   "Tes rendez-vous,": "Seus compromissos,",
   "sans rien oublier.": "sem esquecer nada.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "O Pulse lê a sua convocação, diz quando sair e o que levar, e depois lembra você de marcar o próximo. Sem conta, no seu iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "O Pulse lê a sua convocação, diz quando sair e o que levar, e depois lembra você de marcar o próximo. Sem conta, no seu iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Seus compromissos, sem esquecer nada."
  },
  "pt-PT": {
   "Heures de prière et Ramadan": "Horários de oração e Ramadão",
@@ -3459,7 +3469,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Agenda para iPhone, iPad, Mac e Apple Watch",
   "Tes rendez-vous,": "Os teus compromissos,",
   "sans rien oublier.": "sem esquecer nada.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "O Pulse lê a tua convocatória, diz-te quando sair e o que levar, e depois lembra-te de marcar o próximo. Sem conta, no teu iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "O Pulse lê a tua convocatória, diz-te quando sair e o que levar, e depois lembra-te de marcar o próximo. Sem conta, no teu iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Os teus compromissos, sem esquecer nada."
  },
  "tr": {
   "Heures de prière et Ramadan": "Namaz vakitleri ve Ramazan",
@@ -3783,7 +3794,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "iPhone, iPad, Mac ve Apple Watch için ajanda",
   "Tes rendez-vous,": "Randevuların,",
   "sans rien oublier.": "hiçbir şey unutulmadan.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse çağrı mektubunu okur, ne zaman çıkman ve nelerle gitmen gerektiğini söyler, sonra bir sonrakini almayı hatırlatır. Hesap yok, iPhone'unda."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse çağrı mektubunu okur, ne zaman çıkman ve nelerle gitmen gerektiğini söyler, sonra bir sonrakini almayı hatırlatır. Hesap yok, iPhone'unda.",
+  "Tes rendez-vous, sans rien oublier.": "Randevuların, hiçbir şey unutulmadan."
  },
  "el": {
   "Heures de prière et Ramadan": "Ώρες προσευχής και Ραμαζάνι",
@@ -4107,7 +4119,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Ημερολόγιο για iPhone, iPad, Mac και Apple Watch",
   "Tes rendez-vous,": "Τα ραντεβού σου,",
   "sans rien oublier.": "χωρίς να ξεχνάς τίποτα.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Το Pulse διαβάζει την πρόσκλησή σου, σου λέει πότε να φύγεις και τι να πάρεις μαζί σου και μετά σου θυμίζει να κλείσεις το επόμενο. Χωρίς λογαριασμό, στο iPhone σου."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Το Pulse διαβάζει την πρόσκλησή σου, σου λέει πότε να φύγεις και τι να πάρεις μαζί σου και μετά σου θυμίζει να κλείσεις το επόμενο. Χωρίς λογαριασμό, στο iPhone σου.",
+  "Tes rendez-vous, sans rien oublier.": "Τα ραντεβού σου, χωρίς να ξεχνάς τίποτα."
  },
  "vi": {
   "Heures de prière et Ramadan": "Giờ cầu nguyện và Ramadan",
@@ -4431,7 +4444,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Lịch cho iPhone, iPad, Mac và Apple Watch",
   "Tes rendez-vous,": "Các cuộc hẹn của bạn,",
   "sans rien oublier.": "không quên điều gì.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse đọc giấy triệu tập của bạn, cho bạn biết khi nào nên đi và cần mang theo gì, rồi nhắc bạn đặt lịch cho lần kế tiếp. Không cần tài khoản, ngay trên iPhone của bạn."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse đọc giấy triệu tập của bạn, cho bạn biết khi nào nên đi và cần mang theo gì, rồi nhắc bạn đặt lịch cho lần kế tiếp. Không cần tài khoản, ngay trên iPhone của bạn.",
+  "Tes rendez-vous, sans rien oublier.": "Các cuộc hẹn của bạn, không quên điều gì."
  },
  "da": {
   "Heures de prière et Ramadan": "Bønnetider og ramadan",
@@ -4755,7 +4769,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalender til iPhone, iPad, Mac og Apple Watch",
   "Tes rendez-vous,": "Dine aftaler,",
   "sans rien oublier.": "uden at glemme noget.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse læser din indkaldelse, fortæller dig, hvornår du skal afsted og hvad du skal have med, og minder dig derefter om at bestille den næste. Uden konto, på din iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse læser din indkaldelse, fortæller dig, hvornår du skal afsted og hvad du skal have med, og minder dig derefter om at bestille den næste. Uden konto, på din iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Dine aftaler, uden at glemme noget."
  },
  "nl": {
   "Heures de prière et Ramadan": "Gebedstijden en Ramadan",
@@ -5079,7 +5094,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Agenda voor iPhone, iPad, Mac en Apple Watch",
   "Tes rendez-vous,": "Je afspraken,",
   "sans rien oublier.": "niets vergeten.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse leest je oproep, vertelt je wanneer je moet vertrekken en wat je mee moet nemen, en herinnert je er daarna aan de volgende in te plannen. Zonder account, op je iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse leest je oproep, vertelt je wanneer je moet vertrekken en wat je mee moet nemen, en herinnert je er daarna aan de volgende in te plannen. Zonder account, op je iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Je afspraken, niets vergeten."
  },
  "fi": {
   "Heures de prière et Ramadan": "Rukousajat ja ramadan",
@@ -5403,7 +5419,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalenteri iPhonelle, iPadille, Macille ja Apple Watchille",
   "Tes rendez-vous,": "Tapaamisesi,",
   "sans rien oublier.": "mitään unohtamatta.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse lukee kutsusi, kertoo milloin lähteä ja mitä ottaa mukaan, ja muistuttaa sitten varaamaan seuraavan. Ilman tiliä, iPhonessasi."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse lukee kutsusi, kertoo milloin lähteä ja mitä ottaa mukaan, ja muistuttaa sitten varaamaan seuraavan. Ilman tiliä, iPhonessasi.",
+  "Tes rendez-vous, sans rien oublier.": "Tapaamisesi, mitään unohtamatta."
  },
  "he": {
   "Heures de prière et Ramadan": "זמני תפילה ורמדאן",
@@ -5727,7 +5744,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "לוח שנה ל-iPhone, iPad, Mac ו-Apple Watch",
   "Tes rendez-vous,": "הפגישות שלך,",
   "sans rien oublier.": "בלי לשכוח כלום.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse קורא את ההזמנה שלך, אומר לך מתי לצאת ומה להביא, ואז מזכיר לך לקבוע את הבאה. בלי חשבון, על ה-iPhone שלך."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse קורא את ההזמנה שלך, אומר לך מתי לצאת ומה להביא, ואז מזכיר לך לקבוע את הבאה. בלי חשבון, על ה-iPhone שלך.",
+  "Tes rendez-vous, sans rien oublier.": "הפגישות שלך, בלי לשכוח כלום."
  },
  "hi": {
   "Heures de prière et Ramadan": "नमाज़ के समय और रमज़ान",
@@ -6051,7 +6069,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "iPhone, iPad, Mac और Apple Watch के लिए कैलेंडर",
   "Tes rendez-vous,": "तुम्हारी अपॉइंटमेंट,",
   "sans rien oublier.": "कुछ भी भूले बिना।",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse तुम्हारा बुलावा-पत्र पढ़ता है, बताता है कब निकलना है और क्या साथ ले जाना है, फिर अगली अपॉइंटमेंट बुक करने की याद दिलाता है। बिना खाते के, तुम्हारे iPhone पर।"
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse तुम्हारा बुलावा-पत्र पढ़ता है, बताता है कब निकलना है और क्या साथ ले जाना है, फिर अगली अपॉइंटमेंट बुक करने की याद दिलाता है। बिना खाते के, तुम्हारे iPhone पर।",
+  "Tes rendez-vous, sans rien oublier.": "तुम्हारी अपॉइंटमेंट, कुछ भी भूले बिना।"
  },
  "hu": {
   "Heures de prière et Ramadan": "Imaidők és Ramadán",
@@ -6375,7 +6394,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Naptár iPhone-ra, iPadre, Macre és Apple Watchra",
   "Tes rendez-vous,": "A találkozóid,",
   "sans rien oublier.": "semmi sem marad ki.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "A Pulse elolvassa az idézésedet, megmondja, mikor indulj és mit vigyél, majd emlékeztet, hogy foglald le a következőt. Fiók nélkül, az iPhone-odon."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "A Pulse elolvassa az idézésedet, megmondja, mikor indulj és mit vigyél, majd emlékeztet, hogy foglald le a következőt. Fiók nélkül, az iPhone-odon.",
+  "Tes rendez-vous, sans rien oublier.": "A találkozóid, semmi sem marad ki."
  },
  "id": {
   "Heures de prière et Ramadan": "Waktu salat dan Ramadan",
@@ -6699,7 +6719,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalender untuk iPhone, iPad, Mac, dan Apple Watch",
   "Tes rendez-vous,": "Janji temumu,",
   "sans rien oublier.": "tanpa ada yang terlupa.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse membaca surat panggilanmu, memberi tahu kapan harus berangkat dan apa yang dibawa, lalu mengingatkanmu untuk memesan yang berikutnya. Tanpa akun, di iPhone kamu."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse membaca surat panggilanmu, memberi tahu kapan harus berangkat dan apa yang dibawa, lalu mengingatkanmu untuk memesan yang berikutnya. Tanpa akun, di iPhone kamu.",
+  "Tes rendez-vous, sans rien oublier.": "Janji temumu, tanpa ada yang terlupa."
  },
  "ms": {
   "Heures de prière et Ramadan": "Waktu solat dan Ramadan",
@@ -7023,7 +7044,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalendar untuk iPhone, iPad, Mac dan Apple Watch",
   "Tes rendez-vous,": "Temu janji kamu,",
   "sans rien oublier.": "tanpa terlupa satu pun.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse membaca surat panggilan kamu, memberitahu bila perlu bertolak dan apa yang perlu dibawa, kemudian mengingatkan kamu untuk menempah yang seterusnya. Tiada akaun, pada iPhone kamu."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse membaca surat panggilan kamu, memberitahu bila perlu bertolak dan apa yang perlu dibawa, kemudian mengingatkan kamu untuk menempah yang seterusnya. Tiada akaun, pada iPhone kamu.",
+  "Tes rendez-vous, sans rien oublier.": "Temu janji kamu, tanpa terlupa satu pun."
  },
  "nb": {
   "Heures de prière et Ramadan": "Bønnetider og ramadan",
@@ -7347,7 +7369,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalender for iPhone, iPad, Mac og Apple Watch",
   "Tes rendez-vous,": "Avtalene dine,",
   "sans rien oublier.": "uten å glemme noe.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse leser innkallingen din, sier når du bør dra og hva du skal ha med, og minner deg på å bestille neste. Ingen konto, på iPhone-en din."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse leser innkallingen din, sier når du bør dra og hva du skal ha med, og minner deg på å bestille neste. Ingen konto, på iPhone-en din.",
+  "Tes rendez-vous, sans rien oublier.": "Avtalene dine, uten å glemme noe."
  },
  "pl": {
   "Heures de prière et Ramadan": "Godziny modlitw i Ramadan",
@@ -7671,7 +7694,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalendarz na iPhone, iPad, Mac i Apple Watch",
   "Tes rendez-vous,": "Twoje terminy,",
   "sans rien oublier.": "o niczym nie zapomnisz.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse czyta Twoje wezwanie, mówi Ci, kiedy wyjść i co zabrać, a potem przypomina, żeby umówić kolejny termin. Bez konta, na Twoim iPhonie."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse czyta Twoje wezwanie, mówi Ci, kiedy wyjść i co zabrać, a potem przypomina, żeby umówić kolejny termin. Bez konta, na Twoim iPhonie.",
+  "Tes rendez-vous, sans rien oublier.": "Twoje terminy, o niczym nie zapomnisz."
  },
  "ro": {
   "Heures de prière et Ramadan": "Orele de rugăciune și Ramadanul",
@@ -7995,7 +8019,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Agendă pentru iPhone, iPad, Mac și Apple Watch",
   "Tes rendez-vous,": "Întâlnirile tale,",
   "sans rien oublier.": "fără să uiți nimic.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse citește convocarea ta, îți spune când să pleci și ce să iei, apoi îți amintește să faci programarea următoare. Fără cont, pe iPhone-ul tău."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse citește convocarea ta, îți spune când să pleci și ce să iei, apoi îți amintește să faci programarea următoare. Fără cont, pe iPhone-ul tău.",
+  "Tes rendez-vous, sans rien oublier.": "Întâlnirile tale, fără să uiți nimic."
  },
  "sk": {
   "Heures de prière et Ramadan": "Časy modlitieb a ramadán",
@@ -8319,7 +8344,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalendár pre iPhone, iPad, Mac a Apple Watch",
   "Tes rendez-vous,": "Tvoje stretnutia,",
   "sans rien oublier.": "bez toho, aby si na niečo zabudol.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse číta tvoju predvolávku, povie ti, kedy ísť a čo si vziať, a potom ti pripomenie, aby si si dohodol ďalší termín. Bez účtu, na tvojom iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse číta tvoju predvolávku, povie ti, kedy ísť a čo si vziať, a potom ti pripomenie, aby si si dohodol ďalší termín. Bez účtu, na tvojom iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Tvoje stretnutia, bez toho, aby si na niečo zabudol."
  },
  "sv": {
   "Heures de prière et Ramadan": "Böne- och ramadantider",
@@ -8643,7 +8669,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalender för iPhone, iPad, Mac och Apple Watch",
   "Tes rendez-vous,": "Dina möten,",
   "sans rien oublier.": "utan att glömma något.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse läser din kallelse, säger när du ska åka och vad du ska ta med och påminner dig sedan om att boka nästa. Utan konto, på din iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse läser din kallelse, säger när du ska åka och vad du ska ta med och påminner dig sedan om att boka nästa. Utan konto, på din iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Dina möten, utan att glömma något."
  },
  "th": {
   "Heures de prière et Ramadan": "เวลาละหมาดและรอมฎอน",
@@ -8967,7 +8994,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "ปฏิทินสำหรับ iPhone, iPad, Mac และ Apple Watch",
   "Tes rendez-vous,": "นัดหมายของคุณ",
   "sans rien oublier.": "ไม่มีอะไรหลุด",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse อ่านจดหมายนัดของคุณ บอกว่าควรออกเดินทางเมื่อไรและต้องเอาอะไรไป แล้วเตือนให้คุณนัดครั้งถัดไป ไม่ต้องมีบัญชี ทำงานบน iPhone ของคุณ"
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse อ่านจดหมายนัดของคุณ บอกว่าควรออกเดินทางเมื่อไรและต้องเอาอะไรไป แล้วเตือนให้คุณนัดครั้งถัดไป ไม่ต้องมีบัญชี ทำงานบน iPhone ของคุณ",
+  "Tes rendez-vous, sans rien oublier.": "นัดหมายของคุณ ไม่มีอะไรหลุด"
  },
  "uk": {
   "Heures de prière et Ramadan": "Час намазу та Рамадан",
@@ -9291,7 +9319,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Календар для iPhone, iPad, Mac і Apple Watch",
   "Tes rendez-vous,": "Твої зустрічі,",
   "sans rien oublier.": "нічого не забуто.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse читає твій лист із запрошенням, підказує, коли виходити і що взяти, а потім нагадує записатися на наступну. Без облікового запису, на твоєму iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse читає твій лист із запрошенням, підказує, коли виходити і що взяти, а потім нагадує записатися на наступну. Без облікового запису, на твоєму iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Твої зустрічі, нічого не забуто."
  },
  "zh-Hant": {
   "Heures de prière et Ramadan": "禱告時間與齋戒月",
@@ -9615,7 +9644,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "適用於 iPhone、iPad、Mac 與 Apple Watch 的行事曆",
   "Tes rendez-vous,": "你的約診，",
   "sans rien oublier.": "一件都不漏。",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse 讀懂你的通知信，告訴你何時出發、該帶什麼，再提醒你預約下一次。不需要帳號，就在你的 iPhone 上。"
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse 讀懂你的通知信，告訴你何時出發、該帶什麼，再提醒你預約下一次。不需要帳號，就在你的 iPhone 上。",
+  "Tes rendez-vous, sans rien oublier.": "你的約診，一件都不漏。"
  },
  "ca": {
   "Heures de prière et Ramadan": "Hores de pregària i Ramadà",
@@ -9939,7 +9969,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Agenda per a iPhone, iPad, Mac i Apple Watch",
   "Tes rendez-vous,": "Les teves cites,",
   "sans rien oublier.": "sense oblidar res.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse llegeix la teva citació, et diu quan has de sortir i què has de portar, i després et recorda de reservar la següent. Sense compte, al teu iPhone."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse llegeix la teva citació, et diu quan has de sortir i què has de portar, i després et recorda de reservar la següent. Sense compte, al teu iPhone.",
+  "Tes rendez-vous, sans rien oublier.": "Les teves cites, sense oblidar res."
  },
  "hr": {
   "Heures de prière et Ramadan": "Vrijeme molitve i ramazan",
@@ -10263,7 +10294,8 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalendar za iPhone, iPad, Mac i Apple Watch",
   "Tes rendez-vous,": "Tvoji termini,",
   "sans rien oublier.": "ništa zaboravljeno.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse čita tvoj poziv, kaže ti kada trebaš krenuti i što ponijeti, a zatim te podsjeti da rezerviraš sljedeći termin. Bez računa, na tvom iPhoneu."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse čita tvoj poziv, kaže ti kada trebaš krenuti i što ponijeti, a zatim te podsjeti da rezerviraš sljedeći termin. Bez računa, na tvom iPhoneu.",
+  "Tes rendez-vous, sans rien oublier.": "Tvoji termini, ništa zaboravljeno."
  },
  "cs": {
   "Heures de prière et Ramadan": "Časy modliteb a ramadán",
@@ -10587,6 +10619,7 @@ window.PC_I18N = {
   "Agenda pour iPhone, iPad, Mac et Apple Watch": "Kalendář pro iPhone, iPad, Mac a Apple Watch",
   "Tes rendez-vous,": "Tvé schůzky,",
   "sans rien oublier.": "nic nezapomeneš.",
-  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse přečte tvé předvolání, řekne ti, kdy vyrazit a co vzít s sebou, a pak ti připomene, abys si objednal další. Bez účtu, na tvém iPhonu."
+  "Pulse lit ta convocation, te dit quand partir et quoi apporter, puis te rappelle de reprendre le suivant. Sans compte, sur ton iPhone.": "Pulse přečte tvé předvolání, řekne ti, kdy vyrazit a co vzít s sebou, a pak ti připomene, abys si objednal další. Bez účtu, na tvém iPhonu.",
+  "Tes rendez-vous, sans rien oublier.": "Tvé schůzky, nic nezapomeneš."
  }
 };
