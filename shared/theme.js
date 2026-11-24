@@ -4,6 +4,19 @@
 // Chargé SANS defer dans <head> : pose data-theme avant le premier paint
 // (pas de flash), puis injecte le bouton dans .nav-inner quand la nav
 // existe (nav statique d'index OU nav injectée par nav-footer.js).
+// Toujours démarrer EN HAUT de la page (24/11/2026, « le site ne démarre pas en
+// haut ») : le navigateur remettait la position du défilement précédent au
+// rechargement ou au retour sur le site. Sauf lien vers une section (#ancre).
+(function () {
+  try {
+    if ('scrollRestoration' in history) history.scrollRestoration = 'manual';
+    if (!location.hash) {
+      window.scrollTo(0, 0);
+      window.addEventListener('load', function () { if (!location.hash) window.scrollTo(0, 0); });
+    }
+  } catch (e) {}
+})();
+
 (function () {
   var KEY = 'pulse_theme';
   var theme = 'dark';
