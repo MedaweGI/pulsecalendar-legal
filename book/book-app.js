@@ -10,7 +10,7 @@
 // ni reCAPTCHA, ni Cloud Functions), envoi simulé. Paramètres de test en plus :
 // accent=RRGGBB|none, host=0 (sans nom d'hôte), question=0, phone=1, address=1, video=1, noslots=1,
 // demoLoad=<code> (erreur au chargement), demoError=<code> (erreur à l'envoi),
-// title=, hostName= (textes), ensure=AAAA-MM-JJTHH:MM (créneau garanti, pour les vidéos).
+// title=, hostName=, place= (textes), ensure=AAAA-MM-JJTHH:MM (créneau garanti, pour les vidéos).
 //
 // Tout le texte visible vient de ./i18n/<langue>.js (34 langues). Les contenus
 // saisis par l'hôte (titre, nom, lieu, question) sont insérés en textContent,
@@ -473,7 +473,7 @@ function demoData(withSlots) {
     hostAnonymousUid: 'demo-host',
     title: P.get('title') || t('demoTitle'),
     hostName: P.get('host') === '0' ? null : (P.get('hostName') || 'Camille Martin'),
-    location: t('demoPlace'),
+    location: P.get('place') || t('demoPlace'),
     durationMinutes: durs[0],
     durations: durs.length > 1 ? durs : undefined,
     autoConfirm: /^(1|true|yes)$/i.test(P.get('autoConfirm') || ''),
@@ -1113,8 +1113,26 @@ async function startBooking() {
   setLink(data.link);
   S.slots = data.slots;
   renderHeader();
+  countView(S.shortId);
   if (!S.slots.length) return showNoSlots();
   initPicker(P.get('slot'));
+}
+
+// Compteur « Vues » de l'hôte : une vue par visiteur et par jour, compté côté
+// serveur (viewBookingLink). Jamais en démo ; rien ne bloque la page si l'appel échoue.
+function countView(shortId) {
+  if (DEMO) return;
+  try {
+    const key = `pb_view_${shortId}`;
+    if (sessionStorage.getItem(key)) return;
+    sessionStorage.setItem(key, '1');
+  } catch (_) { /* stockage indisponible : le serveur déduplique déjà */ }
+  fetch(`${FUNCTIONS_BASE}/viewBookingLink`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ linkShortId: shortId }),
+    keepalive: true,
+  }).catch(() => {});
 }
 
 // ─── Annulation ──────────────────────────────────────────────────────────────
